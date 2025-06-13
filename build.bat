@@ -254,9 +254,9 @@ if not exist "%release_dir%\data" (
 rem 还原网关解决方案
 call :GetTimestamp
 echo [!formatted_datetime!] 开始构建网关解决方案... >>%logs_dir%
-dotnet restore src\gateway\IoTCenterHost.sln
+dotnet restore subrepos\GrpcServer\src\IoTCenterHost.sln
 rem 构建网关解决方案
-dotnet build src\gateway\IoTCenterHost.sln --configuration Debug -o "%gateway_dir%" >> "%logs_dir%" 2>&1
+dotnet build subrepos\GrpcServer\src\IoTCenterHost.sln --configuration Debug -o "%gateway_dir%" >> "%logs_dir%" 2>&1
 if %ERRORLEVEL% neq 0 (
     call :GetTimestamp
     echo [!formatted_datetime!] 错误：网关构建失败，错误代码 %ERRORLEVEL% >> "%logs_dir%"
@@ -271,9 +271,9 @@ rem 开始Web APi构建
 rem 还原解决方案
 call :GetTimestamp
 echo [!formatted_datetime!] 开始构建WebApi解决方案... >>%logs_dir%
-dotnet restore src\webapi\IoTCenterWebApi.sln
+dotnet restore subrepos\WebPlugins\src\back-end\IoTCenterWebApi.sln
 rem 构建解决方案
-dotnet build src\webapi\IoTCenterWebApi\IoTCenterWebApi.csproj --configuration Debug -o "%webapi_dir%" >> "%logs_dir%" 2>&1
+dotnet build subrepos\WebPlugins\src\back-end\IoTCenterWebApi\IoTCenterWebApi.csproj --configuration Debug -o "%webapi_dir%" >> "%logs_dir%" 2>&1
 if %ERRORLEVEL% neq 0 (
     call :GetTimestamp
     echo [!formatted_datetime!] 错误：WebApi构建失败，错误代码 %ERRORLEVEL% >> "%logs_dir%"
@@ -282,7 +282,7 @@ if %ERRORLEVEL% neq 0 (
     exit /b 1
 )
 rem 构建插件输出
-dotnet build src\webapi\IoTCenterWebApi.sln
+dotnet build subrepos\WebPlugins\src\back-end\IoTCenterWebApi.sln
 rem 移动插件目录至发布目录
 move "src\webapi\plugins" "%webapi_dir%"
 call :GetTimestamp
