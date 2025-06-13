@@ -1,0 +1,12 @@
+[submodule "subrepos/Devices"]
+	path = subrepos/Devices
+	url = https://github.com/ganweisoft/Devices.git
+[submodule "subrepos/Gateway"]
+	path = subrepos/Gateway
+	url = https://github.com/ganweisoft/Gateway.git
+[submodule "subrepos/GrpcServer"]
+	path = subrepos/GrpcServer
+	url = https://github.com/ganweisoft/GrpcServer.git
+[submodule "subrepos/WebPlugins"]
+	path = subrepos/WebPlugins
+	url = https://github.com/ganweisoft/WebPlugins.git
