@@ -45,7 +45,11 @@ jobs:
         dotnet-version: '9.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore ./subrepos/GrpcServer/src/IoTCenterHost.sln
+      run: |
+          pwd
+          cd $GITHUB_WORKSPACE
+          pwd
+          dotnet restore ./subrepos/GrpcServer/src/IoTCenterHost.sln
 
     - name: Build
       run: dotnet build ./subrepos/GrpcServer/src/IoTCenterHost.sln --self-contained false --configuration Debug --no-restore --output ./release/bin
@@ -79,7 +83,11 @@ jobs:
         dotnet-version: '9.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore ./subrepos/WebPlugins/src/back-end/IoTCenterWebApi.sln
+      run: |
+          pwd
+          cd $GITHUB_WORKSPACE
+          pwd
+          dotnet restore ./subrepos/WebPlugins/src/back-end/IoTCenterWebApi.sln
 
     - name: Build
       run: dotnet build ./subrepos/WebPlugins/src/back-end/IoTCenterWebApi/IoTCenterWebApi.csproj --self-contained false --configuration Debug --no-restore --output ./release/IoTCenterWeb/publish
@@ -97,7 +105,11 @@ jobs:
         dotnet-version: '9.0.x'
 
     - name: Build
-      run: dotnet build ./subrepos/WebPlugins/src/back-end/IoTCenterWebApi.sln
+      run: |
+          pwd
+          cd $GITHUB_WORKSPACE
+          pwd
+          dotnet build ./subrepos/WebPlugins/src/back-end/IoTCenterWebApi.sln
 
     - name: Plugins Config(Linux/macOS)
       if: matrix.os != 'windows-latest'
@@ -128,6 +140,9 @@ jobs:
         node-version: '23.1.0'
         cache: 'npm'
     - run: |
+        pwd
+        cd $GITHUB_WORKSPACE
+        pwd
         cd ./subrepos/WebPlugins/src/front-end/packages/IoTCenterWebBase
         pnpm install
         pnpm build
@@ -163,6 +178,9 @@ jobs:
         node-version: '14.21.3'
         cache: 'npm'
     - run: |
+        pwd
+        cd $GITHUB_WORKSPACE
+        pwd
         cd ./subrepos/WebPlugins/src/front-end/packages/IoTCenterWebPlugin
         npm install
         npm run build-all
@@ -198,6 +216,9 @@ jobs:
     - name: Zip(Linux/macOS)
       if: matrix.os != 'windows-latest'
       run: |
+        pwd
+        cd $GITHUB_WORKSPACE
+        pwd
         rm -f release_${{ matrix.os }}.zip
         cd ./release
         zip -r ../release_${{ matrix.os }}.zip .
