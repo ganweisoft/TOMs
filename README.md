@@ -47,7 +47,7 @@ TOMs is a **fully open-source** IoT application development framework with these
 - **Production-Ready**: Battle-tested components included
 - **Cross-Platform**: Supports diverse deployment scenarios
 
-![](./media/img/framework.png)
+![](./media/img/framework.svg)
 
 ### 2.1 Key Features
 | Feature            | Description                                                      |
