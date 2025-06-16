@@ -49,12 +49,6 @@ TOMs is a **fully open-source** IoT application development framework with these
 
 ![](./media/img/framework.png)
 
-<p align="center" dir="auto">
-  <a href="https://github.com/ganweisoft/TOMs/blob/main/media/img/framework.png" rel="nofollow">
-    <img width="810" height="605" style="max-width:100%;" src="https://github.com/ganweisoft/TOMs/blob/main/media/img/framework.png">
-  </a>
-</p>
-
 ### 2.1 Key Features
 | Feature            | Description                                                      |
 |--------------------|------------------------------------------------------------------|
