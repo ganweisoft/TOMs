@@ -35,6 +35,9 @@ jobs:
   host_build:
     needs: source-checkout
     runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -66,6 +69,9 @@ jobs:
   api_build:
     needs: source-checkout
     runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -81,6 +87,9 @@ jobs:
   plugins_build:
     needs: source-checkout
     runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -109,6 +118,9 @@ jobs:
   web_base_build:
     needs: source-checkout
     runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps:
     - name: Setup Node
       uses: actions/setup-dotnet@v4
@@ -141,6 +153,9 @@ jobs:
   web_plugins_build:
     needs: source-checkout
     runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps:
     - name: Setup Node
       uses: actions/setup-dotnet@v4
@@ -176,6 +191,9 @@ jobs:
   release_upload:
     needs: [host_build,api_build,plugins_build,web_base_build,web_plugins_build]
     runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps: 
     - name: Zip(Linux/macOS)
       if: matrix.os != 'windows-latest'
