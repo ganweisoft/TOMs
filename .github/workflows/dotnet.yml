@@ -30,7 +30,7 @@ jobs:
     - name: Checkout source
       uses: actions/checkout@v4
       with: 
-        submodules: recursive
+        submodules: true
 
   host_build:
     needs: source-checkout
@@ -47,8 +47,8 @@ jobs:
     - name: Restore dependencies
       run: |
           pwd
-          cd $GITHUB_WORKSPACE
-          pwd
+          ls
+          ./subrepos/GrpcServer/src/
           dotnet restore ./subrepos/GrpcServer/src/IoTCenterHost.sln
 
     - name: Build
