@@ -8,7 +8,7 @@
 
 简体中文 | [English](README.md)
 
-TOMs 是一个完全开源、体系化、插件化、高性能、开箱即用、可用于生产环境，是物联网行业应用的一站式开发框架。TOMs 核心代码采用C#编写，基于最新版本的.Net 9.0构建，其扩展出来的插件可以采用Java、 Python 、C++、Go、Rust等主流语言编写。TOMs 支持容器部署、本地部署（Windows、Linux、MacOS）、端侧低功耗设备部署（ARM、RISC-V）。
+TOMs 是一个完全开源、体系化、插件化、高性能、开箱即用、可用于生产环境，是物联网行业应用的一站式开发框架。TOMs 核心代码采用C#编写，基于最新版本的.NET 9.0构建，其扩展出来的插件可以采用Java、 Python 、C++、Go、Rust等主流语言编写。TOMs 支持容器部署、本地部署（Windows、Linux、MacOS）、端侧低功耗设备部署（ARM、RISC-V）。
 
 ##  目录
 
