@@ -163,9 +163,9 @@ TOMs 在macOS上构建，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 
 TOMs 在Linux上构建，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 
-## 4.3 在windows上构建
+## 4.3 在Windows上构建
 
-TOMs 在windows上构建，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
+TOMs 在Windows上构建，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 
 
 # 5. 打包
