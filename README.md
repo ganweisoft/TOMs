@@ -137,16 +137,9 @@ See [Packaging Guide](https://github.com/ganweisoft/TOMs/wiki) for details
 ### 6.1 Linux Installation
 <details>
 <summary>Detailed Steps</summary>
-
-1. Log in to the Linux server with a normal user and go to the /opt directory.
-
-![](./media/./img/9ba2b269dfddd5d0b5f6bdd7b413f344.png)
-
-2. Upload the installer and install script and place it in the /opt directory as shown below.
-
+  
+1. Execute<code>./install.sh</code>installation command, the installation program waits for installation
 ![](./media/./img/ca06520eb62d15f19f03836ff3351aeb.png)
-
-3. Execute<code>./install.sh</code>installation command, the installation program waits for installation
 
 ```sh
 sh ./install.sh
@@ -154,21 +147,6 @@ sh ./install.sh
 
 ![](./media/img/f898bc359ef42cbfe8e9fff4e3256389.png)
 
-4. Enter command: Check if the installation is successful. Enter command<code>ps - ef | grep dotnet</code>
-
-
-```sh
-ps -ef|grep dotnet
-```
-
-![](./media/./img/3.png)
-
-Manually end the command as systemctl stop xxx, restart/start the service systemctl restart/start xxx [IoTCenter].
-
-
-Use systemctl status xxx to check the running status of the service. If the service fails to run, it indicates that the installation has failed.
-
-The initialization, login, and database switching operations after the service starts normally are the same as the installation and deployment process under Windows, and will not be repeated here.
 
 </details>
 
