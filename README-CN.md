@@ -180,31 +180,14 @@ TOMs 打包，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 
 <summary>Linux 系统上安装详细步骤</summary>
 
-1. 创建软件部署目录，使用普通用户登录Linux服务器，进入/opt目录。
-
-![](./media/img-CN/19ba2b269dfddd5d0b5f6bdd7b413f344.png)
-
-2. 上传安装包和安装脚本到服务器，将其放置/opt目录下如下图所示。
+1. 安装运行环境执行<code>./install.sh</code>安装命令，安装程序等待安装。
 
 ![](./media/img-CN/9ba2b269dfddd5d0b5f6bdd7b413f344.png)
 
-3. 安装运行环境执行<code>./install.sh</code>安装命令，安装程序等待安装。
 ```sh
 sh ./install.sh
 ```
 ![](./media/img-CN/f898bc359ef42cbfe8e9fff4e3256389.png)
-
-4. 输入命令：检查是否安装成功输入命令<code>ps -ef|grep dotnet</code>。
-
-```sh
-ps -ef|grep dotnet
-```
-![](./media/img-CN/3.png)
-
-手动结束命令为systemctl stop xxx，重启/启动服务systemctl restart/start xxx【IoTCenter】。
-
-
-systemctl status xxx来查看服务运行状态，若服务运行失败，则说明安装失败。
 
 </details>
 
