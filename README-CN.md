@@ -176,125 +176,18 @@ TOMs 打包，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 
 ## 6.1 Linux 系统上安装
 
-<details>
-
-<summary>Linux 系统上安装详细步骤</summary>
-
-1. 安装运行环境执行<code>./install.sh</code>安装命令，安装程序等待安装。
-
-![](./media/img-CN/9ba2b269dfddd5d0b5f6bdd7b413f344.png)
-
 ```sh
 sh ./install.sh
 ```
-![](./media/img-CN/f898bc359ef42cbfe8e9fff4e3256389.png)
-
-</details>
 
 ### 6.2 容器上安装
 
-<details>
-
-<summary>容器上安装上安装详细步骤</summary>
-
-1.  下载IoTCenter源包。
-
-    -   到下载地址[IoTCenter平台下载中心](https://www.ganweicloud.com/Download)下载最新版本的IoTCenter软件压缩包。
-    ![](./media/img-CN/image40.png)
-
-    -   命令
-        ```
-        curl -o IoTCenter.zip https://ganweicloud.obs.cn-north-4.myhuaweicloud.com/%E6%96%87%E6%A1%A3%E7%BD%91%E7%AB%99/IoTCenter%E7%89%88%E6%9C%AC/6.0.3/6.0.3-Linux_x86_64.zip
-        ```
-
-2.  解压源包。
 
     -   命令
         ```
         unzip IoTCenter.zip
         ```
 
-3.  创建镜像EntryPoint脚本runGW.sh。
-
-    -   代码
-        ```
-        #!/bin/bash
-        umask 027
-        # start service
-        nohup /opt/ganwei/IoTCenter/IoTCenterWeb/shell/restart.sh >/dev/null 2>&1 &
-        
-        sleep 15
-        echo "start service finish"
-        tail -f /dev/null
-        
-        ```
-
-4.  创建打包Dockerfile。
-
-    -   代码
-        ```
-        # 基础镜像为微软官方aspnetcore6.0镜像
-        FROM mcr.microsoft.com/dotnet/nightly/aspnet:6.0
-        
-        # 初始化时区为中国上海（东八区）
-        ENV TZ="Asia/Shanghai"
-        
-        # 去除apt安装缓存
-        RUN apt update \
-        && rm -rf /var/lib/apt/lists/*
-        
-        RUN mkdir -p /opt/ganwei/ \
-        && chmod -R 755 /opt/ganwei
-        
-        COPY IoTCenter /opt/ganwei/IoTCenter
-        COPY runGW.sh /opt/ganwei/
-        
-        # 修改.sh文件的权限，谨防越权
-        RUN find /opt/ganwei/IoTCenter/IoTCenterWeb -name *.sh -exec chmod 550 {} \;
-        
-        EXPOSE 44380
-        
-        WORKDIR /opt/ganwei/
-        
-        # 启动EntryPoint脚本
-        CMD sh runGW.sh
-        ```
-
-5.  部署中也许需要持久化一些文件，如：配置文件AlarmCenterProperties.xml；SQLite数据库文件（使用关系型数据库服务器MySQL等则忽略）；插件安装目录packages等。
-    -   容器启动命令
-        ```
-        docker run -itd \
-         -v /var/gwiot/CurveData:/opt/ganwei/IoTCenter/CurveData \
-         -v /var/gwiot/database:/opt/ganwei/IoTCenter/database \
-         -v /var/gwiot/data:/opt/ganwei/IoTCenter/data/ \
-         -v /var/gwiot/packages:/opt/ganwei/IoTCenter/IoTCenterWeb/packages \
-         -p 44380:44380 iotcenter:6.1.0
-        ```
-
-    -   注意：由于映射目录时，目录文件会自动清除。所以在启动脚本中需做一些前置工作。
-        -   在启动时需先生成sqlite数据库文件。
-        ```
-        DBPATH=/opt/ganwei/IoTCenter/database/Database.db
-        
-        # Linux系统需安装sqlite3包。
-        if [ ! -f "$DBPATH" ]; then
-            cat /ganwei/config/sqlite.sql | sqlite3 $DBPATH
-            echo "execte initialized sql script"
-        fi
-        ```
-        -   由其他备用目录复制配置文件AlarmCenterProperties.xml至运行目录
-        ```
-        XMLDIR=/ganwei/data/
-        
-        cp -rf $XMLDIR/* /opt/ganwei/IoTCenter/data/
-        ```
-
-        -   由其他备用目录原始插件包至运行目录下。
-        ```
-        PKGDIR=/ganwei/packages/
-        
-        cp -rn /opt/ganwei/IoTCenter/IoTCenterWeb/originpackages/* $PKGDIR
-        ```
 6.  最后的启动脚本runGW.sh
     ```
     #!/bin/bash
@@ -324,58 +217,9 @@ sh ./install.sh
         tail -f /dev/null
     ```
 
-</details>
-
-
-
 ### 6.3 Windows 系统上安装
 
-
-<details>
-
-<summary>Windows 系统上安装</summary>
-
-1. 解压安装包到D:\ganwei\IoTCenter目录下。
-
-![](./media/img-CN/4637162272eb61bdc78fda67e2b8ff06.png)
-
-2. 使用services\regist.bat脚本注册服务，需要以管理员身份运行。
-
-![](./media/img-CN/8465daf903822d053b375cb7802888a8.png)
-
-![](./media/img-CN/c0fe9712c7adf7dcba4b8e55556d5d2e.png)
-
-3. 在windows下会注册2个windows服务【IoTCenter】【IoTCenterDaemon】，并使用IoTCenterDaemon进行服务保活，该保活程序会每隔10秒钟探测一次前两个服务的运行状态，若停止，会自动拉起。
-
-![](./media/img-CN/083a07b609654b6865b0b36eb04e8c9a.png)
-
-4. windows下强制停止，需首先停止IoTCenterDaemon服务守护进程，再停止IoTCenter。可使用sc stop xxx来停止，或使用windows界面操作。
-
-![](./media/img-CN/a047be24d5a34f835457d026edaa1d87.png)
-
-5. 若需要注销服务，使用services\unregist.bat脚本以管理员身份运行，打开任务管理器查看是否注销成功。
-
-![](./media/img-CN/e15500af0b16f545c20f2b4e566cb5a2.png)
-
-6. 服务启动后，浏览器打开https://127.0.0.1:44380。
-
-![](./media/img-CN/571937ef07667ba205730055934309b9.png)
-
-7. 点击高级按钮，点击继续前往。
-
-![](./media/img-CN/360df3ca93262288b8721e8d33bea258.png)
-
-8. 进入登录页。。用户首次登录是会显示服务条款信息
-
-![](./media/img-CN/2d78462a7caace6bfcd070c83435abc5.png)
-
-![](./media/img-CN/20250411134054.png)
-
-9. 若是非本机访问，请使用ip 进行访问
-
-![](./media/img-CN/336c838df91228e71cf5abf6a9119916.png)
-
-</details>
+使用regist.bat脚本注册服务，需要以管理员身份运行。
 
 
 # 7. 源码构建说明
