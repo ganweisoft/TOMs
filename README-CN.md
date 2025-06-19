@@ -21,9 +21,7 @@ TOMs 是一个完全开源、体系化、插件化、高性能、开箱即用、
    - 3.2 [.NET 9.0 运行时安装](#32-net-90-运行时安装)
    - 3.3 [克隆仓库](#33-克隆仓库)
 4. [构建](#4-构建)
-   - 4.1 [在Linux上构建](#41-在linux上构建)
-   - 4.2 [在macOS上构建](#42-在macos上构建)
-   - 4.3 [在Windows上构建](#43-在windows上构建)
+   - 4.1 [本地构建](#41-本地构建)
 5. [打包](#5-打包)
 6. [安装与运行](#6-安装与运行)
    - 6.1 [Linux系统安装](#61-linux-系统上安装)
@@ -155,22 +153,12 @@ git clone https://github.com/ganweisoft/TOMs
 ```
 # 4. 构建
 
-## 4.1 在macOS上构建
+## 4.1 本地构建
 
-TOMs 在macOS上构建，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
-
-## 4.2 在Linux上构建
-
-TOMs 在Linux上构建，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
-
-## 4.3 在Windows上构建
-
-TOMs 在Windows上构建，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
-
+TOMs 在本地构建，请见 [本地构建](https://github.com/ganweisoft/TOMs/blob/main/build.bat)
 
 # 5. 打包
-TOMs 打包，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
-
+TOMs 打包，请见 [wiki](https://github.com/ganweisoft/TOMs/wiki)
 
 # 6. 安装与运行
 
@@ -187,7 +175,6 @@ TOMs 打包，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 [Windows install](https://github.com/ganweisoft/TOMs/blob/main/docs/windows/regist.bat)
 
 注意：Windows上运行安装脚本需要以管理员身份运行。
-
 
 # 7. 源码构建说明
 
