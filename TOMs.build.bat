@@ -3,8 +3,9 @@
 cd /d "%~dp0%"
 
 rem =============If this is the first time cloning the repository for building, execute the following code============= 
-git clone https://github.com/ganweisoft/TOMs.git
-cd TOMs
+rem If not cloned yet, please uncomment to clone first
+rem git clone https://github.com/ganweisoft/TOMs.git  
+rem cd TOMs
 git submodule init
 git submodule update
 build.bat
