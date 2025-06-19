@@ -325,7 +325,7 @@ sh ./install.sh
 </details>
 
 ## 7. Source Build Guide
-See [Build Instructions](https://github.com/ganweisoft/TOMs/wiki) for details
+See [Build Instructions](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/dotnet.yml) for details
 
 ## 8. License
 TOMs is licensed under the [MIT License](https://github.com/ganweisoft/TOMs/blob/main/LICENSE)
