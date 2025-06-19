@@ -177,19 +177,18 @@ TOMs 打包，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 ## 6.1 Linux 系统上安装
 
 ```sh
-sh ./install.sh
+sh ./docs/linux/install.sh
 ```
 
 ### 6.2 容器上安装
 
 ```sh
-sh runGW.sh
+sh ./docs/container/runGW.sh
 ```
 
 ### 6.3 Windows 系统上安装
 
-使用regist.bat脚本注册服务，需要以管理员身份运行。
-
+使用./docs/windows/regist.bat脚本注册服务，需要以管理员身份运行。
 
 # 7. 源码构建说明
 
