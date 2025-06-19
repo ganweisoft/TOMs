@@ -155,7 +155,7 @@ git clone https://github.com/ganweisoft/TOMs
 
 ## 4.1 本地构建
 
-TOMs 在本地构建，请见 [本地构建](https://github.com/ganweisoft/TOMs/blob/main/build.bat)
+请见 [本地构建](https://github.com/ganweisoft/TOMs/blob/main/build.bat)
 
 # 5. 打包
 TOMs 打包，请见 [wiki](https://github.com/ganweisoft/TOMs/wiki)
