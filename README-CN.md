@@ -151,7 +151,7 @@ git clone https://github.com/ganweisoft/TOMs
 # 4. 构建发布
 
 ## 4.1 本地构建
-拉取仓库 [WebPlugins](https://github.com/ganweisoft/WebPlugins)，可以通过以下命令进行构建：
+拉取仓库 [WebPlugins](https://github.com/ganweisoft/WebPlugins)，源码根目录通过以下命令进行构建：
 ```bash
 build.bat
 ```
