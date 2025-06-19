@@ -167,14 +167,14 @@ TOMS 可以通过以下命令进行安装运行：
 ```bash
 sh install.sh
 ```
-请见安装脚本 [Linux Install](https://github.com/ganweisoft/TOMs/blob/main/docs/shell/install.sh)
+请见安装脚本 [Linux Install](https://github.com/ganweisoft/TOMs/blob/main/shell/install.sh)
 
 ### 5.2 Windows 系统上安装运行
 TOMS 可以通过以下命令进行安装运行：
 ```bash
 regist.bat
  ```
-请见安装脚本 [Windows Install](https://github.com/ganweisoft/TOMs/blob/main/docs/shell/regist.bat)
+请见安装脚本 [Windows Install](https://github.com/ganweisoft/TOMs/blob/main/shell/regist.bat)
 
 注意：Windows上运行安装脚本需要以管理员身份运行。
 
