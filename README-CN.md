@@ -151,11 +151,11 @@ git clone https://github.com/ganweisoft/TOMs
 # 4. 构建发布
 
 ## 4.1 本地构建
-拉取仓库 [WebPlugins](https://github.com/ganweisoft/WebPlugins)，源码根目录通过以下命令进行构建：
+TOMS 可以通过以下命令进行安装运行：
 ```bash
-build.bat
-```
-请见 [本地构建脚本](https://github.com/ganweisoft/TOMs/blob/main/build.bat)
+TOMs.build.bat
+ ```
+请见 [本地构建脚本](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
 
 ## 4.2 云端构建
 使用[Github Actions](https://docs.github.com/zh/actions)进行云端自动化构建，请见 [云端构建脚本](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/dotnet.yml)
