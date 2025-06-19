@@ -1,3 +1,5 @@
+unzip IoTCenter.zip
+
 #!/bin/bash
 umask 027
 
