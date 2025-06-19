@@ -184,8 +184,10 @@ TOMs 打包，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 
 ### 6.3 Windows 系统上安装
 
-注意：Windows上运行安装脚本需要以管理员身份运行。
 [Windows install](https://github.com/ganweisoft/TOMs/blob/main/docs/windows/regist.bat)
+
+注意：Windows上运行安装脚本需要以管理员身份运行。
+
 
 # 7. 源码构建说明
 
