@@ -158,7 +158,7 @@ TOMs.build.bat
 请见 [本地构建脚本](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
 
 ## 4.2 云端构建
-使用[Github Actions](https://docs.github.com/zh/actions)进行云端自动化构建，请见 [云端构建脚本](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/dotnet.yml)
+使用[Github Actions](https://docs.github.com/zh/actions)进行云端自动化构建，请见 [云端构建脚本](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
 
 # 5. 安装与运行
 
