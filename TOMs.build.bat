@@ -2,15 +2,21 @@
 
 cd /d "%~dp0%"
 
-rem =============If this is the first time cloning the repository for building, execute the following code============= 
-rem If not cloned yet, please uncomment to clone first
-rem git clone https://github.com/ganweisoft/TOMs.git  
-rem cd TOMs
-git submodule init
-git submodule update
-build.bat
+@echo off
 
-rem ============= Otherwise, execute the following code=============
-rem git pull
-rem git submodule update --remote
-rem build.bat
+rem Unified script for both initial setup and updates
+rem Check if repository exists
+if not exist "TOMs\.git" (
+    echo Initial clone required...
+    git clone https://github.com/ganweisoft/TOMs.git
+    cd TOMs
+) else (
+    echo Repository exists, pulling updates...
+    cd TOMs
+    git pull
+)
+
+rem Common operations for both cases
+git submodule init
+git submodule update --remote
+call build.bat
