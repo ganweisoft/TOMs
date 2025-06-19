@@ -22,16 +22,15 @@ TOMs 是一个完全开源、体系化、插件化、高性能、开箱即用、
    - 3.3 [克隆仓库](#33-克隆仓库)
 4. [构建](#4-构建)
    - 4.1 [本地构建](#41-本地构建)
-5. [打包](#5-打包)
-6. [安装与运行](#6-安装与运行)
-   - 6.1 [Linux系统安装](#61-linux-系统上安装)
-   - 6.2 [容器化部署](#62-容器上安装)
-   - 6.3 [Windows系统安装](#63-windows-系统上安装)
-7. [源码构建说明](#7-源码构建说明)
-8. [License](#8-license)
-9. [测试](#9-测试)
-10. [发布](#10-发布)
-11. [贡献指南](#12-如何提交贡献)
+   - 4.2 [云端构建](#42-云端构建)
+5. [安装与运行](#6-安装与运行)
+   - 5.1 [Linux系统安装](#51-linux-系统上安装)
+   - 5.2 [容器化部署](#52-容器上安装)
+   - 5.3 [Windows系统安装](#53-windows-系统上安装)
+6. [License](#6-license)
+7. [测试](#7-测试)
+8. [发布](#8-发布)
+9. [贡献指南](#9-如何提交贡献)
 
 
 # 1. 简介
@@ -149,46 +148,55 @@ graph TD
 ```bash
 git clone https://github.com/ganweisoft/TOMs
 ```
-# 4. 构建
+# 4. 构建发布
 
 ## 4.1 本地构建
+拉取仓库 [WebPlugins](https://github.com/ganweisoft/WebPlugins)，可以通过以下命令进行构建：
+```bash
+build.bat
+```
+请见 [本地构建脚本](https://github.com/ganweisoft/TOMs/blob/main/build.bat)
 
-请见 [本地构建](https://github.com/ganweisoft/TOMs/blob/main/build.bat)
+## 4.2 云端构建
+使用[Github Actions](https://docs.github.com/zh/actions)进行云端自动化构建，请见 [云端构建脚本](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/dotnet.yml)
 
-# 5. 打包
-TOMs 打包，请见 [wiki](https://github.com/ganweisoft/TOMs/wiki)
+# 5. 安装与运行
 
-# 6. 安装与运行
+## 5.1 Linux 系统上安装运行
 
-## 6.1 Linux 系统上安装
+TOMS 可以通过以下命令进行安装运行：
+```bash
+sh install.sh
+```
+请见安装脚本 [Linux Install](https://github.com/ganweisoft/TOMs/blob/main/docs/linux/install.sh)
 
-[Linux install](https://github.com/ganweisoft/TOMs/blob/main/docs/linux/install.sh)
+### 5.2 容器上安装运行
+TOMS 可以通过以下命令进行安装运行：
+```bash
+sh runGW.sh
+ ```
+请见安装脚本 [Docker Install](https://github.com/ganweisoft/TOMs/blob/main/docs/container/runGW.sh)
 
-### 6.2 容器上安装
-
-[Docker install](https://github.com/ganweisoft/TOMs/blob/main/docs/container/runGW.sh)
-
-### 6.3 Windows 系统上安装
-
-[Windows install](https://github.com/ganweisoft/TOMs/blob/main/docs/windows/regist.bat)
+### 5.3 Windows 系统上安装运行
+TOMS 可以通过以下命令进行安装运行：
+```bash
+regist.bat
+ ```
+请见安装脚本 [Windows Install](https://github.com/ganweisoft/TOMs/blob/main/docs/windows/regist.bat)
 
 注意：Windows上运行安装脚本需要以管理员身份运行。
 
-# 7. 源码构建说明
-
-TOMs 源码构建说明，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
-
-# 8. License
+# 6. License
 
 TOMs 使用非常宽松的MIT协议，请见 [License](https://github.com/ganweisoft/TOMs/blob/main/LICENSE)。
 
-# 9. 测试
+# 7. 测试
 
 TOMs 测试说明，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 
-# 10. 发布
+# 8. 发布
 TOMs 发布说明，请见[Releases](https://github.com/ganweisoft/TOMs/releases)
 
-## 11. 如何提交贡献
+## 9. 如何提交贡献
 
 我们非常欢迎开发者提交贡献, 如果您发现了一个bug或者有一些想法想要交流，欢迎提交一个[issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md).
