@@ -1,0 +1,287 @@
+name: TOMs Build and Release
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+    steps:
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1.1.4
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+
+  host-build:
+    needs: create-release
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+    - name: Checkout Source
+      uses: actions/checkout@v4
+      with: 
+        ref: main
+        submodules: true
+        sparse-checkout: |
+          subrepos/GrpcServer
+
+    - name: Update submodules
+      run: |
+        git submodule init
+        git submodule update --init --recursive --remote
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+
+    - name: Host Restore Dependencies
+      run: dotnet restore ./subrepos/GrpcServer/src/IoTCenterHost.sln
+
+    - name: Host Build
+      run: dotnet build ./subrepos/GrpcServer/src/IoTCenterHost.sln --configuration Release --no-restore
+
+    - name: Host Publish
+      run: dotnet publish ./subrepos/GrpcServer/src/IoTCenterHost.sln --self-contained false --configuration Release --no-build --output ./release/bin
+
+    - name: Data Publish
+      run: |
+        cd ./release
+        Copy-Item -Path ../subrepos/GrpcServer/src/config/* -Destination ./ -Recurse -Force
+        cd ..
+      shell: pwsh
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-host-${{ matrix.os }}
+        path: ./release/*
+
+  api-build:
+    needs: create-release
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+    - name: Checkout Source
+      uses: actions/checkout@v4
+      with: 
+        ref: main
+        submodules: true
+        sparse-checkout: |
+          subrepos/WebPlugins/src/back-end
+
+    - name: Update submodules
+      run: |
+        git submodule init
+        git submodule update --init --recursive --remote
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+
+    - name: WebApi Restore Dependencies
+      run: dotnet restore ./subrepos/WebPlugins/src/back-end/IoTCenterWebApi.sln
+
+    - name: WebApi Build
+      run: dotnet build ./subrepos/WebPlugins/src/back-end/IoTCenterWebApi/IoTCenterWebApi.csproj --configuration Release --no-restore
+
+    - name: WebApi Publish
+      run: dotnet publish ./subrepos/WebPlugins/src/back-end/IoTCenterWebApi/IoTCenterWebApi.csproj --self-contained false --configuration Release --no-build --output ./release/IoTCenterWeb/publish 
+
+    - name: Plugins Build
+      run: dotnet build ./subrepos/WebPlugins/src/back-end/IoTCenterWebApi.sln
+
+    - name: Plugins Publish
+      run: |        
+        Copy-Item -Path ./subrepos/WebPlugins/src/back-end/plugins -Destination ./release/IoTCenterWeb/publish/plugins -Recurse -Force
+        Copy-Item -Path ./subrepos/WebPlugins/src/back-end/services -Destination ./release -Recurse -Force
+      shell: pwsh
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-api-${{ matrix.os }}
+        path: ./release/*
+
+  web-base-build:
+    needs: create-release
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Source
+      uses: actions/checkout@v4
+      with: 
+        ref: main
+        submodules: true
+        sparse-checkout: |
+          subrepos/WebPlugins/src/front-end/packages/IoTCenterWebBase
+
+    - name: Update submodules
+      run: |
+        git submodule init
+        git submodule update --init --recursive --remote
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '23.1.0'
+
+    - name: Install && Build
+      run: |
+        npm install pnpm -g
+        cd ./subrepos/WebPlugins/src/front-end/packages/IoTCenterWebBase
+        pnpm install --no-frozen-lockfile
+        pnpm build        
+      shell: pwsh      
+
+    - name: Web Base Publish
+      run: |        
+        Copy-Item -Path ./subrepos/WebPlugins/src/front-end/packages/IoTCenterWebBase/dist -Destination ./release/IoTCenterWeb/publish/wwwroot -Recurse -Force
+      shell: pwsh
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-web-base
+        path: ./release/*
+
+  web-plugin-build:
+    needs: create-release
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Source
+      uses: actions/checkout@v4
+      with: 
+        ref: main
+        submodules: true
+        sparse-checkout: |
+          subrepos/WebPlugins/src/front-end/packages/IoTCenterWebPlugin
+
+    - name: Update submodules
+      run: |
+        git submodule init
+        git submodule update --init --recursive --remote
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '14.21.3'
+
+    - name: Install && Build
+      run: |
+        cd ./subrepos/WebPlugins/src/front-end/packages/IoTCenterWebPlugin
+        npm install
+        npm run build-all
+      shell: pwsh      
+
+    - name: Web Plugin Publish
+      run: |
+        $folderPath = "./subrepos/WebPlugins/src/front-end/packages/IoTCenterWebPlugin/dist/static"        
+        if(Test-Path $folderPath)
+        {
+          Remove-Item -Path $folderPath -Recurse -Force
+        }
+        Copy-Item -Path ./subrepos/WebPlugins/src/front-end/packages/IoTCenterWebPlugin/dist -Destination ./release/IoTCenterWeb/publish/wwwroot -Recurse -Force
+      shell: pwsh
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-web-plugin
+        path: ./release/*
+
+  release-upload :
+    needs: [create-release,host-build,api-build,web-base-build,web-plugin-build]
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
+
+    steps:
+    - name: Set Output File Name
+      id: set-artifact-name
+      run: |
+        if [ "${{ matrix.os }}" == "windows-latest" ]; then
+          echo "artifact_name=Windows.zip" >> $GITHUB_ENV
+          echo "archive_ext=zip" >> $GITHUB_ENV
+        elif [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
+          echo "artifact_name=Linux_x86_x64.tar.gz" >> $GITHUB_ENV
+          echo "archive_ext=tar.gz" >> $GITHUB_ENV
+        elif [ "${{ matrix.os }}" == "macos-latest" ]; then
+          echo "artifact_name=MacOsxArm64.tar.gz" >> $GITHUB_ENV
+          echo "archive_ext=tar.gz" >> $GITHUB_ENV
+        else
+          echo "artifact_name=${{ runner.os }}_${{ runner.arch }}_${{ github.ref_name }}_release.zip" >> $GITHUB_ENV
+          echo "archive_ext=zip" >> $GITHUB_ENV
+        fi
+      shell: bash
+    
+    - name: Download Host Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-host-${{ matrix.os }}
+        path: ./
+
+    - name: Download Api Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-api-${{ matrix.os }}
+        path: ./
+
+    - name: Download Web Base Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-web-base
+        path: ./
+
+    - name: Download Web Plugin Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-web-plugin
+        path: ./
+
+    - name: Compress Release (windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        Compress-Archive -Path * -DestinationPath ${{ env.artifact_name }} -Force        
+      shell: pwsh
+
+    - name: Compress Release (macOS)
+      if: matrix.os == 'macos-latest'
+      run: |
+        tar -czvf ${{ env.artifact_name }} ./
+      shell: bash
+
+    - name: Compress Release (ubuntu)
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        tar -czvf ${{ env.artifact_name }} -- *
+      shell: bash
+
+    - name: Upload Release Asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1.0.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.create-release.outputs.upload_url }}
+        asset_path: ./${{ env.artifact_name }}
+        asset_name: ${{ env.artifact_name }}
+        asset_content_type: application/${{ env.archive_ext }}
