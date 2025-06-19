@@ -24,9 +24,8 @@ TOMs 是一个完全开源、体系化、插件化、高性能、开箱即用、
    - 4.1 [本地构建](#41-本地构建)
    - 4.2 [云端构建](#42-云端构建)
 5. [安装与运行](#6-安装与运行)
-   - 5.1 [Linux系统安装](#51-linux-系统上安装)
-   - 5.2 [容器化部署](#52-容器上安装)
-   - 5.3 [Windows系统安装](#53-windows-系统上安装)
+   - 5.1 [Linux系统安装](#51-Linux-系统上安装运行)
+   - 5.2 [Windows系统安装](#52-Windows-系统上安装运行)
 6. [License](#6-license)
 7. [测试](#7-测试)
 8. [发布](#8-发布)
@@ -168,21 +167,14 @@ TOMS 可以通过以下命令进行安装运行：
 ```bash
 sh install.sh
 ```
-请见安装脚本 [Linux Install](https://github.com/ganweisoft/TOMs/blob/main/docs/linux/install.sh)
+请见安装脚本 [Linux Install](https://github.com/ganweisoft/TOMs/blob/main/docs/shell/install.sh)
 
-### 5.2 容器上安装运行
-TOMS 可以通过以下命令进行安装运行：
-```bash
-sh runGW.sh
- ```
-请见安装脚本 [Docker Install](https://github.com/ganweisoft/TOMs/blob/main/docs/container/runGW.sh)
-
-### 5.3 Windows 系统上安装运行
+### 5.2 Windows 系统上安装运行
 TOMS 可以通过以下命令进行安装运行：
 ```bash
 regist.bat
  ```
-请见安装脚本 [Windows Install](https://github.com/ganweisoft/TOMs/blob/main/docs/windows/regist.bat)
+请见安装脚本 [Windows Install](https://github.com/ganweisoft/TOMs/blob/main/docs/shell/regist.bat)
 
 注意：Windows上运行安装脚本需要以管理员身份运行。
 
