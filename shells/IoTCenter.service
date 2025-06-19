@@ -1,12 +1,12 @@
 [Unit]
-Description=敢为IoTCenter服务
+Description=TOMs IoTCenter服务
 
 [Service]
 LimitCORE=infinity
 LimitNOFILE=65536
 LimitNPROC=65536
 Type=simple
-ExecStart=/opt/ganwei/IoTCenter/dotnet/dotnet /opt/ganwei/IoTCenter/bin/GWHost1.dll
+ExecStart=dotnet /opt/TOMs/IoTCenter/bin/GWHost1.dll
 ExecReload=/bin/kill -HUP $MAINPID 
 Restart=always
 
