@@ -1,42 +1,42 @@
 #!/bin/bash
 
-# 先执行设置脚本
-source ./IoTCenterWeb/shell/environment.sh
+# First execute the setup script
+source environment.sh
 
-# 打印安装目录
+# Print installation directory
 echo "install path: $GLOBAL_INSTALL_PATH"
 
-echo "启动IoTCenter安装程序"
+echo "Starting IoTCenter installation"
 echo "-----------------"
 
-# 检测系统架构
+# Detect system architecture
 get_arch=$(arch)
-echo "系统架构版本：$get_arch"
+echo "System architecture version: $get_arch"
 osName="Linux_x86_64"
 if [ "$get_arch" = "aarch64" ]; then
   osName="Arm64"
-  echo "-------arm平台---------"
+  echo "-------ARM platform---------"
 fi
 
-# 检查目标目录是否已存在
+# Check if target directory already exists
 if [ -d "$GLOBAL_INSTALL_PATH" ]; then
-  echo "$GLOBAL_INSTALL_PATH 目标路径文件夹已存在，安装结束。"
+  echo "$GLOBAL_INSTALL_PATH target directory already exists, installation aborted."
   exit 0
 fi
 
-# 创建安装目录
+# Create installation directory
 mkdir -p "$GLOBAL_INSTALL_PATH"
 
-echo "正在解压安装包到目标目录..."
+echo "Extracting package to target directory..."
 
 tar -zxvf "$osName.tar.gz" -C "$GLOBAL_INSTALL_PATH/"
 
-echo "正在注册服务"
-cd "$GLOBAL_INSTALL_PATH/services/" || { echo "无法进入服务目录！"; exit 1; }
+echo "Registering service"
+cd "$GLOBAL_INSTALL_PATH/services/" || { echo "Failed to enter service directory!"; exit 1; }
 pwd
 chmod u+x regist.sh
 ./regist.sh
 
 echo "-----------------"
-echo "安装程序执行完毕"
+echo "Installation completed"
 exit 0

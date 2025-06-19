@@ -1,11 +1,10 @@
-
-echo "开始反注册服务"
+echo "Starting service unregistration"
 pwd
-echo "当前路径为"$(pwd)
+echo "Current path is "$(pwd)
 echo "--------------------"
-echo "正在反注册IoTCenter 服务"
-systemctl kill IoTCenter 
+echo "Unregistering IoTCenter service"
+systemctl kill IoTCenter
 systemctl stop IoTCenter
-systemctl disable IoTCenter 
+systemctl disable IoTCenter
 rm -r /etc/systemd/system/IoTCenter.service
-echo "IoTCenter服务反注册已完成"
+echo "IoTCenter service unregistration completed"
