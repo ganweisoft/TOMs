@@ -31,9 +31,7 @@ TOMs 是一个完全开源、体系化、插件化、高性能、开箱即用、
 8. [License](#8-license)
 9. [测试](#9-测试)
 10. [发布](#10-发布)
-11. [覆盖率](#11-覆盖率)
-12. [贡献指南](#12-如何提交贡献)
-
+11. [贡献指南](#12-如何提交贡献)
 
 
 # 1. 简介
@@ -191,9 +189,6 @@ TOMs 测试说明，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 # 10. 发布
 TOMs 发布说明，请见[Releases](https://github.com/ganweisoft/TOMs/releases)
 
-# 11. 覆盖率
-TOMs 覆盖率，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
-
-## 12. 如何提交贡献
+## 11. 如何提交贡献
 
 我们非常欢迎开发者提交贡献, 如果您发现了一个bug或者有一些想法想要交流，欢迎提交一个[issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md).
