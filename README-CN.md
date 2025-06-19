@@ -182,9 +182,7 @@ sh ./docs/linux/install.sh
 
 ### 6.2 容器上安装
 
-```sh
-sh ./docs/container/runGW.sh
-```
+https://github.com/ganweisoft/TOMs/blob/main/docs/linux/install.sh
 
 ### 6.3 Windows 系统上安装
 
