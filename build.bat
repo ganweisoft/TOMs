@@ -287,6 +287,8 @@ rem 复制插件目录至发布目录
 move "subrepos\WebPlugins\src\back-end\plugins" "%webapi_dir%"
 rem 复制windows服务目录至发布目录
 move "subrepos\WebPlugins\src\back-end\services" "%release_dir%"
+rem 复制shells脚本目录至发布目录
+move ".\shells" "%release_dir%"
 call :GetTimestamp
 echo [!formatted_datetime!] 完成构建WebApi解决方案... >>%logs_dir%
 rem 结束Web APi构建
