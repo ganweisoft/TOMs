@@ -1,6 +1,6 @@
-<p align="center" dir="auto">
+<p align="left" dir="auto">
   <a href="https://opensource.ganweicloud.com" rel="nofollow">
-    <img width="300" height="200" style="max-width:100%;" src="https://github.com/ganweisoft/.github/blob/main/images/logo.png">
+    <img width="130" height="130" style="max-width:100%;" src="https://github.com/ganweisoft/.github/blob/main/images/logo.png">
   </a>
 </p>
 
