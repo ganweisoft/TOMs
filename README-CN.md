@@ -176,17 +176,16 @@ TOMs 打包，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 
 ## 6.1 Linux 系统上安装
 
-```sh
-sh ./docs/linux/install.sh
-```
+[Linux install](https://github.com/ganweisoft/TOMs/blob/main/docs/linux/install.sh)
 
 ### 6.2 容器上安装
 
-https://github.com/ganweisoft/TOMs/blob/main/docs/linux/install.sh
+[Docker install](https://github.com/ganweisoft/TOMs/blob/main/docs/container/runGW.sh)
 
 ### 6.3 Windows 系统上安装
 
-使用./docs/windows/regist.bat脚本注册服务，需要以管理员身份运行。
+注意：Windows上运行安装脚本需要以管理员身份运行。
+[Windows install](https://github.com/ganweisoft/TOMs/blob/main/docs/windows/regist.bat)
 
 # 7. 源码构建说明
 
