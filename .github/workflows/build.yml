@@ -110,6 +110,7 @@ jobs:
       run: |        
         Copy-Item -Path ./subrepos/WebPlugins/src/back-end/plugins -Destination ./release/IoTCenterWeb/publish/plugins -Recurse -Force
         Copy-Item -Path ./subrepos/WebPlugins/src/back-end/services -Destination ./release -Recurse -Force
+        Copy-Item -Path ./shells -Destination ./release -Recurse -Force
       shell: pwsh
 
     - name: Upload Artifacts
