@@ -150,7 +150,7 @@ git clone https://github.com/ganweisoft/TOMs
 # 4. 构建发布
 
 ## 4.1 本地构建
-TOMS 可以通过以下命令进行安装运行：
+TOMs 可以通过以下命令进行本地构建：
 ```bash
 TOMs.build.bat
 ```
@@ -163,12 +163,12 @@ TOMs.build.bat
 
 ## 5.1 Linux 系统上安装运行
 
-TOMS 可以通过以下命令进行安装运行：
+TOMs 可以通过以下命令进行安装运行：
 ```bash
 sh install.sh
 ```
 ### 5.2 Windows 系统上安装运行
-TOMS 可以通过以下命令进行安装运行：
+TOMs 可以通过以下命令进行安装运行：
 ```bash
 regist.bat
 ```
