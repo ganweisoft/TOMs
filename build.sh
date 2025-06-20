@@ -6,7 +6,7 @@ RELEASE_DIR="./Release"
 GATEWAY_DIR="$RELEASE_DIR/bin"
 WEBAPI_DIR="$RELEASE_DIR/IoTCenterWeb/publish"
 WWWROOT_DIR="$WEBAPI_DIR/wwwroot"
-NVM_DIR="src/front-end/nvm-setup.sh" # 假设你有离线安装脚本或手动安装逻辑
+NVM_DIR="src/front-end/nvm-setup.sh" # 【该脚本暂时没有，待处理】
 
 # 删除旧日志
 rm -f "$LOGS_DIR"
