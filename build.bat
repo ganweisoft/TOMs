@@ -12,7 +12,7 @@ del /q /f %logs_dir%
 call :GetTimestamp
 echo [!formatted_datetime!] 删除已生成的构建日志文件 >>%logs_dir%
 rem 设置实际发布目录
-set "release_dir=.\Release"
+set "release_dir=.\release"
 call :GetTimestamp
 echo [!formatted_datetime!] 设置整体发布目录路径: %release_dir% >>%logs_dir%
 rem 设置网关发布目录
@@ -247,7 +247,7 @@ rem DOTNET SDK CLI目录已找到继续执行后续逻辑
 rem 开始网关构建
 rem 复制数据库配置目录
 if not exist "%release_dir%\data" (
-    xcopy /E /I "subrepos\GrpcServer\src\config" "%release_dir%"    
+    xcopy "subrepos\GrpcServer\src\config" "%release_dir%" /E /I
 ) else (
     echo 数据库配置目录^(%release_dir%\data^)已存在，跳过处理... >>%logs_dir%
 )
@@ -296,18 +296,18 @@ rem 启动网关
 call :GetTimestamp
 echo [!formatted_datetime!] 正在启动网关，请稍后... >>%logs_dir%
 cd "%gateway_dir%"
-start cmd /k dotnet GWHost1.dll
-timeout /t 2 >nul
+rem start cmd /k dotnet GWHost1.dll rem --------------
+rem timeout /t 2 >nul rem --------------
 cd /d "%~dp0%"
 call :GetTimestamp
 echo [!formatted_datetime!] 正在启动WebApi，请稍后... >>%logs_dir%
 rem 启动Web APi
 cd "%webapi_dir%"
-start cmd /k dotnet IoTCenterWebApi.dll
+rem start cmd /k dotnet IoTCenterWebApi.dll rem --------------
 rem 启动Web
 cd /d "%~dp0%"
 call :GetTimestamp
-echo [!formatted_datetime!] 正在打开IoTCenter访问链接^(https://localhost:44380^)，请稍后... >>%logs_dir%
+rem echo [!formatted_datetime!] 正在打开IoTCenter访问链接^(https://localhost:44380^)，请稍后... >>%logs_dir% rem --------------
 rem 获取默认浏览器的协议关联（HTTP）
 for /f "tokens=2*" %%a in ('reg query "HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\https\UserChoice" /v ProgId') do set BROWSER=%%b
 rem 判断常见浏览器类型并调用

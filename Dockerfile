@@ -1,20 +1,10 @@
-# Base image
-FROM mcr.microsoft.com/dotnet/runtime:9.0
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
+WORKDIR /app
+COPY /release .
 
-# Timezone configuration
-ENV TZ=Asia/Shanghai
-RUN apt-get update && \
-    apt-get install -y tzdata && \
-    ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-    dpkg-reconfigure -f noninteractive tzdata
+ENV ASPNETCORE_URLS=https://+:44380;http://+:44381
+EXPOSE 44380 44381
 
-# Copy files
-COPY IoTCenter /opt/ganwei/IoTCenter
-COPY runGW.sh /opt/ganwei/
 
-# Persist data volumes
-VOLUME ["/var/gwiot/database", "/var/gwiot/data"]
-EXPOSE 44380
-
-# Startup script
-CMD ["sh", "/opt/ganwei/runGW.sh"]
+CMD ["sh", "/app/shells/restart.sh"]
+ENTRYPOINT ["dotnet", "/app/IoTCenterWeb/publish/IoTCenterWebApi.dll"]
