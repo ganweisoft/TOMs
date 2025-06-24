@@ -4,11 +4,17 @@
   </a>
 </p>
 
-[![GitHub license](https://camo.githubusercontent.com/5eaf3ed8a7e8ccb15c21d967b8635ac79e8b1865da3a5ccf78d2572a3e10738a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f646f746e65742f6173706e6574636f72653f636f6c6f723d253233306230267374796c653d666c61742d737175617265)](https://github.com/ganweisoft/TOMs/blob/main/LICENSE) [![Build Status](https://github.com/ganweisoft/TOMs/actions/workflows/build.yml/badge.svg)](https://github.com/ganweisoft/TOMs/actions) ![](https://img.shields.io/badge/join-discord-infomational)
+[![GitHub license](https://camo.githubusercontent.com/5eaf3ed8a7e8ccb15c21d967b8635ac79e8b1865da3a5ccf78d2572a3e10738a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f646f746e65742f6173706e6574636f72653f636f6c6f723d253233306230267374796c653d666c61742d737175617265)](https://github.com/ganweisoft/TOMs/blob/main/LICENSE) [![Build Status](https://github.com/ganweisoft/TOMs/actions/workflows/build.yml/badge.svg)](https://github.com/ganweisoft/TOMs/actions) ![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white) ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white) ![](https://img.shields.io/badge/join-discord-infomational)
 
 简体中文 | [English](README.md)
 
-TOMs 是一个完全开源、体系化、插件化、高性能、开箱即用、可用于生产环境，是物联网行业应用的一站式开发框架。TOMs 核心代码采用C#编写，基于最新版本的.NET 9.0构建，其扩展出来的插件可以采用Java、 Python 、C++、Go、Rust等主流语言编写。TOMs 支持容器部署、本地部署（Windows、Linux、MacOS）、端侧低功耗设备部署（ARM、RISC-V）。
+**TOMs**的含义：
+|字母  | 解释 |
+|----|---------------|
+|**T**| Translation，把各种外部异构数据转化为统一的数据模型 |
+|**O**| Orchestrator，数据处理、业务流程以及UI界面可自定义编排|
+|**M**| Module，所有功能全部插件化，可以自由安装卸载 |
+|**s**| 复数，开发者可以贡献各类插件并实现在线交易，聚沙成塔，共筑生态 |
 
 ##  目录
 
@@ -29,13 +35,12 @@ TOMs 是一个完全开源、体系化、插件化、高性能、开箱即用、
 6. [License](#6-license)
 7. [测试](#7-测试)
 8. [发布](#8-发布)
-9. [贡献指南](#9-如何提交贡献)
+9. [子仓库列表](#9-子仓库列表)
+10. [贡献指南](#9-如何提交贡献)
 
 
 # 1. 简介
-TOMs（Thing-Oriented Middleware System）是一款面向物联网领域的**企业级开源开发框架**，基于MIT协议，为工业互联网、智慧城市等场景提供**全生命周期解决方案**。框架采用模块化架构设计，集成设备接入、协议转换、边缘计算及应用开发能力，支持从端侧嵌入式设备到云端服务的完整技术栈覆盖。
-
-核心引擎基于.NET 9.0运行时构建，采用C# 12.0实现高性能组件，并通过AOT编译技术优化资源占用。其创新性的**插件化架构**支持gRPC微服务解耦，提供Java/Python/C++/Go/Rust等多语言SDK，实现核心系统与功能插件的动态扩展与热插拔。
+TOMs 是一个完全开源、高性能、体系化、插件化、面向各种智慧化场景的通用开发框架。TOMs的基于最新的 .NET 9.0 构建，其扩展插件可以使用 C#、 Java、Python、C++、Go 和 Rust 等编程语言进行开发。TOMs 支持云原生部署、本地部署（Windows、Linux、macOS）和嵌入式设备部署。
 
 <a id="框架概述"></a>
 # 2. 框架概述
@@ -174,7 +179,7 @@ TOMs 可以通过以下命令进行安装运行：
 regist.bat
 ```
 
-注意：Windows上运行安装脚本需要以管理员身份运行。
+💡注意：Windows上运行安装脚本需要以管理员身份运行。
 
 # 6. License
 
@@ -187,6 +192,19 @@ TOMs 测试说明，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 # 8. 发布
 TOMs 发布说明，请见[Releases](https://github.com/ganweisoft/TOMs/releases)
 
-## 9. 如何提交贡献
+# 9. 子仓库列表
+📦 核心仓库
+| 徽章 | 仓库 | 描述 | 状态 |
+|------------|------------|-------------|--------|
+|<img src="https://raw.githubusercontent.com/ganweisoft/Gateway/main/GWDataCenter/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/Gateway) | 高性能的、各类设备插件的集中通讯调度模块，把各类异构数据统一转换为标准模型，完成实时数据的存储、报警、联动、任务规划等核心功能 | ![Active](https://img.shields.io/badge/status-active-brightgreen) |
+|<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | 采用 gRPC（Google Remote Procedure Call）协议 构建轻量级、高性能的代理服务框架，基于 Protocol Buffers（protobuf） 接口定义语言进行通信接口建模，支持跨语言、跨平台的服务集成与调用 | ![Active](https://img.shields.io/badge/status-active-brightgreen) |
+|<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | 基于ASP.NET Core和VUE的模块化和插件化应用程序框架，基于松耦合、高内聚的设计理念，构建了一个可扩展、易维护的应用框架，通过将核心逻辑与功能组件完全解耦，可进行二次开发 | ![Active](https://img.shields.io/badge/status-active-brightgreen)
+
+🛠️ 工具仓库
+| 徽章 | 仓库 | 描述 | 状态 |
+|------------|------------|-------------|--------|
+|<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | 原生支持 Modbus 与 OPC UA（Open Platform Communications Unified Architecture） 两种工业自动化领域主流通信协议，提供高效、可靠的数据采集与设备交互能力。 | ![Active](https://img.shields.io/badge/status-active-brightgreen)
+
+# 10. 如何提交贡献
 
 我们非常欢迎开发者提交贡献, 如果您发现了一个bug或者有一些想法想要交流，欢迎提交一个[issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md).

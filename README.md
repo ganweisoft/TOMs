@@ -4,13 +4,17 @@
   </a>
 </p>
 
-[![GitHub license](https://camo.githubusercontent.com/5eaf3ed8a7e8ccb15c21d967b8635ac79e8b1865da3a5ccf78d2572a3e10738a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f646f746e65742f6173706e6574636f72653f636f6c6f723d253233306230267374796c653d666c61742d737175617265)](https://github.com/ganweisoft/TOMs/blob/main/LICENSE) [![Build Status](https://github.com/ganweisoft/TOMs/actions/workflows/build.yml/badge.svg)](https://github.com/ganweisoft/TOMs/actions)
- ![](https://img.shields.io/badge/join-discord-infomational)
+[![GitHub license](https://camo.githubusercontent.com/5eaf3ed8a7e8ccb15c21d967b8635ac79e8b1865da3a5ccf78d2572a3e10738a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f646f746e65742f6173706e6574636f72653f636f6c6f723d253233306230267374796c653d666c61742d737175617265)](https://github.com/ganweisoft/TOMs/blob/main/LICENSE) [![Build Status](https://github.com/ganweisoft/TOMs/actions/workflows/build.yml/badge.svg)](https://github.com/ganweisoft/TOMs/actions) ![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white) ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white) ![](https://img.shields.io/badge/join-discord-infomational)
 
 English | [简体中文](README-CN.md)
 
-TOMs is a fully open-source, systematic, plugin-based, high-performance, out-of-the-box framework ready for production environments, serving as a one-stop development solution for IoT industry applications. The core code of TOMs is written in C# and built on the latest .NET 9.0, while its extended plugins can be developed using mainstream languages such as Java, Python, C++, Go, and Rust. TOMs supports containerized deployment, local deployment (Windows, Linux, macOS), and deployment on low-power edge devices (ARM, RISC-V).
-
+**The Meaning of TOMs**：
+|Letter  | Explanation |
+|----|---------------|
+|**T**| Translation，Converts heterogeneous external data into a unified data model |
+|**O**| Orchestrator，Allows customizable orchestration of data processing, business workflows, and UI interfaces|
+|**M**| Module，All features are plugin-based, supporting free installation and uninstallation |
+|**s**| Plural form (s)，Developers can contribute various plugins and enable online transactions, gathering contributions to build a thriving ecosystem |
 
 ## Table of Contents
 
@@ -31,12 +35,12 @@ TOMs is a fully open-source, systematic, plugin-based, high-performance, out-of-
 6. [License](#6-license)
 7. [Testing](#7-testing)
 8. [Release Notes](#8-release-notes)
-9. [Contribution Guide](#9-how-to-contribute)
+9. [Related Sub-Repositories](#9-Related-Sub-Repositories)
+10. [Contribution Guide](#10-how-to-contribute)
 
 # 1. Introduction
-TOMs (Thing-Oriented Middleware System) is an **enterprise-grade open-source development framework** for IoT scenarios, licensed under MIT, providing **full lifecycle solutions** for industrial internet, smart cities, and similar domains. The framework adopts modular architecture, integrating device connectivity, protocol conversion, edge computing, and application development capabilities, supporting complete tech stack coverage from edge devices to cloud services.
 
-The core engine is built on .NET 9.0 runtime with C# 12.0 for high-performance components, optimized via AOT compilation for resource efficiency. Its innovative **plugin architecture** supports gRPC microservices decoupling, offering multi-language SDKs (Java/Python/C++/Go/Rust) for dynamic extension and hot-swapping of core system and plugins.
+TOMs is a fully open-source, high-performance, systematic, plugin-oriented, and scenario-agnostic general-purpose development framework. Built on the latest .NET 9.0, TOMs supports extension plugins developed in programming languages such as C#, Java, Python, C++, Go, and Rust. It is compatible with cloud-native deployments, local deployments (Windows, Linux, macOS), and embedded device deployments, catering to diverse intelligent application scenarios.
 
 <a id="framework-overview"></a>
 # 2. Framework Overview
@@ -187,6 +191,19 @@ See TOMs testing documentation at [Wiki](https://github.com/ganweisoft/TOMs/wiki
 
 See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/releases)
 
-## 9. How to Contribute
+# 9. Related Sub-Repositories
+📦 Core Components
+| Badge | Repository | Description | Status |
+|------------|------------|-------------|--------|
+|<img src="https://raw.githubusercontent.com/ganweisoft/Gateway/main/GWDataCenter/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/Gateway) | high-performance, centralized communication and scheduling module for various device plugins. It uniformly converts heterogeneous data into standardized models and delivers core functionalities such as real-time data storage, alarm triggering, linkage control, and task planning | ![Active](https://img.shields.io/badge/status-active-brightgreen) |
+|<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | Builds a lightweight, high-performance proxy service framework using the gRPC (Google Remote Procedure Call) protocol. It models communication interfaces using the Protocol Buffers (protobuf) interface definition language, and supports cross-language and cross-platform service integration and invocation | ![Active](https://img.shields.io/badge/status-active-brightgreen) |
+|<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | A modular and pluggable application framework based on ASP.NET Core and VUE. Built on the design principles of loose coupling and high cohesion, it provides an extensible and maintainable application framework. By completely decoupling core logic from functional components, it enables secondary development | ![Active](https://img.shields.io/badge/status-active-brightgreen)
+
+🛠️ Tools & Utilities
+| Badge | Repository | Description | Status |
+|------------|------------|-------------|--------|
+|<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | Natively support Modbus and OPC UA (Open Platform Communications Unified Architecture), two of the most widely used communication protocols in the field of industrial automation, providing efficient and reliable data acquisition and device interaction capabilities | ![Active](https://img.shields.io/badge/status-active-brightgreen)
+
+# 10. How to Contribute
 
 We welcome contributions! If you find a bug or have ideas to discuss, please submit an [issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md)
