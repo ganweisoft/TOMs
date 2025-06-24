@@ -8,7 +8,7 @@
 
 English | [简体中文](README-CN.md)
 
-**The Meaning of TOMs**：
+**The Meaning of TOMs**
 |Letter  | Explanation |
 |----|---------------|
 |**T**| Translation，Converts heterogeneous external data into a unified data model |
