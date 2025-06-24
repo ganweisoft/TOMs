@@ -8,7 +8,13 @@
 
 English | [简体中文](README-CN.md)
 
-TOMs is a fully open-source, high-performance, systematic, plugin-oriented, and scenario-agnostic general-purpose development framework. Built on the latest .NET 9.0, TOMs supports extension plugins developed in programming languages such as C#, Java, Python, C++, Go, and Rust. It is compatible with cloud-native deployments, local deployments (Windows, Linux, macOS), and embedded device deployments, catering to diverse intelligent application scenarios.
+**The Meaning of TOMs**：
+|Letter  | Explanation |
+|----|---------------|
+|**T**| Translation，Converts heterogeneous external data into a unified data model |
+|**O**| Orchestrator，Allows customizable orchestration of data processing, business workflows, and UI interfaces|
+|**M**| Module，All features are plugin-based, supporting free installation and uninstallation |
+|**s**| Plural form (s)，Developers can contribute various plugins and enable online transactions, gathering contributions to build a thriving ecosystem |
 
 ## Table of Contents
 
@@ -33,9 +39,8 @@ TOMs is a fully open-source, high-performance, systematic, plugin-oriented, and 
 10. [Contribution Guide](#10-how-to-contribute)
 
 # 1. Introduction
-TOMs (Thing-Oriented Middleware System) is an **enterprise-grade open-source development framework** for IoT scenarios, licensed under MIT, providing **full lifecycle solutions** for industrial internet, smart cities, and similar domains. The framework adopts modular architecture, integrating device connectivity, protocol conversion, edge computing, and application development capabilities, supporting complete tech stack coverage from edge devices to cloud services.
 
-The core engine is built on .NET 9.0 runtime with C# 12.0 for high-performance components, optimized via AOT compilation for resource efficiency. Its innovative **plugin architecture** supports gRPC microservices decoupling, offering multi-language SDKs (Java/Python/C++/Go/Rust) for dynamic extension and hot-swapping of core system and plugins.
+TOMs is a fully open-source, high-performance, systematic, plugin-oriented, and scenario-agnostic general-purpose development framework. Built on the latest .NET 9.0, TOMs supports extension plugins developed in programming languages such as C#, Java, Python, C++, Go, and Rust. It is compatible with cloud-native deployments, local deployments (Windows, Linux, macOS), and embedded device deployments, catering to diverse intelligent application scenarios.
 
 <a id="framework-overview"></a>
 # 2. Framework Overview
