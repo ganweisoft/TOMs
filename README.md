@@ -44,7 +44,7 @@ English | [简体中文](README-CN.md)
 
 # 1. Introduction
 
-**TOMs** is a fully open-source, high-performance, systematic, plugin-oriented, and general-purpose development framework designed for various intelligent scenarios. **TOMs** is built on the latest **.NET 9.0**, and its extension plugins can be developed using programming languages such as **C#**, **Java**, **Python**, **C++**, **Go**, and **Rust**. TOMs supports cloud-native deployment, local deployment (**Windows**, **Linux**, **macOS**), and embedded device deployment.
+**TOMs** is a fully open-source, high-performance, systematic, plugin-oriented, and general-purpose development framework designed for various intelligent scenarios. **TOMs** is built on the latest **.NET 9.0**, and its extension plugins can be developed using programming languages such as **C#**, **Java**, **Python**, **C++**, **Go**, and **Rust**. **TOMs** supports cloud-native deployment, local deployment (**Windows**, **Linux**, **macOS**), and embedded device deployment.
 
 <a id="framework-overview"></a>
 # 2. Framework Overview
