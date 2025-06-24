@@ -202,14 +202,14 @@ TOMs 发布说明，请见[Releases](https://github.com/ganweisoft/TOMs/releases
 📦 核心仓库
 | 徽章 | 仓库 | 描述 | 状态 |
 |------------|------------|-------------|--------|
-|<img src="https://raw.githubusercontent.com/ganweisoft/Gateway/main/GWDataCenter/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/Gateway) | 高性能的、各类设备插件的集中通讯调度模块，把各类异构数据统一转换为标准模型，完成实时数据的存储、报警、联动、任务规划等核心功能 | ![Active](https://img.shields.io/badge/status-active-brightgreen) |
-|<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | 采用 gRPC（Google Remote Procedure Call）协议 构建轻量级、高性能的代理服务框架，基于 Protocol Buffers（protobuf） 接口定义语言进行通信接口建模，支持跨语言、跨平台的服务集成与调用 | ![Active](https://img.shields.io/badge/status-active-brightgreen) |
-|<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | 基于ASP.NET Core和VUE的模块化和插件化应用程序框架，基于松耦合、高内聚的设计理念，构建了一个可扩展、易维护的应用框架，通过将核心逻辑与功能组件完全解耦，可进行二次开发 | ![Active](https://img.shields.io/badge/status-active-brightgreen)
+|<img src="https://raw.githubusercontent.com/ganweisoft/Gateway/main/GWDataCenter/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/Gateway) | 高性能的、各类设备插件的集中通讯调度模块，把各类异构数据统一转换为标准模型，完成实时数据的存储、报警、联动、任务规划等核心功能 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
+|<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | 采用 gRPC（Google Remote Procedure Call）协议 构建轻量级、高性能的代理服务框架，基于 Protocol Buffers（protobuf） 接口定义语言进行通信接口建模，支持跨语言、跨平台的服务集成与调用 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
+|<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | 基于ASP.NET Core和VUE的模块化和插件化应用程序框架，基于松耦合、高内聚的设计理念，构建了一个可扩展、易维护的应用框架，通过将核心逻辑与功能组件完全解耦，可进行二次开发 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
 
 🛠️ 工具仓库
 | 徽章 | 仓库 | 描述 | 状态 |
 |------------|------------|-------------|--------|
-|<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | 原生支持 Modbus 与 OPC UA（Open Platform Communications Unified Architecture） 两种工业自动化领域主流通信协议，提供高效、可靠的数据采集与设备交互能力。 | ![Active](https://img.shields.io/badge/status-active-brightgreen)
+|<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | 原生支持 Modbus 与 OPC UA（Open Platform Communications Unified Architecture） 两种工业自动化领域主流通信协议，提供高效、可靠的数据采集与设备交互能力。 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
 
 # 10. 如何提交贡献
 
