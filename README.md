@@ -30,7 +30,8 @@ TOMs is a fully open-source, systematic, plugin-based, high-performance, out-of-
 6. [License](#6-license)
 7. [Testing](#7-testing)
 8. [Release Notes](#8-release-notes)
-9. [Contribution Guide](#9-how-to-contribute)
+9. [Related Sub-Repositories](#9-Related-Sub-Repositories)
+10. [Contribution Guide](#10-how-to-contribute)
 
 # 1. Introduction
 TOMs (Thing-Oriented Middleware System) is an **enterprise-grade open-source development framework** for IoT scenarios, licensed under MIT, providing **full lifecycle solutions** for industrial internet, smart cities, and similar domains. The framework adopts modular architecture, integrating device connectivity, protocol conversion, edge computing, and application development capabilities, supporting complete tech stack coverage from edge devices to cloud services.
@@ -186,6 +187,19 @@ See TOMs testing documentation at [Wiki](https://github.com/ganweisoft/TOMs/wiki
 
 See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/releases)
 
-## 9. How to Contribute
+# 9. Related Sub-Repositories
+📦 Core Components
+| Badge | Repository | Description | Status |
+|------------|------------|-------------|--------|
+|<img src="https://raw.githubusercontent.com/ganweisoft/Gateway/main/GWDataCenter/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/Gateway) | high-performance, centralized communication and scheduling module for various device plugins. It uniformly converts heterogeneous data into standardized models and delivers core functionalities such as real-time data storage, alarm triggering, linkage control, and task planning | ![Active](https://img.shields.io/badge/status-active-brightgreen) |
+|<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | Builds a lightweight, high-performance proxy service framework using the gRPC (Google Remote Procedure Call) protocol. It models communication interfaces using the Protocol Buffers (protobuf) interface definition language, and supports cross-language and cross-platform service integration and invocation | ![Active](https://img.shields.io/badge/status-active-brightgreen) |
+|<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | A modular and pluggable application framework based on ASP.NET Core and VUE. Built on the design principles of loose coupling and high cohesion, it provides an extensible and maintainable application framework. By completely decoupling core logic from functional components, it enables secondary development | ![Active](https://img.shields.io/badge/status-active-brightgreen)
+
+🛠️ Tools & Utilities
+| Badge | Repository | Description | Status |
+|------------|------------|-------------|--------|
+|<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | Natively support Modbus and OPC UA (Open Platform Communications Unified Architecture), two of the most widely used communication protocols in the field of industrial automation, providing efficient and reliable data acquisition and device interaction capabilities | ![Active](https://img.shields.io/badge/status-active-brightgreen)
+
+# 10. How to Contribute
 
 We welcome contributions! If you find a bug or have ideas to discuss, please submit an [issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md)
