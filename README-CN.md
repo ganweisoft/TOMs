@@ -8,7 +8,7 @@
 
 简体中文 | [English](README.md)
 
-TOMs 是一个完全开源、体系化、插件化、高性能、开箱即用、可用于生产环境，是物联网行业应用的一站式开发框架。TOMs 核心代码采用C#编写，基于最新版本的.NET 9.0构建，其扩展出来的插件可以采用Java、 Python 、C++、Go、Rust等主流语言编写。TOMs 支持容器部署、本地部署（Windows、Linux、MacOS）、端侧低功耗设备部署（ARM、RISC-V）。
+TOMs 是一个完全开源、高性能、体系化、插件化、面向各种智慧化场景的通用开发框架。TOMs的基于最新的 .NET 9.0 构建，其扩展插件可以使用 C#、 Java、Python、C++、Go 和 Rust 等编程语言进行开发。TOMs 支持云原生部署、本地部署（Windows、Linux、macOS）和嵌入式设备部署。
 
 ##  目录
 
@@ -29,8 +29,8 @@ TOMs 是一个完全开源、体系化、插件化、高性能、开箱即用、
 6. [License](#6-license)
 7. [测试](#7-测试)
 8. [发布](#8-发布)
-9. [贡献指南](#9-如何提交贡献)
-10. [子仓库列表](#10-子仓库列表)
+9. [子仓库列表](#10-子仓库列表)
+10. [贡献指南](#9-如何提交贡献)
 
 
 # 1. 简介
@@ -188,11 +188,7 @@ TOMs 测试说明，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 # 8. 发布
 TOMs 发布说明，请见[Releases](https://github.com/ganweisoft/TOMs/releases)
 
-# 9. 如何提交贡献
-
-我们非常欢迎开发者提交贡献, 如果您发现了一个bug或者有一些想法想要交流，欢迎提交一个[issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md).
-
-# 10. 子仓库列表
+# 9. 子仓库列表
 📦 核心仓库
 | 徽章 | 仓库 | 描述 | 状态 |
 |------------|------------|-------------|--------|
@@ -204,3 +200,7 @@ TOMs 发布说明，请见[Releases](https://github.com/ganweisoft/TOMs/releases
 | 徽章 | 仓库 | 描述 | 状态 |
 |------------|------------|-------------|--------|
 |<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | 原生支持 Modbus 与 OPC UA（Open Platform Communications Unified Architecture） 两种工业自动化领域主流通信协议，提供高效、可靠的数据采集与设备交互能力。 | ![Active](https://img.shields.io/badge/status-active-brightgreen)
+
+# 10. 如何提交贡献
+
+我们非常欢迎开发者提交贡献, 如果您发现了一个bug或者有一些想法想要交流，欢迎提交一个[issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md).
