@@ -128,17 +128,18 @@ graph TD
 #### Linux
 
 1. **Ubuntu/Debian**
-   ```bash
-   wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
-   chmod +x dotnet-install.sh
-   ./dotnet-install.sh --channel 9.0 --runtime aspnetcore
-   ```
+ ```shell
+wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+sudo apt-get update
+sudo apt-get install -y aspnetcore-runtime-9.0
+```
 
 2. **CentOS/RHEL**
-   ```bash
-   sudo dnf install https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
-   sudo dnf install dotnet-sdk-9.0
-   ```
+```shell
+sudo rpm -Uvh https://packages.microsoft.com/config/centos/$(rpm -E %centos)/packages-microsoft-prod.rpm
+sudo yum install aspnetcore-runtime-9.0
+```
 
 ## 3.3 Repository Cloning
 
