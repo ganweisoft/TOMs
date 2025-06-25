@@ -22,6 +22,19 @@
 
 ![应用场景](/media/img-CN/application-scenarios-cn.jpg)
 
+# 子仓库列表
+📦 核心仓库
+| 徽章 | 仓库 | 描述 | 状态 |
+|------------|------------|-------------|--------|
+|<img src="https://raw.githubusercontent.com/ganweisoft/Gateway/main/GWDataCenter/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/Gateway) | 高性能的、各类设备插件的集中通讯调度模块，把各类异构数据统一转换为标准模型，完成实时数据的存储、报警、联动、任务规划等核心功能 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
+|<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | 采用 gRPC（Google Remote Procedure Call）协议 构建轻量级、高性能的代理服务框架，基于 Protocol Buffers（protobuf） 接口定义语言进行通信接口建模，支持跨语言、跨平台的服务集成与调用 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
+|<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | 基于ASP.NET Core和VUE的模块化和插件化应用程序框架，基于松耦合、高内聚的设计理念，构建了一个可扩展、易维护的应用框架，通过将核心逻辑与功能组件完全解耦，可进行二次开发 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
+
+🛠️ 工具仓库
+| 徽章 | 仓库 | 描述 | 状态 |
+|------------|------------|-------------|--------|
+|<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | 原生支持 Modbus 与 OPC UA（Open Platform Communications Unified Architecture） 两种工业自动化领域主流通信协议，提供高效、可靠的数据采集与设备交互能力。 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
+
 ## 软件界面
 
 ##  目录
@@ -41,8 +54,7 @@
 5. [License](#5-license)
 6. [测试](#6-测试)
 7. [发布](#7-发布)
-8. [子仓库列表](#8-子仓库列表)
-9. [贡献指南](#9-如何提交贡献)
+8. [贡献指南](#8-如何提交贡献)
 
 <a id="框架概述"></a>
 # 1. 框架概述
@@ -79,8 +91,8 @@
 |--------------|--------------------------------------------------------------------------|
 | **操作系统** | Windows 11 / Linux (Ubuntu 22.04+/Debian 12/Fedora 40+等) / Linux国产操作系统（例如：OpenEuler，Kylin等） / macOS 13+        |
 | **架构**     | x64/ARM64（推荐x64架构）                                                 |
-| **内存**     | 最低4GB（推荐8GB+）                                                      |
-| **磁盘空间** | 至少2GB可用空间                                                          |
+| **内存**     | 最低1GB（推荐8GB+）                                                      |
+| **磁盘空间** | 至少500M可用空间                                                          |
 
 ###  2.2.2 安装步骤
 
@@ -171,19 +183,6 @@ TOMs 测试说明，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
 # 7. 发布
 TOMs 发布说明，请见[Releases](https://github.com/ganweisoft/TOMs/releases)
 
-# 8. 子仓库列表
-📦 核心仓库
-| 徽章 | 仓库 | 描述 | 状态 |
-|------------|------------|-------------|--------|
-|<img src="https://raw.githubusercontent.com/ganweisoft/Gateway/main/GWDataCenter/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/Gateway) | 高性能的、各类设备插件的集中通讯调度模块，把各类异构数据统一转换为标准模型，完成实时数据的存储、报警、联动、任务规划等核心功能 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
-|<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | 采用 gRPC（Google Remote Procedure Call）协议 构建轻量级、高性能的代理服务框架，基于 Protocol Buffers（protobuf） 接口定义语言进行通信接口建模，支持跨语言、跨平台的服务集成与调用 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
-|<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | 基于ASP.NET Core和VUE的模块化和插件化应用程序框架，基于松耦合、高内聚的设计理念，构建了一个可扩展、易维护的应用框架，通过将核心逻辑与功能组件完全解耦，可进行二次开发 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
-
-🛠️ 工具仓库
-| 徽章 | 仓库 | 描述 | 状态 |
-|------------|------------|-------------|--------|
-|<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | 原生支持 Modbus 与 OPC UA（Open Platform Communications Unified Architecture） 两种工业自动化领域主流通信协议，提供高效、可靠的数据采集与设备交互能力。 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
-
-# 9. 如何提交贡献
+# 8. 如何提交贡献
 
 我们非常欢迎开发者提交贡献, 如果您发现了一个bug或者有一些想法想要交流，欢迎提交一个[issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md).
