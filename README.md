@@ -70,9 +70,9 @@ English | [简体中文](README-CN.md)
 
 ## 2.2 .NET 9.0 Runtime Installation 
 
-### 2.2.1 System Requirements
+### 2.2.1 System Suggests 
 
-| Component   | Requirements                                                          |
+| Component   | Explanation                                                          |
 |-------------|-----------------------------------------------------------------------|
 | **OS**      | Windows 11 / Linux (Ubuntu 22.04+, Debian 12, Fedora 40+, etc.) / Domestic Linux OS (e.g., OpenEuler, Kylin, Deepin) / macOS 13+     |
 | **Arch**    | x64/Arm64 (x64 recommended)                                          |
