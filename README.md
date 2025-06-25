@@ -154,7 +154,7 @@ Run installation with:
 ```bash
 regist.bat
 ```
-💡Note that: Requires Administrator privileges on Windows
+💡Note: Requires Administrator privileges on Windows
 
 # 5. License
 
