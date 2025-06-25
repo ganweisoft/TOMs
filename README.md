@@ -22,7 +22,8 @@ English | [简体中文](README-CN.md)
 
 ![应用场景](/media/img/application-scenarios-en.jpg)
 
-# Related Sub-Repositories
+**Related Sub-Repositories**
+
 📦 Core Components
 | Badge | Repository | Description | Status |
 |------------|------------|-------------|--------|
