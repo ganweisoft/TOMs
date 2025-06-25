@@ -22,6 +22,19 @@ English | [简体中文](README-CN.md)
 
 ![应用场景](/media/img/application-scenarios-en.jpg)
 
+# Related Sub-Repositories
+📦 Core Components
+| Badge | Repository | Description | Status |
+|------------|------------|-------------|--------|
+|<img src="https://raw.githubusercontent.com/ganweisoft/Gateway/main/GWDataCenter/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/Gateway) | high-performance, centralized communication and scheduling module for various device plugins. It uniformly converts heterogeneous data into standardized models and delivers core functionalities such as real-time data storage, alarm triggering, linkage control, and task planning | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
+|<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | Builds a lightweight, high-performance proxy service framework using the gRPC (Google Remote Procedure Call) protocol. It models communication interfaces using the Protocol Buffers (protobuf) interface definition language, and supports cross-language and cross-platform service integration and invocation |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
+|<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | A modular and pluggable application framework based on ASP.NET Core and VUE. Built on the design principles of loose coupling and high cohesion, it provides an extensible and maintainable application framework. By completely decoupling core logic from functional components, it enables secondary development |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
+
+🛠️ Tools & Utilities
+| Badge | Repository | Description | Status |
+|------------|------------|-------------|--------|
+|<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | Natively support Modbus and OPC UA (Open Platform Communications Unified Architecture), two of the most widely used communication protocols in the field of industrial automation, providing efficient and reliable data acquisition and device interaction capabilities |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
+
 ## Table of Contents
 
 1. [Framework Overview](#1-framework-overview)
@@ -39,8 +52,7 @@ English | [简体中文](README-CN.md)
 5. [License](#5-license)
 6. [Testing](#6-testing)
 7. [Release Notes](#7-release-notes)
-8. [Related Sub-Repositories](#8-Related-Sub-Repositories)
-9. [Contribution Guide](#9-how-to-contribute)
+8. [Contribution Guide](#8-how-to-contribute)
 
 <a id="framework-overview"></a>
 # 1. Framework Overview
@@ -76,8 +88,8 @@ English | [简体中文](README-CN.md)
 |-------------|-----------------------------------------------------------------------|
 | **OS**      | Windows 11 / Linux (Ubuntu 22.04+, Debian 12, Fedora 40+, etc.) / Domestic Linux OS (e.g., OpenEuler, Kylin, Deepin) / macOS 13+     |
 | **Arch**    | x64/Arm64 (x64 recommended)                                          |
-| **Memory**  | Minimum 4GB (8GB+ recommended)                                       |
-| **Storage** | At least 2GB free space                                              |
+| **Memory**  | Minimum 1GB (8GB+ recommended)                                       |
+| **Storage** | At least 500M free space                                              |
 
 ### 2.2.2 Installation Steps
 
@@ -168,19 +180,6 @@ See TOMs testing documentation at [Wiki](https://github.com/ganweisoft/TOMs/wiki
 
 See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/releases)
 
-# 8. Related Sub-Repositories
-📦 Core Components
-| Badge | Repository | Description | Status |
-|------------|------------|-------------|--------|
-|<img src="https://raw.githubusercontent.com/ganweisoft/Gateway/main/GWDataCenter/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/Gateway) | high-performance, centralized communication and scheduling module for various device plugins. It uniformly converts heterogeneous data into standardized models and delivers core functionalities such as real-time data storage, alarm triggering, linkage control, and task planning | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
-|<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | Builds a lightweight, high-performance proxy service framework using the gRPC (Google Remote Procedure Call) protocol. It models communication interfaces using the Protocol Buffers (protobuf) interface definition language, and supports cross-language and cross-platform service integration and invocation |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
-|<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | A modular and pluggable application framework based on ASP.NET Core and VUE. Built on the design principles of loose coupling and high cohesion, it provides an extensible and maintainable application framework. By completely decoupling core logic from functional components, it enables secondary development |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
-
-🛠️ Tools & Utilities
-| Badge | Repository | Description | Status |
-|------------|------------|-------------|--------|
-|<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | Natively support Modbus and OPC UA (Open Platform Communications Unified Architecture), two of the most widely used communication protocols in the field of industrial automation, providing efficient and reliable data acquisition and device interaction capabilities |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
-
-# 9. How to Contribute
+# 8. How to Contribute
 
 We welcome contributions! If you find a bug or have ideas to discuss, please submit an [issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md)
