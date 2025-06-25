@@ -77,7 +77,7 @@ English | [简体中文](README-CN.md)
 | **Windows** | Windows 10, Windows 11, Windows Server 2012+          | x86/x64/Arm64          | Nano Server is supported in Windows Server 2019 and 2022    |
 | **Linux**   | OpenEuler, Kylin, OpenKylin, Deepin, UOS, and other domestic operating systems      | x64/Arm64               |  |
 |             | Ubuntu 22.04+, Debian 12, RHEL(8,9), CentOS 9, Fedora(40,41), openSUSE Leap(15.5,15,6), SUSE Enterprise Linux(15.5,15,6), Alpine 3.19+ | x64/Arm64 |  |
-| **macOS**   | macOS 13(Ventura), macOS 14(Sonoma), macOS 15(Sequoia)                      | Arm64               |                           |
+| **macOS**   | macOS 13(Ventura), macOS 14(Sonoma), macOS 15(Sequoia)                      | x64/Arm64               |                           |
 
 💡Note: As of June 30, 2024, all versions of CentOS Linux have reached end-of-life (EOL). It is recommended to migrate to alternative operating systems.
 
