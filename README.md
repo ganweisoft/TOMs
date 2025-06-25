@@ -60,14 +60,13 @@ English | [简体中文](README-CN.md)
 ## 2.1 Supported OS
 
 | OS          | Supported Versions                     | Architectures      | Notes                      |
-| ----------- | -------------------------------------- | ------------------ | -------------------------- |
-| **Windows** | Client 7 SP1+, 8.1, 10 1607+           | x64, x86           | Nano Server supports ARM32 |
-|             | Server 2012 R2+                        |                    |                           |
-| **macOS**   | Mac OS X 10.13+                        | x64                |                           |
-| **Linux**   | RHEL 6+, CentOS 7/8, Oracle 7/8        | x64                | MS/Red Hat/Oracle support policies |
-|             | Fedora 30+, Debian 9+, Ubuntu 16.04+   | x64, ARM32, ARM64  | Specific Debian/Ubuntu versions required |
-|             | Linux Mint 18+, openSUSE 15+           | x64                |                           |
-|             | SLES 12 SP2+, Alpine 3.8+              | x64, ARM64         | Alpine supports RPi 3B+ devices |
+| ----------- | ------------------------------------ | ----------------- | ------------------------- |
+| **Windows** | Windows 10, Windows 11, Windows Server 2012+          | x86/x64/Arm64          | Nano Server is supported in Windows Server 2019 and 2022    |
+| **Linux**   | OpenEuler, Kylin, OpenKylin, Deepin, UOS, and other domestic operating systems      | x64/Arm64               |  |
+|             | Ubuntu 22.04+, Debian 12, RHEL(8,9), CentOS 9, Fedora(40,41), openSUSE Leap(15.5,15,6), SUSE Enterprise Linux(15.5,15,6), Alpine 3.19+ | x64/Arm64 |  |
+| **macOS**   | macOS 13(Ventura), macOS 14(Sonoma), macOS 15(Sequoia)                      | Arm64               |                           |
+
+💡Note: As of June 30, 2024, all versions of CentOS Linux have reached end-of-life (EOL). It is recommended to migrate to alternative operating systems.
 
 ## 2.2 .NET 9.0 Runtime Installation 
 
@@ -75,8 +74,8 @@ English | [简体中文](README-CN.md)
 
 | Component   | Requirements                                                          |
 |-------------|-----------------------------------------------------------------------|
-| **OS**      | macOS 11+/Windows 10+/Linux (Ubuntu 20.04+/CentOS 7+/Fedora 30+)     |
-| **Arch**    | x64/ARM64 (x64 recommended)                                          |
+| **OS**      | Windows 11 / Linux (Ubuntu 22.04+, Debian 12, Fedora 40+, etc.) / Domestic Linux OS (e.g., OpenEuler, Kylin, Deepin) / macOS 13+     |
+| **Arch**    | x64/Arm64 (x64 recommended)                                          |
 | **Memory**  | Minimum 4GB (8GB+ recommended)                                       |
 | **Storage** | At least 2GB free space                                              |
 
