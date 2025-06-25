@@ -8,6 +8,8 @@
 
 English | [简体中文](README-CN.md)
 
+**TOMs** is a fully open-source, high-performance, systematic, plugin-oriented, and general-purpose development framework designed for various intelligent scenarios. **TOMs** is built on the latest **.NET 9.0**, and its extension plugins can be developed using programming languages such as **C#**, **Java**, **Python**, **C++**, **Go**, and **Rust**. **TOMs** supports cloud-native deployment, local deployment (**Windows**, **Linux**, **macOS**), and embedded device deployment.
+
 **The Meaning of TOMs**
 |Letter  | Explanation |
 |----|---------------|
@@ -22,32 +24,27 @@ English | [简体中文](README-CN.md)
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
-2. [Framework Overview](#2-framework-overview)
-   - 2.1 [Core Features](#21-core-features)
-   - 2.2 [Tech Stack](#22-tech-stack)
-3. [Prerequisites](#3-prerequisites)
-   - 3.1 [Supported OS](#31-supported-os)
-   - 3.2 [.NET 9.0 Runtime Installation](#32-net-90-runtime-installation)
-   - 3.3 [Repository Cloning](#33-repository-cloning)
-4. [Build & Release](#4-build--release)
-   - 4.1 [Local Build](#41-local-build)
-   - 4.2 [Cloud Build](#42-cloud-build)
-5. [Installation & Execution](#5-installation--execution)
-   - 5.1 [Linux Installation](#51-linux-installation)
-   - 5.2 [Windows Installation](#52-windows-installation)
-6. [License](#6-license)
-7. [Testing](#7-testing)
-8. [Release Notes](#8-release-notes)
-9. [Related Sub-Repositories](#9-Related-Sub-Repositories)
-10. [Contribution Guide](#10-how-to-contribute)
-
-# 1. Introduction
-
-**TOMs** is a fully open-source, high-performance, systematic, plugin-oriented, and general-purpose development framework designed for various intelligent scenarios. **TOMs** is built on the latest **.NET 9.0**, and its extension plugins can be developed using programming languages such as **C#**, **Java**, **Python**, **C++**, **Go**, and **Rust**. **TOMs** supports cloud-native deployment, local deployment (**Windows**, **Linux**, **macOS**), and embedded device deployment.
+1. [Framework Overview](#1-framework-overview)
+   - 1.1 [Core Features](#11-core-features)
+   - 1.2 [Tech Stack](#12-tech-stack)
+2. [Prerequisites](#2-prerequisites)
+   - 2.1 [Supported OS](#21-supported-os)
+   - 2.2 [.NET 9.0 Runtime Installation](#22-net-90-runtime-installation)
+   - 2.3 [Repository Cloning](#23-repository-cloning)
+3. [Build & Release](#3-build--release)
+   - 3.1 [Local Build](#31-local-build)
+   - 3.2 [Cloud Build](#32-cloud-build)
+4. [Installation & Execution](#4-installation--execution)
+   - 4.1 [Linux Installation](#41-linux-installation)
+   - 4.2 [Windows Installation](#42-windows-installation)
+5. [License](#5-license)
+6. [Testing](#6-testing)
+7. [Release Notes](#7-release-notes)
+8. [Related Sub-Repositories](#8-Related-Sub-Repositories)
+9. [Contribution Guide](#9-how-to-contribute)
 
 <a id="framework-overview"></a>
-# 2. Framework Overview
+# 1. Framework Overview
 
 TOMs is a **fully open-source** one-stop IoT application development framework with these core advantages:
 - **Systematic Architecture**: Complete IoT solution architecture
@@ -58,7 +55,7 @@ TOMs is a **fully open-source** one-stop IoT application development framework w
 
 ![](./media/img/architecture.design.en.png)
 
-## 2.1 Core Features
+## 1.1 Core Features
 | Feature                | Description                                                                 |
 |------------------------|-----------------------------------------------------------------------------|
 | **Tech Stack**          | Mainly developed in C# with .NET 9.0 runtime                                |
@@ -66,7 +63,7 @@ TOMs is a **fully open-source** one-stop IoT application development framework w
 | **Deployment Flexibility** | Containerized/Local/Edge device deployment                                 |
 | **Hardware Adaptation** | Full ARM/RISC-V embedded architecture support                              |
 
-## 2.2 Tech Stack
+## 1.2 Tech Stack
 ```mermaid
 graph TD
     A[Core Framework] -->|C# .NET 9.0| B[Core Services]
@@ -81,9 +78,9 @@ graph TD
     C --> K[Rust Plugin]
 ```
 
-# 3. Prerequisites
+# 2. Prerequisites
 
-## 3.1 Supported OS
+## 2.1 Supported OS
 
 | OS          | Supported Versions                     | Architectures      | Notes                      |
 | ----------- | -------------------------------------- | ------------------ | -------------------------- |
@@ -95,9 +92,9 @@ graph TD
 |             | Linux Mint 18+, openSUSE 15+           | x64                |                           |
 |             | SLES 12 SP2+, Alpine 3.8+              | x64, ARM64         | Alpine supports RPi 3B+ devices |
 
-## 3.2 .NET 9.0 Runtime Installation 
+## 2.2 .NET 9.0 Runtime Installation 
 
-### 3.2.1 System Requirements
+### 2.2.1 System Requirements
 
 | Component   | Requirements                                                          |
 |-------------|-----------------------------------------------------------------------|
@@ -106,7 +103,7 @@ graph TD
 | **Memory**  | Minimum 4GB (8GB+ recommended)                                       |
 | **Storage** | At least 2GB free space                                              |
 
-### 3.2.2 Installation Steps
+### 2.2.2 Installation Steps
 
 #### macOS
 
@@ -149,53 +146,53 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/$(rpm -E %centos)/pac
 sudo yum install aspnetcore-runtime-9.0
 ```
 
-## 3.3 Repository Cloning
+## 2.3 Repository Cloning
 
 Clone the TOMs repository using:
 ```bash
 git clone https://github.com/ganweisoft/TOMs
 ```
 
-# 4. Build & Release
+# 3. Build & Release
 
-## 4.1 Local Build
+## 3.1 Local Build
 Run TOMs build with:
 ```bash
 TOMs.build.bat
 ```
 See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
 
-## 4.2 Cloud Build
+## 3.2 Cloud Build
 Automated cloud builds using [GitHub Actions](https://docs.github.com/en/actions), see [Cloud Build Script](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
 
-# 5. Installation & Execution
+# 4. Installation & Execution
 
-## 5.1 Linux Installation
+## 4.1 Linux Installation
 Run installation with:
 ```bash
 sh install.sh
 ```
 
-## 5.2 Windows Installation
+## 4.2 Windows Installation
 Run installation with:
 ```bash
 regist.bat
 ```
 💡Note that: Requires Administrator privileges on Windows
 
-# 6. License
+# 5. License
 
 TOMs uses the permissive MIT License, see [LICENSE](https://github.com/ganweisoft/TOMs/blob/main/LICENSE)
 
-# 7. Testing
+# 6. Testing
 
 See TOMs testing documentation at [Wiki](https://github.com/ganweisoft/TOMs/wiki)
 
-# 8. Release Notes
+# 7. Release Notes
 
 See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/releases)
 
-# 9. Related Sub-Repositories
+# 8. Related Sub-Repositories
 📦 Core Components
 | Badge | Repository | Description | Status |
 |------------|------------|-------------|--------|
@@ -208,6 +205,6 @@ See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/releas
 |------------|------------|-------------|--------|
 |<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | Natively support Modbus and OPC UA (Open Platform Communications Unified Architecture), two of the most widely used communication protocols in the field of industrial automation, providing efficient and reliable data acquisition and device interaction capabilities |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
 
-# 10. How to Contribute
+# 9. How to Contribute
 
 We welcome contributions! If you find a bug or have ideas to discuss, please submit an [issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md)
