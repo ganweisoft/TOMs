@@ -46,13 +46,6 @@ English | [简体中文](README-CN.md)
 <a id="framework-overview"></a>
 # 1. Framework Overview
 
-TOMs is a **fully open-source** one-stop IoT application development framework with these core advantages:
-- **Systematic Architecture**: Complete IoT solution architecture
-- **Plugin Design**: Multi-language plugin extension mechanism
-- **High-Performance Engine**: Efficient runtime based on .NET 9.0
-- **Out-of-the-Box**: Production-grade built-in components
-- **Cross-Platform Support**: Diverse deployment scenarios
-
 ![](./media/img/architecture.design.en.png)
 
 ## 1.1 Core Features
