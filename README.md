@@ -53,7 +53,7 @@ English | [简体中文](README-CN.md)
 |------------------------|-----------------------------------------------------------------------------|
 | **Tech Stack**          | Mainly developed in C# with .NET 9.0 runtime                                |
 | **Multi-Language Support** | Plugin development in Java/Python/C++/Go/Rust                              |
-| **Deployment Flexibility** | Containerized/Local/Edge device deployment                                 |
+| **Deployment Flexibility** | Cloud-Native deployment/Local/Embedded device deployment                                |
 | **Hardware Adaptation** | Full ARM/RISC-V embedded architecture support                              |
 
 ## 1.2 Tech Stack
