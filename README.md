@@ -20,7 +20,7 @@ English | [简体中文](README-CN.md)
 
 **TOMs** can be widely applied to various large-scale intelligent scenarios, including but not limited to **Industrial**、**Transportation**、**Port/Harbor**、**Power/Electricity**、**Construction/Building**、**Agriculture**、**Data Centers**、**New Energy**、**Environmental Protection**、**Smart Cities**.
 
-![应用场景](/media/img/application-scenarios.jpg)
+![应用场景](/media/img/application-scenarios-en.jpg)
 
 ## Table of Contents
 
