@@ -20,7 +20,7 @@
 
 **TOMs**可以广泛应用于各类重量级的智慧化场景，比如**工业**、**交通**、**港口**、**电力**、**建筑**、**农业**、**数据机房**、**新能源**、**环保**、**城市**等。
 
-![应用场景](/media/img/application-scenarios.jpg)
+![应用场景](/media/img/application-scenarios-cn.jpg)
 
 ## 软件界面
 
