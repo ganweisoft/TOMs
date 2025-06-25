@@ -63,22 +63,21 @@
 
 | 操作系统    | 支持版本                             | 架构              | 备注                      |
 | ----------- | ------------------------------------ | ----------------- | ------------------------- |
-| **Windows** | Client 7 SP1+, 8.1, 10 1607+         | x64, x86          | Nano Server 支持 ARM32    |
-|             | Server 2012 R2+                      |                   |                           |
-| **macOS**   | Mac OS X 10.13+                      | x64               |                           |
-| **Linux**   | RHEL 6+, CentOS 7/8, Oracle 7/8      | x64               | 微软/红帽/Oracle 支持策略 |
-|             | Fedora 30+, Debian 9+, Ubuntu 16.04+ | x64, ARM32, ARM64 | Debian/Ubuntu 需特定版本  |
-|             | Linux Mint 18+, openSUSE 15+         | x64               |                           |
-|             | SLES 12 SP2+, Alpine 3.8+            | x64, ARM64        | Alpine 支持树莓派3B等设备 |
+| **Windows** | Windows 10, Windows 11, Windows Server 2012+          | x86/x64/Arm64          | Nano Server 支持(2019,2022)    |
+| **Linux**   | OpenEuler(华为欧拉), Kylin(银河麒麟), OpenKylin(开放麒麟), Deepin(深度), UOS(统信)等国产操作系统      | x64/Arm64               |  |
+|             | Ubuntu 22.04+, Debian 12, RHEL(8,9), CentOS 9, Fedora(40,41), openSUSE Leap(15.5,15,6), SUSE Enterprise Linux(15.5,15,6), Alpine 3.19+ | x64/Arm64 |  |
+| **macOS**   | macOS 13(Ventura), macOS 14(Sonoma), macOS 15(Sequoia)                      | Arm64               |                           |
+
+💡注意：截至2024年6月30日，CentOS Linux所有版本已全部停止维护，建议使用其他操作系统替代
 
 
 ## 2.2 .NET 9.0 运行时安装 
 
-###  2.2.1 系统要求
+###  2.2.1 系统建议
 
-| 组件         | 要求说明                                                                 |
+| 组件         | 说明                                                                 |
 |--------------|--------------------------------------------------------------------------|
-| **操作系统** | macOS 11+/Windows 10+/Linux (Ubuntu 20.04+/CentOS 7+/Fedora 30+)        |
+| **操作系统** | Windows 11/Linux (Ubuntu 22.04+/Debian 12/Fedora 40+等)/Linux国产操作系统/macOS 13+        |
 | **架构**     | x64/ARM64（推荐x64架构）                                                 |
 | **内存**     | 最低4GB（推荐8GB+）                                                      |
 | **磁盘空间** | 至少2GB可用空间                                                          |
