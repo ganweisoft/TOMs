@@ -89,7 +89,7 @@ English | [简体中文](README-CN.md)
 |-------------|-----------------------------------------------------------------------|
 | **OS**      | Windows 11 / Linux (Ubuntu 22.04+, Debian 12, Fedora 40+, etc.) / Domestic Linux OS (e.g., OpenEuler, Kylin, Deepin) / macOS 13+     |
 | **Arch**    | x64/Arm64 (recommended to use 64-bit architecture)                                          |
-| **Memory**  | Minimum 1GB (8GB+ recommended)                                       |
+| **Memory**  | Minimum 1GB (recommended to use 8GB+)                                       |
 | **Storage** | At least 500M free space                                              |
 
 ### 2.2.2 Installation Steps
