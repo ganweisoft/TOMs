@@ -26,7 +26,6 @@ English | [简体中文](README-CN.md)
 
 1. [Framework Overview](#1-framework-overview)
    - 1.1 [Core Features](#11-core-features)
-   - 1.2 [Tech Stack](#12-tech-stack)
 2. [Prerequisites](#2-prerequisites)
    - 2.1 [Supported OS](#21-supported-os)
    - 2.2 [.NET 9.0 Runtime Installation](#22-net-90-runtime-installation)
@@ -55,21 +54,6 @@ English | [简体中文](README-CN.md)
 | **Multi-Language Support** | Plugin development in Java/Python/C++/Go/Rust                              |
 | **Deployment Flexibility** | Cloud-Native deployment/Local/Embedded device deployment                                |
 | **Hardware Adaptation** | Full ARM/RISC-V embedded architecture support                              |
-
-## 1.2 Tech Stack
-```mermaid
-graph TD
-    A[Core Framework] -->|C# .NET 9.0| B[Core Services]
-    A -->|Multi-Language Gateway| C[Plugin Ecosystem]
-    B --> D[Device Management]
-    B --> E[Rule Engine]
-    B --> F[Data Bus]
-    C --> G[Java Plugin]
-    C --> H[Python Plugin]
-    C --> I[C++ Plugin]
-    C --> J[Go Plugin]
-    C --> K[Rust Plugin]
-```
 
 # 2. Prerequisites
 
