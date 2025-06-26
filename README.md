@@ -164,7 +164,7 @@ TOMs uses the permissive MIT License, see [LICENSE](https://github.com/ganweisof
 
 # 6. Release Notes
 
-## 6.1 Windows/Linux Releases
+## 6.1 Windows / Linux Releases
 
 See Windows and Linux release history at [Releases](https://github.com/ganweisoft/TOMs/releases)
 
