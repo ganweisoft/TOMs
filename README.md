@@ -166,11 +166,11 @@ TOMs uses the permissive MIT License, see [LICENSE](https://github.com/ganweisof
 
 ## 6.1 Windows/Linux Releases
 
-See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/releases)
+See Windows and Linux release history at [Releases](https://github.com/ganweisoft/TOMs/releases)
 
 ## 6.2 Docker Releases
 
-See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/pkgs/container/toms/versions)
+See Docker release history at [Releases](https://github.com/ganweisoft/TOMs/pkgs/container/toms/versions)
 
 # 7. How to Contribute
 
