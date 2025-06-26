@@ -77,7 +77,7 @@
 | 操作系统    | 支持版本                             | 架构              | 备注                      |
 | ----------- | ------------------------------------ | ----------------- | ------------------------- |
 | **Windows** | Windows 10, Windows 11, Windows Server 2012+          | x86/x64/Arm64          | Nano Server 支持(2025, 2019, 2022)    |
-| **Linux**   | OpenEuler(华为欧拉), Kylin(银河麒麟), OpenKylin(开放麒麟), Deepin(深度), UOS(统信)等国产操作系统      | x64/Arm64               |  |
+| **Linux**   | OpenEuler(华为欧拉), Kylin(银河麒麟), OpenKylin(开放麒麟), Deepin(深度), UOS(统信)等其他主流国产操作系统      | x64/Arm64               |  |
 |             | Ubuntu(25.04, 24.04, 22.04), Debian 12, RHEL(10, 9, 8), CentOS (10, 9), Azure Linux 3.0, Fedora(42, 41), OpenSUSE Leap 15.6, SUSE Enterprise Linux 15.6, Alpine(3.22, 3.21, 3.20, 3.19) | x64/Arm64 |  |
 | **macOS**   | macOS 13(Ventura), macOS 14(Sonoma), macOS 15(Sequoia)                      | x64/Arm64               |                           |
 
