@@ -123,7 +123,7 @@ git clone https://github.com/ganweisoft/TOMs
 # 3. 构建发布
 
 ## 3.1 本地构建
-本地构建Windows或Linux：
+本地构建Windows和Linux：
 ```bash
 windows-linux.bat
 ```
