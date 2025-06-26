@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 
 cd /d "%~dp0%"
 
@@ -24,3 +24,4 @@ if not exist "build.bat" (
 	exit /b
 )
 call build.bat
+docker build -t toms:latest
