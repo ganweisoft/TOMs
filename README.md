@@ -18,7 +18,7 @@ English | [简体中文](README-CN.md)
 |**M**| Module，All features are plugin-based, supporting free installation and uninstallation |
 |**s**| Plural form (s)，Developers can contribute various plugins and enable online transactions, gathering contributions to build a thriving ecosystem |
 
-**TOMs** can be widely applied to various large-scale intelligent scenarios, including but not limited to **Industrial**、**Transportation**、**Port/Harbor**、**Power/Electricity**、**Construction/Building**、**Agriculture**、**Data Centers**、**New Energy**、**Environmental Protection**、**Smart Cities**.
+**TOMs** can be widely applied to various large-scale intelligent scenarios, including but not limited to **Industrial**、**Transportation**、**Port**、**Electricity**、**Construction**、**Agriculture**、**Data Centers**、**New Energy**、**Environmental Protection**、**Smart Cities**.
 
 ![应用场景](/media/img/application-scenarios-en.jpg)
 
