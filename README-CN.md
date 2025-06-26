@@ -166,10 +166,10 @@ TOMs 使用非常宽松的MIT协议，请见 [License](https://github.com/ganwei
 # 6. 发布
 
 ## Windows和Linux发布
-Windows和Linux发布说明，请见 [Releases](https://github.com/ganweisoft/TOMs/releases)
+Windows和Linux发布历史记录，请见 [Releases](https://github.com/ganweisoft/TOMs/releases)
 
 ## Docker发布
-Docker发布说明，请见 [Releases](https://github.com/ganweisoft/TOMs/pkgs/container/toms/versions)
+Docker发布历史记录，请见 [Releases](https://github.com/ganweisoft/TOMs/pkgs/container/toms/versions)
 
 # 7. 如何提交贡献
 
