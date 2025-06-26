@@ -111,7 +111,7 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/$(rpm -E %centos)/pac
 sudo yum install aspnetcore-runtime-9.0
 ```
 
-## 2.3 Repository Cloning
+## 2.3 Clone the repo
 
 Clone the TOMs repository using:
 ```bash
