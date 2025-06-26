@@ -136,7 +136,7 @@ docker.bat
 请见 [构建Docker脚本](https://github.com/ganweisoft/TOMs/blob/main/docker.bat)
 
 ## 3.2 云端构建
-使用[Github Actions](https://docs.github.com/zh/actions)进行云端自动化构建，请见 [云端构建脚本](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
+使用 [Github Actions](https://docs.github.com/zh/actions) 进行云端自动化构建，请见 [云端构建脚本](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
 
 # 4. 安装与运行
 
@@ -164,8 +164,13 @@ docker run -d -p 44380:44380 -p 44381:44381 --name toms ghcr.io/ganweisoft/toms:
 TOMs 使用非常宽松的MIT协议，请见 [License](https://github.com/ganweisoft/TOMs/blob/main/LICENSE)。
 
 # 6. 发布
-TOMs 发布说明，请见[Releases](https://github.com/ganweisoft/TOMs/releases)
 
-# 6. 如何提交贡献
+## Windows和Linux发布
+Windows和Linux发布说明，请见 [Releases](https://github.com/ganweisoft/TOMs/releases)
+
+## Docker发布
+Docker发布说明，请见 [Releases](https://github.com/ganweisoft/TOMs/pkgs/container/toms/versions)
+
+# 7. 如何提交贡献
 
 我们非常欢迎开发者提交贡献, 如果您发现了一个bug或者有一些想法想要交流，欢迎提交一个[issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md).
