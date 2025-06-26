@@ -50,10 +50,13 @@ English | [简体中文](README-CN.md)
 4. [Installation & Execution](#4-installation--execution)
    - 4.1 [Linux Installation](#41-linux-installation)
    - 4.2 [Windows Installation](#42-windows-installation)
+   - 4.3 [Docker Installation](#43-docker-installation)
 5. [License](#5-license)
 6. [Testing](#6-testing)
 7. [Release Notes](#7-release-notes)
-8. [Contribution Guide](#8-how-to-contribute)
+   - 7.1 [Windows/Linux Releases](#71-Windows/Linux-Releases)
+   - 7.2 [Docker Releases](#72-Docker-Releases)
+9. [Contribution Guide](#8-how-to-contribute)
 
 <a id="framework-overview"></a>
 # 1. Framework Overview
@@ -145,13 +148,20 @@ git clone https://github.com/ganweisoft/TOMs
 # 3. Build & Release
 
 ## 3.1 Local Build
-Run TOMs build with:
+Local build script (Windows/Linux)
 ```bash
 TOMs.build.bat
 ```
 See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
 
+Local build script (Docker)
+```bash
+build.bat
+docker build -t toms:latest
+```
+
 ## 3.2 Cloud Build
+
 Automated cloud builds using [GitHub Actions](https://docs.github.com/en/actions), see [Cloud Build Script](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
 
 # 4. Installation & Execution
@@ -169,6 +179,12 @@ regist.bat
 ```
 💡Note: Requires Administrator privileges on Windows
 
+## 4.3 Docker Installation
+Run installation with:
+```bash
+docker run -d -p 44380:44380 -p 44381:44381 --name toms ghcr.io/ganweisoft/toms:latest
+```
+
 # 5. License
 
 TOMs uses the permissive MIT License, see [LICENSE](https://github.com/ganweisoft/TOMs/blob/main/LICENSE)
@@ -179,7 +195,13 @@ See TOMs testing documentation at [Wiki](https://github.com/ganweisoft/TOMs/wiki
 
 # 7. Release Notes
 
+## 7.1 Windows/Linux Releases
+
 See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/releases)
+
+## 7.2 Docker Releases
+
+See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/pkgs/container/toms/versions)
 
 # 8. How to Contribute
 
