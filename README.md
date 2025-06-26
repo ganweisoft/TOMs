@@ -8,9 +8,11 @@
 
 English | [简体中文](README-CN.md)
 
+# 1. Introduction
+
 **TOMs** is a fully open-source, high-performance, systematic, plugin-oriented, and general-purpose development framework designed for various intelligent scenarios. **TOMs** is built on the latest **.NET 9.0**, and its extension plugins can be developed using programming languages such as **C#**, **Java**, **Python**, **C++**, **Go**, and **Rust**. **TOMs** supports cloud-native deployment, local deployment (**Windows**, **Linux**, **macOS**), and embedded device deployment.
 
-**The Meaning of TOMs**
+## 1.1 The Meaning of TOMs
 |Letter  | Explanation |
 |----|---------------|
 |**T**| Translation，Converts heterogeneous external data into a unified data model |
@@ -18,15 +20,17 @@ English | [简体中文](README-CN.md)
 |**M**| Module，All features are plugin-based, supporting free installation and uninstallation |
 |**s**| Plural form (s)，Developers can contribute various plugins and enable online transactions, gathering contributions to build a thriving ecosystem |
 
+## 1.2 Application Scenarios
+
 **TOMs** can be widely applied to various large-scale intelligent scenarios, including but not limited to **Industrial**、**Transportation**、**Port**、**Electricity**、**Construction**、**Agriculture**、**Data Centers**、**New Energy**、**Environmental Protection**、**Smart Cities**.
 
 ![应用场景](/media/img/application-scenarios-en.jpg)
 
-**Framework Overview**
+## 1.3 Framework Overview
 
 ![](./media/img/architecture.design.en.png)
 
-**Related Sub-Repositories**
+## 1.4 Related Sub-Repositories
 
 📦 Core Components
 | Badge | Repository | Description | Status |
