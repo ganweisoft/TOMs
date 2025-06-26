@@ -1,0 +1,6 @@
+[submodule "subrepos/GrpcServer"]
+	path = subrepos/GrpcServer
+	url = https://github.com/ganweisoft/GrpcServer.git
+[submodule "subrepos/WebPlugins"]
+	path = subrepos/WebPlugins
+	url = https://github.com/ganweisoft/WebPlugins.git
