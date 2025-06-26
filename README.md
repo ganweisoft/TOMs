@@ -58,18 +58,9 @@ English | [简体中文](README-CN.md)
    - 7.2 [Docker Releases](#72-Docker-Releases)
 9. [Contribution Guide](#8-how-to-contribute)
 
-<a id="framework-overview"></a>
 # 1. Framework Overview
 
 ![](./media/img/architecture.design.en.png)
-
-## 1.1 Core Features
-| Feature                | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| **Tech Stack**          | Mainly developed in C# with .NET 9.0 runtime                                |
-| **Multi-Language Support** | Plugin development in Java/Python/C++/Go/Rust                              |
-| **Deployment Flexibility** | Cloud-Native deployment/Local deployment/Embedded device deployment                                |
-| **Hardware Adaptation** | Full ARM/RISC-V embedded architecture support                              |
 
 # 2. Prerequisites
 
