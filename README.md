@@ -154,8 +154,12 @@ TOMs.build.bat
 ```
 See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
 
-## 3.2 Cloud Build
-Automated cloud builds using [GitHub Actions](https://docs.github.com/en/actions), see [Cloud Build Script](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
+## 3.3 Docker Build
+Run TOMs build with:
+```bash
+TOMs.build.bat
+```
+See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
 
 # 4. Installation & Execution
 
@@ -175,7 +179,7 @@ regist.bat
 ## 4.3 Docker Installation
 Run installation with:
 ```bash
-docker run -d -p 44380:44380 -p 44381:44381 --name toms ghcr.io/ganweisoft/toms:v1.0.5
+docker run -d -p 44380:44380 -p 44381:44381 --name toms ghcr.io/ganweisoft/toms:latest
 ```
 
 # 5. License
