@@ -121,7 +121,7 @@ git clone https://github.com/ganweisoft/TOMs
 # 3. Build & Release
 
 ## 3.1 Local Build
-Local build script (Windows/Linux)
+Local build script (Windows / Linux)
 ```bash
 windows-linux.bat
 ```
@@ -135,7 +135,7 @@ See [Docker Build Script](https://github.com/ganweisoft/TOMs/blob/main/docker.ba
 
 ## 3.2 Cloud Build
 
-Automated cloud builds using [GitHub Actions](https://docs.github.com/en/actions), see [Cloud Build Script](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
+Automated cloud builds(Windows / Linux / Docker) using [GitHub Actions](https://docs.github.com/en/actions), see [Cloud Build Script](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
 
 # 4. Installation & Execution
 
