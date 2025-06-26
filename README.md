@@ -172,6 +172,6 @@ See Windows and Linux release history at [Releases](https://github.com/ganweisof
 
 See Docker release history at [Releases](https://github.com/ganweisoft/TOMs/pkgs/container/toms/versions)
 
-# 7. How to Contribute
+# 7. Contributing
 
 We welcome contributions! If you find a bug or have ideas to discuss, please submit an [issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md)
