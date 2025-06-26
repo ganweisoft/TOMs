@@ -158,20 +158,16 @@ docker run -d -p 44380:44380 -p 44381:44381 --name toms ghcr.io/ganweisoft/toms:
 
 TOMs uses the permissive MIT License, see [LICENSE](https://github.com/ganweisoft/TOMs/blob/main/LICENSE)
 
-# 6. Testing
+# 6. Release Notes
 
-See TOMs testing documentation at [Wiki](https://github.com/ganweisoft/TOMs/wiki)
-
-# 7. Release Notes
-
-## 7.1 Windows/Linux Releases
+## 6.1 Windows/Linux Releases
 
 See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/releases)
 
-## 7.2 Docker Releases
+## 6.2 Docker Releases
 
 See TOMs release history at [Releases](https://github.com/ganweisoft/TOMs/pkgs/container/toms/versions)
 
-# 8. How to Contribute
+# 7. How to Contribute
 
 We welcome contributions! If you find a bug or have ideas to discuss, please submit an [issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md)
