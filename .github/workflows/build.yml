@@ -148,7 +148,7 @@ jobs:
         npm install pnpm -g
         cd ./subrepos/WebPlugins/src/front-end/packages/IoTCenterWebBase
         pnpm install --no-frozen-lockfile
-        pnpm build        
+        pnpm build
       shell: pwsh      
 
     - name: Web Base Publish
@@ -287,3 +287,80 @@ jobs:
         asset_path: ./${{ env.artifact_name }}
         asset_name: ${{ env.artifact_name }}
         asset_content_type: application/${{ env.archive_ext }}
+
+  image-upload :
+    needs: [create-release,host-build,api-build,web-base-build,web-plugin-build]
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+
+    steps:    
+    - name: Download Host Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-host-ubuntu-latest
+        path: ./Release/
+
+    - name: Download Api Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-api-ubuntu-latest
+        path: ./Release/
+
+    - name: Download Web Base Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-web-base
+        path: ./Release/
+
+    - name: Download Web Plugin Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-web-plugin
+        path: ./Release/
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with: 
+        ref: main
+        clean: false
+        path: TOMs
+
+    - name: Workplace Prepare
+      run: |
+        mv ./TOMs/* ./        
+        rm -rf ./TOMs        
+      shell: bash
+
+    - name: Log in to the Container registry      
+      uses: docker/login-action@v3.4
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Extract metadata for Docker
+      id: meta
+      uses: docker/metadata-action@v5.7
+      with:
+        images: ghcr.io/${{ github.repository }}
+
+    - name: Build and push Docker image
+      id: push
+      uses: docker/build-push-action@v6.18
+      with:
+        context: .
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
+
+    - name: Generate artifact attestation
+      uses: actions/attest-build-provenance@v2.4
+      with:
+        subject-name: ghcr.io/${{ github.repository }}
+        subject-digest: ${{ steps.push.outputs.digest }}
+        push-to-registry: true
