@@ -148,13 +148,13 @@ git clone https://github.com/ganweisoft/TOMs
 # 3. Build & Release
 
 ## 3.1 Local Build
-If a local windows / linux build is required, please run the following script:
+Local build script (Windows/Linux)
 ```bash
 TOMs.build.bat
 ```
 See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
 
-If a local container build is required, please run the following script:
+Local build script (Docker)
 ```bash
 build.bat
 docker build -t toms:latest
