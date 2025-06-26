@@ -20,15 +20,15 @@ English | [简体中文](README-CN.md)
 |**M**| Module，All features are plugin-based, supporting free installation and uninstallation |
 |**s**| Plural form (s)，Developers can contribute various plugins and enable online transactions, gathering contributions to build a thriving ecosystem |
 
-## 1.2 Application Scenarios
+## 1.2 Framework Overview
+
+![](./media/img/architecture.design.en.png)
+
+## 1.3 Application Scenarios
 
 **TOMs** can be widely applied to various large-scale intelligent scenarios, including but not limited to **Industrial**、**Transportation**、**Port**、**Electricity**、**Construction**、**Agriculture**、**Data Centers**、**New Energy**、**Environmental Protection**、**Smart Cities**.
 
 ![应用场景](/media/img/application-scenarios-en.jpg)
-
-## 1.3 Framework Overview
-
-![](./media/img/architecture.design.en.png)
 
 ## 1.4 Related Sub-Repositories
 
