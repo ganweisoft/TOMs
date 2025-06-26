@@ -171,6 +171,6 @@ Windows和Linux发布历史记录，请见 [Releases](https://github.com/ganweis
 ## Docker发布
 Docker发布历史记录，请见 [Releases](https://github.com/ganweisoft/TOMs/pkgs/container/toms/versions)
 
-# 7. 如何提交贡献
+# 7. 成为社区贡献者
 
 我们非常欢迎开发者提交贡献, 如果您发现了一个bug或者有一些想法想要交流，欢迎提交一个[issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md).
