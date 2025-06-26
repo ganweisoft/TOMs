@@ -36,28 +36,6 @@ English | [简体中文](README-CN.md)
 |------------|------------|-------------|--------|
 |<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | Natively support Modbus and OPC UA (Open Platform Communications Unified Architecture), two of the most widely used communication protocols in the field of industrial automation, providing efficient and reliable data acquisition and device interaction capabilities |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
 
-## Table of Contents
-
-1. [Framework Overview](#1-framework-overview)
-   - 1.1 [Core Features](#11-core-features)
-2. [Prerequisites](#2-prerequisites)
-   - 2.1 [Supported OS](#21-supported-os)
-   - 2.2 [.NET 9.0 Runtime Installation](#22-net-90-runtime-installation)
-   - 2.3 [Repository Cloning](#23-repository-cloning)
-3. [Build & Release](#3-build--release)
-   - 3.1 [Local Build](#31-local-build)
-   - 3.2 [Cloud Build](#32-cloud-build)
-4. [Installation & Execution](#4-installation--execution)
-   - 4.1 [Linux Installation](#41-linux-installation)
-   - 4.2 [Windows Installation](#42-windows-installation)
-   - 4.3 [Docker Installation](#43-docker-installation)
-5. [License](#5-license)
-6. [Testing](#6-testing)
-7. [Release Notes](#7-release-notes)
-   - 7.1 [Windows/Linux Releases](#71-Windows/Linux-Releases)
-   - 7.2 [Docker Releases](#72-Docker-Releases)
-9. [Contribution Guide](#8-how-to-contribute)
-
 # 1. Framework Overview
 
 ![](./media/img/architecture.design.en.png)
