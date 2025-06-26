@@ -4,13 +4,16 @@
   </a>
 </p>
 
-[![GitHub license](https://camo.githubusercontent.com/5eaf3ed8a7e8ccb15c21d967b8635ac79e8b1865da3a5ccf78d2572a3e10738a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f646f746e65742f6173706e6574636f72653f636f6c6f723d253233306230267374796c653d666c61742d737175617265)](https://github.com/ganweisoft/TOMs/blob/main/LICENSE) [![Build Status](https://github.com/ganweisoft/TOMs/actions/workflows/build.yml/badge.svg)](https://github.com/ganweisoft/TOMs/actions) ![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white) ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white) ![](https://img.shields.io/badge/join-discord-infomational)
+[![GitHub license](https://camo.githubusercontent.com/5eaf3ed8a7e8ccb15c21d967b8635ac79e8b1865da3a5ccf78d2572a3e10738a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f646f746e65742f6173706e6574636f72653f636f6c6f723d253233306230267374796c653d666c61742d737175617265)](https://github.com/ganweisoft/TOMs/blob/main/LICENSE) [![Build Status](https://github.com/ganweisoft/TOMs/actions/workflows/build.yml/badge.svg)](https://github.com/ganweisoft/TOMs/actions) ![Docker](https://img.shields.io/github/v/release/ganweisoft/toms?logo=docker) ![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white) ![](https://img.shields.io/badge/join-discord-infomational)
+
 
 简体中文 | [English](README.md)
 
+# 1. 介绍
+
 **TOMs** 是一个完全开源、高性能、体系化、插件化、面向各种智慧化场景的通用开发框架。**TOMs** 基于最新的 **.NET 9.0** 构建，其扩展插件可以使用 **C#**、 **Java**、**Python**、**C++**、**Go** 和 **Rust** 等编程语言进行开发。**TOMs** 支持云原生部署、本地部署（**Windows**、**Linux**、**macOS**）和嵌入式设备部署。
 
-**TOMs**的含义
+## 1.1 TOMs的含义
 |字母  | 解释 |
 |----|---------------|
 |**T**| Translation，把各种外部异构数据转化为统一的数据模型 |
@@ -20,9 +23,15 @@
 
 **TOMs**可以广泛应用于各类重量级的智慧化场景，比如**工业**、**交通**、**港口**、**电力**、**建筑**、**农业**、**数据中心**、**新能源**、**环保**、**城市**等。
 
+## 1.2 框架总览
+
+![](./media/img-CN/architecture.design.cn.png)
+
+## 1.3 应用场景
+
 ![应用场景](/media/img-CN/application-scenarios-cn.jpg)
 
-**子仓库列表**
+## 1.4 子仓库列表
 
 📦 核心仓库
 | 徽章 | 仓库 | 描述 | 状态 |
@@ -35,40 +44,6 @@
 | 徽章 | 仓库 | 描述 | 状态 |
 |------------|------------|-------------|--------|
 |<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | 原生支持 Modbus 与 OPC UA（Open Platform Communications Unified Architecture） 两种工业自动化领域主流通信协议，提供高效、可靠的数据采集与设备交互能力。 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
-
-## 软件界面
-
-##  目录
-
-1. [框架概述](#1-框架概述)
-   - 1.1 [核心特性](#11-核心特性)
-2. [必备工具](#2-必备工具)
-   - 2.1 [操作系统支持](#21-操作系统支持)
-   - 2.2 [.NET 9.0 运行时安装](#22-net-90-运行时安装)
-   - 2.3 [克隆仓库](#23-克隆仓库)
-3. [构建发布](#3-构建发布)
-   - 3.1 [本地构建](#31-本地构建)
-   - 3.2 [云端构建](#32-云端构建)
-4. [安装与运行](#4-安装与运行)
-   - 4.1 [Linux系统安装](#41-Linux-系统上安装运行)
-   - 4.2 [Windows系统安装](#42-Windows-系统上安装运行)
-5. [License](#5-license)
-6. [测试](#6-测试)
-7. [发布](#7-发布)
-8. [贡献指南](#8-如何提交贡献)
-
-<a id="框架概述"></a>
-# 1. 框架概述
-
-![](./media/img-CN/architecture.design.cn.png)
-
-## 1.1 核心特性
-| 特性                | 描述                                                                 |
-|---------------------|----------------------------------------------------------------------|
-| **技术栈**           | 主体采用 C# 开发，基于 .NET 9.0 运行时                              |
-| **多语言扩展**       | 支持 Java/Python/C++/Go/Rust 等主流语言开发插件                      |
-| **部署灵活性**       | 云原生部署 / 本地部署 / 嵌入式设备部署                          |
-| **硬件适配**         | 全面支持 ARM/RISC-V 等嵌入式架构                                     |
 
 # 2. 必备工具
 
@@ -148,42 +123,49 @@ git clone https://github.com/ganweisoft/TOMs
 # 3. 构建发布
 
 ## 3.1 本地构建
-TOMs 可以通过以下命令进行本地构建：
+本地构建Windows或Linux：
 ```bash
-TOMs.build.bat
+windows-linux.bat
 ```
-请见 [本地构建脚本](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
+请见 [Windows-Linux构建脚本](https://github.com/ganweisoft/TOMs/blob/main/windows-linux.bat)
+
+本地构建Docker：
+```bash
+docker.bat
+```
+请见 [构建Docker脚本](https://github.com/ganweisoft/TOMs/blob/main/docker.bat)
 
 ## 3.2 云端构建
 使用[Github Actions](https://docs.github.com/zh/actions)进行云端自动化构建，请见 [云端构建脚本](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
 
 # 4. 安装与运行
 
-## 4.1 Linux 系统上安装运行
-
-TOMs 可以通过以下命令进行安装运行：
-```bash
-sh install.sh
-```
-### 4.2 Windows 系统上安装运行
-TOMs 可以通过以下命令进行安装运行：
+## 4.1 Windows 系统上安装运行
+Windows操作系统上可以通过以下命令进行安装运行：
 ```bash
 regist.bat
 ```
 
 💡注意：Windows上运行安装脚本需要以管理员身份运行。
 
+## 4.2 Linux 系统上安装运行
+Linux操作系统上可以通过以下命令进行安装运行：
+```bash
+sh install.sh
+```
+## 4.3 Docker 上安装运行
+Docker上可以通过以下命令进行安装运行：
+```bash
+docker run -d -p 44380:44380 -p 44381:44381 --name toms ghcr.io/ganweisoft/toms:latest
+```
+
 # 5. License
 
 TOMs 使用非常宽松的MIT协议，请见 [License](https://github.com/ganweisoft/TOMs/blob/main/LICENSE)。
 
-# 6. 测试
-
-TOMs 测试说明，请见[wiki](https://github.com/ganweisoft/TOMs/wiki)
-
-# 7. 发布
+# 6. 发布
 TOMs 发布说明，请见[Releases](https://github.com/ganweisoft/TOMs/releases)
 
-# 8. 如何提交贡献
+# 6. 如何提交贡献
 
 我们非常欢迎开发者提交贡献, 如果您发现了一个bug或者有一些想法想要交流，欢迎提交一个[issue](https://github.com/ganweisoft/TOMs/blob/main/CONTRIBUTING.md).
