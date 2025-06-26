@@ -148,18 +148,21 @@ git clone https://github.com/ganweisoft/TOMs
 # 3. Build & Release
 
 ## 3.1 Local Build
-Run TOMs build with:
+If a local windows/linux build is required, please run the following script:
 ```bash
 TOMs.build.bat
 ```
 See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
 
-## 3.3 Docker Build
-Run TOMs build with:
+If a local container build is required, please run the following script:
 ```bash
-TOMs.build.bat
+build.bat
+docker build -t toms:latest
 ```
-See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
+
+## 3.2 Cloud Build
+
+Automated cloud builds using [GitHub Actions](https://docs.github.com/en/actions), see [Cloud Build Script](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
 
 # 4. Installation & Execution
 
