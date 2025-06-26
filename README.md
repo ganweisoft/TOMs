@@ -75,7 +75,7 @@ English | [简体中文](README-CN.md)
 | OS          | Supported Versions                     | Architectures      | Notes                      |
 | ----------- | ------------------------------------ | ----------------- | ------------------------- |
 | **Windows** | Windows 10, Windows 11, Windows Server 2012+          | x86/x64/Arm64          | Nano Server is supported in Windows Server 2025, 2019 and 2022    |
-| **Linux**   | OpenEuler, Kylin, OpenKylin, Deepin, UOS, and other domestic operating systems      | x64/Arm64               |  |
+| **Linux**   | OpenEuler, Kylin, OpenKylin, Deepin, UOS, and other mainstream domestic operating systems      | x64/Arm64               |  |
 |             | Ubuntu(25.04, 24.04, 22.04), Debian 12, RHEL(10, 9, 8), CentOS (10, 9), Azure Linux 3.0, Fedora(42, 41), OpenSUSE Leap 15.6, SUSE Enterprise Linux 15.6, Alpine(3.22, 3.21, 3.20, 3.19) | x64/Arm64 |  |
 | **macOS**   | macOS 13(Ventura), macOS 14(Sonoma), macOS 15(Sequoia)                      | x64/Arm64               |                           |
 
