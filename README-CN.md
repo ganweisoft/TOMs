@@ -136,7 +136,7 @@ docker.bat
 请见 [构建Docker脚本](https://github.com/ganweisoft/TOMs/blob/main/docker.bat)
 
 ## 3.2 云端构建
-使用 [Github Actions](https://docs.github.com/zh/actions) 进行云端自动化构建，请见 [云端构建脚本](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
+使用 [Github Actions](https://docs.github.com/zh/actions) 进行云端自动化构建(Windows / Linux / Docker)，请见 [云端构建脚本](https://github.com/ganweisoft/TOMs/blob/main/.github/workflows/build.yml)
 
 # 4. 安装与运行
 
