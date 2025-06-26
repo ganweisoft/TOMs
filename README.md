@@ -152,13 +152,13 @@ Local build script (Windows/Linux)
 ```bash
 windows-linux.bat
 ```
-See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/windows-linux.bat)
+See [Window-Linux Build Script](https://github.com/ganweisoft/TOMs/blob/main/windows-linux.bat)
 
 Local build script (Docker)
 ```bash
 docker.bat
 ```
-See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/docker.bat)
+See [Docker Build Script](https://github.com/ganweisoft/TOMs/blob/main/docker.bat)
 
 ## 3.2 Cloud Build
 
