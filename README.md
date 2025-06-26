@@ -148,7 +148,7 @@ git clone https://github.com/ganweisoft/TOMs
 # 3. Build & Release
 
 ## 3.1 Local Build
-If a local windows/linux build is required, please run the following script:
+If a local windows / linux build is required, please run the following script:
 ```bash
 TOMs.build.bat
 ```
