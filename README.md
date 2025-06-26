@@ -22,6 +22,10 @@ English | [简体中文](README-CN.md)
 
 ![应用场景](/media/img/application-scenarios-en.jpg)
 
+**Framework Overview**
+
+![](./media/img/architecture.design.en.png)
+
 **Related Sub-Repositories**
 
 📦 Core Components
@@ -35,10 +39,6 @@ English | [简体中文](README-CN.md)
 | Badge | Repository | Description | Status |
 |------------|------------|-------------|--------|
 |<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | Natively support Modbus and OPC UA (Open Platform Communications Unified Architecture), two of the most widely used communication protocols in the field of industrial automation, providing efficient and reliable data acquisition and device interaction capabilities |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
-
-# 1. Framework Overview
-
-![](./media/img/architecture.design.en.png)
 
 # 2. Prerequisites
 
