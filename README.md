@@ -139,18 +139,18 @@ Automated cloud builds using [GitHub Actions](https://docs.github.com/en/actions
 
 # 4. Installation & Execution
 
-## 4.1 Linux Installation
-Run installation with:
-```bash
-sh install.sh
-```
-
-## 4.2 Windows Installation
+## 4.1 Windows Installation
 Run installation with:
 ```bash
 regist.bat
 ```
 💡Note: Requires Administrator privileges on Windows
+
+## 4.2 Linux Installation
+Run installation with:
+```bash
+sh install.sh
+```
 
 ## 4.3 Docker Installation
 Run installation with:
