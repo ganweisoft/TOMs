@@ -150,15 +150,15 @@ git clone https://github.com/ganweisoft/TOMs
 ## 3.1 Local Build
 Local build script (Windows/Linux)
 ```bash
-TOMs.build.bat
+windows-linux.bat
 ```
-See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/TOMs.build.bat)
+See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/windows-linux.bat)
 
 Local build script (Docker)
 ```bash
-build.bat
-docker build -t toms:latest
+docker.bat
 ```
+See [Local Build Script](https://github.com/ganweisoft/TOMs/blob/main/docker.bat)
 
 ## 3.2 Cloud Build
 
