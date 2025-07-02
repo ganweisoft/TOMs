@@ -30,6 +30,9 @@ English | [简体中文](README-CN.md)
 
 ![应用场景](/media/img/application-scenarios-en.jpg)
 
+## 1.4
+[查看内联视频](https://ganweisoft.github.io/TOMs//index.html)
+
 ## 1.4 Related Sub-Repositories
 
 📦 Core Components
