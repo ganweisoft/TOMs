@@ -33,7 +33,7 @@ English | [简体中文](README-CN.md)
 ## 1.4 Software Interface
 [![Software Interface Cover](/media/img/software-interface-cover.gif)](https://ganweisoft.github.io/TOMs//index.html)
 
-## 1.4 Related Sub-Repositories
+## 1.5 Related Sub-Repositories
 
 📦 Core Components
 | Badge | Repository | Description | Status |
