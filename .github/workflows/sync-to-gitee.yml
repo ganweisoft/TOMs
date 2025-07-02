@@ -1,0 +1,17 @@
+name: Sync To Gitee
+
+on: push
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+    
+    - name: Sync to Gitee
+      uses: wearerequired/git-mirror-action@v1.2.0
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+      with:
+        source-repo: "git@github.com:${{ github.repository }}.git"
+        destination-repo: "git@gitee.com:shend/OpenTOMs.git"
