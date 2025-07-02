@@ -31,7 +31,7 @@ do
     echo "number:"$number
     if [ $number -eq 0 ]                                    # Check if process exists
     then
-        nohup /opt/dotnet/dotnet $parent_dir/IoTCenterWeb/publish/IoTCenterWebApi.dll > /dev/null 2>&1 &
+        nohup dotnet $parent_dir/IoTCenterWeb/publish/IoTCenterWebApi.dll > /dev/null 2>&1 &
                                                             # Command to restart process (modify as needed)
         proc_id                                         # Get new process ID
         echo "IoTCenterWebApi current process ID:"${pid}, `date` >> $file_name  # Record new process ID and restart time
