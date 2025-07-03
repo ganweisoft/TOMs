@@ -31,7 +31,7 @@ English | [简体中文](README-CN.md)
 ![应用场景](/media/img/application-scenarios-en.jpg)
 
 ## 1.4 Software Interface
-[![Software Interface Cover](/media/img/software-interface-cover.gif)](https://ganweisoft.github.io/TOMs/index.html)
+[![Software Interface Cover](/media/img/software-interface-cover.gif)](https://ganweisoft.github.io/TOMs/index.html){:target="_blank"}
 
 💡 Tip: Click to watch video online
 
