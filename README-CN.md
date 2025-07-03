@@ -32,7 +32,7 @@
 ![应用场景](/media/img-CN/application-scenarios-cn.jpg)
 
 ## 1.4 软件界面
-[![Software Interface Cover](/media/img/software-interface-cover.gif)](https://ganweisoft.github.io/TOMs/index.html)
+[![Software Interface Cover](/media/img/software-interface-cover.gif)](https://ganweisoft.github.io/TOMs/docs/video-software-interface.html)
 
 💡温馨提示：点击可在线查看视频
 
