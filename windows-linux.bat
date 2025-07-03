@@ -1,16 +1,17 @@
 @echo off
 setlocal enabledelayedexpansion
 
-rem ÇĞ»»µ½µ±Ç°Åú´¦ÀíÎÄ¼şËùÔÚÄ¿Â¼
+rem åˆ‡æ¢åˆ°å½“å‰æ‰¹å¤„ç†æ–‡ä»¶æ‰€åœ¨ç›®å½•
 cd /d "%~dp0%"
 
 chcp 65001 >nul
 
+set "release_dir=.\Release"
 set "logs_dir=run_logs.txt"
 del /q /f %logs_dir%
-rem ÉèÖÃÍø¹Ø·¢²¼Ä¿Â¼
+rem è®¾ç½®ç½‘å…³å‘å¸ƒç›®å½•
 set "gateway_dir=%release_dir%\bin"
-rem ÉèÖÃWebAPi·¢²¼Ä¿Â¼
+rem è®¾ç½®WebAPiå‘å¸ƒç›®å½•
 set "webapi_dir=%release_dir%\IoTCenterWeb\publish"
 
 rem Unified script for both initial setup and updates
@@ -34,23 +35,23 @@ if not exist "build.bat" (
 )
 call build.bat
 call :GetTimestamp
-echo [!formatted_datetime!] ÕıÔÚÆô¶¯Íø¹Ø£¬ÇëÉÔºó... >>%logs_dir%
+echo [!formatted_datetime!] æ­£åœ¨å¯åŠ¨ç½‘å…³ï¼Œè¯·ç¨å... >>%logs_dir%
 cd "%gateway_dir%"
 start cmd /k dotnet GWHost1.dll
 timeout /t 2 >nul
 cd /d "%~dp0%"
 call :GetTimestamp
-echo [!formatted_datetime!] ÕıÔÚÆô¶¯WebApi£¬ÇëÉÔºó... >>%logs_dir%
-rem Æô¶¯Web APi
+echo [!formatted_datetime!] æ­£åœ¨å¯åŠ¨WebApiï¼Œè¯·ç¨å... >>%logs_dir%
+rem å¯åŠ¨Web APi
 cd "%webapi_dir%"
 start cmd /k dotnet IoTCenterWebApi.dll
-rem Æô¶¯Web
+rem å¯åŠ¨Web
 cd /d "%~dp0%"
 call :GetTimestamp
-echo [!formatted_datetime!] ÕıÔÚ´ò¿ªIoTCenter·ÃÎÊÁ´½Ó^(https://localhost:44380^)£¬ÇëÉÔºó... >>%logs_dir% rem --------------
-rem »ñÈ¡Ä¬ÈÏä¯ÀÀÆ÷µÄĞ­Òé¹ØÁª£¨HTTP£©
+echo [!formatted_datetime!] æ­£åœ¨æ‰“å¼€IoTCenterè®¿é—®é“¾æ¥^(https://localhost:44380^)ï¼Œè¯·ç¨å... >>%logs_dir%
+rem è·å–é»˜è®¤æµè§ˆå™¨çš„åè®®å…³è”ï¼ˆHTTPï¼‰
 for /f "tokens=2*" %%a in ('reg query "HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\https\UserChoice" /v ProgId') do set BROWSER=%%b
-rem ÅĞ¶Ï³£¼ûä¯ÀÀÆ÷ÀàĞÍ²¢µ÷ÓÃ
+rem åˆ¤æ–­å¸¸è§æµè§ˆå™¨ç±»å‹å¹¶è°ƒç”¨
 if "%BROWSER%"=="ChromeHTML" (
     start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --new-window "https://localhost:44380"
 ) else if "%BROWSER%"=="MSEdgeHTM" (
@@ -59,18 +60,18 @@ if "%BROWSER%"=="ChromeHTML" (
     start "" "C:\Program Files\Mozilla Firefox\firefox.exe" -new-window "https://localhost:44380"
 ) else if "%BROWSER%"=="AppXq0fevzme2p429mpbidy6na6cqpiv3i5" (
     call :GetTimestamp
-	echo [!formatted_datetime! ²»Ö§³Ö Microsoft Edge ä¯ÀÀÆ÷µÄÏÖ´ú°æ±¾£¨»ùÓÚ UWP/Win10+£©¡£>>%logs_dir%
+	echo [!formatted_datetime! ä¸æ”¯æŒ Microsoft Edge æµè§ˆå™¨çš„ç°ä»£ç‰ˆæœ¬ï¼ˆåŸºäº UWP/Win10+ï¼‰ã€‚>>%logs_dir%
 ) else (
 	call :GetTimestamp
-    echo [!formatted_datetime!] Î´Ê¶±ğµÄä¯ÀÀÆ÷ÀàĞÍ£º%BROWSER% >>%logs_dir%
-    echo [!formatted_datetime!] ÕıÔÚ³¢ÊÔÊ¹ÓÃÏµÍ³Ä¬ÈÏ·½Ê½´ò¿ª... >>%logs_dir%
+    echo [!formatted_datetime!] æœªè¯†åˆ«çš„æµè§ˆå™¨ç±»å‹ï¼š%BROWSER% >>%logs_dir%
+    echo [!formatted_datetime!] æ­£åœ¨å°è¯•ä½¿ç”¨ç³»ç»Ÿé»˜è®¤æ–¹å¼æ‰“å¼€... >>%logs_dir%
     start "" "https://localhost:44380"
 )
 
-rem ========== º¯Êı¶¨Òå ==========
+rem ========== å‡½æ•°å®šä¹‰ ==========
 :GetTimestamp
-rem ¹¦ÄÜ£º»ñÈ¡µ±Ç°Ê±¼ä´Á²¢´æÈëformatted_datetime±äÁ¿
-rem ¸ñÊ½£ºyyyy-MM-dd HH:mm:ss
+rem åŠŸèƒ½ï¼šè·å–å½“å‰æ—¶é—´æˆ³å¹¶å­˜å…¥formatted_datetimeå˜é‡
+rem æ ¼å¼ï¼šyyyy-MM-dd HH:mm:ss
 for /f "delims=" %%a in ('powershell -command "Get-Date -Format 'yyyy-MM-dd HH:mm:ss'"') do (
     set "formatted_datetime=%%a"
 )

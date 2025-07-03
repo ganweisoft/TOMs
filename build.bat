@@ -292,40 +292,6 @@ xcopy ".\shells" "%release_dir%\shells" /E /I
 call :GetTimestamp
 echo [!formatted_datetime!] 完成构建WebApi解决方案... >>%logs_dir%
 rem 结束Web APi构建
-rem 启动网关
-call :GetTimestamp
-echo [!formatted_datetime!] 正在启动网关，请稍后... >>%logs_dir%
-cd "%gateway_dir%"
-rem start cmd /k dotnet GWHost1.dll rem --------------
-rem timeout /t 2 >nul rem --------------
-cd /d "%~dp0%"
-call :GetTimestamp
-echo [!formatted_datetime!] 正在启动WebApi，请稍后... >>%logs_dir%
-rem 启动Web APi
-cd "%webapi_dir%"
-rem start cmd /k dotnet IoTCenterWebApi.dll rem --------------
-rem 启动Web
-cd /d "%~dp0%"
-call :GetTimestamp
-rem echo [!formatted_datetime!] 正在打开IoTCenter访问链接^(https://localhost:44380^)，请稍后... >>%logs_dir% rem --------------
-rem 获取默认浏览器的协议关联（HTTP）
-for /f "tokens=2*" %%a in ('reg query "HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\https\UserChoice" /v ProgId') do set BROWSER=%%b
-rem 判断常见浏览器类型并调用
-if "%BROWSER%"=="ChromeHTML" (
-    start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --new-window "https://localhost:44380"
-) else if "%BROWSER%"=="MSEdgeHTM" (
-    start "" "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --new-window "https://localhost:44380"
-) else if "%BROWSER%"=="FirefoxURL" (
-    start "" "C:\Program Files\Mozilla Firefox\firefox.exe" -new-window "https://localhost:44380"
-) else if "%BROWSER%"=="AppXq0fevzme2p429mpbidy6na6cqpiv3i5" (
-    call :GetTimestamp
-	echo [!formatted_datetime! 不支持 Microsoft Edge 浏览器的现代版本（基于 UWP/Win10+）。>>%logs_dir%
-) else (
-	call :GetTimestamp
-    echo [!formatted_datetime!] 未识别的浏览器类型：%BROWSER% >>%logs_dir%
-    echo [!formatted_datetime!] 正在尝试使用系统默认方式打开... >>%logs_dir%
-    start "" "https://localhost:44380"
-)
 
 rem ========== 函数定义 ==========
 :GetTimestamp
