@@ -154,7 +154,7 @@ regist.bat
 ## 4.2 Linux Installation
 Run installation with:
 ```bash
-sh install.sh
+./install.sh
 ```
 
 ## 4.3 Docker Installation
