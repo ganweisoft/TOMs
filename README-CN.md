@@ -156,7 +156,7 @@ regist.bat
 ## 4.2 Linux 系统上安装运行
 Linux操作系统上可以通过以下命令进行安装运行：
 ```bash
-sh install.sh
+./install.sh
 ```
 ## 4.3 Docker 上安装运行
 Docker上可以通过以下命令进行安装运行：
