@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOMs Software Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .video-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 20px 0;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 20px;
+        }
+        .btn-return {
+            background: #6e8efb;
+            color: white;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="header">
+            <h1>🎥 TOMs Software Interface</h1>
+            <p class="lead">Watch the full demonstration of the TOMs</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 video-container">
+                <div class="ratio ratio-16x9">
+                    <video controls width="100%">
+                        <source src="https://ganweicloud.obs.cn-north-4.myhuaweicloud.com/TOMs/%E8%8B%B1%E6%96%87%E7%89%88%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <a href="https://github.com/ganweisoft/TOMs" 
+                   class="btn btn-return btn-lg mt-3" 
+                   target="_blank">
+                   ⬅ Back to TOMs Repository
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
