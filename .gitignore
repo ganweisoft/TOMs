@@ -41,6 +41,12 @@ build_logs.txt
 #wwwroot/
 plugins/
 
+#custom build log directories
+Release/*
+subrepos/
+run_logs.txt
+build_logs.txt
+
 # Visual Studio 2017 auto generated files
 Generated\ Files/
 
