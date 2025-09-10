@@ -53,9 +53,9 @@
 🌐 多语言仓库
 | 徽章 | 仓库 | 描述 | 状态 |
 |------------|------------|-------------|--------|
-|<img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python Logo">| [Dist.Gateway4Python](https://github.com/ganweisoft/Dist.Gateway4Python) | Python环境分布式网关 | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" height="20" /> |
-|<img src="https://img.shields.io/badge/-Java-ED8B00?style=flat&logo=java&logoColor=white" alt="Java Logo">| [Dist.Gateway4Java](https://github.com/ganweisoft/Dist.Gateway4Java) | Java环境分布式网关 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" height="20" /> |
-|<img src="https://img.shields.io/badge/-.NET-512BD4?style=flat&logo=.net&logoColor=white" alt="CSharp Logo">| [Dist.Gateway4CSharp](https://github.com/ganweisoft/Dist.Gateway4CSharp) | .NET环境分布式网关 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" />
+|<img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" width="67" height="15" alt="Python Logo">| [Dist.Gateway4Python](https://github.com/ganweisoft/Dist.Gateway4Python) | Python环境分布式网关 | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" height="20" /> |
+|<img src="https://img.shields.io/badge/-Java-ED8B00?style=flat&logo=java&logoColor=white" width="67" height="17" alt="Java Logo">| [Dist.Gateway4Java](https://github.com/ganweisoft/Dist.Gateway4Java) | Java环境分布式网关 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" height="20" /> |
+|<img src="https://img.shields.io/badge/-.NET-512BD4?style=flat&logo=.net&logoColor=white" width="67" height="15" alt="CSharp Logo">| [Dist.Gateway4CSharp](https://github.com/ganweisoft/Dist.Gateway4CSharp) | .NET环境分布式网关 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" />
 
 # 2. 必备工具
 
