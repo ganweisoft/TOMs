@@ -44,10 +44,18 @@ English | [简体中文](README-CN.md)
 |<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | Builds a lightweight, high-performance proxy service framework using the gRPC (Google Remote Procedure Call) protocol. It models communication interfaces using the Protocol Buffers (protobuf) interface definition language, and supports cross-language and cross-platform service integration and invocation |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
 |<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | A modular and pluggable application framework based on ASP.NET Core and VUE. Built on the design principles of loose coupling and high cohesion, it provides an extensible and maintainable application framework. By completely decoupling core logic from functional components, it enables secondary development |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
 
+
 🛠️ Tools & Utilities
 | Badge | Repository | Description | Status |
 |------------|------------|-------------|--------|
 |<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | Natively support Modbus and OPC UA (Open Platform Communications Unified Architecture), two of the most widely used communication protocols in the field of industrial automation, providing efficient and reliable data acquisition and device interaction capabilities |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
+
+🌐 Multi-Language
+| Badge | Repository | Description | Status |
+|------------|------------|-------------|--------|
+|<img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python Logo">| [Dist.Gateway4Python](https://github.com/ganweisoft/Dist.Gateway4Python) | Distributed Gateway for Python | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" height="20" /> |
+|<img src="https://img.shields.io/badge/-Java-ED8B00?style=flat&logo=java&logoColor=white" alt="Java Logo">| [Dist.Gateway4Java](https://github.com/ganweisoft/Dist.Gateway4Java) | Distributed Gateway for Java |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" height="20" /> |
+|<img src="https://img.shields.io/badge/-.NET-512BD4?style=flat&logo=.net&logoColor=white" alt="CSharp Logo">| [Dist.Gateway4CSharp](https://github.com/ganweisoft/Dist.Gateway4CSharp) | Distributed Gateway for .NET |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" />
 
 # 2. Prerequisites
 
