@@ -51,7 +51,7 @@
 |<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | 原生支持 Modbus 与 OPC UA（Open Platform Communications Unified Architecture） 两种工业自动化领域主流通信协议，提供高效、可靠的数据采集与设备交互能力。 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
 
 🌐 多语言仓库
-| Badge | Repository | Description | Status |
+| 徽章 | 仓库 | 描述 | 状态 |
 |------------|------------|-------------|--------|
 |<img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python Logo">| [Dist.Gateway4Python](https://github.com/ganweisoft/Dist.Gateway4Python) | Python环境分布式网关 | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" height="20" /> |
 |<img src="https://img.shields.io/badge/-Java-ED8B00?style=flat&logo=java&logoColor=white" alt="Java Logo">| [Dist.Gateway4Java](https://github.com/ganweisoft/Dist.Gateway4Java) | Java环境分布式网关 |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" height="20" /> |
