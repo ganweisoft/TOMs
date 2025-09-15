@@ -54,9 +54,9 @@ English | [简体中文](README-CN.md)
 🌐 Multi-Language
 | Badge | Repository | Description | Status |
 |------------|------------|-------------|--------|
-|<img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" width="67" height="15" alt="Python Logo">| [Dist.Gateway4Python](https://github.com/ganweisoft/Dist.Gateway4Python) | Distributed Gateway for Python | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" /> |
-|<img src="https://img.shields.io/badge/-Java-ED8B00?style=flat&logo=java&logoColor=white" width="67" height="17" alt="Java Logo">| [Dist.Gateway4Java](https://github.com/ganweisoft/Dist.Gateway4Java) | Distributed Gateway for Java |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" /> |
-|<img src="https://img.shields.io/badge/-.NET-512BD4?style=flat&logo=.net&logoColor=white" width="67" height="15" alt="CSharp Logo">| [Dist.Gateway4CSharp](https://github.com/ganweisoft/Dist.Gateway4CSharp) | Distributed Gateway for .NET |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" />
+|<img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" width="67" height="15" alt="Python Logo">| [Gateway4Python](https://github.com/ganweisoft/Gateway4Python) | Distributed Gateway for Python | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" /> |
+|<img src="https://img.shields.io/badge/-Java-ED8B00?style=flat&logo=java&logoColor=white" width="67" height="17" alt="Java Logo">| [Gateway4Java](https://github.com/ganweisoft/Gateway4Java) | Distributed Gateway for Java |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" /> |
+|<img src="https://img.shields.io/badge/-.NET-512BD4?style=flat&logo=.net&logoColor=white" width="67" height="15" alt="CSharp Logo">| [Gateway4CSharp](https://github.com/ganweisoft/Gateway4CSharp) | Distributed Gateway for .NET |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" />
 
 # 2. Prerequisites
 
