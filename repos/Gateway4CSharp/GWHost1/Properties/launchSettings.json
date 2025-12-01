@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "GWHost1": {
+      "commandName": "Project",
+      "workingDirectory": "D:\\WorkSpace\\Source\\gwminidatacenter\\GWHost1\\bin\\Debug\\",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MqUsername": "a3b919123f224689923d21173de60574",
+        "MqPassword": "O8YlD1wg8RMdBudkWs0Ky0hyrq^$@&",
+        "InstanceId": "open-datacenter",
+        "MqServer": "",
+        "MqSslEnable": "false",
+        "MqPort": "1883"
+      }
+    }
+  }
+}

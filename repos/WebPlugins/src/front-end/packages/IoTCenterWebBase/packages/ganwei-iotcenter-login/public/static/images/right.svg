@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 123 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>背景/设置项/未选中</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#313747" offset="0%"></stop>
+            <stop stop-color="#232937" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#545A6B" offset="0%"></stop>
+            <stop stop-color="#252A39" offset="100%"></stop>
+        </linearGradient>
+        <path d="M235.327147,159 L350,159 C352.209139,159 354,160.790861 354,163 L354,199 L354,199 L253.249158,199 L233.5609,161.938281 C233.042702,160.96281 233.413394,159.751952 234.388866,159.233753 C234.677799,159.080263 234.999975,159 235.327147,159 Z" id="path-3"></path>
+    </defs>
+    <g id="黑" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="「6」设备列表_切图" transform="translate(-232.000000, -158.000000)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <use id="背景/设置项/未选中" stroke="url(#linearGradient-2)" fill="url(#linearGradient-1)" xlink:href="#path-3"></use>
+        </g>
+    </g>
+</svg>

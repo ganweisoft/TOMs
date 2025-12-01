@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<PackageId>IoTCenterCore.AutoMapper</PackageId>
+		<Authors>深圳市敢为软件技术有限公司</Authors>
+		<Company>https://www.ganweicloud.com/</Company>
+		<TargetFramework>$(AspNetCoreTargetFramework)</TargetFramework>
+		<FileVersion>9.0.0</FileVersion>
+		<Version>9.0.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" />
+	</ItemGroup>
+
+</Project>

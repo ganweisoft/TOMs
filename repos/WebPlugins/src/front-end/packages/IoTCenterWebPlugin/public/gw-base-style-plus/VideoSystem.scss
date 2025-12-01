@@ -1,0 +1,400 @@
+.VideoSystem {
+    width: 100%;
+    min-width: 1100px;
+    height: 100%;
+
+    div[name="flex"] {
+        display: flex;
+        border-bottom: 0px !important;
+    }
+
+    div[name="flex"] + [name="flex"] {
+        border-left: 0px !important;
+    }
+
+    .videoColor {
+        background-color: rgba(37, 40, 51, 0.88) !important;
+    }
+
+    .videoClickLight {
+        //opacity: 0.80;
+        border: 0.5px solid #f26624 !important;
+        box-sizing: border-box !important;
+    }
+
+    .frame {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: #313747 !important;
+    }
+
+    .controlColor {
+        background: #8d909b !important;
+        color: #ffffff !important;
+    }
+
+    // 滚动条长度宽度
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    ::-webkit-scrollbar-button:vertical:start {
+        /* background-color: #ABB5BB; */
+        height: 10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #abb5bb transparent;
+    }
+
+    ::-webkit-scrollbar-button:vertical:end {
+        height: 10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #abb5bb transparent transparent transparent;
+    }
+
+    // 滚动条颜色修改
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #899399;
+    }
+
+    .tab-a {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+
+        .eqList {
+            position: relative;
+            height: calc(100% - 4px);
+            overflow: hidden;
+            border-radius: 3px;
+            border-right: 0.5px solid $n-borderColor;
+            @include main-list;
+
+            .video-noData {
+                position: absolute;
+                top: 180px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: calc(100% - 50px);
+                height: 70px;
+
+                /deep/ .el-table {
+                    background-color: #181c29;
+                }
+            }
+
+            // 最新设备列表
+            .hehader {
+                width: 100%;
+                height: 120px;
+                @include list-title;
+            }
+
+            .links-equip {
+                padding: 8px 8px 8px 0;
+                height: calc(100% - 120px);
+                overflow-y: auto;
+
+                li {
+                    padding-left: 1rem;
+                    margin-bottom: 6px;
+                    height: 32px;
+                    line-height: 32px;
+                    border-radius: 3px;
+                    font-size: 0.875rem;
+                    color: $textColor_3;
+                    border: 0.5px solid $n-borderColor;
+                    cursor: pointer;
+                    transition: all 0.2s;
+
+                    &:hover {
+                        color: $textColor_2;
+                        background-color: $n-frondHigh;
+                    }
+                }
+
+                .equip-active {
+                    background-color: $btn-blue;
+                    color: $textColor_1;
+
+                    &:hover {
+                        color: $textColor_2;
+                        background-color: $btn-blue;
+                    }
+                }
+            }
+
+            /deep/ .el-tabs {
+                width: 100%;
+                height: calc(100% - 2px);
+
+                /deep/ .el-tabs__header {
+                    margin: 0 !important;
+                }
+
+                .el-tabs__content {
+                    padding: 1rem 20px 10px 10px;
+                    overflow: auto;
+                    width: calc(100% + 15px);
+                    height: calc(100% - 60px - 1rem);
+                    overflow-x: auto;
+                    background-color: $n-middleColor;
+
+                    .el-tree {
+                        background-color: $n-middleColor;
+                    }
+
+                    .el-tree-node__content {
+                        height: 32px;
+                        border-radius: 7px;
+
+                        .el-tree-node__label {
+                            font-size: 0.9rem;
+                            margin-left: 21px;
+
+                            @media screen and (max-width: 1280px) {
+                                margin-left: 0 !important;
+                            }
+                        }
+
+                        .el-tree-node__expand-icon.is-leaf {
+                            @media screen and (max-width: 1280px) {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+
+                .el-tabs__nav-wrap::after {
+                    background-color: $foregroundColor_4;
+                    height: 1px !important;
+                }
+            }
+
+            /deep/
+                .el-tree--highlight-current
+                .el-tree-node.is-current
+                > .el-tree-node__content {
+                color: $textColor_1;
+            }
+
+            /deep/ .el-tabs__item.is-active {
+                color: $textColor_1 !important;
+            }
+
+            /deep/ .el-tabs__nav-scroll {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                height: 60px;
+
+                .el-tabs__nav {
+                    width: 228px;
+                    height: 39px;
+                    line-height: 33px;
+                    margin-top: 14px;
+                    border-radius: 6px;
+
+                    .el-tabs__active-bar {
+                        display: none;
+                    }
+                }
+
+                .el-tabs__nav > div {
+                    display: inline-block;
+                    width: 108px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    margin-left: 4px;
+                    margin-top: 4px;
+                    color: grey;
+                    padding: 0 !important;
+                }
+            }
+        }
+
+        .videoSystem-main {
+            flex: 1;
+
+            .screenControl-header {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 64px;
+                border-bottom: 1px solid $n-borderColor;
+
+                .title {
+                    padding-left: 24px;
+                    font-size: 24px;
+                    color: $textColor_1;
+                }
+
+                > div {
+                    padding: 8px;
+                    margin-left: 16px;
+                    float: left;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    transition: all 0.15s;
+
+                    &:hover {
+                        background-color: $n-frondHigh;
+                    }
+
+                    i {
+                        margin-top: 2px;
+                        font-size: 26px;
+                        color: $textColor_1;
+                    }
+
+                    .sm-title {
+                        margin-left: 10px;
+                        color: $textColor_1;
+                        font-size: 16px;
+                    }
+                }
+
+                .el-dropdown-link,
+                .btn-1 {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .screen {
+                width: 100%;
+                height: calc(100% - 64px);
+                // border: 0.5px solid $foregroundColor_4;
+                overflow-y: auto;
+                overflow: hidden;
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                    background: #363636;
+                }
+
+                #h5sVideo2 {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                    background: #363636;
+                }
+            }
+
+            .videoPanelClass1 {
+                > div {
+                    width: 100%;
+                    height: 100% !important;
+
+                    > div {
+                        width: 100% !important;
+                        height: 100% !important;
+                    }
+                }
+            }
+
+            .videoPanelClass4 {
+                > div {
+                    width: 100%;
+                    height: calc(50% - 1px) !important;
+
+                    > div {
+                        width: calc(50% - 1px) !important;
+                        height: 100% !important;
+                    }
+                }
+            }
+
+            .videoPanelClass9 {
+                > div {
+                    width: 100%;
+                    height: calc(33.33% - 1.5px) !important;
+
+                    > div {
+                        width: calc(33.33% - 1.5px) !important;
+                        height: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/deep/ .ivu-modal {
+    width: 771px !important;
+
+    .ivu-modal-body {
+        height: 456px !important;
+    }
+
+    .pic {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/deep/ .ivu-modal .ivu-modal-content > .ivu-modal-body {
+    overflow: hidden !important;
+}
+
+/deep/ .el-radio-group {
+    margin-top: 8px !important;
+    margin-left: 18px !important;
+}
+
+/deep/ .el-popover {
+    /deep/ li {
+        background: red;
+    }
+}
+
+// 组件
+.displayNone {
+    display: none !important;
+}
+
+.VideoAssembly {
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    // background: url(../../assets/Images/connecting.jpg) no-repeat center center/100% 100%;
+    background-color: $foregroundColor_1;
+
+    > div {
+        height: 100% !important;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    i {
+        padding: 5px;
+        display: block;
+        position: absolute;
+        right: 12px;
+        top: -20px;
+        cursor: pointer;
+        background-color: $foregroundColor_1;
+    }
+}
+
+// .VideoAssembly:after{content: "加载中.....";color: #0890A9;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}

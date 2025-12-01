@@ -1,0 +1,13 @@
+﻿extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+// Copyright (c) 2020-2025 Beijing TOMs Software Technology Co., Ltd
+extensions: .aspx .ascx
+<%-- 
+Copyright (c) 2020-2025 Beijing TOMs Software Technology Co., Ltd
+--%>
+extensions: .vb
+'Sample license text.
+extensions:  .xml .config .xsd
+<!--
+Sample license text.
+-->

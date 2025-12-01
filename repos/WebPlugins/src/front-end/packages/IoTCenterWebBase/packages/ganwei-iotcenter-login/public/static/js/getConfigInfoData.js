@@ -1,0 +1,15 @@
+
+window.getConfigInfoData = function () {
+    return new Promise((resolve, reject) => {
+        let configInfoData = sessionStorage.configInfoData || null
+        if (configInfoData) {
+            resolve(JSON.parse(configInfoData))
+        } else {
+            let data = '{"logoJumpPath":{"url":"","name":""},"showSwitchTheme":true,"showLangSelect":false,"showExportSnapshots":false,"showPlatformInfo":true,"showOrganization":false,"verificationType":true,"titleConfig":{"platName":"TOMs"},"speaktts":[],"defaultLanguageType":"","labelPage":true,"showTopNav":true,"img":{"loginImg":"/file/loginImg/编组-670213777acfc879f10928157695feb4.png","indexSmallImg":"/static/images/index-logo-src-small.png","platLogo":"/static/images/index-logo-src-small.png","loginBgImg":"/file/loginBgImg/位图-3fc671674823f2223987cbc43bad5740.png"},"theme":{"default":"dark","supportThemes":[{"value":"dark","color":"#3d4a63","name":"黑色","name-en":"Black","skin":"/static/images/index-skin.svg","logo":"/static/images/index-logo-src-dark.svg","fullScreen":"/static/images/index-fullscreen.svg","user":"/static/images/index-user.svg","outFullScreeen":"/static/images/index-tuchuquanping.svg","contentFullScreen":"/static/images/index-contentfull.svg","appPreview":"/static/images/index-apppreview-dark.svg","enable":true},{"value":"light","color":"#ffffff","name":"白色","name-en":"White","skin":"/static/images/index-skin-light.svg","logo":"/static/images/index-logo-src-light.svg","fullScreen":"/static/images/index-fullscreen-light.svg","user":"/static/images/index-user-light.svg","outFullScreeen":"/static/images/index-tuchuquanping.svg","contentFullScreen":"/static/images/index-contentfull-light.svg","appPreview":"/static/images/index-apppreview-light.svg","enable":true}]},"enabledSsoUrl":false,"ssoConfig":{"default":{"plateName":"default","description":"默认配置","ssoUrl":{"api":"/#/jumpIframeLogin/ganwei-iotcenter-login/ssoLogin","method":"get"},"ssoLogin":{"api":"/IoT/api/v3/Internal/SSO","method":"get","url":"/"},"ssoLogOut":{"api":"","method":"get"}},"ganweicloud":{"plateName":"ganweicloud","description":"敢为云配置","ssoUrl":{"api":"/#/jumpIframeLogin/ganwei-iotcenter-login/ssoLogin","method":"get"},"ssoLogin":{"api":"/IoT/api/v3/thirdparty/ganweicloud/SSO","method":"get","url":"/"},"ssoLogOut":{"api":"/IoT/api/v3/thirdparty/ganweicloud/logout","method":"get"}}},"preloadConfig":[{"configName":"","customParameterName":"","path":"","methods":"","data":{"appid":"","redirect_uri":"","response_type":"","scope":"","state":""}}],"equipStatus":{"noComm":"#a0a0a0","normal":"#63e03f","alarm":"#f22433","lsSet":"#bebcaa","initialize":"#289ac0","withdraw":"#ffc0cb","BackUp":"#f8901c"},"httpConfig":{"title":"","countRetry":0,"timeout":30000,"retryDelay":1000,"retryWhiteList":"","overTimeList":[]},"showTopBtn":{"update":true,"safeTips":true,"appPreview":true,"fullScreen":true,"contentFullScreen":true,"notify":true,"themes":true,"language":true,"user":true,"systemInfo":true,"restartIoT":true,"runningMode":true,"editPassword":true,"logout":true}}';
+            sessionStorage.configInfoData = data
+            resolve(JSON.parse(data))
+        }
+    })
+}
+
+

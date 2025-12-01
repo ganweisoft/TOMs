@@ -1,0 +1,88 @@
+// 统一提示字体处理
+.success {
+    color: $themeColor_success !important;
+}
+
+.warning {
+    color: $themeColor_warning !important;
+}
+
+.purple {
+    color: $themeColor_purple !important;
+}
+
+.primary {
+    color: $themeColor_1 !important;
+}
+
+
+// 设备实时状态---圆点状态颜色
+.noComm {
+    // 不通讯
+    color: #a0a0a0 !important;
+}
+
+.normal {
+    // 通讯正常
+    color: #63e03f !important;
+}
+
+.alarm {
+    // 有报警
+    color: #f22433 !important;
+}
+
+.lsSet {
+    // 正在进行设置
+    color: #bebcaa !important;
+}
+
+.initialize {
+    // 正在初始化
+    color: #289ac0 !important;
+}
+
+.withdraw {
+    // 撤防
+    color: pink !important;
+}
+
+// 双击热备
+.BackUp {
+    color: #f8901c !important;
+}
+
+.dotNoComm {
+    // 不通讯
+    background-color: #a0a0a0 !important;
+}
+
+.dotNormal {
+    // 通讯正常
+    background-color: #63e03f !important;
+}
+
+.dotAlarm {
+    // 有报警
+    background-color: #f22433 !important;
+}
+
+.dotLsSet {
+    // 正在进行设置
+    background-color: #bebcaa !important;
+}
+
+.dotInitialize {
+    // 正在初始化
+    background-color: #289ac0 !important;
+}
+
+.dotWithdraw {
+    // 撤防
+    background-color: pink !important;
+}
+
+// 双击热备
+.dotBackUp {
+    background-color: #f8901c !important;
+}

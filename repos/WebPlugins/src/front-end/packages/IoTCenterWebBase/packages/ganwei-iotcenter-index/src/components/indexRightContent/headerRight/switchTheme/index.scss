@@ -1,0 +1,93 @@
+
+
+.el-radio-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.el-dropdown-menu p.actived::after{
+    left: 11px !important;
+    border-color: var(--gw-color-Neutrals2);
+}
+
+.selectedTheme{
+    background-color: var(--dialog-background);
+    .themeContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        .themeOptionCard{
+            margin-bottom: 16px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 180px;
+            height: 185px;
+            border-radius: 12px;
+            background-color: var(--radio-inner-background);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--dialog-border);
+            cursor: pointer;
+            .optionBox{
+                text-align: center;
+            }
+            .optionBox>i{
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border: 1px solid var(--frame-main-color);
+            }
+            .optionBox>p{
+                margin-top: 23px;
+            }
+            >span{
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                right: -10px;
+                top: -10px;
+                transform: skew(30deg, 10deg);
+                border-radius: 50%;
+            }
+
+            >label{
+                position: absolute;
+                right: 5px;
+                top: 0px;
+                font-size: 20px;
+                display: none;
+            }
+
+        }
+        .is-active{
+            border: 1px solid var(--radio-inner-border__checked);
+            >span{
+                background-color: var(--radio-inner-border__checked);
+            }
+            >label{
+                display: block;
+                color: white;
+            }
+        }
+        .noPadding{
+            margin-right: 0;
+        }
+    }
+
+    ::v-deep .safetyLevel {
+        .el-dialog__header {
+            display: none !important;
+        }
+        .el-dialog__body {
+            height: 224px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+}
+

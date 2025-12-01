@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<FileVersion>9.0.0</FileVersion>
+		<Version>9.0.0</Version>
+		<Authors>深圳市敢为软件技术有限公司</Authors>
+		<Company>https://www.ganweicloud.com/</Company>
+		<TargetFramework>$(AspNetCoreTargetFramework)</TargetFramework>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Ganweisoft.IoTCenter.Module.SignalR.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\IoTCenter.Infrastructure\IoTCenterCore.Abstractions\IoTCenterCore.Abstractions.csproj" />
+		<ProjectReference Include="..\..\IoTCenter.Infrastructure\IoTCenterWebApi.BaseCore\IoTCenterWebApi.BaseCore.csproj" />
+	</ItemGroup>
+
+</Project>

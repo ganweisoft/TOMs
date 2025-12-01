@@ -1,0 +1,26 @@
+.DS_Store
+/node_modules/
+/dist/
+/src/modules/
+/src/water-modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+test.html
+# Editor directories and files
+.idea
+.vscode
+*.log
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+RoleManage-未修改成树状结构.vue
+RoleManage-只修改了可看设备为树状结构.vue
+debug.log
+package-lock.json
+/build/dev-entries/
+
+
+
+

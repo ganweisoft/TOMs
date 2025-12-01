@@ -1,0 +1,114 @@
+{
+    "fix": {
+        "version": "1.2.5",
+        "description": "稳定版",
+        "excludeFile": [
+            "package.json",
+            "initConfig.json",
+            "src",
+            "readMe.md"
+        ],
+        "scripts": {
+            "public": "npm config set registry=http://registry.npmjs.org",
+            "private": "npm config set registry http://default/repository/npm-hosted/",
+            "group": "npm config set registry http://default/repository/npm-group/",
+            "addThemeModule": "git submodule add -f -b RefactorUI-6.1 https://gitee.com/dareweb_group/ganwei-iotcenter-theme.git ./static/themes",
+            "downloadTheme": "git submodule update --init --remote ./static/themes",
+            "deleteTheme": "git rm -r --cached ./static/themes",
+            "init": "git submodule update --init --remote ./static/themes && npm config set registry http://default/repository/npm-group/ && npm install",
+            "dev-all": "cross-env NODE_ENV_ALL=debugAll webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+            "build-all": "cross-env NODE_ENV_ALL=proAll node build/build-all.js",
+            "build-frame": "cross-env NODE_ENV_ALL=proFrame node build/build.js",
+            "lint:init": "npm install -D husky commitizen lint-staged @commitlint/cli @commitlint/config-conventional commitizen cz-git eslint prettier && husky install ",
+            "prepare": "husky install",
+            "lint": "eslint --ext .js,.vue src",
+            "lint:lint-staged": "lint-staged",
+            "lint:eslint": "eslint \"src/**/*.{vue,ts,js}\" --fix",
+            "lint:prettier": "prettier --write \"**/*.{js,ts,json,css,less,scss,vue,html,md}\"",
+            "commit": "git-cz",
+            "init-fix": "node ./init.js fix",
+            "init-lat": "node ./init.js lat",
+            "update-mod": "node ./updatePackage.js",
+            "build-components": "webpack --config build/buildComponent.js --progress --hide-modules"
+        },
+        "optionalDependencies": {
+            "gw-base-components-plus": "2.5.0",
+            "gw-base-noAccess": "1.1.1",
+            "gw-base-style-plus": "2.3.8",
+            "gw-base-utils-plus": "2.2.1",
+            "gw-base-api-plus": "2.4.0",
+            "gw-base-frame-config": "1.7.7"
+        },
+        "dependencies": {},
+        "devDependencies": {}
+    },
+    "lat": {
+        "version": "latest",
+        "description": "最新版",
+        "excludeFile": [
+            "package.json",
+            "initConfig.json",
+            "src",
+            "readMe.md"
+        ],
+        "scripts": {
+            "public": "npm config set registry=http://registry.npmjs.org",
+            "private": "npm config set registry http://default/repository/npm-hosted/",
+            "group": "npm config set registry http://default/repository/npm-group/",
+            "addThemeModule": "git submodule add -f -b RefactorUI-6.1 https://gitee.com/dareweb_group/ganwei-iotcenter-theme.git ./static/themes",
+            "downloadTheme": "git submodule update --init --remote ./static/themes",
+            "deleteTheme": "git rm -r --cached ./static/themes",
+            "init": "git submodule update --init --remote ./static/themes && npm config set registry http://default/repository/npm-group/ && npm install",
+            "dev-all": "cross-env NODE_ENV_ALL=debugAll webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+            "build-all": "cross-env NODE_ENV_ALL=proAll node build/build-all.js",
+            "build-frame": "cross-env NODE_ENV_ALL=proFrame node build/build.js",
+            "lint:init": "npm install -D husky commitizen lint-staged @commitlint/cli @commitlint/config-conventional commitizen cz-git eslint prettier && husky install ",
+            "prepare": "husky install",
+            "lint": "eslint --ext .js,.vue src",
+            "lint:lint-staged": "lint-staged",
+            "lint:eslint": "eslint \"src/**/*.{vue,ts,js}\" --fix",
+            "lint:prettier": "prettier --write \"**/*.{js,ts,json,css,less,scss,vue,html,md}\"",
+            "commit": "git-cz",
+            "init-fix": "node ./init.js fix",
+            "init-lat": "node ./init.js lat",
+            "update-mod": "node ./updatePackage.js",
+            "build-components": "webpack --config build/buildComponent.js --progress --hide-modules"
+        },
+        "optionalDependencies": {
+            "gw-base-components-plus": "2 -s",
+            "gw-base-noAccess": "1 -s",
+            "gw-base-style-plus": "2 -s",
+            "gw-base-utils-plus": "2 -s",
+            "gw-base-api-plus": "2 -s",
+            "gw-base-frame-config": "1 -s"
+        },
+        "dependencies": {
+            "@babel/runtime": "^7.22.10",
+            "progress-bar-webpack-plugin": "^2.1.0"
+        },
+        "devDependencies": {
+            "babel-helper-vue-jsx-merge-props": "^2.0.3",
+            "babel-loader": "^8.0.4",
+            "babel-plugin-transform-vue-jsx": "^4.0.1",
+            "@babel/cli": "^7.22.10",
+            "@babel/core": "^7.22.10",
+            "@babel/plugin-proposal-class-properties": "^7.18.6",
+            "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+            "@babel/plugin-syntax-jsx": "^7.22.5",
+            "@babel/plugin-transform-classes": "^7.22.6",
+            "@babel/plugin-transform-runtime": "^7.22.10",
+            "@babel/preset-env": "^7.22.10"
+        },
+        "unInstallDependencies": {
+            "babel-core": "^6.22.1",
+            "babel-eslint": "^8.2.1",
+            "babel-loader": "^7.1.1",
+            "babel-plugin-syntax-jsx": "^6.18.0",
+            "babel-plugin-transform-runtime": "^6.22.0",
+            "babel-plugin-transform-vue-jsx": "^3.5.0",
+            "babel-polyfill": "^6.26.0",
+            "babel-preset-env": "^1.3.2",
+            "babel-preset-stage-2": "^6.22.0"
+        }
+    }
+}

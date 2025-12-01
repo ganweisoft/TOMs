@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath> 
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild> 
+    <Configurations>Development;Staging;Production</Configurations> 
+    <OutputType>Library</OutputType> 
+    <Description>敢为物联网平台服务端程序框架，用以提供敢为物联网平台宿主程序对外访问的接口和消息推送。
+1.4.x 提供dotnetfx支持</Description>
+	  <Version>9.0.0.1</Version>
+    <AssemblyVersion>9.0.0.1</AssemblyVersion>
+	  <LangVersion>8.0</LangVersion>
+	  <ApplicationIcon />
+	  <StartupObject />
+	  <IsPackable>true</IsPackable>
+	  <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+	  <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+  </PropertyGroup> 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Staging|AnyCPU'">
+    <OutputPath>D:\IoTCenter\IoTCenter\IoTCenter\bin\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Production|AnyCPU'">
+    <OutputPath>D:\IoTCenter\IoTCenter\IoTCenter\bin\</OutputPath>
+  </PropertyGroup>  
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" />
+    <PackageReference Include="System.Data.Common" />
+	<PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\IoTCenterHost.Domain\IoTCenterHost.Domain.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

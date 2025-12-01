@@ -1,0 +1,48 @@
+.historyEchar {
+    .el-dialog {
+        width: 800px;
+        height: 612px;
+        max-height: 720px;
+    }
+
+    /deep/ .el-dialog {
+        border: 1px solid $n-borderColor;
+        border-radius: 3px;
+    }
+
+    .el-dialog__body {
+        height: calc(100% - 64px - 20px);
+
+        .header_time {
+            height: 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .el-button {
+                margin-left: 12px;
+                width: 80px;
+            }
+        }
+
+        .las_li_history {
+            height: calc(100% - 40px);
+
+            .noData {
+                width: 100%;
+                height: 100%;
+            }
+
+            #historyData-details {
+                height: calc(100% - 70px);
+            }
+
+            #historyData-timezoom {
+                height: 70px;
+                width: 100%;
+            }
+        }
+    }
+
+
+}

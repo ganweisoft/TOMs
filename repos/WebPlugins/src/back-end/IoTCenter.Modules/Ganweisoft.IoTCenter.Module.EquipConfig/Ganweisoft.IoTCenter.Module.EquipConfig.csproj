@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>$(AspNetCoreTargetFramework)</TargetFramework>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>true</AppendRuntimeIdentifierToOutputPath>
+		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+		<FileVersion>9.0.0</FileVersion>
+		<Version>9.0.0</Version>
+		<Authors>深圳市敢为软件技术有限公司</Authors>
+		<Company>https://www.ganweicloud.com/</Company>
+		<Deterministic>False</Deterministic>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<Deterministic>False</Deterministic>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<Deterministic>False</Deterministic>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Ganweisoft.IoTCenter.Module.EquipConfig.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\IoTCenter.Infrastructure\IoTCenterCore.Abstractions\IoTCenterCore.Abstractions.csproj" />
+		<ProjectReference Include="..\..\IoTCenter.Infrastructure\IoTCenterWebApi.BaseCore\IoTCenterWebApi.BaseCore.csproj" />
+	</ItemGroup>
+</Project>

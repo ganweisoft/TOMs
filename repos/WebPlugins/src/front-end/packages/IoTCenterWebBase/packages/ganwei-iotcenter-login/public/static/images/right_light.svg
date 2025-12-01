@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 121 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>BG备份 4</title>
+    <defs>
+        <path d="M235.327147,98 L350,98 C352.209139,98 354,99.790861 354,102 L354,138 L354,138 L253.249158,138 L233.5609,100.938281 C233.042702,99.9628103 233.413394,98.7519517 234.388866,98.2337532 C234.677799,98.0802635 234.999975,98 235.327147,98 Z" id="path-1"></path>
+    </defs>
+    <g id="白" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="「6」设备列表_切图" transform="translate(-233.000000, -98.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="BG备份-4" fill="#D9DBE1" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

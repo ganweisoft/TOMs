@@ -1,0 +1,212 @@
+.mainInfo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .toLogin{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        margin-top: 10px;
+        color: #3875ff !important;
+        cursor: pointer;
+    }
+
+    .loginBg {
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        width: auto;
+        background-size: 100% 100%;
+
+        img {
+            position: fixed;
+            right: 50%;
+            bottom: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            transform: translate(50%, 50%);
+        }
+
+    }
+
+    /deep/ .el-form {
+        // @include background_color("con-bgColor4");
+
+        &-item {
+            &__label {
+                font-size: 16px;
+                line-height: 18px;
+                @include font_color("con-textColor1");
+            }
+
+            .el-input__inner {
+                height: 52px;
+                border: 0;
+            }
+        }
+
+        .tabs {
+            margin-bottom: 22px;
+            &__nav {
+                display: flex;
+                color: rgba(240,244,255,0.5);
+                margin-bottom: 15px;
+
+                &--item {
+                    margin-right: 24px;
+                    font-size: 16px;
+                    padding-bottom: 5px;
+                    cursor: pointer;
+
+                    &.active {
+                        border-bottom: 1px solid #0087FF;
+                        color: #F0F4FF;
+                    }
+                }
+            }
+        }
+    }
+
+    .bgImage {
+        height: 560px;
+        width: 472px;
+        background: rgba(60, 70, 89, 0.5);
+        padding: 40px 56px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background: url("../images/login-bg.jpg") center;
+        -webkit-filter: blur(13px);
+        filter: blur(13px);
+        border-radius: 6px;
+        z-index: 0;
+    }
+
+    /deep/ .license {
+        height: 560px;
+        width: 472px;
+        background: rgba(60, 70, 89, 0.5);
+        padding: 40px 56px;
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        // background: $n-frondColor;
+
+        .goback {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            color: white;
+            cursor: pointer;
+        }
+
+
+
+        .el-form-item:last-of-type {
+            margin-bottom: 0px;
+        }
+
+        .el-form-item__content {
+            .el-input.is-disabled {
+                .el-input__inner {
+                    background-color: $n-backColor;
+                }
+            }
+
+            .el-button--default {
+                width: 350px;
+                background-color: transparent !important;
+                @include font_color("con-textColor1");
+                border: 0.5px solid;
+                @include border_color("bor-default");
+            }
+
+            .el-button--primary {
+                width: 48%;
+                height: 44px;
+            }
+
+            .el-upload--text {
+                background: #4B6A8B;
+                border-radius: 4px;
+                color: #FFFFFF;
+                height: 32px;
+                padding: 0px 14px 0px 9px;
+                .el-button--text {
+                    font-size: 18px;
+                    height: 32px;
+                    padding: 0px;
+                    display: flex;
+                    align-items: center;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    /deep/ .loadingModal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        @include firefoxScroll;
+
+        .el-dialog {
+            margin-top: 0vh !important;
+            overflow: hidden;
+            @include el-dialog;
+
+            .el-dialog__header {
+                height: 48px;
+                padding: 12px 20px;
+                border-bottom: 1px solid $n-borderColor;
+
+                .el-dialog__title {
+                    font-size: 18px;
+                    font-weight: normal;
+                }
+
+                .title {
+                    font-size: 18px !important;
+                    height: 26px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: $textColor_1;
+
+                    .close {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .el-dialog__body {
+                padding: 0;
+                border-top: 0.5px solid $n-borderColor;
+                overflow: auto;
+                height: calc(100% - 48px) !important;
+
+                .el-progress {
+                    padding: 16px !important;
+                }
+            }
+        }
+    }
+}

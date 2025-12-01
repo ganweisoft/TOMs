@@ -1,0 +1,34 @@
+{
+    "10003-10005": {
+        "icon": "/static/images/systemsnapshot-guzhang.png",
+        "zh-CN": "故障",
+        "en-US": "Error",
+        "color": "#f03f3f",
+        "backgroundColor": "rgba(240, 63, 63,.1)"
+    },
+    "2-9": {
+        "icon": "/static/images/systemsnapshot-jinggao.png",
+        "zh-CN": "警告",
+        "en-US": "Warning",
+        "color": "#ff8e53",
+        "backgroundColor": "rgba(255, 142, 83,.1)"
+    },
+    "0-1": {
+        "icon": "/static/images/systemsnapshot-xinxi.png",
+        "zh-CN": "信息",
+        "en-US": "Info",
+        "color": "#4fa0f2"
+    },
+    "10001-10001": {
+        "icon": "/static/images/systemsnapshot-shezhi.png",
+        "zh-CN": "设置",
+        "en-US": "Settings",
+        "color": "#33bf7e"
+    },
+    "10002-10002": {
+        "icon": "/static/images/systemsnapshot-zichan.png",
+        "zh-CN": "资产",
+        "en-US": "Assets",
+        "color": "#33bf7e"
+    }
+}

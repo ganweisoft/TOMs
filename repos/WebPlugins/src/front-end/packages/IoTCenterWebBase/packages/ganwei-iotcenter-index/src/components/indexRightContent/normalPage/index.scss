@@ -1,0 +1,44 @@
+.normalPage {
+    width: 100%;
+    height: 100%;
+
+    .noLabelPage {
+        height: calc(100% - 48px);
+    }
+}
+
+.el-main {
+    padding: 0px !important;
+    overflow: hidden;
+
+    iframe {
+        border: none;
+    }
+}
+
+// 面包屑导航
+.breadcrumb {
+    width: 100%;
+    height: 48px;
+    padding-left: 16px;
+    background-color: var(--con-bgColor3);
+
+    >div {
+        height: 100%;
+        line-height: 48px;
+        font-size: 14px;
+    }
+
+    ::v-deep .el-breadcrumb {
+
+        .is-link,
+        span {
+            font-weight: 500;
+            color: var(--frame-main-color);
+
+            &:hover {
+                color: var(--frame-main-color);
+            }
+        }
+    }
+}

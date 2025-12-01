@@ -1,0 +1,526 @@
+syntax = "proto3";
+
+option csharp_namespace = "IoTCenterHost.Proto";
+import "google/protobuf/timestamp.proto";
+package IoTCenterHost.Proto; 
+message BoolDefine{
+	bool result=1;
+}
+enum ClientType{
+	Desktop=0;
+	ARVRMR=1;
+	Mobile=2;
+	WebServer=3;
+	Unity3D=4;
+	Gateway=5;
+	Dll=6;
+	Other=7;
+}
+message LoginModel{
+  string User=1;
+  string Pwd=2;
+  ClientType CT=3;
+  bool bRetry=4; 
+}
+message BaseResult{
+  string result=1;
+  int32  code=2;
+  string description=3;
+}
+message IntegerDefine{
+  int32 result=1;
+}
+message StringArrDefine{
+  repeated string result=1;
+}
+
+message ByteArrDefine{
+  repeated bytes result=1;
+}
+message LongDefine{
+  int64 result=1;  
+}
+message StringResult{
+	string result=1;
+}
+message SetParmRequest{
+  int32 EquipNo=1;
+  string strCMD1=2;
+  string strCMD2=3;
+  string strCMD3=4;
+  string strUser=5;
+  string requestId=6;
+} 
+
+message ShowInfoRequest {
+  string BtnText = 1;
+  string Content = 2;
+  string TitleText = 3;
+  string o = 4; 
+}
+message ShowLockSetParmMsgRequest {
+  string Content=1; 
+  int32 iEquipNo=2;
+  int32 iSetNo=3; 
+  string value=4; 
+  string o=5;
+}
+message ShowOrClosePageRequest {
+  CallBackDataType Data=1; 
+  bool ShowOrClose=2;
+}
+message CallBackDataType{ 
+  int32 iEqpNo=1;
+  string Type=2; 
+  int32 iYcYxNo=3; 
+  bool isAlarm=4; 
+  string related_pic=5; 
+  string related_video=6; 
+  string ZiChanID=7; 
+  string PlanNo=8; 
+  string EvtMsg=9;
+}
+message OpenPage4InterScreenRequest {
+  string PageNm=1;
+  bool IsAutoOpen=2; 
+  bool DWAction=3;
+  string InfoConfig=4;
+  bool StopPageCycle=5;
+}
+message GetAllPageRequest { 
+  repeated CallBackDataType L1=1; 
+  repeated CallBackPageType L2=2;
+}
+message ActionRequest {
+  string o=1;
+  WcfCallBackEventType type=2;
+  enum WcfCallBackEventType{
+        KickClient = 0;
+        ShowMsg = 1;
+        ShowLockSetParmMsg = 2;
+        VOpenPage = 3;
+        NotifyOffLine = 4;
+        NotifyRoleOffLine = 5;
+    }
+}
+message GetClientInfoRequest {
+  repeated szWCFClientInfo ClientInfoList=1;
+}
+message szWCFClientInfo{
+  string Instance_GUID =1;
+  string ClientUserNm =2;
+  string ClientIP =3;
+  int32 ClientPort=4;
+}
+
+message CallBackPageType{
+	string related_pic=1;
+	string related_video=2;
+	string ZiChanID=3;
+	repeated CallBackPlanType PlanNo=4;
+	message CallBackPlanType{
+		 string PlanNo=1;
+		 string EvtMsg=2;
+	}
+}
+
+message RealByteReply{
+  ByteArrDefine result=1;
+} 
+message ProtosEventArgs{
+  string typeName=1;
+  string json=2; 
+  string args=3;
+} 
+message OpenPageReply{
+	string PageNm=1;
+	bool IsAutoOpen=2; 
+	bool DWAction=3;
+	string InfoConfig=4;
+	bool StopPageCycle=5;
+} 
+message LoginReply{
+	string ListCallBackData=1;
+	string ListCallBackPage=2;
+}
+message ShowPageReply{
+	string data=1;
+	bool showOrClose=2; 
+}
+
+message DllLoginRequest{
+	repeated bytes dataResult=1;
+}  
+message EquipStateReply{
+  EquipState result=1; 
+}
+enum EquipState{
+  NoCommunication = 0;
+  CommunicationOK = 1;
+  HaveAlarm = 2;
+  HaveSetParm = 3;
+  Initial = 4;
+  CheFang = 5;
+}
+message GetEquipStateDictReply{
+  string result=1;
+} 
+message YCValueRequest{
+  int32 iEquipNo=1;
+  int32 iYcpNo=2;
+} 
+message GetYCAlarmStateRequest{
+  int32 iEquipNo=1;
+  int32 iYcpNo=2;
+} 
+message IntegerArrReply{
+  repeated int32 result=1;
+}
+message GetYXValueRequest{
+  int32 iEquipNo=1;
+  int32 iYxpNo=2;
+} 
+message GetYXAlarmStateRequest{
+  int32 iEquipNo=1;
+  int32 iYxpNo=2;
+}
+message GetYXEvt01Request{
+  int32 iEquipNo=1;
+  int32 iYxpNo=2;
+} 
+message GetCurveDataRequest{
+  string d=1;
+  int32 eqpno=2;
+  int32 ycno=3;
+} 
+message GetCurveData1Request{
+  string d=1;
+  int32 eqpno=2;
+  int32 ycyxno=3;
+  string type=4;
+}
+message GetDataFromCurveRequest{
+  string DTList=1;
+  int32 stano=2;
+  int32 eqpno=3;
+  int32 ycyxno=4;
+  string type=5;
+} 
+message GetChangedDataFromCurveAsyncRequest{
+  string bgn=1;
+  string end=2;
+  int32 stano=3;
+  int32 eqpno=4; 
+  int32 ycyxno=5;
+  string type=6;
+}
+message SetEquipDebugRequest{
+  int32 iEquipNo=1;
+  bool bFlag=2;
+}
+
+message SetParm_1Request{
+  int32 EquipNo=1; 
+  string strCMD1=2; 
+  string strCMD2=3; 
+  string strCMD3=4; 
+  string strUser=5; 
+  bool bShowDlg=6;
+
+}
+message SetParm1Request{
+  int32 EquipNo=1; 
+  int32 SetNo=2; 
+  string strUser=3; 
+}
+message SetParm2Request{
+  int32 EquipNo=1;
+  string strCMD1=2;
+  string strCMD2=3;
+  string strCMD3=4;
+  string strType=5;
+  string strUser=6;
+}
+message SetParm2_1Request{
+  int32 EquipNo=1;
+  string strCMD1=2;
+  string strCMD2=3;
+  string strCMD3=4;
+  string strType=5;
+  string strUser=6;
+  bool bShowDlg=7;
+}
+
+message FirstGetRealZCItemReply{
+  repeated WcfZCItem result=1; 
+  message WcfZCItem{
+	string ZCID=1;
+	string ZCName=2;
+	int32 ZCDay=3;
+  }
+}
+message HaveHistoryCurveRequest{
+  int32 EquipNo=1; 
+  int32 YCPNo=2; 
+}
+
+message SendSMSRequest{
+  string TelNumber=1; 
+  string msg=2; 
+}
+message ConfirmedRealTimeEventItemRequest{
+  RealTimeEventItemProto item=1;  
+}
+
+message RealTimeEventItemProtoList{
+	  repeated RealTimeEventItemProto realitem=1;
+  }
+ message RealTimeEventItemProto{
+	 bool bConfirmed=1; 
+	 string User_Confirmed=2; 
+	 string Dt_Confirmed=3; 
+	 int32 Level=4 ;
+	 string EventMsg=5; 
+	 string Proc_advice_Msg=6; 
+	 string Wavefile=7; 
+	 string Related_pic=8; 
+	 string m_related_video=9; 
+	 string m_ZiChanID=10; 
+	 string m_PlanNo=11; 
+	 int32 Equipno=12; 
+	 string Type=13; 
+	 string Ycyxno=14; 
+	 string Time=15; 
+  }
+
+message SetParm1_1Request{
+  int32 EquipNo=1; 
+  int32 SetNo=2; 
+  string strValue=3; 
+  string strUser=4; 
+  bool bShowDlg=5; 
+  string requestId=6;
+}
+message GetSetItemDescRequest{
+  int32 iEquipNo=1;
+  int32 iSetNo=2; 
+} 
+message GetPropertyFromPropertyServiceRequest{
+  string PropertyName=1;
+  string NodeName=2;
+  string DefaultValue=3;
+} 
+message AddMessageRequest{
+  MessageLevel level=1;
+  string msgstr=2;
+  int32 equipno=3;
+  bool CanRepeat =4;
+  enum MessageLevel{ 
+	Info = 0;
+	Wubao = 1;
+	SpecalInfo = 2;
+	Debug = 3;
+	SetParm = 4;
+	ZiChan = 5;
+	Warn = 6;
+	Error = 7;
+	Fatal = 8;
+  }
+}
+message LockSetItemRequest{
+  string UserNm=1;
+  int32 iEquipNo=2;
+  int32 iSetNo=3;
+  string Client_Instance_GUID=4;
+}
+message Confirm2NormalStateRequest{
+  int32 iEqpNo=1;
+  string sYcYxType=2;
+  int32 iYcYxNo=3;
+}
+message SetYxpNmRequest{
+  int32 EquipNo=1;
+  int32 YcpNo=2;
+  string Nm=3;
+}
+
+message MResetYcYxNoRequest{
+  int32 EquipNo=1;
+  string sType=2;
+  int32 YcYxNo=3;
+}
+message DoExProcSetParmRequest{
+  string ModuleNm=1;
+  string cmd1=2;
+  string cmd2=3;
+  string cmd3=4;
+}
+message OpenPageInMultiScreensRequest{
+  string PageNm=1;
+  string multiScreens=2;
+  bool IsAutoOpen=3;
+  bool DWAction=4;
+  string infoConfig=5;
+  bool bStopPageCycle=6;
+}
+message SendImageToSvrRequest{
+  string ZCID=1;
+  repeated bytes bs=2;
+}
+message AddWeihuRecord4ZCRequest{
+  string ZCID=1;
+  string Name=2;
+  string RecordStr=3;
+  string Pictures=4;
+}
+message SetNoAlarmRequest{
+  int32 eqpno=1;
+  string type=2;
+  int32 ycyxno=3;
+}
+message SendPlanImageToSvrRequest{
+  int32 ID=1;
+  repeated bytes bs=2;
+}
+message SetWuBaoRequest{
+  int32 eqpno=1;
+  string type=2;
+  int32 ycyxno=3;
+} 
+message LongRequest{
+  int64 ID=1;
+}
+message SetEquipNmDefine{
+  int32 EquipNo=1;
+  string Nm=2;
+}
+message SetYcpNmRequest{
+  int32 EquipNo=1;
+  int32 YcpNo=2;
+  string Nm=3;
+}
+message AddChangedEquipRequest{
+  ChangedEquip EqpList=1; 
+} 
+message ChangedEquip{
+	  int32 iStaNo=1;
+	  int32 iEqpNo=2;
+	  ChangedEquipState State=3; 
+	  enum ChangedEquipState{
+		Add = 0;
+		Delete = 1;
+		Edit = 2;
+	  }
+  }
+message SetVCtrolRequest{
+  repeated bytes bVoices=1;
+  string UserNm=2;
+}
+message SetVCtrolReply{
+  WcfVoiceItem result=1;
+  message WcfVoiceItem{
+	bool Result=1;
+	string Vstring=2;
+  }
+}
+message SetVCtrol1Request{
+  string csVoice=1;
+  string UserNm=2;
+}
+
+message NotifyLoginUserOffLineRequest{
+  string msg=1;
+  string UserNm=2;
+}
+message NotifyRoleUserOffLineRequest{
+  string msg=1;
+  string RoleNm=2;
+}
+message ShowMsg2GUIDRequest{
+  string msg=1;
+  string GUID=2;
+}
+message GetImageFromSvr1Request{
+  string path=1;
+  string ImageNm=2;
+}  
+message CreateQrCode4VisitorParm{
+	string VisitorNm=1;
+	string OwnerNm=2;
+	repeated EquipSetInfo ListEquipSetInfo=3;  
+}
+message EquipSetInfo{
+	int32 iEquiNo=1;
+	int32 iSetNo=2;
+	string csValue=3;
+}
+message CreateQrCode4EquipParm{
+	string EqpNo=1;
+	string ZhiChanNo=2;
+	repeated EquipSetInfo ListEquipSetInfo=3;  
+}
+message QRScan4EquipParm{
+	string UserNm=1;
+	string QRContent=2;
+}
+message QRScan4Equip1Parm{
+	string UserNm=1;
+	string QRContent=2;
+	string RtnStr=3;
+} 
+message DllLoginResult{
+	DllLoginEnum Result=1;
+}
+enum DllLoginEnum{
+	OK = 0;
+	ServerNoStart = 1;
+	OverClientConnectMax = 2;
+	CertificateError = 3;
+	OtherError = 4;
+}
+
+message EventInfo{
+	int64 id=1;
+	google.protobuf.Timestamp datetime=2;
+	string gwevent=3;
+}
+
+message EventInfoResultList{
+	repeated EventInfo EventInfoList=1; 
+}
+
+message YcItemResponseList{
+	repeated YcItemResponse YcItemList=1;
+}
+
+message YcItemResponse{
+	int32 m_iEquipNo=1;
+	bool m_Bufang=2;
+	int32 m_iYCNo=3;
+	string m_YCNm=4;
+	szYCValueResponse m_YCValue=5;
+	string	m_Unit=6;
+	string	m_related_video=7;
+	string	m_related_pic=8;
+	string	m_ZiChanID=9;
+	string	m_PlanNo=10;
+	bool	m_IsAlarm=11;
+	string	m_AdviceMsg=12;
+	bool	m_bHasHistoryCcurve=13;
+	EquipState	equipState=14;
+    int64 timestamp=15;
+}
+
+message szYCValueResponse{
+	double	 f=1;
+	string s=2;
+}
+
+message PropertyToReserveResult{
+  string TableName = 1; 
+  string ReserveName = 2;
+  int32 iEquipNo = 3;
+  int32 iChedianNo = 4; 
+  string NodeName = 5; 
+  string Value = 6;
+}

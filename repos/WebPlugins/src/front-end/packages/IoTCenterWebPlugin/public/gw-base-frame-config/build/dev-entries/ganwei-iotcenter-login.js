@@ -1,0 +1,1 @@
+import '../../pages/ganwei-iotcenter-login/index.js';

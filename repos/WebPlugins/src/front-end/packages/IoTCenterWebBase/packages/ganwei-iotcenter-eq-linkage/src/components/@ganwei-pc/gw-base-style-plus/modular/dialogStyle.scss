@@ -1,0 +1,39 @@
+@mixin el-dialog {
+
+    .el-dialog__header {
+        height: 64px;
+        padding: 23px 20px;
+        text-align: left;
+
+        .el-dialog__title,
+        .dialogTitle span {
+            font-size: 16px;
+            font-family: "Microsoft YaHei";
+        }
+    }
+
+    .el-dialog__body {
+        font-size: 14px;
+        font-family: "Microsoft YaHei";
+        padding: 0px 20px !important;
+    }
+
+    .el-dialog__footer {
+        height: 72px;
+        border: none;
+        display: flex;
+        justify-content: flex-end !important;
+        align-items: center;
+
+        .dialog-footer {
+            .el-button {
+                min-width: 92px;
+                height: 32px !important;
+                line-height: 32px;
+                font-size: 14px;
+                font-family: "Microsoft YaHei";
+                border-radius: 2px;
+            }
+        }
+    }
+}

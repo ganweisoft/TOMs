@@ -1,0 +1,468 @@
+// 录像回放
+
+.videoPlayback {
+    width: 100%;
+    height: 100%;
+
+    div[name="flex"] {
+        display: flex;
+        border-bottom: 0px !important;
+    }
+
+    div[name="flex"]+[name="flex"] {
+        border-left: 0px !important;
+    }
+
+    .videoColor {
+        background-color: rgba(37, 40, 51, 0.88) !important;
+    }
+
+    .videoClickLight {
+        //opacity: 0.80;
+        border: 0.5px solid #f26624 !important;
+        box-sizing: border-box !important;
+    }
+
+    .frame {
+        width: 100%;
+        height: calc(100% - 1px);
+        position: relative;
+        border: none;
+    }
+
+    .controlColor {
+        background: #8d909b !important;
+        color: #ffffff !important;
+    }
+
+    // 滚动条长度宽度
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    ::-webkit-scrollbar-button:vertical:start {
+        /* background-color: #ABB5BB; */
+        height: 10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #abb5bb transparent;
+    }
+
+    ::-webkit-scrollbar-button:vertical:end {
+        height: 10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #abb5bb transparent transparent transparent;
+    }
+
+    // 滚动条颜色修改
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #899399;
+    }
+
+    .tab-b {
+        position: relative;
+        width: calc(800px - 2rem);
+        height: 100%;
+
+        .iconguanbi {
+            padding: 5px;
+            position: absolute;
+            right: 0;
+            top: -3rem;
+            cursor: pointer;
+            background-color: $n-frondColor;
+        }
+
+        .playback {
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $n-cardColor;
+            overflow: hidden;
+        }
+
+        .screen {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.2s;
+
+            >video {
+                width: 100%;
+                height: 100%;
+            }
+
+            // 关闭按钮
+            .btn-close {
+                position: absolute;
+                right: 3rem;
+                top: 1rem;
+                color: $textColor_2;
+                cursor: pointer;
+                display: none;
+            }
+
+            // 全屏按钮
+            .btn-full-screen {
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                color: $textColor_2;
+                cursor: pointer;
+                display: none;
+            }
+
+            &:hover {
+
+                .btn-close,
+                .btn-full-screen {
+                    display: block;
+                }
+            }
+
+            .topShade {
+                width: 100%;
+                height: 12%;
+                background: url(./Images/shade-top.png) no-repeat center center/100% 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    padding: 3px 10px;
+                    display: inline-block;
+                    font-size: 0.875rem;
+                    background: rgba(31, 35, 47, 0.5);
+                    text-align: center;
+                    color: $textColor_2;
+                    border: 0.5px solid $n-borderColor;
+                    border-radius: 24px;
+
+                    @media screen and (max-width: 1280px) {
+                        font-size: 1rem !important;
+                    }
+                }
+            }
+
+            .bottomShade {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                // min-height: 50px;
+                // background: url(./Images/shade-bottom.png) no-repeat center center/100% 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: none;
+
+                /deep/ .el-slider {
+                    width: 56%;
+                    position: absolute !important;
+                    left: 15% !important;
+                    bottom: 0px;
+                    height: 3rem;
+
+                    .el-slider__runway {
+                        background-color: rgba(255, 255, 255, 0.2) !important;
+
+                        .el-slider__button {
+                            width: 14px !important;
+                            height: 10px !important;
+                            background-color: #ffffff !important;
+                            border-radius: 37% !important;
+                            border: none !important;
+                        }
+
+                        .el-slider__bar {
+                            background-color: $aside-font2 !important;
+                        }
+                    }
+                }
+
+                /deep/ .el-select {
+                    position: absolute !important;
+                    right: 17% !important;
+                    bottom: 10px !important;
+                }
+
+                i {
+                    position: absolute;
+                }
+
+                .playBtn {
+                    position: absolute;
+                    left: 10%;
+                    bottom: 0.3125rem;
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid $foregroundColor_4;
+                    border-radius: 50%;
+                    background: rgba(31, 35, 47, 0.5);
+                    cursor: pointer;
+
+                    .play {
+                        font-size: 14px;
+                        color: $textColor_2;
+                    }
+                }
+
+                // 加速按钮区域
+                .speedChoice {
+                    display: inline-block;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 100px;
+                    text-align: center;
+
+                    .speedVal {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        height: 100%;
+
+                        span {
+                            display: block;
+                            width: 28px;
+                            height: 28px;
+                            font-size: 14px;
+                        }
+
+                        .slower,
+                        .val,
+                        .faster {
+                            text-align: center;
+                            line-height: 2rem;
+                            border: 1px solid $foregroundColor_4;
+                            border-radius: 50%;
+                            color: #ffffff;
+                            cursor: pointer;
+                            background: rgba(31, 35, 47, 0.5);
+
+                            i {
+                                position: unset;
+                            }
+                        }
+
+                        .val {
+                            vertical-align: top;
+                            border-radius: 24px;
+                            cursor: unset;
+                        }
+                    }
+                }
+
+                .timeShow {
+                    width: 136px;
+                    height: 14px;
+                    position: absolute;
+                    left: 18%;
+                    bottom: 35px;
+
+                    span {
+                        display: inline-block;
+                        font-size: 14px;
+                        color: white;
+
+                        &:nth-child(2),
+                        &:nth-child(3) {
+                            color: #8d909b;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 回放多屏按钮
+        .screenControl {
+            position: absolute;
+            -moz-outline-radius-bottomright: 1rem;
+            padding-top: 0 !important;
+            bottom: 10px;
+            left: 0;
+            height: 32px !important;
+            border-radius: 3px;
+            background: $n-frondColor !important;
+            display: none;
+
+            >div {
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                width: 300px;
+                height: 100%;
+            }
+
+            .rightControl {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                right: 0;
+                height: 50px;
+                color: $textColor_2;
+                font-size: 0.75rem;
+                cursor: pointer;
+
+                i {
+                    font-size: 1.8rem;
+                }
+
+                span {
+                    margin-top: 3px;
+                }
+            }
+
+            .switchBlockNumActive {
+                color: #3875ff;
+            }
+
+            .close {
+                position: absolute;
+                left: 1rem !important;
+            }
+        }
+
+        .switchBlockClass-1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            >div {
+                width: 100%;
+                height: 100%;
+                border-radius: 3px;
+                border: 1px solid $n-borderColor;
+
+                .speedChoice {
+                    right: 15% !important;
+                    bottom: 0.5rem !important;
+                }
+            }
+        }
+
+        .switchBlockClass-4 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            >div {
+                width: 49%;
+                height: 48%;
+                border-radius: 3px;
+                border: 1px solid $n-borderColor;
+            }
+
+            .playBtn {
+                left: 30px !important;
+                bottom: 0.625rem !important;
+                width: 2rem !important;
+                height: 2rem !important;
+            }
+
+            .speedChoice {
+                right: 5% !important;
+                bottom: 0.5rem !important;
+                transform: scale(0.8);
+            }
+        }
+
+        .switchBlockClass-9 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            >div {
+                width: 33%;
+                height: 33%;
+                border-radius: 3px;
+                border: 1px solid $n-borderColor;
+
+                /deep/ .el-slider {
+                    width: 50% !important;
+                }
+
+                .playBtn {
+                    left: 10px !important;
+                    bottom: 0.8rem !important;
+                    width: 1.2rem !important;
+                    height: 1.2rem !important;
+
+                    .play {
+                        font-size: 0.6rem !important;
+                    }
+                }
+
+                .bottomShade {
+
+                    // bottom: 10px;
+                    .speedChoice {
+                        right: 5% !important;
+                        bottom: 0.3125rem !important;
+                        transform: scale(0.7);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/deep/ .ivu-modal {
+    width: 771px !important;
+
+    .ivu-modal-body {
+        height: 456px !important;
+    }
+
+    .pic {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/deep/ .ivu-modal .ivu-modal-content>.ivu-modal-body {
+    overflow: hidden !important;
+}
+
+/deep/ .el-radio-group {
+    margin-top: 8px !important;
+    margin-left: 18px !important;
+}
+
+/deep/ .el-popover {
+    /deep/ li {
+        background: red;
+    }
+}
+
+// 组件
+.displayNone {
+    display: none !important;
+}
+
+.VideoAssembly {
+    border: 5px solid #3875ff;
+    overflow: hidden;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    background: url(./Images/connecting.jpg) no-repeat center center/100% 100%;
+}
+
+// .VideoAssembly:after{content: "加载中.....";color: #0890A9;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}

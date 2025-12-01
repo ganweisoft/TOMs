@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>$(AspNetCoreTargetFramework)</TargetFramework>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>true</AppendRuntimeIdentifierToOutputPath>
+		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+		<FileVersion>6.1.0.0</FileVersion>
+		<Version>6.1.0.0</Version>
+		<Company>深圳市敢为软件技术有限公司</Company>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>Ganweisoft.IoTCenter.Module.EquipLink.xml</DocumentationFile>
+		<NoWarn>1701;1702;1591;</NoWarn>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<EmbeddedResource Include="Ganweisoft.IoTCenter.Module.EquipLink.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\..\IoTCenter.Infrastructure\IoTCenterCore.Abstractions\IoTCenterCore.Abstractions.csproj" />
+		<ProjectReference Include="..\..\..\..\IoTCenter.Infrastructure\IoTCenterWebApi.BaseCore\IoTCenterWebApi.BaseCore.csproj" />
+	</ItemGroup>
+
+</Project>

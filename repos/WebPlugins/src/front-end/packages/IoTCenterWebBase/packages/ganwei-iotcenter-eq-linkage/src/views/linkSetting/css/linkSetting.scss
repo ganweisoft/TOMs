@@ -1,0 +1,183 @@
+.linkSetting {
+    width: 100%;
+    min-width: 950px;
+    height: 100%;
+
+    >div {
+        display: inline-block;
+        height: 100%;
+        border-radius: 3px;
+    }
+
+    .left {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border: unset;
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .title_left {
+                @include page-header;
+
+                .rightLine {
+                    position: relative;
+                }
+
+                >span {
+                    font-size: $fontH18;
+                }
+
+                >i {
+                    font-size: $fontH24;
+                    cursor: pointer;
+                }
+
+                .el-icon {
+                    width: auto;
+                }
+            }
+
+            .export img {
+                width: 20px;
+            }
+        }
+
+        >section {
+            width: 100%;
+            height: calc(100% - 70px);
+
+            ::v-deep() #eqTable {
+                width: 100%;
+                height: calc(100% - 68px) !important;
+                padding: 15px 20px 0;
+                overflow: auto;
+                position: relative;
+                @include el-table;
+                .el-table{
+                    background-color: var(--table-background);
+                }
+                .el-table__header th{border: 0;}
+            }
+
+            ::v-deep() .pagination {
+                @include pagination;
+            }
+
+
+        }
+    }
+
+    ::v-deep() .el-dialog {
+        @include el-dialog;
+        .el-dialog__body {
+            .formDetail {
+                width: 100%;
+                max-height: 500px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                .el-form-item {
+                    width: 100%;
+                }
+                .controlEquipContainer{
+                    font-size: 14px;
+                    padding-left: 36px;
+                    width: 100%;
+                    margin: 0 !important;
+                    .controlEquip-add{
+                        height: 36px;
+                        line-height: 36px;
+                        position: relative;
+                        padding-right: 72px;
+                        >span{
+                            position: absolute;right: 42px;top: 7px;
+                           i{font-size: 20px;cursor: pointer;margin-left: 10px;}
+                          }
+                        label{
+                            font-size: 12px;
+                            color: var(--gw-color-Neutrals12);
+                        }
+                    }
+                    .controlEquip-list {
+                        dt{
+                           position: relative;
+                           padding-right: 72px;
+                           >span{
+                             display: none;
+                             position: absolute;right: 7px;top: 7px;
+                            i{font-size: 20px;cursor: pointer;margin-left: 10px;}
+                           }
+                        }
+                        dd{
+                            position: relative;
+                            padding-left: 110px;
+                            padding-right: 72px;
+                            display: flex;
+                            gap: 10px;
+                            .el-form-item__content{
+                                margin-left: 0!important;
+                            }
+                            .el-form-item{
+                                width: 88%;
+                            }
+                            >i{display: none;position: absolute;right: 7px;top: 7px;font-size: 20px;cursor: pointer;}
+                        }
+                        dt:hover >span, dd:hover >i{
+                            display: block!important;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .content {
+            width: 100%;
+
+            .eqInfo {
+                display: flex;
+                align-items: center;
+                margin-bottom: 16px;
+
+                &:nth-of-type(2n + 1) {
+                    padding-right: 50px;
+                }
+
+                &>span {
+                    width: 70px;
+                    flex-shrink: 0;
+
+                    &::after {
+                        content: ":";
+                    }
+                }
+            }
+
+            .labelWidth {
+                padding: 0 !important;
+
+                &>span {
+                    width: 160px !important;
+                }
+            }
+
+            .input {
+                display: flex;
+                align-items: center;
+
+                p {
+                    display: inline-block;
+                    font-size: 0.75rem;
+                    color: #8d909b;
+                    flex: 0 0 8%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}

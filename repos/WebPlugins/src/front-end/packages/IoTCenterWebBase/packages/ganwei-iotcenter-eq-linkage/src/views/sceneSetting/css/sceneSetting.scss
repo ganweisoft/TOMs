@@ -1,0 +1,624 @@
+.sceneSetting {
+    width: 100%;
+    height: 100%;
+    min-width: 700px;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+            @include page-header;
+            .el-icon {
+                width: auto;
+            }
+        }
+    }
+    .content{
+        overflow: auto;
+    }
+    .taskList {
+        width: 100%;
+        .repositoryItem {
+            height: 72px;
+        }
+
+        &>div {
+            margin-bottom: 10px;
+
+            &>div {
+                background-color: var(--frame-main-background-3);
+                color: var(--frame-main-color);
+                font-size: 0.75rem;
+                cursor: pointer;
+                border-radius: 3px;
+                padding: 0 16px;
+                position: relative;
+                padding: 16px;
+
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    right: 3%;
+                    top: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                    @include whiteSpace;
+
+                    &:nth-child(1) {
+                        margin-bottom: 12px;
+                    }
+
+                    &:nth-child(2) {
+                        color: var(--frame-main-color-1);
+                    }
+                }
+
+                i {
+                    font-size: 1.25rem;
+                    position: absolute;
+                    top: 33%;
+                    right: 2%;
+                }
+            }
+        }
+    }
+
+    .content {
+        color: var(--frame-main-color);
+        width: 100%;
+        @include page-body;
+    }
+
+    ::v-deep() .pagination {
+        width: 100%;
+        height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include pagination;
+    }
+
+    ::v-deep() .el-dialog {
+        margin-bottom: 0;
+        @include el-dialog;
+        .el-dialog__header{
+            .el-dialog__title{
+                padding: 0;
+            }
+        }
+        .el-dialog__body {
+            height: calc(100% - 64px - 72px);
+            padding: 8px;
+
+            .flex-start-body {
+                align-items: flex-start;
+            }
+
+            .dialog-body {
+
+                .dialog-body-xh-left {
+                    height: 430px;
+                    border: 0.5px solid;
+                    border-color: var(--frame-main-border);
+                    border-radius: 3px;
+                    padding: 5px 20px 20px 20px;
+
+                    >p {
+                        line-height: 50px;
+                        position: relative;
+                    }
+
+                    >div {
+                        display: flex;
+                        height: calc(100% - 50px);
+                    }
+
+                    #contentFullScreen {
+                        position: absolute;
+                        right: 0px;
+                        bottom: 12px;
+                        width: 25px;
+                        cursor: pointer;
+                    }
+
+                    .dialog-body-xh-left-leftContent {
+                        max-width: calc(50% - 25px);
+                        padding: 10px;
+                        white-space: nowrap;
+
+                        &>span {
+                            display: inline-block;
+
+                            a {
+                                display: inline-block;
+                                height: 28px;
+                                line-height: 28px;
+                                padding: 0px 10px;
+                                font-size: 13px;
+                            }
+
+                            border: 1px solid var(--tab-background__active);
+                            cursor: pointer;
+
+                            .active {
+                                color: white;
+                                background-color: var(--tab-background__active);
+                            }
+                        }
+
+                        &>form {
+                            height: calc(100% - 28px);
+
+                            >div {
+                                padding-top: 20px;
+                                height: calc(100% - 20px);
+
+                                .el-cascader {
+                                    .el-input {
+                                        width: 100%;
+                                    }
+                                }
+
+                                .el-form-item .el-input-number {
+                                    width: 100%;
+                                }
+                            }
+
+                            .el-input__wrapper{
+                                box-shadow: 0 0 0 1px var(--input-border) inset;
+                            }
+                            .el-form-item__error{
+
+                                color: var(--gw-color-danger);
+                            }
+                        }
+
+                        .sys-info {
+                            .el-form-item__content {
+                                display: flex;
+                                height: 100%;
+
+                                .el-cascader-panel {
+                                    width: 100%;
+                                    border: 1px solid var(--border-color-2);
+
+                                    .el-cascader-menu {
+                                        width: 50%;
+                                        border-right: 1px solid var(--border-color-2);
+                                    }
+
+                                    .el-cascader-menu__wrap {
+                                        height: 100%;
+
+                                        .el-cascader-node:not(.is-disabled):focus,
+                                        .el-cascader-node:not(.is-disabled):hover,
+                                        .is-active,
+                                        .in-active-path {
+                                            background: var(--tab-background__active);
+
+                                            span {
+                                                color: var(--con-textColor10);
+                                            }
+                                        }
+
+                                        .el-cascader-node__label {
+                                            color: var(--con-textColor1);
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        .eqp-info {
+                            .el-form-item__content {
+                                height: 100%;
+
+                                .list-box {
+                                    height: 100%;
+                                    width: 100%;
+
+                                    .main {
+                                        height: calc(100% - 34px);
+                                    }
+                                }
+                            }
+                        }
+
+                        flex: 1;
+                        background-color: var(--frame-main-background);
+
+                        .el-form-item__label {
+                            display: block;
+                            width: 100%;
+                            text-align: left;
+                            height: 32px;
+                            line-height: 32px;
+                            padding-left: 10px;
+                            background-color: var(--frame-main-background-3);
+                            margin-bottom: 20px;
+                        }
+
+                        .timeInterval {
+                            width: 100%;
+
+                            >div {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+
+                    .dialog-body-xh-left-centerContent {
+                        width: 50px;
+                        flex-shrink: 0 !important;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            font-size: 26px;
+                            color: var(--gw-color-primary);
+                            cursor: pointer;
+                        }
+                    }
+
+                    .dialog-body-xh-left-rightContent {
+                        flex: 1;
+                        max-width: calc(50% - 25px);
+
+                        .el-form,
+                        .el-form-item,
+                        .el-form-item__content {
+                            height: 100%;
+                        }
+
+                    }
+
+                    header {
+                        width: 100%;
+                        height: 32px;
+                        line-height: 32px;
+                        background-color: var(--frame-main-background-3);
+                        padding: 0 10px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .el-button {
+                            height: 32px;
+                            font-size: 14px;
+                            padding: 0;
+                            background: transparent;
+
+                            span {
+                                color: var(--gw-color-danger);
+                                font-size: 12px;
+
+                                .el-icon-delete {
+                                    padding-right: 4px;
+                                }
+                            }
+                        }
+                    }
+
+                    .base-info {
+                        padding: 0px;
+                        width: 100%;
+                        height: calc(100% - 32px);
+                        background-color: var(--frame-main-background);
+                        overflow: auto;
+
+                        .el-checkbox-group {
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 5px 0;
+
+                            .ctr-list {
+                                height: 100%;
+
+                                .setYcValue {
+                                    width: 105px;
+
+                                    input {
+                                        text-align: center;
+                                    }
+                                }
+
+                                .setDateInput {
+                                    width: 40px;
+                                    font-size: 12px;
+
+                                    input {
+                                        text-align: center;
+                                        padding: 0;
+                                        border-color: var(--border-color-2) !important;
+                                    }
+                                }
+
+                                >div {
+                                    position: relative;
+                                    padding-top: 5px;
+                                    padding-bottom: 5px;
+                                    padding-left: 70px;
+
+                                    .ctr-list-setValue {
+                                        margin-top: 10px;
+                                    }
+                                }
+
+                                >div:first-child {
+                                    .timeLine::before {
+                                        display: none !important;
+                                    }
+                                }
+
+                                >div:last-child {
+                                    .timeLine::after {
+                                        display: none !important;
+                                    }
+                                }
+
+                                .timeLine {
+                                    width: 24px;
+                                    height: 24px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: absolute;
+                                    left: 20px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    border-radius: 50%;
+                                    background-color: var(--tab-background__active);
+
+                                    i {
+                                        font-size: 14px;
+                                        color: white;
+                                    }
+                                }
+
+                                .timeLine~label {
+                                    width: calc(100% - 10px);
+                                    height: 78px;
+                                    line-height: 78px;
+                                    display: flex;
+                                    align-items: center;
+                                    background-color: var(--dialog-background);
+                                    border-radius: 6px;
+                                    overflow: auto;
+                                    padding-left: 20px;
+                                    cursor: all-scroll;
+                                }
+
+                                .timeLine::before {
+                                    content: '';
+                                    display: inline-block;
+                                    width: 1px;
+                                    height: 42px;
+                                    border-right: 3px solid var(--tab-background__active);
+                                    position: absolute;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    top: -42px;
+                                }
+
+                                .timeLine::after {
+                                    content: '';
+                                    display: inline-block;
+                                    width: 1px;
+                                    height: 42px;
+                                    border-right: 3px solid var(--tab-background__active);
+                                    position: absolute;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    bottom: -42px;
+                                }
+
+                            }
+
+                            .el-checkbox {
+                                .el-checkbox__input {
+                                    display: none;
+                                }
+
+                                .el-checkbox__label {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        .noDataTips {
+                            &::before {
+                                width: 200px;
+                                height: 200px;
+                                transform: translate(-100px, -130px);
+                            }
+                        }
+                    }
+                }
+
+                .dialog-body-xh-right {
+                    width: 100%;
+
+                    .paddingRight {
+                        .el-col {
+                            padding-right: 0 !important;
+                        }
+                    }
+
+                    .el-form:first-child {
+                        .el-form-item__label {
+                            // padding-left: 8px;
+
+                            &:before {
+                                content: '*';
+                                color: red;
+                            }
+                        }
+                    }
+
+                    >div:not(:last-of-type) {
+                        margin-bottom: 8px;
+                    }
+
+                    .el-row {
+                        margin-right: 0px !important;
+                        margin-left: 0px !important;
+
+                        .el-col {
+                            // margin-bottom: 20px;
+                            white-space: nowrap;
+                            text-align: right;
+                        }
+                    }
+
+                    .el-button {
+                        background: transparent !important;
+                        height: 32px;
+                        border-radius: 16px;
+                    }
+
+                    .saveCancel {
+                        .el-button {
+                            margin-left: 0 !important;
+                        }
+                    }
+
+                    .el-collapse {
+                        border: none;
+
+                        .el-collapse-item__header {
+                            font-size: 14px;
+                            // border-color: $n-borderColor;
+                            padding-left: 24px;
+                            padding-right: 8px;
+
+                            .el-icon-arrow-right {
+                                transform: rotate(90deg);
+                            }
+
+                            .is-active {
+                                transform: rotate(-90deg);
+                            }
+                        }
+
+                        .el-collapse-item__wrap {
+                            // border-color: $n-borderColor;
+
+                            .el-collapse-item__content {
+                                padding-bottom: 0;
+                            }
+
+                            .el-radio {
+                                position: relative;
+                                width: 100%;
+                                height: 34px;
+                                line-height: 32px;
+                                margin: 0;
+                                padding: 0 0 0 6px;
+
+                                .el-radio__label {
+                                    padding-left: 12px !important;
+                                }
+
+                                .el-date-editor {
+                                    position: absolute;
+                                    right: 0;
+                                    width: 72px;
+                                    border: none;
+
+                                    .el-input__inner {
+                                        border: none;
+                                        text-align: center;
+                                        font-size: 14px !important;
+                                    }
+
+                                    .el-input__icon {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            .el-checkbox {
+                                width: 100%;
+                                margin: 0;
+                                position: relative;
+
+                                .el-input-number {
+                                    width: 72px;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+
+                                    .el-input-number__decrease,
+                                    .el-input-number__increase {
+                                        display: none;
+                                    }
+
+                                    .el-input__inner {
+                                        height: 30px;
+                                        line-height: 30px;
+                                        border: none;
+                                        text-align: right;
+                                    }
+                                }
+
+                                .is-disabled {
+                                    .el-input__inner {
+                                        background: transparent !important;
+                                        border: none !important;
+                                    }
+                                }
+                            }
+
+                            .is-bordered {
+                                // border-color: $n-borderColor;
+                            }
+                        }
+                    }
+
+                    >div:not(:last-of-type) {
+                        margin-bottom: 8px;
+                    }
+
+                    .el-select {
+                        width: 100%;
+                    }
+
+                    .el-input-number {
+                        width: 100%;
+
+                        .el-input__inner {
+                            text-align: left;
+                        }
+
+                        .el-input-number__decrease,
+                        .el-input-number__increase {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.flip-list-move {
+    transition: transform 0.5s;
+}
+
+.no-move {
+    transition: transform 0s;
+}
+
+.moveGhost {
+    background: rgba(31, 35, 47, 0.8) !important;
+    color: white !important;
+}
+
+.goingdDel {
+    color: #f22433 !important;
+}

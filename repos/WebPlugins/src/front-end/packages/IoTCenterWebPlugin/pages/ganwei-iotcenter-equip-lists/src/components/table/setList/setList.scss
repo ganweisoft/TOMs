@@ -1,0 +1,40 @@
+.setList {
+    width: 100%;
+    height: 100%;
+
+    li {
+        margin: 4px;
+        padding: 0 16px;
+        float: left;
+        display: flex;
+        justify-content: center;
+        height: 48px;
+        line-height: 48px;
+        font-size: 14px;
+        overflow: hidden;
+        border-radius: 3px;
+        // border: 1px solid;
+        // border-color: var(--frame-main-border);
+        background-color: var(--frame-main-background-3);
+        // background-color: #3B4357;
+        color: var(--frame-main-color);
+        cursor: pointer;
+
+        &.isDisabled {
+            cursor: not-allowed;
+        }
+
+        &:not(.isDisabled):hover {
+            color: white;
+            transition: 0.2s;
+            background-color: var(--gw-color-primary);
+        }
+
+        >span {
+            display: block;
+            float: left;
+            // width: 80%;
+            height: 100%;
+        }
+    }
+}

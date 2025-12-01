@@ -1,0 +1,107 @@
+#objectModel {
+    width: calc(100% + 16px);
+    height: 100%;
+
+    .objectHeader {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .childSearch {
+            width: 180px;
+            height: 32px;
+            line-height: 32px;
+            margin-right: 8px;
+
+            /deep/ .el-input__inner {
+                height: 100%;
+            }
+        }
+    }
+
+    .el-menu-demo {
+        border-bottom: unset;
+
+        li {
+            &:hover {
+                background-color: unset !important;
+            }
+
+            &:focus {
+                background-color: unset !important;
+            }
+        }
+    }
+
+
+    /deep/ .el-pagination {
+        text-align: center;
+    }
+
+    .objectTable {
+        height: calc(100% - 124px);
+
+        /deep/ .el-table {
+            @include el-table;
+        }
+    }
+
+    /deep/ .anologueEquipPaging {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid $n-borderColor;
+        @include pagination;
+    }
+
+    .objModelDialog {
+        overflow: hidden;
+
+        /deep/ .el-dialog {
+            width: 100%;
+            height: 98vh;
+            margin-top: 1vh !important;
+            // margin: 0px !important;
+            @include el-dialog;
+
+            .el-dialog__body {
+                height: calc(100% - 50px - 80px);
+                overflow: auto;
+                @include firefoxScroll;
+            }
+        }
+    }
+
+    .el-dialog__footer {
+        height: 64px;
+        padding: 16px 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        // border-top: 0.5px solid;
+        // border-color: var(--frame-main-border);
+        border: none;
+
+        .dialog-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .el-button {
+            width: 78px;
+            height: 28px;
+            line-height: 28px;
+            padding: 0px !important;
+            border: none;
+            float: left;
+
+            .el-icon-loading {
+                line-height: 28px !important;
+            }
+        }
+
+    }
+}

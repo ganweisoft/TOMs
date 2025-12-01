@@ -1,0 +1,15 @@
+.historyEchart {
+    width: 100%;
+    height: 100%;
+    > div {
+        width: 100%;
+        height: 100%;
+    }
+    .noData {
+        // color: $textColor_1;
+        color: var(--con-textColor1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "IoTCenterHost.AppServices": {
+      "commandName": "Executable",
+      "executablePath": "D:\\IoTCenter\\bin\\GWHost1.exe",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:4000"
+    }
+  }
+}

@@ -1,0 +1,351 @@
+.specialTask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    min-width: 1014px;
+
+    .viewHeader {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-left {
+            display: flex;
+            align-items: center;
+
+            h1 {
+                font-size: 1.125rem;
+                line-height: 24px;
+                font-weight: normal;
+                color: var(--frame-main-color);
+                &::after {
+                    content: "";
+                    width: 1px;
+                    height: 20px;
+                    margin-left: 24px;
+                    margin-right: 24px;
+                    transform: translateY(3px);
+                    display: inline-block;
+                    background: #595959;
+                }
+            }
+
+            .change-box {
+                font-size: 1rem;
+            }
+
+            .el-button.is-circle {
+                color: var(--frame-main-color);
+                border-radius: 3px;
+                font-size: 1.5rem;
+                background-color: transparent !important;
+                border-color: transparent !important;
+
+                padding: 0;
+                &::before {
+                    content: "";
+                    width: 1px;
+                    height: 20px;
+                    margin-left: 24px;
+                    padding-left: 24px;
+                    transform: translateY(2px);
+                    display: inline-block;
+                    border-left: 1px solid #595959;
+                    background: transparent;
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        span {
+            font-size: 1rem;
+            cursor: pointer;
+            color: var(--frame-main-color);
+            display: flex;
+            align-items: center;
+
+            .iconfont {
+                font-size: 1.5rem;
+                margin-right: 0.625rem;
+            }
+        }
+
+        .control {
+            @include searchInput;
+        }
+    }
+
+    .padding-box {
+        padding: 15px 20px 0;
+    }
+
+    .viewBody {
+        display: inline-block;
+        width: 100%;
+        height: calc(100% - 70px);
+        background-color: var(--frame-main-background-2);
+
+        /deep/ .fc {
+            table {
+                border-collapse: inherit;
+            }
+
+            td {
+                border: 0.5px solid;
+                border-color: var(--frame-main-border);
+                border-left: none;
+                border-bottom: none;
+            }
+
+            // 日历图表顶部导航条
+            .fc-toolbar {
+                width: auto;
+                position: absolute;
+                top: 24px;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 0 !important;
+
+                .fc-left {
+                    width: auto;
+                    position: relative;
+
+                    >div {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .fc-today-button {
+                        display: none;
+                    }
+
+                    .fc-button {
+                        font-size: 0.75rem;
+                        margin: 0 8px;
+                        padding: 0 !important;
+                        background: transparent;
+                        border: none;
+
+                        .fc-icon {
+                            font-size: 1.6rem;
+                        }
+
+                        .fc-icon-chevron-left:before {
+                            content: \e70e;
+                        }
+                    }
+
+                    .fc-button-primary:disabled {
+                        background: $n-frondColor !important;
+                    }
+                }
+
+                h2 {
+                    width: 100px;
+                    text-align: center;
+                    font-size: 1rem;
+                    white-space: nowrap;
+                    margin: 0 16px;
+                }
+            }
+
+            // 日历图表内容区域
+            .fc-view-container {
+                .fc-view {
+                    .fc-head {
+                        line-height: 32px !important;
+
+                        .fc-head-container {
+                            border-width: 0;
+
+                            .fc-day-header {
+                                font-size: 14px;
+                                font-weight: 100;
+                                line-height: 48px;
+                                border-width: 0 !important;
+                            }
+                        }
+                    }
+
+                    .fc-body {
+                        &>tr {
+                            &>.fc-widget-content {
+                                border-right: none;
+                            }
+                        }
+
+                        .fc-day-grid {
+                            .fc-row {
+                                &:first-of-type {
+                                    .fc-day:not(.fc-today) {
+                                        border-top: none;
+                                    }
+                                }
+
+                                .fc-bg {
+                                    .fc-other-month {
+                                        @include background_linear("con-bgColor19",
+                                            "con-bgColor23"
+                                        );
+                                    }
+                                }
+
+                                .fc-content-skeleton {
+                                    .fc-day-top {
+                                        border-top: none;
+                                        border-right: none;
+
+                                        .fc-day-number {
+                                            font-weight: 100;
+                                            position: relative;
+                                            top: 4px;
+                                            right: 4px;
+                                        }
+                                    }
+
+                                    tbody {
+                                        td {
+                                            border-top: none;
+                                            border-right: none;
+                                        }
+
+                                        .fc-event-container {
+                                            .fc-day-grid-event {
+                                                margin-top: 12px !important;
+
+                                                .fc-content {
+                                                    height: 30px;
+                                                    line-height: 30px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .fc-more-popover {
+                        border: unset;
+
+                        .fc-header {
+                            padding: 7px 9px;
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        /deep/ .el-table {
+            width: calc(100%) !important;
+            // margin: 0 16px;
+            background: transparent;
+            @include el-table;
+
+            th {
+                font-weight: normal !important;
+                padding: 7px 8px;
+            }
+
+            .cell {
+                text-align: left !important;
+                // display: flex;
+                align-items: center;
+            }
+
+            .el-table__empty-block {
+                .el-table__empty-text {
+                    >div {
+                        flex-direction: column;
+                    }
+                }
+
+                h2 {
+                    font-size: 1.5rem;
+                    color: var(--frame-main-color);
+                    line-height: 1.5rem;
+                    font-weight: normal;
+                }
+            }
+
+            .colorBlock {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                // background: skyblue;
+                border: unset;
+            }
+        }
+    }
+
+    /deep/ .viewPagnation {
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        @include pagination;
+        width: calc(100% - 40px);
+    }
+
+    .tabStyle {
+        padding: unset !important;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    /deep/ .el-dialog__wrapper {
+        .el-dialog {
+            @include el-dialog;
+
+            .el-dialog__body {
+                padding: 0 !important;
+
+                .formDetail {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 16px;
+
+                    .el-form {
+                        .el-form-item {
+                            margin-bottom: 20px;
+
+                            .el-form-item__label {
+                                line-height: 32px;
+                            }
+
+                            .el-form-item__content {
+                                height: 32px;
+                                line-height: 32px;
+
+                                .el-input,
+                                .el-select,
+                                .el-date-editor {
+                                    width: 100%;
+                                }
+
+                                .el-form-item__error {
+                                    padding-top: 2px;
+                                }
+                            }
+
+                            .el-tag--info {
+                                display: flex;
+                                align-items: center;
+
+                                .el-select__tags-text {
+                                    max-width: 120px;
+                                    display: block;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

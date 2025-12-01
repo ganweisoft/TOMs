@@ -1,0 +1,14 @@
+{
+    "excludeFile": [
+        "package.json",
+        "initConfig.json",
+        "src"
+    ],
+    "scripts": {
+        "public": "npm config set registry=http://registry.npmjs.org",
+        "dev-all": "node copy-public.js & cross-env NODE_ENV_ALL=debugAll webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+        "build-all": "cross-env NODE_ENV_ALL=proAll node build/build-all.js",
+        "build-frame": "cross-env NODE_ENV_ALL=proFrame node build/build.js",
+        "prestart": "node copy-public.js"
+    }
+}

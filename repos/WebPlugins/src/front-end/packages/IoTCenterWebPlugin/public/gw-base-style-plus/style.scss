@@ -1,0 +1,192 @@
+//------------------------------ 旧版主题定义V3.0 start------------------------------------------//
+
+// 日间模式
+$login-btn: #05a2e5;
+$login-btn-hover: #04b0fa;
+$login-btn-shadow: rgba(190, 227, 243, 0.2);
+$background: #f8f8f8;
+$background-box: #ffffff;
+$borderColor: #e6e6e6;
+$fontColor: #1f232f;
+$fontColor-minor: #2d2e30;
+$fontColor-light: rgba(31, 35, 47, 0.6);
+$fontColor-gray: #8d909b;
+$background-equipNum: #cccccc;
+$background-equipNum-check: #4f535f;
+$equipNum-icon: #bfbfbf;
+$inputBorder: #979797;
+$lightBack: #252833;
+$btn-blue: #3875ff;
+$dialog-background: #ebebeb;
+$black: #000;
+$aside-font: rgba(240, 244, 255, 0.88);
+$aside-font2: rgba(240, 244, 255, 0.64);
+$aside-font3: rgba(56, 117, 255, 1);
+
+// 夜间模式
+$n-fontColor: #ffffff;
+$n-cardColor: #313747;
+$n-backColor: #0c0e14; //背景色
+$n-middleColor: #181c29; //中间色
+$n-frondColor: #252833; //前景色
+$n-frondLight: #313747; //前景色-突出
+$n-frondHigh: #3b4357; //前景色-高亮
+$n-borderColor: rgba(240, 244, 255, 0.16); // 文本色-最次
+
+// 评审公共样式
+$main-padding: 16px; // 主内容主体边距、主内容标题内边距
+$main-titleHeight: 48px; // 主内容标题高度
+$bottomHeight: 48px; // 底部栏高度 (主内容&副内容)
+$bottomPadding: 8px 0 16px; // 底部栏边距 (主内容&副内容)
+$sub-padding: 8px; // 副内容主体边距
+$sub-cardTight: 8px; //副内容选项边距 (紧凑)
+$sub-cardLoose: 8px; //副内容选项边距 (宽松)
+$sub-titlePadding: 16px; // 副内容标题区边距
+$title-btn: 28px; // 标题区按钮高度
+$small-btn: 32px; // 小按钮
+$big-btn: 40px; // 大按钮
+$alartFooterHeight: 64px; //弹窗底部高度
+$labelColor: rgba(240, 244, 255, 0.64); // 表单标签名颜色,表单placeHolder颜色
+$inputColor: rgba(240, 244, 255, 1); // 输入文字颜色
+$scout-inputHeight: 28px; // 标题输入框高
+$inputHeight: 32px; // 普通&表单输入框（下拉框）高度
+$popper-font: rgba(240, 244, 255, 0.88);
+$list-FontSize: 16px;
+
+
+// 主题色
+$themeColor_1: #3875ff;
+$themeColor_2: #226bcc;
+$themeColor_3: #195098;
+$themeColor_4: #113464;
+$themeColor_success: #63e03f;
+$themeColor_alarm: #f22433;
+$themeColor_warning: #f5bb36;
+$themeColor_purple: #eb2fbc;
+
+// 文本色
+$headerTitle: #91a2af;
+$textColor_1: #f0f4ff;
+$textColor_2: rgba(240, 244, 255, 0.88);
+$textColor_3: rgba(240, 244, 255, 0.56);
+$textColor_4: rgba(240, 244, 255, 0.32);
+$textColor_5: rgba(240, 244, 255, 0.16);
+$textColor_6: rgba(240, 244, 255, 0.56);
+$textColor_7: rgba(240, 244, 255, 0.08);
+$bjColor_1: #090f1a; // 背景色
+$middleColor_1: #181c29; //中间色
+
+// 前景色
+$foregroundColor_1: #252833;
+$foregroundColor_1_2: rgba(37, 40, 51, 0.88);
+$foregroundColor_2: #313747;
+$foregroundColor_3: #3b4357;
+$foregroundColor_4: #2f3544;
+$icon_color: #000b17;
+
+//列表双行颜色
+$listDouColor: #07253e;
+$listSelected: #103e66;
+
+// 侧边栏
+$asideHeader: #313747;
+$asideBg: #252833;
+$asideColor: rgba(240, 244, 255, 0.56);
+$asideBorder: rgba(240, 244, 255, 0.16);
+$asideHoverBg: #181c29;
+$asideHoverColor: #f0f4ff;
+
+// 按钮 $btn-
+$linearBg: linear-gradient(-43deg, #181c29, #3b4357);
+$linearBtnBg: #3b4357;
+$linearBtnHoverBg: #2f3544;
+$linearHeaderBg: #313747;
+$border-color: rgba(61, 74, 99, 0.51);
+
+// 列表
+$list-bgColor: rgba(61, 74, 99, 0.51);
+
+// 边框 $border-
+
+// 线条 $line-
+$line-color: #595959;
+// Tab $tab-
+
+// 输入框 $input-
+
+// textarea $textarea-
+
+// 表格 $table-
+$table-border-radius: 6px;
+$table-header-height: 40px;
+$table-tbody-tr-height: 48px;
+// 图片 $img-
+
+// 容器(div、section等背景) $con-
+
+// 弹窗 $dialog-
+
+// 提示 $tips-
+
+// 文本 $txt-
+$fontH36: 36px;
+$fontH30: 30px;
+$fontH24: 24px;
+$fontH20: 20px;
+$fontH18: 18px;
+$fontH16: 16px;
+$fontH14: 14px;
+$fontH12: 12px;
+$foldBg: #181c29;
+$foldColor: rgba(240, 244, 255, 0.88);
+
+// 选中框-单选-多选 $sel-
+
+// 分页 $page-
+
+// 为换肤增加的样式--end
+
+
+// 统一宽度处理
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+//统一字体处理
+html,
+body {
+    font-size: 16px;
+}
+
+
+
+//------------------------------ 旧版主题定义 end------------------------------------------//
+
+// 黑色
+@import "./modular/style-black.scss";
+// 白色
+@import "./modular/style-white.scss";
+// 设置主题相关混合
+@import "./modular/setTheme.scss";
+
+// 浏览器相关混合
+@import "./modular/browserScroll.scss";
+// 文本相关混合
+@import "./modular/txtHandle.scss";
+// 列表相关混合
+@import "./modular/listHandle.scss";
+//输入框
+@import "./modular/inputStyle.scss";
+// 容器相关混合
+@import "./modular/containerHandle.scss";
+// 弹窗相关混合
+@import "./modular/alertHandle.scss";
+// 按钮相关混合
+@import "./modular/btnHandle.scss";
+// 表格相关混合
+@import "./modular/tableHandle.scss";
+// 响应式样式
+// @import "./modular/mobileStyle.scss";
+// 弹窗样式混入
+@import "./modular/dialogStyle.scss";

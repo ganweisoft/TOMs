@@ -1,0 +1,229 @@
+// 单行超出省略号
+@mixin noData {
+    .noData {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+
+        .tip {
+            font-size: 1.5rem;
+            display: flex;
+            line-height: 50px;
+            justify-content: center;
+            align-items: center;
+            color: var(--con-textColor4);
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--con-textColor4);
+
+            span {
+                font-size: 1rem;
+            }
+
+            .el-button {
+                // color: $themeColor_1;
+                margin: 0px 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                .icon16_tianjia {
+                    font-size: 24px;
+                }
+
+                span {
+                    font-size: 18px;
+                    display: inline-block;
+                    height: 24px;
+                    line-height: 22px;
+                }
+
+                .iconfont {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+
+    //响应式宽度
+    $screen-xs-max: 767px;
+    $screen-sm-min: 768px;
+    $screen-md-min: 992px;
+    $screen-lg-min: 1200px;
+
+    @media (max-width: $screen-xs-max) {
+        .noData {
+            .tip {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@mixin dialog {
+    .eqYcYxDialog {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        @include firefoxScroll;
+
+        .el-dialog {
+            width: 86% !important;
+            min-width: 1100px;
+            max-width: 1232px !important;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 4px;
+
+            .el-dialog__body {
+                overflow: auto;
+                height: calc(100% - 64px - 71px);
+                @include firefoxScroll;
+                border: none !important;
+
+                .el-collapse-item__content {
+                    padding-bottom: 0px;
+                }
+
+                .el-input-number--small {
+                    line-height: 32px !important;
+                }
+
+                .el-input-number__decrease,
+                .el-input-number__increase {
+                    right: 0px !important;
+                }
+
+                .el-input-number__increase {
+                    border: 1px solid;
+                }
+
+                .el-tooltip {
+                    &:hover {
+                        color: var(--gw-color-primary);
+                    }
+                }
+            }
+        }
+
+        .el-loading-mask {
+            visibility: visible !important;
+        }
+    }
+
+    //响应式宽度
+    $screen-xs-max: 767px;
+    $screen-sm-min: 768px;
+    $screen-md-min: 992px;
+    $screen-lg-min: 1200px;
+
+    @media (max-width: $screen-xs-max) {
+        .eqYcYxDialog {
+            .el-dialog {
+                width: 100% !important;
+                height: 100%;
+                margin-top: 0px !important;
+                margin-bottom: 0px !important;
+
+                .el-dialog__body {
+                    height: calc(100% - 64px - 71px);
+                    overflow: auto;
+                    @include firefoxScroll;
+
+                    .el-collapse-item__content {
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen-sm-min) {
+        .eqYcYxDialog {
+            .el-dialog {
+                margin-top: 0vh !important;
+
+                .el-collapse-item__content {
+                    padding-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+@mixin setDialog {
+    .setDialog {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        @include firefoxScroll;
+
+
+        .el-dialog {
+            @include el-dialog;
+            width: 60%;
+            margin: unset !important;
+            width: 86% !important;
+            max-width: 1232px !important;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 4px;
+
+            .el-dialog__body {
+                overflow: auto;
+                height: calc(100% - 64px - 72px);
+                @include firefoxScroll;
+                border: none !important;
+
+                .el-collapse-item__content {
+                    padding-bottom: 0px;
+                }
+            }
+        }
+    }
+
+    //响应式宽度
+    $screen-xs-max: 767px;
+    $screen-sm-min: 768px;
+    $screen-md-min: 992px;
+    $screen-lg-min: 1200px;
+
+    @media (max-width: $screen-xs-max) {
+        .setDialog {
+            .el-dialog {
+                height: 100% !important;
+                width: 100% !important;
+                margin-top: 0px !important;
+                margin-bottom: 0px !important;
+
+                .el-dialog__body {
+                    height: calc(100% - 64px - 72px);
+                    overflow: auto;
+                    @include firefoxScroll;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen-sm-min) {
+        .setDialog {
+            /deep/ .el-dialog {
+                width: 50%;
+                min-width: 726px;
+            }
+        }
+    }
+}

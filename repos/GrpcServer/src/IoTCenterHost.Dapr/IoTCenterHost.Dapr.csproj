@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Version>9.0.0.1</Version>
+        <Company>深圳敢为软件技术有限公司</Company>
+        <Product>IoTCenter</Product>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Protobuf Include="Protos\*.proto" ProtoRoot="Protos" GrpcServices="None" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Google.Protobuf" />
+        <PackageReference Include="Grpc.AspNetCore" />
+        <PackageReference Include="Grpc.Net.Client" />
+        <PackageReference Include="Grpc.Tools" PrivateAssets="All" />
+        <PackageReference Include="Google.Api.CommonProtos" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Dapr.AspNetCore" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IoTCenterHost.Domain\IoTCenterHost.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="dapr.yaml" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AssemblyName>GWHost1</AssemblyName>
+		<RootNamespace>GWHost</RootNamespace>
+		<UserSecretsId>a6756859-eaa3-45b2-a682-62ca66ba278e</UserSecretsId>
+		<SatelliteResourceLanguages>none</SatelliteResourceLanguages>
+		<IsPackable>true</IsPackable> 
+	</PropertyGroup>
+	<PropertyGroup>
+		<InvariantGlobalization>false</InvariantGlobalization>
+		<AssemblyVersion>9.0.0</AssemblyVersion>
+		<Version>9.0.0</Version>
+		<Description>敢为物联网平台服务端程序框架，用以提供敢为物联网平台宿主程序对外访问的接口和消息推送。</Description>
+		<FileVersion>9.0.0</FileVersion>
+		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+		<EnableNETAnalyzers>False</EnableNETAnalyzers>
+	</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<SatelliteResourceLanguages>cs</SatelliteResourceLanguages>
+	</PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore.HealthChecks" />
+	  <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" />
+	  <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" />
+	  <PackageReference Include="Serilog.AspNetCore" />
+	  <PackageReference Include="Serilog.Enrichers.Thread" />
+	  <PackageReference Include="Serilog.Expressions" />
+	  <PackageReference Include="Serilog.Sinks.Map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IoTCenterHost.Core\IoTCenterHost.Core.csproj" />
+    <ProjectReference Include="..\IoTCenterHost.Dapr\IoTCenterHost.Dapr.csproj" />
+    <ProjectReference Include="..\IoTCenterHost.GrpcConstract\IoTCenterHost.GrpcConstract.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Content Update="appsettings.Development.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<Content Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<Content Update="logsetting.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="GWRES1.dll">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="ssl\ssl.p12">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="更新记录.txt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties appsettings_1json__JsonSchema="" />
+		</VisualStudio>
+	</ProjectExtensions>
+
+</Project>

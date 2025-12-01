@@ -1,0 +1,71 @@
+# ------------------------------
+# 1. App 配置
+# ------------------------------
+apiVersion: dapr.io/v1alpha1
+version: 1
+common:
+  resourcesPath: ./
+apps:
+  - appID: open-datacenter
+    appDirPath: ../bin/
+    appPort: 5000
+    daprHTTPPort: 3500
+    daprGRPCPort: 50000
+    command: ["dotnet", "GWHost1.dll"]
+
+---
+# ------------------------------
+# 1. Redis 状态存储组件
+# ------------------------------
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: statestore
+  namespace: default
+spec:
+  type: state.redis
+  version: v1
+  metadata:
+    - name: redisHost
+      value: localhost:6379
+    - name: redisPassword
+      value: ""
+    - name: enableTLS
+      value: "false"  # 是否启用 TLS
+    - name: maxRetries
+      value: "3"      # 最大重试次数
+
+---
+# ------------------------------
+# 2. Redis 发布/订阅组件
+# ------------------------------
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: open_datacenter_pubsub
+spec:
+  type: pubsub.redis  # optional: pubsub.rabbitmq, pubsub.kafka
+  version: v1
+  metadata:
+    - name: redisHost
+      value: localhost:6379
+    - name: redisPassword
+      value: ""
+scopes:
+  - open-datacenter
+
+---
+# ------------------------------
+# 3. HTTP 输入绑定（接收外部事件）
+# ------------------------------
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: http-input
+  namespace: default
+spec:
+  type: bindings.http
+  version: v1
+  metadata:
+    - name: url
+      value: "http://localhost:8080"  # 绑定到本地服务的地址

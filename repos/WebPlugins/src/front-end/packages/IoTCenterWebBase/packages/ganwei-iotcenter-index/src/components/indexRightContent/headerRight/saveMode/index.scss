@@ -1,0 +1,36 @@
+.safeModeBox{
+    >div{
+        display: flex;
+        height: 28px;
+        align-items: center;
+        font-size: 14px;
+        // padding: 0px 8px;
+        .safeMode {
+            font-size: 14px;
+            color: #878A91;
+            line-height: 24px;
+            pointer-events: none;
+            .safeMode1 {
+                margin-left: 5px;
+                color: #F22433;
+            }
+        
+            .safeMode2 {
+                margin-right: 5px;
+                color: #00DB1C;
+            }
+        
+            .safeMode3 {
+                margin-left: 5px;
+                color: #78262E;
+            }
+        }
+    }
+    .safeModeContainer1{
+        padding: 0px 8px;
+        background-color: var(--frame-top-alarm-background);
+    }
+    .safeModeContainer2{
+        // background-color: var(--frame-top-normal-background);
+    }
+}

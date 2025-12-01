@@ -1,0 +1,19 @@
+syntax = "proto3";  
+import "google/protobuf/empty.proto"; 
+import "common.proto"; 
+import "google/protobuf/wrappers.proto";
+option csharp_namespace = "IoTCenterHost.Proto";  
+package IoTCenterHost.Proto;
+service IotQueryService { 
+  rpc Listen (google.protobuf.Empty) returns (google.protobuf.Empty);   
+  rpc GetTotalEquipData (BoolDefine) returns (StringResult);
+  rpc GetTotalYCData (BoolDefine) returns (StringResult); 
+  rpc GetTotalYXData (BoolDefine) returns (StringResult);
+  rpc FirstGetRealEventItem (google.protobuf.Empty) returns (StringResult);
+  rpc GetRealEventItem (BoolDefine) returns (StringResult); 
+  rpc GetLastRealEventItem (IntegerDefine) returns (StringResult);   
+  rpc GetAddRealEventItem (google.protobuf.Empty) returns (StringResult);
+  rpc GetDelRealEventItem (google.protobuf.Empty) returns (StringResult); 
+  rpc GetPaginationRealEventItem (StringResult) returns (StringResult); 
+  rpc GetRealTimeGroupCount (google.protobuf.Empty) returns (StringResult); 
+}

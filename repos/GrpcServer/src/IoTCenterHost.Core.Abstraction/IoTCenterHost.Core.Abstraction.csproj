@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<VersionPrefix>9.0.0.3</VersionPrefix>
+		<Version>$(VersionPrefix)</Version>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+	</PropertyGroup>
+	<PropertyGroup>
+		<PackageId>IoTCenterHost.Core.Abstraction</PackageId>
+		<Description>grpc abstraction interface</Description>
+		<SignAssembly>true</SignAssembly>
+		<PackageId>IoTCenterHost.Core.Abstraction</PackageId>
+		<Authors>ganweisoft</Authors>
+		<Company>ganweisoft</Company>
+		<IsPackable>true</IsPackable>
+		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+		<EnableNETAnalyzers>False</EnableNETAnalyzers>
+		<TargetFramework>net9.0</TargetFramework>
+		<NoWarn>$(NoWarn);CS1591;CS0108</NoWarn>
+		<PackageProjectUrl>https://opensource.ganweicloud.com</PackageProjectUrl>
+		<PackageIcon>logo.jpg</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/ganweisoft/GrpcServer</RepositoryUrl>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+		<DocumentationFile>IoTCenterHost.Core.Abstraction.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\logo.jpg">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>

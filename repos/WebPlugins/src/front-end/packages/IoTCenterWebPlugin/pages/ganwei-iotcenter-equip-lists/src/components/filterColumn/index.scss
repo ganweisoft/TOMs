@@ -1,0 +1,224 @@
+.gw-tab {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    user-select: none;
+
+    .el-loading-mask {
+        visibility: visible;
+    }
+
+    .tab_btn {
+        border-radius: 3px;
+
+        display: flex;
+        height: 40px;
+
+        span {
+            display: inline-block;
+        }
+
+        .tab {
+            font-size: 16px;
+            color: var(--equiptab-color);
+            text-align: center;
+            border-radius: 2px;
+            cursor: pointer;
+
+            height: 100%;
+            line-height: 40px;
+            margin-right: -16px;
+            display: flex;
+            align-items: center;
+
+            .content {
+                min-width: 84px;
+            }
+
+            .leftBox,
+            .rightBox {
+                width: 0;
+                height: 0;
+            }
+
+            [data-theme='dark'] & {
+                .content {
+                    background-color: #313747;
+                }
+            }
+
+            [data-theme='light'] & {
+                .content {
+                    background-color: #d8ddea;
+                }
+            }
+
+            [data-theme='dark'] & {
+                .rightBox {
+                    border-bottom: 40px solid #313747;
+                    border-right: 20px solid transparent;
+                }
+            }
+
+            [data-theme='light'] & {
+                .rightBox {
+                    border-bottom: 40px solid #d8ddea;
+                    border-right: 20px solid transparent;
+                }
+            }
+
+            .leftBox {
+                width: 20px;
+                height: 100%;
+
+                [data-theme='dark'] & {
+                    background: #313747;
+                }
+
+                [data-theme='light'] & {
+                    background: #d8ddea;
+                }
+            }
+
+            [data-theme='dark'] &:not(:first-of-type) {
+                .leftBox {
+                    // background-image: linear-gradient(-135deg, transparent 15px, #58a 0) top right;
+                    width: 0;
+                    height: 0;
+                    border-top: 40px solid #313747;
+                    border-left: 20px solid transparent;
+                    background: unset;
+                }
+            }
+
+            [data-theme='light'] &:not(:first-of-type) {
+                .leftBox {
+                    // background-image: linear-gradient(-135deg, transparent 15px, #58a 0) top right;
+                    width: 0;
+                    height: 0;
+                    border-top: 40px solid #d8ddea;
+                    border-left: 20px solid transparent;
+                    background: unset;
+                }
+            }
+
+            &:hover {
+                color: $btn-blue;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                &.onTabNavClass {
+
+                    // background-image: linear-gradient(60deg, transparent 15%, #3875FF 16%, #3875FF 84%, transparent 85%, transparent);
+                    .leftBox {
+                        // background-image: linear-gradient(-135deg, transparent 15px, #58a 0) top right;
+                        width: 0;
+                        height: 0;
+                        border-top: 40px solid #3875ff;
+                        border-left: 20px solid transparent;
+                        background: unset;
+                    }
+
+                    .content {
+                        background: #3875ff;
+                    }
+
+                    .rightBox {
+                        border-bottom: 40px solid #3875ff;
+                        border-right: 20px solid transparent;
+                    }
+                }
+            }
+
+            &:first-child.onTabNavClass {
+
+                // background-image: linear-gradient(59deg, #3875FF 84%, transparent 85%, transparent);
+                .leftBox,
+                .content {
+                    background: #3875ff;
+                }
+
+                .rightBox {
+                    border-bottom: 40px solid #3875ff;
+                    border-right: 20px solid transparent;
+                }
+            }
+        }
+
+        .onTabNavClass {
+            // color: white;
+            color: var(--equiptab-color__active) !important;
+        }
+    }
+
+    .tab_content {
+        position: relative;
+        width: 100%;
+        height: calc(100% - 40px);
+        overflow: auto;
+        color: $textColor_1;
+        padding: 15px;
+        padding-bottom: 0px;
+        @include el-table;
+
+        .el-table {
+            width: 100%;
+
+            .zi-chan {
+                cursor: pointer;
+                color: $themeColor_1;
+            }
+
+            th.gutter,
+            colgroup.gutter {
+                display: table-cell !important;
+            }
+
+            .el-icon-more {
+                transform: rotate(90deg);
+                cursor: pointer;
+            }
+
+            tbody {
+                .cell {
+                    height: 48px;
+                    margin-top: 4px;
+
+                    display: flex;
+                    font-size: 14px;
+                    line-height: 48px;
+                    margin-right: 0px !important;
+
+                    .aState {
+                        width: 100%;
+                        height: 100%;
+                        display: flex; //   justify-content: center;
+                        //   padding-left: 1rem;
+                        align-items: center;
+                    }
+
+                    .iconfont {
+                        cursor: pointer;
+                        font-size: 24px !important;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: rgb(56, 117, 255);
+                    }
+
+                    .iconshanchu {
+                        color: #bf2533;
+                    }
+
+                    .iconbianji {
+                        color: #346ae4;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

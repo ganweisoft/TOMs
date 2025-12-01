@@ -1,0 +1,16 @@
+// 搜索框
+@mixin searchInput {
+    .el-input {
+        width: 287px;
+
+        .el-input__inner {
+            height: 32px;
+            background-color: var(--input-background);
+
+            &::-webkit-input-placeholder {
+                font-size: 14px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<Import Project="Dependencies.props" />
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<DebugType>portable</DebugType>
+		<NetStandardImplicitPackageVersion>2.0.0-*</NetStandardImplicitPackageVersion>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+		<LangVersion>10.0</LangVersion>
+		<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+		<RunAnalyzers>false</RunAnalyzers>
+	</PropertyGroup>
+
+</Project>

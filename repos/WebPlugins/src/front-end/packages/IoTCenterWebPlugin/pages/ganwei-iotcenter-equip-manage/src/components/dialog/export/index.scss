@@ -1,0 +1,23 @@
+.exportContainer{
+.exportSearch{
+   margin-top: 25px;
+}
+.exportContent{
+  padding: 15px 0;
+  .exportList{
+    padding: 5px 0;
+    max-height: 400px;
+    overflow: auto;
+    >div>label{
+        width: 33%;
+        overflow: hidden;
+        margin: 10px 0;
+        .el-checkbox__label{width: 90%;overflow: hidden;text-overflow: ellipsis;vertical-align: middle;}
+    }
+  }
+}
+.exportPagination{
+    text-align: center;
+    line-height: 30px;
+}
+}

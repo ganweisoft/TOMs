@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<VersionPrefix>9.0.0</VersionPrefix>
+		<Version>$(VersionPrefix)</Version>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Configurations>Development;Staging;Production</Configurations>
+		<Description>
+			敢为物联网平台服务端程序框架，用以提供敢为物联网平台宿主程序对外访问的接口和消息推送。
+			AlarmCenterGrpcService.Protos为协议文件共享类库。
+		</Description>
+		<Company>深圳敢为软件技术有限公司</Company>
+		<IsPackable>true</IsPackable>
+		<TargetFramework>net9.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Protobuf Include="common.proto" GrpcServices="Client and Server" />
+		<Protobuf Include="greet.proto" GrpcServices="Client and Server" />
+		<Protobuf Include="iotsubgatewayContract.proto" GrpcServices="Client and Server" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,37 @@
+{
+    "name": "IoTCenterWebBase",
+    "version": "6.1.0",
+    "license": "MIT",
+    "author": "Shenzhen Ganwei Software<opensource@ganweisoft.com>",
+    "private": false,
+    "type": "module",
+    "scripts": {
+        "dev": "pnpm -r --parallel  run dev",
+        "build": "pnpm -r --parallel run build"
+    },
+    "pnpm": {
+        "peerDependencyRules": {
+            "allowedVersions": {
+                "vite": ">2.5.10",
+                "vue": ">2.0.0"
+            }
+        },
+        "packageExtensions": {
+            "vue-template-compiler": {
+                "peerDependencies": {
+                    "vue": "2.6.14"
+                }
+            }
+        },
+        "allowedDeprecatedVersions": {
+            "@aspnet/signalr": "*",
+            "@babel/plugin-proposal-class-properties": "*",
+            "@volar/vue-typescript": "*",
+            "request": "*",
+            "har-validator": "*",
+            "uuid": "*",
+            "sourcemap-codec": "*",
+            "barcode-detector": "*"
+        }
+    }
+}

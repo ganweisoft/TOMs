@@ -1,0 +1,3440 @@
+<?xml version="1.0"?>
+<!--
+Sample license text.
+-->
+<doc>
+    <assembly>
+        <name>IoTCenterHost.Core.Abstraction</name>
+    </assembly>
+    <members>
+        <member name="T:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetKeyModel">
+            <summary>
+            获取事件表key的查询条件
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetKeyModel.equipno">
+            <summary>
+            设备号
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetKeyModel.ycyxno">
+            <summary>
+            遥测遥信
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetKeyModel.GWEventType">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetKeyModel.time">
+            <summary>
+            查询键的时间
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo">
+            <summary>
+            获取事件信息查询条件
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo.bgn">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo.end">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo.stano">
+            <summary>
+            站点号
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo.eqpno">
+            <summary>
+            设备号，多个用#隔开，如：3#5#102#103
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo.ycyxno">
+            <summary>
+            遥测遥信编号
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo.GWEventType">
+            <summary>
+            事件类型  YC_Event = 0,YX_Event = 1, Equip_Event = 2,SetParm_Event = 3,System_Event = 4
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo.pageSize">
+            <summary>
+            分页大小也加入hash校验
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo.ToString">
+            <summary>
+            重写方法，返回对象拼接的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.BaseModels.GrpcAddEventInfo">
+            <summary>
+            事件添加
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcAddEventInfo.equipno">
+            <summary>
+            设备号，多个用#隔开，如：3#5#102#103
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcAddEventInfo.ycyxno">
+            <summary>
+            遥测遥信编号
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcAddEventInfo.GWEventType">
+            <summary>
+            事件类型  YC_Event = 0,YX_Event = 1, Equip_Event = 2,SetParm_Event = 3,System_Event = 4
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.BaseModels.GrpcAddEventInfo.GWEventJson">
+            <summary>
+            事件详情
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.Pagination.WhereCause">
+            <summary>
+            查询语句
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.Pagination.PageIndex">
+            <summary>
+            分页
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.Pagination.PageSize">
+            <summary>
+            规格
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.Pagination.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.Pagination.IsAsc">
+            <summary>
+            升序
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.PaginationData.Data">
+            <summary>
+            数据内容
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.PaginationData.Total">
+            <summary>
+            总数
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.IotModels.RealTimeGroupCount">
+            <summary>
+            获取不同级别的实时快照分组统计数据
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.IotModels.RealTimePageModel">
+            <summary>
+            各类型实时快照事件请求参数
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.RealTimePageModel.EventType">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.RealTimePageModel.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.RealTimePageModel.Confirmed">
+            <summary>
+            用于APP端获取待确认或已确认分页事件
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.RealTimePageModel.Guid">
+            <summary>
+            实时快照主键
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.RealTimeFilterPageModel.MaxRecordId">
+            <summary>
+            最新一条记录的id，可用时间作为条件，此时需转字符串
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.IotModels.RealTimeFilterPageModel.LastRecordId">
+            <summary>
+            最早一条记录的id，可用时间作为条件，此时需转字符串
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.CallbackModels.ShowOrCloseModel.PageData">
+            <summary>
+            回调数据
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.CallbackModels.ShowOrCloseModel.Open">
+            <summary>
+            开启
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ConnectionStatus.AccessTokenInfo">
+            <summary>
+            登录凭据
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ConnectionStatus.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ConnectionStatus.Instance_GUID">
+            <summary>
+            guid
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ConnectionStatus.ID_InterScreen">
+            <summary>
+            窗口Id
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.ConstDefine.ZMQSUBSCRIBETAG">
+            <summary>
+            ZMQ消息推送订阅标识
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.EnumDefine.ChangedEquipState">
+            <summary>
+            设备修改状态
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.EnumDefine.WebLogType">
+            <summary>
+            获取的日志类型 0-Debug 1-Info 2-Warm 3-Error 4-Fatal 5-Verbose
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.EnumDefine.CurveDataState">
+            <summary>
+            实时曲线状态
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.EnumDefine.DatabaseType.Access">
+            <summary>
+            Access数据库
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.EnumDefine.DatabaseType.SQLServer">
+            <summary>
+            SQLServer
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.EnumDefine.DatabaseType.SQLite">
+            <summary>
+            SQLite数据库
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.EnumDefine.DatabaseType.MySql">
+            <summary>
+            MySQL数据库
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.EnumDefine.DatabaseType.ODBC">
+            <summary>
+            经典odbc连接方式
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.EnumDefine.GrpcDllLoginReturnInfo">
+            <summary>
+            组件启动状态
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.EnumDefine.ServiceBackUpMode">
+            <summary>
+            服务热备状态
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.EventModel.Sta_n">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.EventModel.gwEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.EventModel.time">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.EventModel.confirmname">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.EventModel.confirmtime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.EventModel.confirmremark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.EventModel.GUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.GrpcVoiceItem.Result">
+            <summary>
+            语音结果
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.GrpcVoiceItem.Vstring">
+            <summary>
+            语音字符串
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService">
+            <summary>
+            设备事件应用服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.GetAddRealEventItem1">
+            <summary>
+            新增事件
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.GetDelRealEventItem1">
+            <summary>
+            获取删除事件
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.ConfirmedRealTimeEventItem(IoTCenterHost.Core.Abstraction.WcfRealTimeEventItem)">
+            <summary>
+            确认实时事件状态
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.GetRealEventItems(IoTCenterHost.Core.Abstraction.IotModels.Pagination)">
+            <summary>
+            分页获取设备实时快照
+            </summary>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.GetRealTimeGroupCount">
+             <summary>
+            获取不同级别的实时快照统计数据
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.GetRealTimeEventItem(System.String)">
+            <summary>
+            根据Id获取实时快照
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.Contains(System.String)">
+            <summary>
+            是否包含元素
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.GetKey(IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetKeyModel)">
+            <summary>
+            把设备号、测点号、类型、时间整合成key
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.GetGWEventInfoAsync(IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo)">
+            <summary>
+            获取事件信息
+            </summary>
+            <param name="grpcGetEventInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.GetPaginationGWEventInfoAsync(IoTCenterHost.Core.Abstraction.IotModels.Pagination)">
+            <summary>
+            分页获取事件信息
+            </summary>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.DeleteQuery(IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo)">
+            <summary>
+            删除本次查询条件的缓存数据，防止网关内存溢出
+            </summary>
+            <param name="grpcGetEventInfo"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.GetGWEventCount(IoTCenterHost.Core.Abstraction.BaseModels.GrpcGetEventInfo)">
+            <summary>
+            获取事件数
+            </summary>
+            <param name="grpcGetEventInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventAppService.AddGWEvent(IoTCenterHost.Core.Abstraction.BaseModels.GrpcAddEventInfo)">
+            <summary>
+            添加事件
+            </summary>
+            <param name="grpcGetEventInfo"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IAlarmEventClientAppService.FirstGetRealEventItemExAsync">
+            <summary>
+            获取实时事件数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICapitalAppService.ZCAddReset(System.String)">
+            <summary>
+            资产管理：增加一个资产
+            </summary>
+            <param name="ZCID">资产号</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICapitalAppService.ZCEditReset(System.String)">
+            <summary>
+            资产管理：修改一个资产
+            </summary>
+            <param name="ZCID"></param> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICapitalAppService.ZCDelReset(System.String)">
+            <summary>
+            资产管理：删除一个资产
+            </summary>
+            <param name="ZCID"></param> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICapitalAppService.FirstGetRealZCItem">
+            <summary>
+            获取所有资产项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICapitalAppService.GetChangedZCItem">
+            <summary>
+            获取改变了的资产项目,包括增加项和修改项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICapitalAppService.GetDeleteZCItem">
+            <summary>
+            获取删除的资产
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICapitalAppService.SendImageToSvr(System.String,System.Byte[])">
+            <summary>
+            保存资产图片
+            </summary>
+            <param name="ZCID"></param>
+            <param name="bs"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICapitalAppService.GetImageFromSvr(System.String)">
+            <summary>
+            获取资产图片
+            </summary>
+            <param name="ZCID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICapitalAppService.AddWeihuRecord4ZC(System.String,System.String,System.String,System.Collections.Generic.List{System.Byte[]})">
+            <summary>
+            新增资产维护记录
+            </summary>
+            <param name="ZCID"></param>
+            <param name="Name"></param>
+            <param name="RecordStr"></param>
+            <param name="Pictures"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICapitalAppService.RemoveWeihuRecord4ZC(System.Int64)">
+            <summary>
+            删除资产
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService">
+            <summary>
+            命令应用服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.SetParm(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            设置命令
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="strCMD1"></param>
+            <param name="strCMD2"></param>
+            <param name="strCMD3"></param>
+            <param name="strUser"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.SetParmExAsync(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Action{System.String})">
+            <summary>
+            扩展方法，实现带参数的回调
+            </summary>
+            <param name="iEquipNo"></param>
+            <param name="strCMD1"></param>
+            <param name="strCMD2"></param>
+            <param name="strCMD3"></param>
+            <param name="strUser"></param>
+            <param name="Instance_GUID"></param>
+            <param name="requestId"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.FireSetParmResponseEvent(System.Int32,System.Int32,System.String,System.String,System.Boolean,System.String,System.Action{IoTCenterHost.Core.Abstraction.SetParmRequestModel})">
+            <summary>
+            扩展方法，实现带参数的回调
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="strCMD1"></param>
+            <param name="strCMD2"></param>
+            <param name="strCMD3"></param>
+            <param name="strUser"></param>
+            <param name="requestId"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.SetParm(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            设置命令
+            </summary>
+            <param name="iEquipNo"></param>
+            <param name="strCMD1"></param>
+            <param name="strCMD2"></param>
+            <param name="strCMD3"></param>
+            <param name="strUser"></param>
+            <param name="Instance_GUID"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.SetParm_1(System.Int32,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            设置命令
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="strCMD1"></param>
+            <param name="strCMD2"></param>
+            <param name="strCMD3"></param>
+            <param name="strUser"></param>
+            <param name="bShowDlg"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.SetParm1(System.Int32,System.Int32,System.String)">
+            <summary>
+            设置命令
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="SetNo"></param>
+            <param name="strUser"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.SetParm1_1(System.Int32,System.Int32,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            设置命令
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="SetNo"></param>
+            <param name="strValue"></param>
+            <param name="strUser"></param>
+            <param name="bShowDlg"></param>
+            <param name="requestId"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.SetParm2(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            设置命令
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="strCMD1"></param>
+            <param name="strCMD2"></param>
+            <param name="strCMD3"></param>
+            <param name="strType"></param>
+            <param name="strUser"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.SetParm2_1(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            设置命令
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="strCMD1"></param>
+            <param name="strCMD2"></param>
+            <param name="strCMD3"></param>
+            <param name="strType"></param>
+            <param name="strUser"></param>
+            <param name="bShowDlg"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.DoSetParmFromString(System.String)">
+            <summary>
+            设置命令
+            </summary>
+            <param name="csParmStr"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.ResetSetParmTable">
+            <summary>
+            重置命令
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.DoEquipSetItem(System.Int32,System.Int32,System.String,System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            同步调用命令接口
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="SetNo"></param>
+            <param name="strValue"></param>
+            <param name="strUser"></param>
+            <param name="bShowDlg"></param>
+            <param name="Instance_GUID"></param>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.HaveSet(System.Int32)">
+            <summary>
+            查看指定设备是否有命令
+            </summary>
+            <param name="EquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICommandAppService.GetSetListStr(System.Int32)">
+            <summary>
+            获取设备命令列表
+            </summary>
+            <param name="iEquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICurveAppService.GetCurveData(System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            获取实时曲线数据
+            </summary>
+            <param name="d"></param>
+            <param name="eqpno"></param>
+            <param name="ycno"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICurveAppService.GetCurveData1(System.DateTime,System.Int32,System.Int32,System.String)">
+            <summary>
+            扩展方法：获取实时曲线
+            </summary>
+            <param name="d"></param>
+            <param name="eqpno"></param>
+            <param name="ycyxno"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ICurveAppService.HaveHistoryCurve(System.Int32,System.Int32)">
+            <summary>
+            是否有历史曲线
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="YCPNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.GetDataTableOfEquip">
+            <summary>
+            获取设备表（equip表）的DataTable
+            </summary>
+            <returns>equip表的DataTable</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.GetObjectFromSQL(System.String)">
+            <summary>
+            通过SQL语句获取一个对象
+            </summary>
+            <param name="strSQL">SQL语句</param>
+            <returns>对象</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.DataRecordQueryFromXML(System.Collections.Generic.Dictionary{System.Int32,System.String[]},System.DateTime,System.DateTime)">
+            <summary>
+            获取实时数据记录
+            </summary>
+            <param name="dicEquipYcYxNo"></param>
+            <param name="bgnT"></param>
+            <param name="endT"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.GetDataTableOfYCP(System.Int32,System.Int32)">
+            <summary>
+            获取YCP表的DataTable
+            </summary>
+            <param name="sta_no">站点好，填入1，当前无意义</param>
+            <param name="equip_no">设备号</param>
+            <returns>YCP表的DataTable</returns>  
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.GetDataTableOfYXP(System.Int32,System.Int32)">
+            <summary>
+            获取YXP表的DataTable
+            </summary>
+            <param name="sta_no">站点好，填入1，当前无意义</param>
+            <param name="equip_no">设备号</param>
+            <returns>YXP表的DataTable</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.GetDataTableOfSetParm(System.Int32,System.Int32)">
+            <summary>
+            获取SetParm表的DataTable
+            </summary>
+            <param name="sta_no">站点好，填入1，当前无意义</param>
+            <param name="equip_no">设备号</param>
+            <returns>SetParm表的DataTable</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.GetDataTableFromSQL(System.String)">
+            <summary>
+            通过SQL语句获取一个DataTable
+            </summary>
+            <param name="strSQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.GetDataTableFromSQL1(System.String)">
+            <summary>
+            根据SQL语句获取数据表对象（写入到内存中）
+            </summary>
+            <param name="strSQL"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.GetDataAdapter(System.String)">
+            <summary>
+            获取数据适配器（写入到内存中）
+            </summary>
+            <param name="strSQL"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.SaveDataTableWithDataAdapter(System.Data.DataTable)">
+            <summary>
+            保存数据表对象
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.ExecuteSQL(System.String)">
+            <summary>
+            执行一个SQL语句
+            </summary>
+            <param name="strSQL">SQL语句</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.ExecuteSQLsWithTransaction(System.String[])">
+            <summary>
+            通过事务执行SQL语句（一条或者多条）
+            </summary>
+            <param name="cmdtext">SQL语句的数组</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.GetDatabaseType">
+            <summary>
+            获取数据库类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.GetDataByPagination(IoTCenterHost.Core.Abstraction.IotModels.Pagination)">
+            <summary>
+            获取分页
+            </summary>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDatabaseProviderAppService.ExecuteInsertSQL(System.String,System.String)">
+            <summary>
+            执行插入语句，并返回记录id
+            </summary>
+            <param name="strSQL"></param>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService">
+            <summary>
+            主程序相关
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService.StopDataCenter">
+            <summary>
+            停止数据采集
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService.GetApplicationRootPath">
+            <summary>
+            获取应用程序路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService.IsRun">
+            <summary>
+            获取是否运行状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService.GetClientIPAndPort">
+            <summary>
+            获取客户端IP和端口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService.LockSetItem(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            用户针对某个设置项进行锁定
+            </summary>
+            <param name="UserNm">用户名</param>
+            <param name="iEquipNo">设备号</param>
+            <param name="iSetNo">设置号</param>
+            <param name="Client_Instance_GUID">客户端GUID标识</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService.UnLockSetItem(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            解除某个设置项的锁定
+            </summary>
+            <param name="UserNm">用户名</param>
+            <param name="iEquipNo">设备号</param>
+            <param name="iSetNo">设置号</param>
+            <param name="Client_Instance_GUID">客户端实例GUID</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService.GetSetItemDesc(System.Int32,System.Int32)">
+            <summary>
+            获取设置项的描述
+            </summary>
+            <param name="iEquipNo">设备号</param>
+            <param name="iSetNo">设置号</param>
+            <returns>描述内容</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService.GetValueFromExpression(System.String)">
+            <summary>
+            通过表达式获取相应的返回值 float or string
+            </summary>
+            <param name="csExpr"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService.GetPropertyFromReserve(System.String@,System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            读取扩展字段里面的配置参数
+            </summary>
+            <param name="strValue">读到的参数值</param>
+            <param name="TableName">表名称：目前支持equip、ycp、yxp、setparm这四个表</param>
+            <param name="ReserveName">字段名称，仅支持Reserve1、Reserve2、Reserve3这三个字段名称</param>
+            <param name="iEquipNo">设备号</param>
+            <param name="iChedianNo">测点号，无需填入时就填0，比如读取equip表时</param>
+            <param name="NodeName">json的键名，支持多层深度，每个深度之间用#隔开，比如"GWDataCenter.dll#EnableEquip"</param>
+            <returns>读取成功返回true，否则为false</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IDataCenterAppService.SetPropertyToReserve(System.String,System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            设置扩展字段里面的配置参数，并保存在数据库里面
+            </summary>
+            <param name="TableName">表名称：目前支持equip、ycp、yxp、setparm这四个表</param>
+            <param name="ReserveName">字段名称，仅支持Reserve1、Reserve2、Reserve3这三个字段名称</param>
+            <param name="iEquipNo">设备号</param>
+            <param name="iChedianNo">测点号，无需填入时就填0，比如读取equip表时</param>
+            <param name="NodeName">json的键名，支持多层深度，每个深度之间用#隔开，比如"GWDataCenter.dll#EnableEquip"</param>
+            <param name="Value">指定的键值</param>
+            <returns>设置成功返回true，否则为false</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipAlarmAppService.SetWuBao(System.Int32,System.String,System.Int32)">
+            <summary>
+            把某个测点设置成误报状态，适用于处理误报的情况
+            </summary>
+            <param name="eqpno">设备号</param>
+            <param name="type">类型 C-模拟量  X-状态量</param>
+            <param name="ycyxno">测点号</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipAlarmAppService.SetNoAlarm(System.Int32,System.String,System.Int32)">
+            <summary>
+            把某个测点设置为非报警状态---适用于处理报警后无恢复信号的情况
+            </summary>
+            <param name="eqpno">设备号</param>
+            <param name="type">类型 C-模拟量  X-状态量</param>
+            <param name="ycyxno">测点号</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipAlarmAppService.Confirm2NormalState(System.Int32,System.String,System.Int32)">
+            <summary>
+            报警确认后恢复到正常状态---需要在设备dll中重新定义基类的虚函数
+            public virtual bool Confirm2NormalState(string sYcYxType, int iYcYxNo)
+            默认情况返回false
+            </summary>
+            <param name="iEqpNo">设备号</param>
+            <param name="sYcYxType">类型 C-模拟量  X-状态量</param>
+            <param name="iYcYxNo">测点号</param>
+            <returns>true可以执行， false不可以执行</returns> 
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService">
+            <summary>
+            设备应用服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetAddRTEquipItemData">
+            <summary>
+            获取新增设备
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.SetEquipDebug(System.Int32,System.Boolean)">
+            <summary>
+            设置设备为调试状态
+            </summary>
+            <param name="iEquipNo"></param>
+            <param name="bFlag"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetEquipDebugState(System.Int32)">
+            <summary>
+            获取设备是否为调试状态
+            </summary>
+            <param name="iEquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetEquipListStr">
+            <summary>
+            获取设备列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetTotalRTEquipItemData1">
+            <summary>
+            获取运行设备
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetChangedRTEquipItemData1">
+            <summary>
+            获取变化设备值
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetEditRTEquipItemData">
+            <summary>
+            获取动态删除的设备的设备号数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetEquipTreeXMLFile">
+            <summary>
+            获取设备xml文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.DeleteDebugInfo(System.Int32)">
+            <summary>
+            删除设备调试信息
+            </summary>
+            <param name="iEquipNo"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.ResetEquips">
+            <summary>
+            重置设备
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.ResetEquipmentLinkage">
+            <summary>
+            修改了设备联动关系后进行程序重置
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.SetEquipNm(System.Int32,System.String)">
+            <summary>
+            设置设备名称
+            </summary>
+            <param name="EquipNo">设备号</param>
+            <param name="Nm">新的设备名称</param> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetTotalRTEquipItemData">
+            <summary>
+            获取设备
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetChangedRTEquipItemData">
+            <summary>
+            获取设备值已改变内容
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetTotalRTYCItemData1">
+            <summary>
+            获取所有实时ProxyYxItem值
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetTotalRTYXItemData1">
+            <summary> 
+            获取所有实时ProxyYxItem值
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetChangedRTYCItemData1">
+            <summary>
+            获取变化的实时ProxyYcItem值
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetChangedRTYXItemData1">
+            <summary>
+            获取变化的实时ProxyYxItem值
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetDelRTEquipItemData">
+            <summary>
+            获取动态删除的设备的设备号数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseAppService.GetEquipDict(IoTCenterHost.Core.Abstraction.IotModels.Pagination)">
+            <summary>
+            获取设备字典
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseClientAppService">
+            <summary>
+            客户端的接口实现
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseClientAppService.GetEquipStateDict(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            批量获取设备
+            </summary>
+            <param name="equipList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseClientAppService.GetEquipStateFromEquipNo(System.Int32)">
+            <summary>
+            获取单个设备状态
+            </summary>
+            <param name="iEquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseClientAppService.AddChangedEquipList(System.Collections.Generic.IEnumerable{IoTCenterHost.Core.Abstraction.BaseModels.GrpcChangedEquip})">
+            <summary>
+            设备批量变化
+            </summary>
+            <param name="changedEquips"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseClientAppService.AddChangedEquip(IoTCenterHost.Core.Abstraction.BaseModels.GrpcChangedEquip)">
+            <summary>
+            设备变化
+            </summary>
+            <param name="EqpList"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IEquipBaseClientAppService.GetEquipStateDict">
+            <summary>
+            获取设备状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IGWExProcAppService.DoExProcSetParm(System.String,System.String,System.String,System.String)">
+            <summary>
+            执行扩展模块中的一个命令
+            </summary>
+            <param name="ModuleNm">模块名称.GWExProc表中的Proc_Module</param>
+            <param name="cmd1">参数1.GWExProcCmd表中的main_instruction</param>
+            <param name="cmd2">参数2.GWExProcCmd表中的minor_instruction</param>
+            <param name="cmd3">参数3.GWExProcCmd表中的value</param> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IHotStandbyAppService.IsHotStandby">
+            <summary>
+            系统是否为双机热备的热备模式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IHotStandbyAppService.GetHotStandbyIP">
+            <summary>
+            获取双机热备备机的IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IHotStandbyAppService.IsHotStandbyListenState">
+            <summary>
+            是否处于双机热备的侦听状态中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IMessageAppService">
+            <summary>
+            消息应用服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IMessageAppService.SendSMS(System.String,System.String)">
+            <summary>
+            发送短信
+            </summary>
+            <param name="TelNumber"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IMessageClientAppService">
+            <summary>
+            客户端不依赖GWDataCenter实现
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IMessageClientAppService.AddMessage(IoTCenterHost.Core.Abstraction.BaseModels.GrpcMessageLevel,System.String,System.Int32,System.Boolean)">
+            <summary>
+            实时快照消息
+            </summary>
+            <param name="level"></param>
+            <param name="msgstr"></param>
+            <param name="equipno"></param>
+            <param name="CanRepeat"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.INotificationAppService.KickClient(System.String)">
+            <summary>
+            强制指定客户端下线，管理员才有此权限  
+            </summary>
+            <param name="GUID"></param>
+            <returns>总是true</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.INotificationAppService.NotifyLoginUserOffLine(System.String,System.String)">
+            <summary>
+            通知指定登录用户下线，用于用户权限变更的情形
+            </summary> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.INotificationAppService.NotifyRoleUserOffLine(System.String,System.String)">
+            <summary>
+            通知指定角色的用户下线，用于用户权限变更的情形
+            </summary> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.INotificationAppService.ShowMsg2GUID(System.String,System.String)">
+            <summary>
+            向指定客户端弹出信息   
+            </summary>
+            <param name="msg">消息</param>
+            <param name="GUID">客户端GUID</param> 
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService">
+            <summary>
+            获取应用基本信息，与用户交互无关
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.GetVersionInfo">
+            <summary>
+            获取版本号
+            </summary> 
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.ReadNextBuffer">
+            <summary>
+            读取下一个数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.InterScreenOpenPageAsync(System.String,System.String)">
+            <summary>
+            交互方式打开窗口
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.GetCurrentBuffer">
+            <summary>
+            获取下一个缓冲区
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.ResetProcTimeManage">
+            <summary>
+            修改了定时任务的逻辑后进行程序重置
+            </summary> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.ResetGWDataRecordItems">
+            <summary>
+            修改了定时抄表的逻辑后进行程序重置
+            </summary> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.ResetDelayActionPlan">
+            <summary>
+            修改了延时执行动作的列表后（修改了GWDelayAction表）进行程序重置
+            </summary> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.GetName2SF">
+            <summary>
+            获取软件的授权名称
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.GetUserName2SF">
+            <summary>
+            获取授权用户名称
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.GetSystemGUID">
+            <summary>
+            获取系统的唯一标识码
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.MResetYcYxNo(System.Int32,System.String,System.Int32)">
+            <summary>
+            把某个测点设置成非手工复位状态
+            </summary>
+            <param name="EquipNo">设备号</param>
+            <param name="sType">"C"---模拟量；"X"---状态量</param>
+            <param name="YcYxNo">测点号</param> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.IsNeuTral">
+            <summary>
+             是否采用中性版本的支持
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.GetPropertyFromPropertyService(System.String,System.String,System.String)">
+            <summary>
+            读取系统的配置文件
+            </summary>
+            <param name="PropertyName">配置文件中的属性名称</param>
+            <param name="NodeName">属性下面的节点名称</param>
+            <param name="DefaultValue">如果没有配置该属性，则返回默认值</param>
+            <returns>返回属性值</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.SetPropertyToPropertyService(System.String,System.String,System.String)">
+            <summary>
+            修改系统的配置文件
+            </summary>
+            <param name="PropertyName">配置文件中的属性名称</param>
+            <param name="NodeName">属性下面的节点名称</param>
+            <param name="DefaultValue">属性或者节点的值</param> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.SetInterScreenID(System.Int32)">
+            <summary>
+            设置屏幕
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.OpenPageInMultiScreens(System.String,System.String,System.Boolean,System.Boolean,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            多屏互动
+            </summary>
+            <param name="PageNm"></param>
+            <param name="multiScreens"></param>
+            <param name="IsAutoOpen"></param>
+            <param name="DWAction"></param>
+            <param name="infoConfig"></param>
+            <param name="bStopPageCycle"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.SetGUID(System.String)">
+            <summary>
+            设置GUID
+            </summary>
+            <param name="strGUID"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.GetImageFromSvr1(System.String,System.String)">
+            <summary>
+            从服务端获取指定图片文件
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="ImageNm">文件名</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.SetUserNm(System.String)">
+            <summary>
+            设置用户名
+            </summary>
+            <param name="strNm"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.Connect">
+            <summary>
+            连接
+            </summary>
+            <param name="guid"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.CheckSSOLifeTime">
+            <summary>
+            检查sso
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IoTCenterAppService.GetEncryptKey4Project">
+            <summary>
+            获取key
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IPlanAppService">
+            <summary>
+            预案应用服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IPlanAppService.SendPlanImageToSvr(System.Int32,System.Byte[])">
+            <summary>
+            保存预案文件
+            </summary>
+            <param name="planId"></param>
+            <param name="imageBytes"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IPlanAppService.GetPlanImageFromSvr(System.String)">
+            <summary>
+            获取预案文件
+            </summary>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IPlanAppService.IsPlanFileExist(System.String)">
+            <summary>
+            判断预案文件是否存在
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IPlanAppService.GetAllPlanName">
+            <summary>
+            获取所有预案文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IQrCodeAppService">
+            <summary>
+            二维码应用服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IQrCodeAppService.CreateQrCode2Jpeg(System.String)">
+            <summary>
+            生成二维码图片
+            </summary>
+            <param name="Content">二维码内容</param>
+            <returns>二维码图片字节流</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IQrCodeAppService.CreateQrCode4Owner(System.String)">
+            <summary>
+            生成具有用户身份的二维码
+            </summary>
+            <param name="OwnerName">用户名</param>
+            <returns>二维码图片字节流</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IQrCodeAppService.CreateQrCode4Visitor(System.String,System.String,System.Collections.Generic.IEnumerable{IoTCenterHost.Core.Abstraction.IotModels.EquipSetInfo})">
+            <summary>
+            生成具有访客身份的二维码
+            </summary>
+            <param name="VisitorNm">访客姓名</param>
+            <param name="OwnerNm">邀请人姓名</param>
+            <param name="ListEquipSetInfo">允许的设置项</param>
+            <returns>二维码图片字节流</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IQrCodeAppService.CreateQrCode4Equip(System.Collections.Generic.IEnumerable{IoTCenterHost.Core.Abstraction.IotModels.EquipSetInfo},System.String,System.String)">
+            <summary>
+            生成具有设备身份的二维码
+            </summary>
+            <param name="ListEquipSetInfo">设备动作</param>
+            <param name="EqpNo">设备号</param>
+            <param name="ZhiChanNo">资产号</param>
+            <returns>二维码图片字节流</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IQrCodeAppService.QRScan4Equip(System.String,System.String)">
+            <summary>
+            移动端扫描设备二维码
+            </summary>
+            <param name="UserNm">用户名</param>
+            <param name="QRContent">二维码内容</param>
+            <returns>无意义</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IQrCodeAppService.QRScan4Equip1(System.String,System.String,System.String@)">
+            <summary>
+            移动端扫描设备二维码,带返回值
+            </summary>
+            <param name="UserNm">用户名</param>
+            <param name="QRContent">二维码内容</param>
+            <param name="RtnStr">返回值:设备号+资产号</param>
+            <returns></returns> 
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IRealDataAppService">
+            <summary>
+            实时数据
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IStoreInfoService.RefreshGWStoreInfo">
+            <summary>
+            对GWStoreInfo.shd这个文件进行更新
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IStoreInfoService.GetGWStoreInfo">
+            <summary>
+            获取GWStoreInfo.shd内的数据
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IStoreInfoService.FileExistGWStoreInfo(System.String)">
+            <summary>
+            指定文件是否能在安全模式下加载
+            </summary>
+            <param name="filePath">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.Support3D">
+            <summary>
+            系统是否支持3D功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportSJFX">
+            <summary>
+            系统是否支持数据分析与挖掘的功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportZCGL">
+            <summary>
+            系统是否支持资产管理的功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportTGKZ">
+            <summary>
+            系统是否支持体感控制的功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportDDCK">
+            <summary>
+            系统是否支持多点触控的功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportZXSJ">
+            <summary>
+            系统是否支持在线升级功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportNYGL">
+            <summary>
+            系统是否支持能源管理的功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportYAGL">
+            <summary>
+            系统是否支持预案管理的功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportDPHD">
+            <summary>
+            系统是否支持多屏互动的功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportBIM">
+            <summary>
+            系统是否支持BIM的功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportVOICE">
+            <summary>
+            系统是否支持语音交互的功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.SupportQRCode">
+            <summary>
+            系统是否支持二维码的功能
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.ISystemSupportAppService.CheckSupportState(IoTCenterHost.Core.Abstraction.EnumDefine.GwClientType)">
+            <summary>
+            是否支持指定终端
+            </summary>
+            <param name="clientType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IVoiceAppService.SetVCtrol(System.Byte[],System.String)">
+            <summary>
+            通过语音进行交互
+            </summary>
+            <param name="bVoices">语音流</param>
+            <param name="UserNm">登录用户名</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IVoiceAppService.SetVCtrol1(System.String,System.String)">
+            <summary>
+            通过语音进行交互
+            </summary>
+            <param name="csVoice">语音字符</param>
+            <param name="UserNm">登录用户名</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IVoiceAppService.GetHFString">
+            <summary>
+            获取语音设置的高频词 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IVoiceAppService.GetXunfeiAPPID">
+            <summary>
+            获取讯飞AppId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService">
+            <summary>
+            遥测点应用服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService.GetYCValue(System.Int32,System.Int32)">
+            <summary>
+            获取模拟量测点的实时值
+            </summary>
+            <param name="iEquipNo">设备号</param>
+            <param name="iYcpNo">模拟量测点号</param>
+            <returns>返回值</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService.GetYCValueDictFromEquip(System.Int32)">
+            <summary>
+            获取指定设备的遥测属性
+            </summary>
+            <param name="iEquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService.GetYCAlarmState(System.Int32,System.Int32)">
+            <summary>
+            获取遥测点报警状态
+            </summary>
+            <param name="iEquipNo"></param>
+            <param name="iYcpNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService.GetYCAlarmStateDictFromEquip(System.Int32)">
+            <summary>
+            获取指定设备所有的遥测报警状态
+            </summary>
+            <param name="iEquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService.HaveYCP(System.Int32)">
+            <summary>
+            查看指定设备是否有遥测点
+            </summary>
+            <param name="EquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService.GetYCPListStr(System.Int32)">
+            <summary>
+            获取模拟量列表的字符串
+            </summary>
+            <param name="iEquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService.GetYCAlarmComments(System.Int32,System.Int32)">
+            <summary>
+            获取设备遥测报警描述
+            </summary>
+            <param name="iEqpNo"></param>
+            <param name="iYCPNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService.SetYcpNm(System.Int32,System.Int32,System.String)">
+            <summary>
+            设置某个模拟量测点的名称
+            </summary>
+            <param name="EquipNo">对应设备号</param>
+            <param name="YcpNo">对应测点号</param>
+            <param name="Nm">新的测点名称</param> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService.GetYCPListByEquipNo(IoTCenterHost.Core.Abstraction.IotModels.Pagination)">
+            <summary>
+            获取遥测点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCAppService.GetYCPDict(IoTCenterHost.Core.Abstraction.IotModels.Pagination)">
+            <summary>
+            获取遥测
+            </summary>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYCClientAppService.GetTotalYCData(System.Boolean)">
+            <summary>
+            初次查询
+            </summary>
+            <param name="isDynamic"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService">
+            <summary>
+            遥信应用服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetYXValue(System.Int32,System.Int32)">
+            <summary>
+            获取遥信值
+            </summary>
+            <param name="iEquipNo"></param>
+            <param name="iYxpNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetYXValueDictFromEquip(System.Int32)">
+            <summary>
+            获取指定设备的遥信值
+            </summary>
+            <param name="iEquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetYXAlarmState(System.Int32,System.Int32)">
+            <summary>
+            获取指定设备的遥信报警状态
+            </summary>
+            <param name="iEquipNo"></param>
+            <param name="iYxpNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetYXEvt01(System.Int32,System.Int32)">
+            <summary>
+            获取指定设备遥信事件
+            </summary>
+            <param name="iEquipNo"></param>
+            <param name="iYxpNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetYXEvt10(System.Int32,System.Int32)">
+            <summary>
+            获取遥信事件
+            </summary>
+            <param name="iEquipNo"></param>
+            <param name="iYxpNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetYXAlarmStateDictFromEquip(System.Int32)">
+            <summary>
+            获取指定设备遥信报警状态
+            </summary>
+            <param name="iEquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.HaveYXP(System.Int32)">
+            <summary>
+            查看指定设备是否有遥信点
+            </summary>
+            <param name="EquipNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetYXPListStr(System.Int32)">
+            <summary> 
+            </summary>
+            <returns>[测点号][测点名称];[测点号][测点名称]...</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetYXAlarmComments(System.Int32,System.Int32)">
+            <summary>
+            获取指定状态量测点的“报警处理意见”
+            </summary>
+            <param name="iEqpNo">设备号</param>
+            <param name="iYXPNo">测点号</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetTotalRTYXItemData1">
+            <summary>
+            获取所有实时ProxyYxItem值
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetChangedRTYXItemData1">
+            <summary>
+            获取遥信变化值
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetChangedRTYXItemData">
+            <summary>
+            获取遥信值已改变数据项
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.SetYxpNm(System.Int32,System.Int32,System.String)">
+            <summary>
+            设置某个模拟量测点的名称
+            </summary>
+            <param name="EquipNo">对应设备号</param>
+            <param name="YcpNo">对应测点号</param>
+            <param name="Nm">新的测点名称</param> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetTotalRTYXItemData">
+            <summary>
+            获取遥信数据
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetYXPListByEquipNo(IoTCenterHost.Core.Abstraction.IotModels.Pagination)">
+            <summary>
+            获取遥测点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXAppService.GetYXPDict(IoTCenterHost.Core.Abstraction.IotModels.Pagination)">
+            <summary>
+            获取遥测点
+            </summary>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.AppServices.IYXClientAppService.GetTotalYXDataEx(System.Boolean)">
+            <summary>
+            返回遥信数据
+            </summary>
+            <param name="isDynamic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IAssemblyInstallAppService.AppPluginInit">
+            <summary>
+            应用插件数据初始Des加密数据转成Aes加密数据
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IAssemblyInstallAppService.AppPluginInfoInstallAndUnInstall">
+            <summary>
+            协议插件与扩展插件待卸载与待安装流程处理
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IRoleAppService.GetRoleEntities(IoTCenterHost.Core.Abstraction.IotModels.Pagination)">
+            <summary>
+            获取角色列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IRoleAppService.DeleteRole(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="guid"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IRoleAppService.ModifyRole(IoTCenterHost.Core.Abstraction.IotModels.GWRoleItem)">
+            <summary>
+            修改角色
+            </summary>
+            <param name="roleEntity"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IRoleAppService.AddRole(IoTCenterHost.Core.Abstraction.IotModels.GWRoleItem)">
+            <summary>
+            新增角色
+            </summary>
+            <param name="roleEntity"></param>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IRoleClientAppService">
+            <summary>
+            客户端不依赖gwdatacenter的实现
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IUserAppService.GetUserEntities(IoTCenterHost.Core.Abstraction.IotModels.Pagination)">
+            <summary>
+            获取所有用户
+            </summary>
+            <param name="whereCause"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IUserAppService.GetWebUser(System.String)">
+            <summary>
+            根据用户名获取用户内容
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IUserAppService.DeleteUserEntity(System.Int32)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IUserAppService.AddUserEntity(IoTCenterHost.Core.Abstraction.IotModels.GWUserItem)">
+            <summary>
+            新增单个用户
+            </summary>
+            <param name="userEntity"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IUserAppService.RevisePassword(IoTCenterHost.Core.Abstraction.IotModels.GWUserItem)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IUserAppService.ModifyUserEntity(IoTCenterHost.Core.Abstraction.IotModels.GWUserItem)">
+            <summary>
+            修改用户
+            </summary>
+            <param name="userEntity"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.AppServices.IUserAppService.UpdateUserTable">
+            <summary>
+            刷新用户缓存
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService">
+            <summary>
+            通用文件操作
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.CreateDirectory(System.String,System.String,System.String)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="path">相对路径</param>
+            <param name="bucketName">桶名称</param>
+            <param name="tag">标签，obs存储时可用标签进行快捷查询，而磁盘存储时，为最上一级目录名称，为空时则放置在默认目录下</param>
+            <returns>实际文件目录</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.DeleteDirectory(System.String,System.String,System.String)">
+            <summary>
+            删除文件夹
+            </summary>
+            <param name="path">相对路径</param>
+            <param name="bucketName">桶名称</param>
+            <param name="tag">标签，obs存储时可用标签进行快捷查询，而磁盘存储时，为最上一级目录名称，为空时则放置在默认目录下</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.GetDiskFullName(System.String,System.String,System.String)">
+            <summary>
+            获取指定文件夹所在完整目录
+            </summary>
+            <param name="path"></param>
+            <param name="bucketName"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.GetFullName(System.String,System.String,System.String)">
+            <summary>
+            获取指定文件夹所在完整目录
+            </summary>
+            <param name="path"></param>
+            <param name="bucketName"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.GetFiles(System.String,System.String,System.String)">
+            <summary>
+            获取文件夹下的所有文件名
+            </summary>
+            <param name="directory">相对路径</param>
+            <param name="bucketName">桶名称</param>
+            <param name="tag">标签，obs存储时可用标签进行快捷查询，而磁盘存储时，为最上一级目录名称，为空时则放置在默认目录下</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.CreateFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            创建指定格式的空文件，并返回实际存储路径
+            </summary>
+            <param name="path">相对路径</param>
+            <param name="fileName">文件名</param>
+            <param name="extension">文件扩展名</param>
+            <param name="bucketName">桶名称</param>
+            <param name="tag">标签，obs存储时可用标签进行快捷查询，而磁盘存储时，为最上一级目录名称，为空时则放置在默认目录下</param>
+            <returns>绝对路径</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.CreateFile(System.String,System.Byte[],System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            创建指定格式的文件，并返回实际存储路径
+            </summary>
+            <param name="path">相对路径</param>
+            <param name="file">文件内容</param>
+            <param name="fileName">文件名</param>
+            <param name="extension">文件扩展名</param>
+            <param name="bucketName">桶名称</param>
+            <param name="tag">标签，obs存储时可用标签进行快捷查询，而磁盘存储时，为最上一级目录名称，为空时则放置在默认目录下</param>
+            <param name="createNew">创建新文件</param>
+            <param name="append">是否追加</param>
+            <returns>绝对路径</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.WriteTextStream(System.String,System.String,System.String,System.String)">
+            <summary>
+            将内容写入到文本文件
+            </summary>
+            <param name="filePath"></param>
+            <param name="input"></param>
+            <param name="bucketName"></param>
+            <param name="tag"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.ReadTextStream(System.String,System.String,System.String)">
+            <summary>
+            读取本地文本文件
+            </summary>
+            <param name="path"></param>
+            <param name="bucketName"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.OpenFile(System.String,System.String,System.String)">
+            <summary>
+            打开文件
+            </summary>
+            <param name="path">相对路径</param>
+            <param name="bucketName">桶名称</param>
+            <param name="tag">标签，obs存储时可用标签进行快捷查询，而磁盘存储时，为最上一级目录名称，为空时则放置在默认目录下</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.DeleteFile(System.String,System.String,System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="path">相对路径</param>
+            <param name="bucketName">桶名称</param>
+            <param name="tag">标签，obs存储时可用标签进行快捷查询，而磁盘存储时，为最上一级目录名称，为空时则放置在默认目录下</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.DeleteFiles(System.String[],System.String,System.String)">
+            <summary>
+            批量删除文件
+            </summary>
+            <param name="path">相对路径</param>
+            <param name="bucketName">桶名称</param>
+            <param name="tag">标签，obs存储时可用标签进行快捷查询，而磁盘存储时，为最上一级目录名称，为空时则放置在默认目录下</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.GetFileHash(System.String,IoTCenterHost.Core.Abstraction.Interfaces.FileHashType,System.String,System.String)">
+            <summary>
+            获取文件的哈希值
+            </summary>
+            <param name="path">相对路径</param>
+            <param name="fileHashType">哈希类型</param>
+            <param name="bucketName">桶名称</param>
+            <param name="tag">标签，obs存储时可用标签进行快捷查询，而磁盘存储时，为最上一级目录名称，为空时则放置在默认目录下</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.IsFileExist(System.String,System.String,System.String)">
+            <summary>
+            文件是否存在
+            </summary>
+            <param name="path"></param>
+            <param name="bucketName"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.IFileStorageService.GetThumbnail(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取缩略图
+            </summary>
+            <param name="path"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="bucketName"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.Interfaces.FileHashType">
+            <summary>
+            文件哈希格式
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.Interfaces.FileHashType.Md5">
+            <summary>
+            MD5
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.Interfaces.FileHashType.Sha256">
+            <summary>
+            SHA256
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.Interfaces.FileHashType.Sha512">
+            <summary>
+            SHA512
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService">
+            <summary>
+            协议动态库
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.UploadLicense(System.Byte[])">
+            <summary>
+            上传无扩展名的zip压缩文件
+            </summary>
+            <param name="fileBytes"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.GetBackupStatus">
+            <summary>
+            获取双机热备运行状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.ShutDownService">
+            <summary>
+            停止服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.ReBootAsync">
+            <summary>
+            重启服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.RefreshAssemblyInstallJson">
+            <summary>
+            刷新组件运行配置文件
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.AddAssemblyInstall(System.Int32,System.String@)">
+            <summary>
+            组件
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.GetServiceStatus">
+            <summary>
+            获取服务状态
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.GetTree(System.String,System.Int64@,System.String)">
+            <summary>
+            获取日志目录树
+            </summary>
+            <param name="path"></param>
+            <param name="length"></param>
+            <param name="rootPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.GetLogFileName(System.String)">
+            <summary>
+            获取日志文件名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.ReadLog(IoTCenterHost.Core.Abstraction.QueryLogRequest,System.String)">
+            <summary>
+            读取指定日志文件指定段的内容
+            </summary>
+            <param name="logRequest"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.DownloadLog(System.String)">
+            <summary>
+            下载日志
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.GetSafetyLevel">
+            <summary>
+            获取安全性级别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.SetSafetyLevel(System.Int32)">
+            <summary>
+            设置安全级别
+            </summary>
+            <param name="safetyLevel"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IServiceInstaceContractService.SetWebSslPassword(System.String)">
+            <summary>
+            设置WebApi证书密码
+            </summary>
+            <param name="encryptPwd"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IToolService.Decrypt(System.String,System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="str"></param>
+            <param name="securityStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IToolService.Encrypt(System.String,System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="str"></param>
+            <param name="securityStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IToolService.DecryptOld(System.String)">
+            <summary>
+            盐值解密方法
+            </summary>
+            <param name="str"></param>
+            <param name="securityStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IToolService.EncryptOld(System.String)">
+            <summary>
+            盐值加密方法
+            </summary>
+            <param name="str"></param>
+            <param name="securityStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IToolService.BatchDecrypt(IoTCenterHost.Core.Abstraction.Interfaces.Services.BatchInputStringWithSalt)">
+            <summary>
+            批量解密
+            </summary>
+            <param name="batchInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Interfaces.Services.IToolService.BatchEncrypt(IoTCenterHost.Core.Abstraction.Interfaces.Services.BatchInputStringWithSalt)">
+            <summary>
+            批量加密
+            </summary>
+            <param name="batchInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.Interfaces.Services.BatchInputStringWithSalt">
+            <summary>
+            批量加密、解密传参
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.Interfaces.Services.BatchInputStringWithSalt.PlainTexts">
+            <summary>
+            文本组
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.Interfaces.Services.BatchInputStringWithSalt.SecurityStamp">
+            <summary>
+            盐值
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.Interfaces.Services.InputStringItem">
+            <summary>
+            加密/解密文本
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.Interfaces.Services.InputStringItem.PlainKey">
+            <summary>
+            输入标识
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.Interfaces.Services.InputStringItem.PlainText">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackService.InterScreenOpenPage(System.Object,System.EventArgs)">
+            <summary>
+            打开指定的窗口
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackService.ShowPage(System.Object,System.EventArgs)">
+            <summary>
+            显示窗口
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackService.ClosePage(System.Object,System.EventArgs)">
+            <summary>
+            关闭窗口
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackService.Login">
+            <summary>
+            登录并回调
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackService.Listen">
+            <summary>
+            监听
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackService.SetInterScreenID(System.Int32)">
+            <summary>
+            设置屏幕id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackService.SetGUID(System.String)">
+            <summary>
+            设置guid
+            </summary>
+            <param name="strGUID"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackService.SetUserNm(System.String)">
+            <summary>
+            设置用户名
+            </summary>
+            <param name="strNm"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackClientService.GetTotalYXDataEx(System.Boolean)">
+            <summary>
+            获取所有遥信点
+            </summary>
+            <param name="isDynamic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackClientService.GetTotalEquipData(System.Boolean)">
+            <summary>
+            获取所有设备数据
+            </summary>
+            <param name="isDynamic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackClientService.GetTotalYCData(System.Boolean)">
+            <summary>
+            获取所有遥测点
+            </summary>
+            <param name="isDynamic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterCallbackClientService.FirstGetRealEventItemEx">
+            <summary>
+            获取初始化数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterDatabaseService.GetDataTableOfEquip">
+            <summary>
+            获取设备表（equip表）的DataTable
+            </summary>
+            <returns>equip表的DataTable</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterDatabaseService.GetObjectFromSQL(System.String)">
+            <summary>
+            通过SQL语句获取一个对象
+            </summary>
+            <param name="strSQL">SQL语句</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterDatabaseService.GetDataTableOfYCP(System.Int32,System.Int32)">
+            <summary>
+            获取YCP表的DataTable
+            </summary>
+            <param name="sta_no">站点好，填入1，当前无意义</param>
+            <param name="equip_no">设备号</param>
+            <returns>YCP表的DataTable</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterDatabaseService.GetDataTableOfYXP(System.Int32,System.Int32)">
+            <summary>
+            获取YXP表的DataTable
+            </summary>
+            <param name="sta_no">站点好，填入1，当前无意义</param>
+            <param name="equip_no">设备号</param>
+            <returns>YXP表的DataTable</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterDatabaseService.GetDataTableOfSetParm(System.Int32,System.Int32)">
+            <summary>
+            获取SetParm表的DataTable
+            </summary>
+            <param name="sta_no">站点好，填入1，当前无意义</param>
+            <param name="equip_no">设备号</param>
+            <returns>SetParm表的DataTable</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterDatabaseService.GetDataTableFromSQL(System.String)">
+            <summary>
+            通过SQL语句获取一个DataTable
+            </summary>
+            <param name="strSQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterDatabaseService.ExecuteSQL(System.String)">
+            <summary>
+            执行一个SQL语句
+            </summary>
+            <param name="strSQL">SQL语句</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterDatabaseService.ExecuteSQLsWithTransaction(System.String[])">
+            <summary>
+            通过事务执行SQL语句（一条或者多条）
+            </summary>
+            <param name="cmdtext">SQL语句的数组</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterDatabaseService.DataRecordQueryFromXML(System.Collections.Generic.Dictionary{System.Int32,System.String[]},System.DateTime,System.DateTime)" -->
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IAlarmCenterService2.SetGUID(System.String)">
+            <summary>
+            等待返回的设置函数，常用于耗时较大的操作，比如门禁系统的人员授权
+            </summary>
+            <param name="Items">设置项的数组</param>
+            <param name="strUser">登录用户名</param>
+            <returns>登录不成功时返回null,否则返回的是设置失败的SetParmItem</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostCallbackService.OpenWindow(System.Action{System.String})">
+            <summary>
+            打开大屏回调窗口
+            </summary>
+            <param name="action"></param>
+             <see cref="T:System.String"/>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostCallbackService.EquipAddEvent(System.Action{IoTCenterHost.Core.Abstraction.BaseModels.GrpcEquipItem},System.Boolean)">
+            <summary>
+            设备新增回调
+            </summary>
+            <param name="action"></param>
+            <param name="isReUse"></param>
+             <see cref="T:IoTCenterHost.Core.Abstraction.BaseModels.GrpcEquipItem"/>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostCallbackService.EquipChangeEvent(System.Action{IoTCenterHost.Core.Abstraction.BaseModels.GrpcEquipItem},System.Boolean)">
+            <summary>
+            设备变化回调
+            </summary>
+            <param name="action"></param>
+            <param name="isReUse"></param>
+            <see cref="T:IoTCenterHost.Core.Abstraction.BaseModels.GrpcEquipItem"/>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostCallbackService.EquipDeleteEvent(System.Action{System.Int32},System.Boolean)">
+            <summary>
+            设备删除回调
+            </summary>
+            <param name="action"></param>
+             <see cref="T:System.Int32"/>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostCallbackService.EquipStateEvent(System.Action{IoTCenterHost.Core.Abstraction.ProxyModels.GrpcEquipStateItem},System.Boolean)">
+            <summary>
+            设备状态变更回调
+            </summary> 
+            <param name="action"></param>
+            <param name="isReUse"></param>
+            <see cref="T:IoTCenterHost.Core.Abstraction.ProxyModels.GrpcEquipStateItem"/>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostCallbackService.YcChangeEvent(System.Action{IoTCenterHost.Core.Abstraction.BaseModels.GrpcYcItem},System.Boolean)">
+            <summary>
+            遥测属性变更回调
+            </summary>
+            <param name="action"></param>
+            <param name="isReUse"></param>
+             <see cref="T:IoTCenterHost.Core.Abstraction.BaseModels.GrpcYcItem"/>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostCallbackService.YxChangeEvent(System.Action{IoTCenterHost.Core.Abstraction.BaseModels.GrpcYxItem},System.Boolean)">
+            <summary>
+            遥信属性变更回调
+            </summary>
+            <param name="action"></param>
+            <param name="isReUse"></param>
+             <see cref="T:IoTCenterHost.Core.Abstraction.BaseModels.GrpcYxItem"/>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostCallbackService.AddRealTimeSnapshot(System.Action{IoTCenterHost.Core.Abstraction.WcfRealTimeEventItem},System.Boolean)">
+            <summary>
+            实时快照变更回调
+            </summary>
+            <param name="action"></param>
+            <param name="isReUse"></param>
+             <see cref="T:System.String"/>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostCallbackService.DeleteRealTimeSnapshot(System.Action{IoTCenterHost.Core.Abstraction.WcfRealTimeEventItem},System.Boolean)">
+            <summary>
+            实时快照清除回调
+            </summary>
+            <param name="action"></param>
+            <param name="isReUse"></param>
+             <see cref="T:IoTCenterHost.Core.Abstraction.WcfRealTimeEventItem"/>
+            <returns></returns>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService">
+            <summary>
+            IoTCenter统一服务
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.Listen">
+            <summary>
+            监听
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ListenEx">
+            <summary>
+            监听
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.Login(System.String,System.String,IoTCenterHost.Core.Abstraction.EnumDefine.GwClientType,System.Boolean)">
+            <summary>
+            登录
+            </summary>
+            <param name="User">用户名</param>
+            <param name="Pwd">密码</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.LoginEx(System.String,System.String,IoTCenterHost.Core.Abstraction.EnumDefine.GwClientType)">
+            <summary>
+            登录并返回令牌
+            </summary>
+            <param name="User"></param>
+            <param name="Pwd"></param>
+            <param name="CT"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetClientIPAndPort">
+            <summary>
+            获取客户端IP和端口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.CloseSession">
+            <summary>
+            结束会话
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.StopDataCenter">
+            <summary>
+            停止服务端数据采集
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.IsRun">
+            <summary>
+            服务的数据采集是否在运行
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYCValue(System.Int32,System.Int32)">
+            <summary>
+            获取模拟量测点的实时值
+            </summary>
+            <param name="iEquipNo">设备号</param>
+            <param name="iYcpNo">模拟量测点号</param>
+            <returns>返回值</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYCValueDictFromEquip(System.Int32)">
+            <summary>
+            获取指定设备的所有YC实时值
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYCAlarmState(System.Int32,System.Int32)">
+            <summary>
+            获取模拟量测点的报警状态
+            </summary>
+            <param name="iEquipNo">设备号</param>
+            <param name="iYcpNo">测点号</param>
+            <returns>true:有报警; false:无报警</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYCAlarmStateDictFromEquip(System.Int32)">
+            <summary>
+            获取指定设备的所有YC报警状态值
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYXValue(System.Int32,System.Int32)">
+            <summary>
+            获取状态量测点的实时值
+            </summary>
+            <param name="iEquipNo">设备号</param>
+            <param name="iYxpNo">状态量测点号</param>
+            <returns>返回值</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYXValueDictFromEquip(System.Int32)">
+            <summary>
+            获取指定设备的所有YX状态值
+            </summary>
+            <returns></returns>  
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYXAlarmState(System.Int32,System.Int32)">
+            <summary>
+            获取状态量测点的报警状态
+            </summary>
+            <param name="iEquipNo">设备号</param>
+            <param name="iYxpNo">状态量测点号</param>
+            <returns>true:有报警; false:无报警</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYXAlarmStateDictFromEquip(System.Int32)">
+            <summary>
+            获取指定设备的所有YX报警状态
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetCurveData(System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            获得历史曲线的数据
+            </summary>
+            <param name="d">读取日期</param>
+            <param name="eqpno">设备号</param>
+            <param name="ycpno">模拟量测点号</param>
+            <returns></returns>  
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetCurveData1(System.DateTime,System.Int32,System.Int32,System.String)">
+            <summary>
+            获取数据曲线
+            </summary>
+            <param name="d"></param>
+            <param name="eqpno"></param>
+            <param name="ycyxno"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetHistoryStorePeriod(System.Int32)">
+            <summary>
+            设置历史曲线保存时段
+            </summary>
+            <param name="period"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetHistoryStorePeriod">
+            <summary>
+            获取历史曲线保存时段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetEquipDebug(System.Int32,System.Boolean)">
+            <summary>
+            把设备设置成调试状态
+            </summary>
+            <param name="iEquipNo">设备号</param>
+            <param name="bFlag">true:调试状态; false:非调试状态</param> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetEquipDebugState(System.Int32)">
+            <summary>
+            获取设备的调试状态
+            </summary>
+            <param name="iEquipNo">设备号</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetParm(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            向设备发送设置命令
+            </summary>
+            <param name="EquipNo">设备号</param>
+            <param name="strCMD1">命令字符串1</param>
+            <param name="strCMD2">命令字符串2</param>
+            <param name="strCMD3">命令字符串3</param>
+            <param name="strUser">用户名(当前登录用户)</param> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.HaveYCP(System.Int32)">
+            <summary>
+            设备是否有模拟量测点
+            </summary>
+            <param name="EquipNo">设备号</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.HaveYXP(System.Int32)">
+            <summary>
+            设备是否有状态量测点
+            </summary>
+            <param name="EquipNo">设备号</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.HaveSet(System.Int32)">
+            <summary>
+            设备是否有控制命令
+            </summary>
+            <param name="EquipNo">设备号</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.HaveHistoryCurve(System.Int32,System.Int32)">
+            <summary>
+            是否有历史曲线记录
+            </summary>
+            <param name="EquipNo">设备号</param>
+            <param name="YCPNo">模拟量测点号</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetEquipListStr">
+            <summary>
+            获取设备列表的字符串
+            </summary>
+            <returns>[设备号][设备名称];[设备号][设备名称]...</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYCPListStr(System.Int32)">
+            <summary>
+            获取模拟量列表的字符串
+            </summary>
+            <returns>[测点号][测点名称];[测点号][测点名称]...</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYXPListStr(System.Int32)">
+            <summary>
+            获取状态量列表的字符串
+            </summary>
+            <returns>[测点号][测点名称];[测点号][测点名称]...</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetSetListStr(System.Int32)">
+            <summary>
+            获取设置列表的字符串
+            </summary>
+            <returns>[设置名称][命令字符串1][命令字符串2][命令字符串3];[设置名称][命令字符串1][命令字符串2][命令字符串3]...</returns>   
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYCAlarmComments(System.Int32,System.Int32)">
+            <summary>
+            获取指定模拟量测点的“越限事件+处理意见”
+            </summary>
+            <param name="iEqpNo">设备号</param>
+            <param name="iYCPNo">测点号</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetYXAlarmComments(System.Int32,System.Int32)">
+            <summary>
+            获取指定状态量测点的“报警处理意见”
+            </summary>
+            <param name="iEqpNo">设备号</param>
+            <param name="iYXPNo">测点号</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetVersionInfo">
+            <summary>
+            获取程序版本号
+            </summary>
+            <returns>程序版本号</returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetTotalRTYCItemData1">
+            <summary>
+            获取所有实时ProxyYcItem值 
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetTotalRTYXItemData1">
+            <summary>
+            获取所有实时ProxyYxItem值
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetChangedRTYCItemData1">
+            <summary>
+            获取变化的实时ProxyYcItem值
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetChangedRTYXItemData1">
+            <summary>
+            获取变化的实时ProxyYxItem值
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetTotalRTEquipItemData1">
+             <summary>
+            获取所有实时ProxyEquipItem值
+             </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetChangedRTEquipItemData1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetAddRTEquipItemData">
+            <summary>
+            获取动态添加的设备的ProxyEquipItem值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetDelRTEquipItemData">
+            <summary>
+            获取动态删除的设备的设备号数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetEditRTEquipItemData">
+            <summary>
+            获取动态删除的设备的设备号数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetEquipTreeXMLFile">
+            <summary>
+            获取设备树的XML文件
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SendSMS(System.String,System.String)">
+            <summary>
+            通过平台的短信模块向指定手机号码发送短信
+            </summary>
+            <param name="TelNumber">手机号码</param>
+            <param name="msg">短信内容</param>
+            <returns></returns> 
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ReadNextBuffer">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetCurrentBuffer">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetAddRealEventItem1">
+            <summary>
+            获取新增的实时事件
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetDelRealEventItem1">
+            <summary>
+            获取删除后的实时事件
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.DeleteDebugInfo(System.Int32)">
+            <summary>
+            删除调试信息
+            </summary>
+            <param name="iEquipNo"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ConfirmedRealTimeEventItem(IoTCenterHost.Core.Abstraction.WcfRealTimeEventItem)">
+            <summary>
+            确认设备状态
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetParmEx(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Action{System.String})">
+            <summary>
+            设置命令扩展方法，提供带参数requestId的回调
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="strCMD1"></param>
+            <param name="strCMD2"></param>
+            <param name="strCMD3"></param>
+            <param name="strUser"></param>
+            <param name="requestId"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.DoEquipSetItem(System.Int32,System.Int32,System.String,System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            同步调用命令接口
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="SetNo"></param>
+            <param name="strValue"></param>
+            <param name="strUser"></param>
+            <param name="bShowDlg"></param>
+            <param name="Instance_GUID"></param>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.FireSetParmResponseEvent(System.Int32,System.Int32,System.String,System.String,System.Boolean,System.String,System.Action{IoTCenterHost.Core.Abstraction.SetParmRequestModel})">
+            <summary>
+            扩展方法，实现带参数的回调
+            </summary>
+            <param name="EquipNo"></param>
+            <param name="strCMD1"></param>
+            <param name="strCMD2"></param>
+            <param name="strCMD3"></param>
+            <param name="strUser"></param>
+            <param name="requestId"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ResetEquips">
+            <summary>
+            数据库设备信息改变后(修改了equip、ycp、yxp表)进行重置
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ResetSetParmTable">
+            <summary>
+            设备设置表的信息改变后(修改了SetParm表)进行重置
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ResetEquipmentLinkage">
+            <summary>
+            修改了设备联动关系后进行程序重置
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ResetProcTimeManage">
+            <summary>
+            修改了定时任务的逻辑后进行程序重置
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ResetGWDataRecordItems">
+            <summary>
+            修改了定时抄表的逻辑后进行程序重置
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ResetDelayActionPlan">
+            <summary>
+            修改了延时执行动作的列表后（修改了GWDelayAction表）进行程序重置
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ZCAddReset(System.String)">
+            <summary>
+            资产管理：增加一个资产
+            </summary>
+            <param name="ZCID">资产号</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ZCEditReset(System.String)">
+            <summary>
+            资产管理：修改一个资产
+            </summary>
+            <param name="ZCID"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ZCDelReset(System.String)">
+            <summary>
+            资产管理：删除一个资产
+            </summary>
+            <param name="ZCID"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.FirstGetRealZCItem">
+            <summary>
+            获取所有资产项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetChangedZCItem">
+            <summary>
+            获取改变了的资产项目,包括增加项和修改项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetDeleteZCItem">
+            <summary>
+            获取删除了的资产项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SendImageToSvr(System.String,System.Byte[])">
+            <summary>
+            把对应资产的图片传到服务端存储
+            </summary>
+            <param name="ZCID"></param>
+            <param name="bs">图片的二进制数组</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetImageFromSvr(System.String)">
+            <summary>
+            从服务端取回对应资产的图片
+            </summary>
+            <param name="ZCID">资产号</param>
+            <returns>图片的二进制数据数组</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.AddWeihuRecord4ZC(System.String,System.String,System.String,System.Collections.Generic.List{System.Byte[]})">
+            <summary>
+            加入资产维护记录
+            </summary>
+            <param name="ZCID">资产ID</param>
+            <param name="Name">维护人，通常就是App的登录用户名</param>
+            <param name="RecordStr">输入的维护记录</param>
+            <param name="Pictures">通过手机拍的照片，一张或多张</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.RemoveWeihuRecord4ZC(System.Int64)">
+            <summary>
+            删除一条维护记录
+            </summary>
+            <param name="ID">维护记录表中的唯一ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SendPlanImageToSvr(System.String,System.Byte[])">
+            <summary>
+            把预案的图片存到服务端
+            </summary>
+            <param name="ID">预案号</param>
+            <param name="bs">图片的二进制数组</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetPlanImageFromSvr(System.String)">
+            <summary>
+            从服务端获取预案的对应图片
+            </summary>
+            <param name="ID">预案ID</param>
+            <returns>图片数据的数组</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetAllPlanImageName">
+            <summary>
+            获取所有预案的图片名称
+            </summary>
+            <returns>名称数组</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetName2SF">
+            <summary>
+            获取软件的授权名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetUserName2SF">
+            <summary>
+            获取授权用户名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetSystemGUID">
+            <summary>
+            获取系统的唯一标识码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetEquipNm(System.Int32,System.String)">
+            <summary>
+            设置设备名称
+            </summary>
+            <param name="EquipNo">设备号</param>
+            <param name="Nm">新的设备名称</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetYcpNm(System.Int32,System.Int32,System.String)">
+            <summary>
+            设置某个模拟量测点的名称
+            </summary>
+            <param name="EquipNo">对应设备号</param>
+            <param name="YcpNo">对应测点号</param>
+            <param name="Nm">新的测点名称</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetYxpNm(System.Int32,System.Int32,System.String)">
+            <summary>
+            设置某个状态量测点的名称
+            </summary>
+            <param name="EquipNo">对应设备号</param>
+            <param name="YxpNo">对应测点号</param>
+            <param name="Nm">新的测点名称</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.MResetYcYxNo(System.Int32,System.String,System.Int32)">
+            <summary>
+            把某个测点设置成非手工复位状态
+            </summary>
+            <param name="EquipNo">设备号</param>
+            <param name="sType">"C"---模拟量；"X"---状态量</param>
+            <param name="YcYxNo">测点号</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.Support3D">
+            <summary>
+            系统是否支持3D功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportSJFX">
+            <summary>
+            系统是否支持数据分析与挖掘的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportZCGL">
+            <summary>
+            系统是否支持资产管理的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportTGKZ">
+            <summary>
+            系统是否支持体感控制的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportDDCK">
+            <summary>
+            系统是否支持多点触控的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportZXSJ">
+            <summary>
+            系统是否支持在线升级功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportNYGL">
+            <summary>
+            系统是否支持能源管理的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportYAGL">
+            <summary>
+            系统是否支持预案管理的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportDPHD">
+            <summary>
+            系统是否支持多屏互动的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportBIM">
+            <summary>
+            系统是否支持BIM的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportVOICE">
+            <summary>
+            系统是否支持语音交互的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SupportQRCode">
+            <summary>
+            系统是否支持二维码的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.IsNeuTral">
+            <summary>
+            是否采用中性版本的支持
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.IsHotStandby">
+            <summary>
+            系统是否为双机热备的热备模式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetHotStandbyIP">
+            <summary>
+            获取双机热备备机的IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.IsHotStandbyListenState">
+            <summary>
+            是否处于双机热备的侦听状态中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetPropertyFromPropertyService(System.String,System.String,System.String)">
+            <summary>
+            读取系统的配置文件
+            </summary>
+            <param name="PropertyName">配置文件中的属性名称</param>
+            <param name="NodeName">属性下面的节点名称</param>
+            <param name="DefaultValue">如果没有配置该属性，则返回默认值</param>
+            <returns>返回属性值</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetPropertyToPropertyService(System.String,System.String,System.String)">
+            <summary>
+            修改系统的配置文件
+            </summary>
+            <param name="PropertyName">配置文件中的属性名称</param>
+            <param name="NodeName">属性下面的节点名称</param>
+            <param name="DefaultValue">属性或者节点的值</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetVCtrol(System.Byte[],System.String)">
+            <summary>
+            通过语音进行交互
+            </summary>
+            <param name="bVoices">语音流</param>
+            <param name="UserNm">登录用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetVCtrol1(System.String,System.String)">
+            <summary>
+            通过语音进行交互
+            </summary>
+            <param name="csVoice">语音字符</param>
+            <param name="UserNm">登录用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.KickClient(System.String)">
+            <summary>
+            强制指定客户端下线，管理员才有此权限  
+            </summary>
+            <param name="GUID"></param>
+            <returns>总是true</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.NotifyLoginUserOffLine(System.String,System.String)">
+            <summary>
+            通知指定登录用户下线，用于用户权限变更的情形
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.NotifyRoleUserOffLine(System.String,System.String)">
+            <summary>
+            通知指定角色的用户下线，用于用户权限变更的情形
+            </summary>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.ShowMsg2GUID(System.String,System.String)">
+            <summary>
+            向指定客户端弹出信息   
+            </summary>
+            <param name="msg">消息</param>
+            <param name="GUID">客户端GUID</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetImageFromSvr1(System.String,System.String)">
+            <summary>
+            从服务端获取指定图片文件
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="ImageNm">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetWuBao(System.Int32,System.String,System.Int32)">
+            <summary>
+            把某个测点设置成误报状态，适用于处理误报的情况
+            </summary>
+            <param name="eqpno">设备号</param>
+            <param name="type">类型 C-模拟量  X-状态量</param>
+            <param name="ycyxno">测点号</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.SetNoAlarm(System.Int32,System.String,System.Int32)">
+            <summary>
+            把某个测点设置为非报警状态---适用于处理报警后无恢复信号的情况
+            </summary>
+            <param name="eqpno">设备号</param>
+            <param name="type">类型 C-模拟量  X-状态量</param>
+            <param name="ycyxno">测点号</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.DoExProcSetParm(System.String,System.String,System.String,System.String)">
+            <summary>
+            执行扩展模块中的一个命令
+            </summary>
+            <param name="ModuleNm">模块名称.GWExProc表中的Proc_Module</param>
+            <param name="cmd1">参数1.GWExProcCmd表中的main_instruction</param>
+            <param name="cmd2">参数2.GWExProcCmd表中的minor_instruction</param>
+            <param name="cmd3">参数3.GWExProcCmd表中的value</param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.Confirm2NormalState(System.Int32,System.String,System.Int32)">
+            <summary>
+            报警确认后恢复到正常状态---需要在设备dll中重新定义基类的虚函数
+            public virtual bool Confirm2NormalState(string sYcYxType, int iYcYxNo)
+            默认情况返回false
+            </summary>
+            <param name="iEqpNo">设备号</param>
+            <param name="sYcYxType">类型 C-模拟量  X-状态量</param>
+            <param name="iYcYxNo">测点号</param>
+            <returns>true可以执行， false不可以执行</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.LockSetItem(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            用户针对某个设置项进行锁定
+            </summary>
+            <param name="UserNm">用户名</param>
+            <param name="iEquipNo">设备号</param>
+            <param name="iSetNo">设置号</param>
+            <param name="Client_Instance_GUID">客户端GUID标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.UnLockSetItem(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            解除某个设置项的锁定
+            </summary>
+            <param name="UserNm">用户名</param>
+            <param name="iEquipNo">设备号</param>
+            <param name="iSetNo">设置号</param>
+            <param name="Client_Instance_GUID">客户端实例GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetSetItemDesc(System.Int32,System.Int32)">
+            <summary>
+            获取设置项的描述
+            </summary>
+            <param name="iEquipNo">设备号</param>
+            <param name="iSetNo">设置号</param>
+            <returns>描述内容</returns>        
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.CreateQrCode2Jpeg(System.String)">
+            <summary>
+            生成二维码图片
+            </summary>
+            <param name="Content">二维码内容</param>
+            <returns>二维码图片字节流</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.CreateQrCode4Owner(System.String)">
+            <summary>
+            生成具有用户身份的二维码
+            </summary>
+            <param name="OwnerName">用户名</param>
+            <returns>二维码图片字节流</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.QRScan4Equip(System.String,System.String)">
+            <summary>
+            移动端扫描设备二维码
+            </summary>
+            <param name="UserNm">用户名</param>
+            <param name="QRContent">二维码内容</param>
+            <returns>无意义</returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.QRScan4Equip1(System.String,System.String,System.String@)">
+            <summary>
+            移动端扫描设备二维码,带返回值
+            </summary>
+            <param name="UserNm">用户名</param>
+            <param name="QRContent">二维码内容</param>
+            <param name="RtnStr">返回值:设备号+资产号</param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetValueFromExpression(System.String)">
+            <summary>
+            通过表达式获取相应的返回值 float or string
+            </summary>
+            <param name="csExpr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.CheckSSOLifeTime">
+            <summary>
+            检查sso
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetEncryptKey4Project">
+            <summary>
+            获取key
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.AddChangedEquip(IoTCenterHost.Core.Abstraction.BaseModels.GrpcChangedEquip)">
+            <summary>
+            设备变化
+            </summary>
+            <param name="EqpList"></param>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.GetChangedDataFromCurveAsync(System.DateTime,System.DateTime,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            获取历史曲线
+            </summary>
+            <param name="bgn"></param>
+            <param name="end"></param>
+            <param name="stano"></param>
+            <param name="eqpno"></param>
+            <param name="ycyxno"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IoTCenterHost.Core.Abstraction.Services.IotCenterHostService.UpdateUserTable">
+            <summary>
+            刷新用户缓存
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.Services.ISingleStationCallback">
+            <summary>
+            ISingleStationCallback:作为tcp客户端的回调接口
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.LoginResult.UserItem">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.LoginResult.Token">
+            <summary>
+            jwt标识
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.LoginResult.LoginMark">
+            <summary>
+            登录唯一标示
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.LoginResult.LoginTime">
+            <summary>
+            登录时间
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.LoginResult.MqIdentity">
+            <summary>
+            消息队列id
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.LogTreeResponse">
+            <summary>
+            日志结构
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.OpenPage4InterScreen">
+            <summary>
+            打开屏幕
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.ShowOrClosePage">
+            <summary>
+            开启/关闭窗口
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.KickClient">
+            <summary>
+            用户下线
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.ShowMsg">
+            <summary>
+            显示消息
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.NotifyOffLine">
+            <summary>
+            回调客户端
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.NotifyRoleOffLine">
+            <summary>
+            角色修改，用户下线
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.ShowLockSetParmMsg">
+            <summary>
+            锁定
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.VOpenPage">
+            <summary>
+            打开页面
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.ShowInfo">
+            <summary>
+            显示提示信息
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.SetparmCallback">
+            <summary>
+            回调到客户端
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.MsgEventType.FireSetParm">
+            <summary>
+            回调到客户端
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.PackageInstallModel">
+            <summary>
+            安装组件
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.PackageInstallModel.ReleaseId">
+            <summary>
+            发布版id
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.PackageInstallModel.AssemblyId">
+            <summary>
+            包标识
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.PackageInstallModel.Product">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.PackageInstallModel.Version">
+            <summary>
+            安装版本
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.PackageInstallModel.InstalledAt">
+            <summary>
+            安装日期
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.PackageInstallModel.PluginType">
+            <summary>
+            插件类型
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.PackageInstallModel.InstallHistory">
+            <summary>
+            已安装历史
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.InstallInfo">
+            <summary>
+            安装记录
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.InstallInfo.AssestId">
+            <summary>
+            安装发布文件标识
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.InstallInfo.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.InstallInfo.InstallStatus">
+            <summary>
+            安装状态
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.InstallInfo.DownloadAt">
+            <summary>
+            下载时间
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.InstallInfo.InstallAt">
+            <summary>
+            安装时间
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.InstallInfo.Files">
+            <summary>
+            文件列表
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.InstallInfo.FullPath">
+            <summary>
+            新增文件目录
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.InstallStatus">
+            <summary>
+            设备安装状态
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.InstallStatus.Null">
+            <summary>
+            未安装
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.InstallStatus.Installed">
+            <summary>
+            已安装
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.InstallStatus.UnInstalled">
+            <summary>
+            卸载
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.InstallStatus.ToUnInstall">
+            <summary>
+            待卸载
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.PluginType">
+            <summary>
+            插件类型
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.PluginType.Null">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.PluginType.DeviceDriver">
+            <summary>
+            协议插件
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.PluginType.ExtAssembly">
+            <summary>
+            扩展插件
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.PluginType.Page">
+            <summary>
+            页面插件
+            </summary>
+        </member>
+        <member name="F:IoTCenterHost.Core.Abstraction.PluginType.Web">
+            <summary>
+            应用插件
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.ResponseModel">
+            <summary>
+            响应模型
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ResponseModel.Code">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ResponseModel.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ResponseModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ServiceStatusModel.ServiceStatus">
+            <summary>
+            许可状态
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ServiceStatusModel.LicenseStatus">
+            <summary>
+            许可是否已激活
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ServiceStatusModel.License">
+            <summary>
+            许可序列号
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ServiceStatusModel.IsDebug">
+            <summary>
+            是否为调试模式
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ServiceStatusModel.ServiceStatusDesc">
+            <summary>
+            许可状态正文
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ServiceStatusModel.Empty">
+            <summary>
+            默认状态
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.ServiceStatusModel.ServiceRunning">
+            <summary>
+            运行状态
+            </summary>
+        </member>
+        <member name="T:IoTCenterHost.Core.Abstraction.WcfRealTimeEventItem">
+            <summary>
+            实时数据事件内容
+            </summary>
+        </member>
+        <member name="P:IoTCenterHost.Core.Abstraction.WcfRealTimeEventItem.GUID">
+            <summary>
+            guid
+            </summary>
+        </member>
+    </members>
+</doc>

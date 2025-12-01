@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<PackageId>IoTCenterCore</PackageId>
+		<Authors>深圳市敢为软件技术有限公司</Authors>
+		<Company>https://www.ganweicloud.com/</Company>
+		<TargetFramework>$(AspNetCoreTargetFramework)</TargetFramework>
+		<FileVersion>9.0.0</FileVersion>
+		<Version>9.0.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NodaTime" />
+		<PackageReference Include="ncrontab" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\IoTCenterCore.Abstractions\IoTCenterCore.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

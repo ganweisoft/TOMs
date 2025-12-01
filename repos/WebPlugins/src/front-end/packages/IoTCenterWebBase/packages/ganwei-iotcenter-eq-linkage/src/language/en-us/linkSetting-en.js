@@ -1,0 +1,110 @@
+const linkSetting = {
+    "title": {
+        "headName": "Rules",
+        "popoverTitle": "Filter"
+    },
+    "label": {
+        "notcommunicating": "Not Communicating",
+        "communicationisnormal": "Communication Is Normal",
+        "thereisanalarm": "There Is An Alarm",
+        "settingupinprogress": "Setting Up In Progress",
+        "initializing": "Initializing",
+        "withdrawagarrison": "Withdraw A Garrison",
+        "equal": "Equal",
+        "notEqual": "Not Equal",
+        "greaterThan": "Greater Than",
+        "greaterThanOrEqualTo": "Greater Than Or Equal To",
+        "lessThan": "Less Than",
+        "lessThanOrEqualTo": "Less Than Or Equal To",
+        "to": "To",
+        "highest": "Highest",
+        "minimum": "Minimum",
+        "pleaseSel": "Select",
+        "pleaseInput": "Please Enter Parameters",
+        "unnamed": "Unnamed Grouping",
+        "noRelatedContent": "No Content",
+        "delPrompt": "Delete Linked Equipment"
+    },
+    "button": {
+        "comfirmed": "Confirm",
+        "save": "Confirm",
+        "cancel": "Cancel",
+        "del": "Delete",
+        "edit": "Edit",
+        "add": "New",
+        "reset": "Reset"
+    },
+    "input": {
+        "selectEquipStatus": "Please Select The Device Status",
+        "selectJudgeIf": "Please Select The Criteria For Judgment",
+        "selectLinkIf": "Please Select The Linkage Condition",
+        "newLinkInfoProcName": "Please Enter The Linkage Name",
+        "searchTriggerEquip": "Search Trigger Equipment Name",
+        "selEquip": "Select A Equipment",
+        "triggerDevice": "Select Trigger Equipment",
+        "triggerType": "Select Trigger Classification",
+        "triggerPoint": "Select Trigger Point",
+        "delayTime": "Delay Time",
+        "linkEquip": "Select Linkage Equipment",
+        "linkCommand": "Select Linkage Command",
+        "commandInstructions": "Input Command Instructions",
+        "enable": "Enable",
+        "yes": "Yes",
+        "no": "No",
+        "remarksInfo": "Input Remarks",
+        "equipFault": "Equipment Communication Failure",
+        "equipRecovery": "Equipment Communication Recovery",
+        "equipTypeFault": "Equipment Status Fault",
+        "equipTypeRecovery": "Equipment Status Recovery",
+        "incident": "Event",
+        "ycLimit": "Analog Out Of Limit (Telemetry)",
+        "ycRecovery": "Analog Recovery (Telemetry)",
+        "yxAlarm": "Status Alarm (Remote Signaling)",
+        "yxRecovery": "Status Recovery (Remote Signaling)",
+        "and": "And",
+        "or": "Or"
+    },
+    "table": {
+        "procName": "Linkage Name",
+        "triggerEquip": "Trigger Equipment",
+        "triggerType": "Trigger Classification",
+        "triggerPoint": "Trigger Point",
+        "eventExpression": "Event Expression",
+        "delayTime": "Delay (ms)",
+        "linkEquip": "Linkage Equipment",
+        "linkCommand": "Linkage Command",
+        "commandInstructions": "Command Parameter",
+        "remarksInfo": "Remark",
+        "operation": "Operation"
+    },
+    "pagination": {
+        "selectLabel": "Item / Page",
+        "pageBeforeLable": "Go",
+        "pageAfterLable": "Page"
+    },
+    "dialog": {
+        "newTitleName": "New Rule",
+        "newIfTitleName": "New Conditional Linkage Configuration",
+        "editTitleName": "Edit Rule"
+    },
+    "tips": {
+        "delTitle1": "Tips",
+        "delTipsContent": "This Action Will Permanently Delete The Data, Continue?",
+        "operationSuccess": "Operation Succeed",
+        "operationError": "Operation Failed",
+        "getDataError": "Failed To Get Data",
+        "required": "There Are Required Items Not Filled In!",
+        "delayTimeIsNumber": "Delay Time Should Be Of Numeric Classification",
+        "selTriEquip": "Select Trigger Equipment First",
+        "noDate": "No Content",
+        "click": "Click",
+        "addDate": "Add Date",
+        "linkIf": "Linkage Condition",
+        "linkIfTipsStart": "All Linkage Conditions Are",
+        "linkIfTipsEnd": ". It Will Only Be Triggered When The Conditions Are Met",
+        "minimumConfiguration": "At Least One Triggering Device Configuration Is Required"
+    },
+    "配置预览": "Configuration Preview"
+}
+
+export default linkSetting;

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <Version>9.0.0.1</Version>
+	  <IsPackable>true</IsPackable>
+	  <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+	  <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+	  <EnableNETAnalyzers>False</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore.Web" />
+	<PackageReference Include="Grpc.AspNetCore" />
+	<PackageReference Include="Grpc.Tools" />
+  </ItemGroup>
+	<ItemGroup>
+		<Protobuf Include="..\IoTCenterHost.Protos\*.proto" GrpcServices="Both" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Remove="GrpcConstract\SystemManageService.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\IoTCenterHost.AppServices\IoTCenterHost.AppServices.csproj" />
+  </ItemGroup>
+
+</Project>

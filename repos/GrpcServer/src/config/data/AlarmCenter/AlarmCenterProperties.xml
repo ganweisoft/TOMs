@@ -1,0 +1,45 @@
+﻿<AlarmCenterProperties>   
+  <Properties name="AES.Parameter4OldEncrypt">
+    <IVString value="" />
+    <Key value="" />
+  </Properties>
+  <Properties name="AlarmCenter.Gui.OptionPanels.CurveOptions">
+    <CurveStoreInDB value="FALSE" />
+    <EquipSaveType value="FALSE" />
+    <History_CurveStoreTime value="365" />
+    <Hostory_CurveStorePath value="../../oTCenter/CurveData" />
+    <Real_CurveLenth value="300" />
+    <Real_FrashTime value="1" />
+    <RemoteSite value="false" />
+    <RemoteSitePwd value="" />
+    <RemoteSiteUser value="" />
+  </Properties>
+  <Properties name="AlarmCenter.Gui.OptionPanels.DatabaseOptions">    
+    <MySql.Database value="" />
+    <MySql.IP value="" />
+    <MySql.PORT value="" />
+    <MySql.PWD value="" />
+    <MySql.Select value="False" />
+    <MySql.UID value="" />
+    <SQLite.DefaultPath value="../database/Database.db" />
+    <SQLite.Select value="True" /> 
+  </Properties> 
+  <CoreProperties.UILanguage value="zh-CN" /> 
+  <DBStoreLimitTime value="10" />   
+  <Properties name="HostServer">
+    <EnableGrpc value="true" />
+    <HostIpAddr value="127.0.0.1" />
+    <HttpPort value="4000" />
+    <UnityPort value="" />
+    <MQPort value="" />
+    <ZMQSubscribeKey value="" />
+    <EnableSSLGen value="false" />
+    <HttpsPort value="" />
+    <HttpsCertFile value="" />
+    <HttpsPassword value="" /> 
+    <StorageFile value="" />
+    <PluginsPath value="" />
+    <Redis.ConnectString value=""/>
+    <Redis.Password value=""/>
+  </Properties>       
+</AlarmCenterProperties>

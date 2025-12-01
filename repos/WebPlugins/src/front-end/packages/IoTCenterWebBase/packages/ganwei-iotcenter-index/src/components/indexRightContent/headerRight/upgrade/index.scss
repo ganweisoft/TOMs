@@ -1,0 +1,147 @@
+.upgradeBox {
+    >.upgradeBox-btn {
+        display: flex;
+        height: 28px;
+        align-items: center;
+        font-size: 12px;
+        padding: 0px 8px;
+        background-color: var(--frame-top-upgrade-background);
+        user-select: none;
+
+        >span {
+            color: var(--frame-main-color-2);
+        }
+    }
+
+}
+
+.upgradeBox-drawer {
+    .titleClass {
+        font-size: 18px;
+        text-align: left;
+
+        >span {
+            margin-right: 15px;
+        }
+
+        .el-button {
+            width: 100px;
+            height: 32px;
+            line-height: 32px;
+        }
+    }
+
+    .upgradeBox-item {
+        height: 100%;
+        overflow-y: auto;
+
+        li {
+            border-radius: 4px;
+            padding: 0 16px 16px 16px;
+            background-color: var(--frame-main-background-4);
+            margin-bottom: 10px;
+
+            h4 {
+                font-size: 14px;
+                padding: 12px 0;
+                text-align: left;
+
+                span {
+                    font-size: 12px;
+                    color: #fff;
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background: var(--button-primary-background);
+                    border-radius: 4px;
+                    line-height: 20px;
+                    text-align: center;
+                }
+
+                label {
+                    color: var(--button-primary-background);
+                    margin-left: 5px;
+                    font-family: PingFangSC, PingFang SC;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+            }
+
+            p {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .el-button {
+                    width: 55px;
+                    height: 18px;
+                    line-height: 18px;
+                    border-radius: 14px;
+                    font-size: 12px;
+                    span{font-size: 12px;}
+                }
+
+                >span {
+                    color: var(--frame-main-color);
+                    font-size: 14px;
+                    text-align: left;
+                    line-height: 18px;
+                    width: calc(100% - 75px);
+                    white-space: break-spaces;
+                }
+
+                a {
+                    color: #fff;
+                    font-size: 12px;
+                    display: inline-block;
+                    width: 55px;
+                    height: 18px;
+                    line-height: 18px;
+                    background: var(--button-primary-background);
+                    border-radius: 14px;
+                    text-decoration: none;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .el-button {
+        padding: 0;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 4px;
+        overflow: hidden;
+        border: unset !important;
+        position: relative;
+
+        &.is-loading {
+            cursor: pointer;
+
+            &::before {
+                background: linear-gradient(270deg, var(--gw-color-primary5) 0%, var(--gw-color-primary4) 3%, var(--gw-color-primary) 100%);
+                box-shadow: 0px 6px 10px 0px rgba(38, 105, 236, 0.18);
+                animation: installing 1s ease-in-out infinite;
+            }
+
+            .el-icon-loading {
+                display: none;
+            }
+        }
+    }
+
+    @keyframes installing {
+        from {
+            width: 0%;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        to {
+            width: 100%;
+            opacity: 0.1;
+        }
+    }
+}

@@ -1,0 +1,195 @@
+$themes: (light: $light, dark: $dark);
+
+//遍历主题map
+@mixin themeify {
+
+    @each $theme-name,
+    $theme-map in $themes {
+        //!global 把局部变量强升为全局变量
+        $theme-map: $theme-map !global;
+
+        // 判断html的data-theme的属性值  #{}是sass的插值表达式
+        // & sass嵌套里的父容器标识   @content是混合器插槽，像vue的slot
+        [data-theme="#{$theme-name}"] & {
+            @content;
+        }
+    }
+}
+
+//声明一个根据Key获取颜色的function
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
+
+//获取背景颜色
+@mixin background_color($color) {
+    @include themeify {
+        background-color: themed($color) !important;
+    }
+}
+
+@mixin background($color) {
+    @include themeify {
+        background: themed($color) !important;
+    }
+}
+
+
+@mixin background_color2($color) {
+    @include themeify {
+        background-color: themed($color);
+    }
+}
+
+//获取字体颜色
+@mixin font_color($color) {
+    @include themeify {
+        color: themed($color) !important;
+    }
+}
+
+@mixin font_color2($color) {
+    @include themeify {
+        color: themed($color);
+    }
+}
+
+@mixin box_shadow($color) {
+    @include themeify {
+        box-shadow: inset 0px 0px 16px 0px themed($color);
+    }
+}
+
+// 自动填充背景颜色
+@mixin box_shadow2($x, $y, $blur, $spread, $color, $inset) {
+    @include themeify {
+        box-shadow: 0 0 0px 1000px themed($color) inset;
+        -webkit-box-shadow: 0 0 0px 1000px themed($color) inset;
+    }
+}
+
+// 自动填充背景颜色
+@mixin box_shadow3($color) {
+    @include themeify {
+        box-shadow: themed($color);
+        -webkit-box-shadow: themed($color);
+    }
+}
+
+// 自动填充文字颜色
+@mixin text-fill-color($color) {
+    @include themeify {
+        text-fill-color: themed($color) !important;
+        -webkit-text-fill-color: themed($color) !important;
+    }
+}
+
+//获取边框颜色
+@mixin border_color($color) {
+    @include themeify {
+        border-color: themed($color) !important;
+    }
+}
+
+@mixin border($size, $color) {
+    @include themeify {
+        border: $size solid themed($color) !important;
+    }
+}
+
+@mixin border_image($size, $image) {
+    @include themeify {
+        border: $size solid;
+        border-image: themed($image);
+    }
+}
+
+@mixin border_bottom_color($color) {
+    @include themeify {
+        border-bottom-color: themed($color) !important;
+    }
+}
+
+@mixin border_bottom($size, $color) {
+    @include themeify {
+        border-bottom: $size solid themed($color) !important;
+    }
+}
+
+@mixin border_top_color($color) {
+    @include themeify {
+        border-top-color: themed($color) !important;
+    }
+}
+
+@mixin border_top($size, $color) {
+    @include themeify {
+        border-top: $size solid themed($color) !important;
+    }
+}
+
+@mixin border_right_color($color) {
+    @include themeify {
+        border-right-color: themed($color) !important;
+    }
+}
+
+@mixin border_right($size, $color) {
+    @include themeify {
+        border-right: $size solid themed($color) !important;
+    }
+}
+
+@mixin border_right_dashed($size, $color) {
+    @include themeify {
+        border-right: $size dashed themed($color) !important;
+    }
+}
+
+@mixin border_left_color($color) {
+    @include themeify {
+        border-left-color: themed($color) !important;
+    }
+}
+
+@mixin border_left($size, $color) {
+    @include themeify {
+        border-left: $size solid themed($color) !important;
+    }
+}
+
+@mixin border_left_dashed($size, $color) {
+    @include themeify {
+        border-left: $size dashed themed($color) !important;
+    }
+}
+
+@mixin scrollbar-color($color) {
+    @include themeify {
+        scrollbar-color: themed($color) transparent !important;
+    }
+}
+
+@mixin text-fill-color($color) {
+    @include themeify {
+        -webkit-text-fill-color: themed($color) !important;
+    }
+}
+
+@mixin stroke-color($color) {
+    @include themeify {
+        stroke: themed($color) !important;
+    }
+}
+
+@mixin set-fill($color) {
+    @include themeify {
+        fill: themed($color) !important;
+    }
+}
+
+@mixin background_linear($color1, $color2) {
+    @include themeify {
+        background: repeating-linear-gradient(-45deg, themed($color1), themed($color1) 20px, themed($color2) 0, themed($color2) 30px);
+    }
+}

@@ -1,0 +1,150 @@
+//统一table表头设置
+@mixin tableHeader {
+    font-size: $fontH14;
+    height: $main-titleHeight;
+    line-height: $main-titleHeight;
+}
+
+@mixin tableTr {
+    height: $main-titleHeight;
+    line-height: $main-titleHeight;
+    font-size: $fontH16;
+}
+
+@mixin el-table {
+    background-color: var(--table-background);
+
+    .el-table__header {
+        th {
+            height: 24px;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: left;
+            color: var(--table-header-color);
+        }
+    }
+
+    th,
+    tr {
+        padding: 8px;
+        background-color: var(--table-header-background);
+
+    }
+
+    .el-table__empty-text {
+        font-size: 24px;
+        // tochange
+        color: var(--con-textColor8);
+    }
+
+    tbody {
+        .el-table__row {
+            td {
+                padding: 0px 8px;
+                transition: none !important;
+                border: unset !important;
+                border-bottom: 1px solid !important;
+                border-color: var(--table-body-border) !important;
+
+                .cell {
+                    height: 38px;
+                    margin-top: 0px;
+                    color: var(--table-body-color);
+
+                    span {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    line-height: 38px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    word-break: break-all;
+
+
+                    .iconfont,
+                    .el-icon-edit-outline,
+                    .el-icon-delete {
+                        cursor: pointer;
+                        font-size: 18px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 20px;
+                        padding-right: 10px;
+
+                    }
+
+                    .iconshanchu,
+                    .el-icon-delete {
+                        color: #bf2533;
+                    }
+
+                    .iconbianji,
+                    .el-icon-edit-outline {
+                        color: #346ae4;
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            &:nth-child(2n) {
+                background-color: var(--table-body-background__strip1);
+            }
+
+            &:nth-child(2n + 1) {
+                background-color: var(--table-body-background__strip2);
+            }
+        }
+
+
+        .hover-row {
+            td {
+                background-color: var(--table-body-background__hover) !important;
+
+                .cell {
+                    background-color: var(--table-body-background__hover);
+                }
+            }
+        }
+
+        tr :not(.hover-row) {
+            &:hover {
+                td {
+                    background-color: var(--table-body-background__hover);
+
+                    div {
+                        background-color: var(--table-body-background__hover);
+                    }
+                }
+            }
+        }
+
+        .el-table__fixed-right::before,
+        .el-table__fixed::before {
+            background-color: transparent;
+        }
+
+        .iconfont {
+            font-size: 20px;
+        }
+    }
+
+    .el-table__fixed-right-patch {
+        background-color: var(--table-header-background);
+        border-bottom-color: var(--table-header-background);
+    }
+
+    th.gutter:last-of-type {
+        border-color: var(--table-header-background);
+    }
+
+    .el-button--text {
+        color: var(--button-primary-color);
+    }
+}

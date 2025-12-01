@@ -1,0 +1,424 @@
+:root {
+    /* gw-color 为基础颜色，原则上不允许添加、修改*/
+    --gw-color-primary: #3875ff;
+    --gw-color-primary1: #7af8ff;
+    --gw-color-primary2: #eaf4f8;
+    --gw-color-primary3: #abceff;
+    --gw-color-primary4: #60a3ff;
+    --gw-color-primary5: #38b7ff;
+    --gw-color-primary6: #276bed;
+    --gw-color-primary7: #1D4175;
+    --gw-color-primary8: #121A2C;
+    --gw-color-primary9: #5189F6;
+
+    --gw-color-success: #13a212;
+    --gw-color-success1: #dfffcf;
+    --gw-color-success2: #4cff79;
+    --gw-color-success3: #a9d77e;
+    --gw-color-success4: #51c41c;
+    --gw-color-success5: #387500;
+    --gw-color-success6: #274916;
+    --gw-color-success7: #162313;
+
+    --gw-color-waning: #d08b00;
+    --gw-color-waning1: #fffbe6;
+    --gw-color-waning2: #ffe58f;
+    --gw-color-waning3: #f8c161;
+    --gw-color-waning4: #ff8f3a;
+    --gw-color-waning5: #584215;
+    --gw-color-waning6: #2B2111;
+
+    --gw-color-danger: #f22433;
+    --gw-color-danger1: #fff2f1;
+    --gw-color-danger2: #fccec6;
+    --gw-color-danger3: #ff484b;
+    --gw-color-danger4: #9b2627;
+    --gw-color-danger5: #58181C;
+    --gw-color-danger6: #2A1215;
+    --gw-color-danger7: #CF1322;
+
+    --gw-color-Neutrals1: #333333;
+    --gw-color-Neutrals2: #333333;
+    --gw-color-Neutrals3: #333333;
+    --gw-color-Neutrals4: #333333;
+    --gw-color-Neutrals5: #333333;
+    --gw-color-Neutrals6: #333333;
+    --gw-color-Neutrals7: #333333;
+    --gw-color-Neutrals8: #333333;
+    --gw-color-Neutrals9: #333333;
+    --gw-color-Neutrals10: #333333;
+    --gw-color-Neutrals11: #333333;
+    --gw-color-Neutrals12: #555555;
+    --gw-color-Neutrals13: #8b8f97;
+    --gw-color-Neutrals14: #626d84;
+    --gw-color-Neutrals15: #dfe9ff;
+    --gw-color-Neutrals16: #d9d9d9;
+    --gw-color-Neutrals17: #d9d9d9;
+    --gw-color-Neutrals18: #e1e3e6;
+    --gw-color-Neutrals19: #eff4fe;
+    --gw-color-Neutrals20: #f2f3f5;
+    --gw-color-Neutrals21: #f2f6ff;
+    --gw-color-Neutrals22: #f1f4f4;
+    --gw-color-Neutrals23: #ffffff;
+    --gw-color-Neutrals24: #eeeeee;
+    --gw-color-Neutrals25: #ffffff;
+    --gw-color-Neutrals26: #ffffff;
+    --gw-color-Neutrals27: #ffffff;
+    --gw-color-Neutrals28: #f9f9f9;
+    --gw-color-Neutrals29: #D8DDEA;
+    --gw-color-Neutrals30: #666666;
+    --gw-color-Neutrals31: #D8DDEA;
+    --gw-color-Neutrals32: #FFFFFF;
+    --gw-color-Neutrals33: rgba(255,255,255,0.42);
+    --gw-color-Neutrals34: rgba(4,4,4,0.14);
+    --gw-color-Neutrals35: #F3F6F8;
+    --gw-color-Neutrals36: #E1E8EC;
+    --gw-color-Neutrals37: #191D2B;
+    --gw-color-Neutrals38: #F0F3F5;
+    --gw-color-Neutrals39:rgba(154,37,37,0.1);
+    --gw-color-Neutrals40:rgba(0,219,28,0.1);
+    --gw-color-Neutrals41:rgba(197, 154, 99, 0.4);
+    /* 命名规则 参考BEM命名法*/
+    /* --组件-元素-样式名__状态 */
+    /* 样式名：color(字体颜色),background(背景色),border(边框色) */
+    /* 状态：hover(悬浮),focus(聚焦),select、checked(选择)、...等 */
+
+    /* 底部主背景色 */
+    --frame-main-background: var(--gw-color-Neutrals20);
+    --frame-main-background-black: var(--gw-color-Neutrals27);
+    /* 弹窗内容深色背景 */
+    --frame-main-background-1: var(--gw-color-Neutrals25);
+    /* 内容区域背景 */
+    --frame-main-background-2: var(--gw-color-Neutrals23);
+    /* 内容header深色背景 */
+    --frame-main-background-3: var(--gw-color-Neutrals22);
+    /* 任务库 popover 背景 */
+    --frame-main-background-4: var(--gw-color-Neutrals20);
+    /* 主要字体色 */
+    --frame-main-color: var(--gw-color-Neutrals2);
+    /* 稍浅字体色 */
+    --frame-main-color-1: var(--gw-color-Neutrals12);
+    --frame-main-color-2: var(--gw-color-waning4);
+    /* 主要边框色 */
+    /* --bor-default =>  --border-color-2 =>*/
+    --frame-main-border: var(--gw-color-Neutrals18);
+    /* 稍浅边框色 */
+    --frame-main-border1: var(--gw-color-Neutrals16);
+    /* 稍深边框色 */
+    --frame-main-border2: var(--gw-color-Neutrals36);
+
+    /* 顶部 */
+    --frame-top-background: var(--gw-color-Neutrals27);
+    --frame-top-alarm-background: var(--gw-color-Neutrals39);
+    --frame-top-normal-background: var(--gw-color-Neutrals40);
+    --frame-top-upgrade-background: var(--gw-color-Neutrals41);
+    /* 左侧菜单 */
+    --frame-left-background: var(--gw-color-Neutrals23);
+    --frame-left-box-shadow:  0px 0px 10px 0px rgba(13,17,26,0.1);
+
+    /* 按钮主要颜色 */
+    --button-all-background__disabled: var(--gw-color-Neutrals21);
+    --button-all-border__disabled: var(--gw-color-Neutrals18);
+    --button-all-color__disabled: var(--gw-color-Neutrals14);
+    --button-primary-color: var(--gw-color-primary);
+    --button-primary-background: var(--gw-color-primary);
+    --button-primary-border-color: var(--button-primary-background);
+    --button-primary-background__hover: var(--gw-color-primary9);
+    --button-primary-border-color__hover: var(--button-primary-background__hover);
+    --button-primary-background__active: var(--gw-color-primary6);
+    --button-primary-border-color__active: var(--button-primary-background__active);
+    --button-danger-color: var(--gw-color-danger);
+    --button-danger-background: var(--gw-color-danger);
+    --button-danger-border-color: var(--button-danger-background);
+    --button-danger-background__hover: var(--gw-color-danger3);
+    --button-danger-background__active: var(--gw-color-danger7);
+    --button-danger-border-color__active: var(--button-danger-background__active);
+
+    /* message弹窗 */
+    --message-background: var(--gw-color-Neutrals23);
+    --message-border: var(--gw-color-Neutrals22);
+    --message-color: var(--gw-color-Neutrals7);
+
+    --message-box-background: var(--gw-color-Neutrals23);
+    --message-box-color: var(--gw-color-Neutrals2);
+    --message-box-button-color: var(--gw-color-Neutrals27);
+
+    /* 通知弹窗 */
+    --notification-color: var(--gw-color-Neutrals2);
+
+    --loading-background: var(--gw-color-Neutrals26);
+
+    /* 标签页 */
+    --labelpage-header-background: var(--gw-color-Neutrals23);
+    --labelpage-background: var(--gw-color-Neutrals35);
+    --labelpage-background__active: var(--gw-color-primary);
+    --labelpage-border__active: var(--gw-color-primary);
+    --labelpage-color: var(--gw-color-Neutrals12);
+    --labelpage-color__active: var(--gw-color-Neutrals24);
+    --labelpage-icon-color__hover: var(--gw-color-primary);
+    --labelpage-border: var(--gw-color-Neutrals18);
+
+    /* 设备相关标签页 */
+    --equiptab-color: var(--gw-color-Neutrals14);
+    --equiptab-color__active: var(--gw-color-Neutrals27);
+    --tab-color: var(--gw-color-Neutrals7);
+    --tab-color__disabled: var(--gw-color-Neutrals12);
+    --tab-color__active: var(--gw-color-Neutrals2);
+    --tab-background: var(--gw-color-Neutrals29);
+    --tab-background__active: var(--gw-color-primary);
+
+    --tab-card-background: var(--gw-color-Neutrals25);
+    --tab-card-border: var(--gw-color-Neutrals18);
+    --tab-card-border__active: var(--gw-color-Neutrals25);
+
+    /* 实施快照标签页 */
+    --snapshot-background: var(--gw-color-Neutrals26);
+    --snapshot-background__active: var(--gw-color-Neutrals23);
+    --snapshot-color__active: var(--gw-color-Neutrals2);
+
+    /* 步骤组件 */
+    --step-icon-color: var(--gw-color-Neutrals12);
+    --step-icon-color__active: var(--gw-color-Neutrals2);
+    --step-icon-color__finish: var(--gw-color-primary);
+    --step-icon-border: var(--gw-color-Neutrals18);
+    --step-icon-border__active: var(--gw-color-primary);
+    --step-icon-border__finish: var(--gw-color-primary);
+    --step-icon-background: transparent;
+    --step-icon-background__active: var(--gw-color-primary);
+    --step-icon-background__finish: transparent;
+    --step-line-background: var(--gw-color-Neutrals21);
+    --step-line-background__active: var(--gw-color-Neutrals21);
+    --step-line-background__finish: var(--gw-color-Neutrals21);
+
+    /* 菜单 */
+    --menu-color: var(--gw-color-Neutrals12);
+    --menu-color__hover: var(--gw-color-Neutrals2);
+    --menu-color__active: var(--gw-color-Neutrals27);
+    --menu-background__hover: var(--gw-color-Neutrals19);
+    --menu-background__active: var(--gw-color-primary);
+    --menu-popup-color: var(--gw-color-Neutrals12);
+    --menu-popup-background: var(--gw-color-Neutrals33);
+    --menu-popup-boxshadow: var(--gw-color-Neutrals34);
+    --menu-popup-boxshadow-1: var(--gw-color-Neutrals32);
+    --menu-popup-border: var(--gw-color-Neutrals34);
+    --menu-submenu-color: var(--gw-color-Neutrals2);
+
+    /*form el-input 用于表单*/
+    --form-input-color: var(--gw-color-Neutrals2);
+    --form-input-background: var(--gw-color-Neutrals26);
+    --form-input-background__disabled: var(--gw-color-Neutrals20);
+    --form-input-autofill-shadow: var(--gw-color-Neutrals25);
+    --input-number-background: var(--gw-color-Neutrals25);
+
+    /*el-input 基础*/
+    --input-color: var(--gw-color-Neutrals2);
+    --input-background: var(--gw-color-Neutrals38);
+    --input-background__disabled: var(--gw-color-Neutrals20);
+    --input-placeholder: var(--gw-color-Neutrals13);
+    --input-border: var(--gw-color-Neutrals16);
+    --input-border__hover: var(--gw-color-primary);
+    --input-border__focus: var(--gw-color-primary);
+    --input-autofill-color: var(--gw-color-Neutrals2);
+    --input-autofill-shadow: var(--gw-color-Neutrals27);
+    --input-number-button-background: var(--gw-color-Neutrals20);
+
+    /*form-item 表单项*/
+    --form-item-color__error: var(--gw-color-danger);
+    --form-label-color: var(--gw-color-Neutrals2);
+
+    /*el-select 下拉框*/
+    --select-tag-color: var(--gw-color-Neutrals12);
+    --select-tag-background: var(--gw-color-Neutrals22);
+    --select-dropdown-border: var(--gw-color-Neutrals22);
+    --select-dropdown-background: var(--gw-color-Neutrals27);
+    --select-dropdown-color: var(--gw-color-Neutrals1);
+    --select-dropdown-color__selected: var(--gw-color-Neutrals27);
+    --select-dropdown-item-background__hover: var(--gw-color-primary);
+
+    --tag-background__primary: var(--gw-color-primary8);
+    --tag-color__primary: var(--gw-color-primary4);
+    --tag-border__primary: var(--gw-color-primary7);
+    --tag-background__success: var(--gw-color-success7);
+    --tag-color__success: var(--gw-color-success4);
+    --tag-border__success: var(--gw-color-success6);
+    --tag-background__danger: var(--gw-color-danger6);
+    --tag-color__danger: var(--gw-color-danger3);
+    --tag-border__danger: var(--gw-color-danger5);
+    --tag-background__warning: var(--gw-color-waning6);
+    --tag-color__warning: var(--gw-color-waning3);
+    --tag-border__warning: var(--gw-color-waning5);
+    --tag-background__info: var(--gw-color-Neutrals24);
+    --tag-color__info: var(--gw-color-Neutrals11);
+    --tag-border__info: var(--gw-color-Neutrals16);
+    --tag-color: var(--gw-color-Neutrals27);
+
+    /* 下拉菜单 */
+    --dropdown-menu-background: var(--gw-color-Neutrals27);
+    --dropdown-menu-background__hover: var(--gw-color-Neutrals20);
+    --dropdown-menu-color: var(--gw-color-Neutrals1);
+    --dropdown-menu-color__hover: var(--gw-color-primary);
+    --dropdown-menu-icon-color: var(--gw-color-Neutrals12);
+
+    /*el-checkbox 多选框*/
+    --checkbox-label-color: var(--gw-color-Neutrals2);
+    --checkbox-label-color__checked: var(--gw-color-primary);
+    --checkbox-label-color__disabled: var(--gw-color-Neutrals12);
+    --checkbox-inner-after: var(--gw-color-Neutrals27);
+    --checkbox-inner-border: var(--gw-color-Neutrals18);
+    --checkbox-inner-background: var(--gw-color-Neutrals25);
+    --checkbox-inner-border__checked: var(--gw-color-primary);
+
+    /* el-radio 单选框*/
+    --radio-label-color: var(--gw-color-Neutrals2);
+    --radio-label-color__disabled: var(--gw-color-Neutrals12);
+    --radio-inner-after: var(--gw-color-Neutrals27);
+    --radio-inner-border: var(--gw-color-Neutrals18);
+    --radio-inner-background: var(--gw-color-Neutrals25);
+    --radio-inner-background___disabled: var(--gw-color-Neutrals18);
+    --radio-inner-border__checked: var(--gw-color-primary);
+
+    /* el-switch 滑块*/
+    --switch-label-color: var(--gw-color-Neutrals2);
+    --switch-core-border: var(--gw-color-Neutrals18);
+    --switch-core-background: var(--gw-color-Neutrals12);
+    --switch-core-border__active: var(--gw-color-primary);
+    --switch-core-background__active: var(--gw-color-primary);
+    --switch-label-color__active: var(--gw-color-Neutrals27);
+    --switch-core-after-background: var(--gw-color-Neutrals27);
+
+    /* 弹出提示 基础 */
+    --popper-background: var(--gw-color-Neutrals23);
+    --popper-border: var(--gw-color-Neutrals22);
+    --poper-border: var(--gw-color-Neutrals22);
+    --popper-tooltip-background: var(--gw-color-Neutrals27);
+    --popper-button-background: var(--gw-color-Neutrals27);
+    --popper-button-color: var(--gw-color-Neutrals2);
+
+    /* 弹出框 */
+    --popover-button-background__hover: var(--gw-color-primary);
+    --popover-button-color__hover: var(--gw-color-Neutrals2);
+
+    /* 提示框 */
+    --tooltip-background: var(--gw-color-Neutrals27);
+    --tooltip-color: var(--gw-color-Neutrals2);
+    --tooltip-background__task: var(--gw-color-Neutrals21);
+
+    /* 日期选择 */
+    --datepicker-color: var(--gw-color-Neutrals2);
+    --datepicker-color__hover: var(--gw-color-Neutrals21);
+    --datepicker-icon-button-color: var(--gw-color-primary);
+    --datepicker--table-header-color: var(--gw-color-Neutrals23);
+    --datepicker-border: var(--gw-color-Neutrals22);
+    --datepicker-background: var(--gw-color-Neutrals23);
+    --datepicker-background_active: var(--gw-color-primary);
+    --datepicker-background__inrange: var(--gw-color-Neutrals21);
+    --datepicker-icon-btn-color: var(--gw-color-Neutrals12);
+    --datepicker-month-background__hover: var(--gw-color-primary);
+    --datepicker-month-color__checked: var(--gw-color-primary);
+    --datepicker-month-background__disabled: var(--gw-color-Neutrals21);
+    --datepicker-dooter-button-color__danger: var(--gw-color-danger);
+    --datepicker-dooter-button-color__primary: var(--gw-color-primary);
+
+    /* 弹出基础 */
+    --dialog-background: var(--gw-color-Neutrals23);
+    --dialog-border: var(--gw-color-Neutrals22);
+    --dialog-color: var(--gw-color-Neutrals2);
+    --dialog-footer-button-color: var(--gw-color-Neutrals27);
+    --dialog-footer-button-color__primary: var(--gw-color-primary);
+
+    /* 抽屉 */
+    --drawer-background: var(--gw-color-Neutrals23);
+    --drawer-border: var(--gw-color-Neutrals22);
+    --drawer-color: var(--gw-color-Neutrals2);
+    --drawer-footer-button-color: var(--gw-color-Neutrals2);
+    --drawer-footer-button-color__primary: var(--gw-color-primary);
+
+    /* 树型组件 */
+    --tree-node-background: var(--gw-color-Neutrals23);
+    --tree-node-background_transparent: transparent;
+    --tree-node-background_select: var(--gw-color-Neutrals27);
+    --tree-node-background_hover: var(--gw-color-Neutrals21);
+    --tree-node-color: var(--gw-color-Neutrals2);
+    --tree-node-color__select: var(--gw-color-primary);
+    --tree-node-border: var(--gw-color-Neutrals18);
+    --tree-node-border__select: var(--gw-color-primary);
+    --tree-list-index-background: var(--gw-color-Neutrals21);
+    --tree-list-index-color: var(--gw-color-Neutrals12);
+    --tree-list-background__select: var(--gw-color-primary);
+
+    /* 分页 */
+    --page-color: var(--gw-color-Neutrals6);
+    --page-color__disabled: var(--gw-color-Neutrals30);
+    --page-color__active: var(--gw-color-Neutrals26);
+    --page-background: var(--gw-color-Neutrals22);
+    --page-background__active: var(--gw-color-primary);
+    --page-border: var(--gw-color-Neutrals21);
+
+    /* 表格基础 */
+    --table-background: var(--gw-color-Neutrals23);
+    --table-header-background: var(--gw-color-Neutrals21);
+    --table-header-color: var(--gw-color-Neutrals12);
+    --table-body-border: var(--gw-color-Neutrals24);
+    --table-body-color: var(--gw-color-Neutrals2);
+    --table-body-background__strip1: var(--gw-color-Neutrals27);
+    --table-body-background__strip2: var(--gw-color-Neutrals27);
+    --table-body-background__hover: var(--gw-color-Neutrals20);
+
+    /* 穿梭框 */
+    --transfer-background: var(--gw-color-Neutrals25);
+    --transfer-border: var(--gw-color-Neutrals18);
+    --transfer-header-background: var(--gw-color-Neutrals21);
+
+    /* fullcalendar 日历 */
+    --fc-color: var(--gw-color-Neutrals2);
+    --fc-color__active: var(--gw-color-Neutrals27);
+    --fc-button-background: var(--gw-color-Neutrals23);
+    --fc-timelint-border: var(--gw-color-Neutrals18);
+    --fc-timelint-background__active: var(--gw-color-primary);
+    --fc-popover-background: var(--gw-color-Neutrals21);
+
+    /* monoca 编辑器 */
+    --editor-background: var(--gw-color-Neutrals25);
+    --editor-background_select: var(--gw-color-primary);
+    --editor-color: var(--gw-color-Neutrals2);
+    --editor-border: var(--gw-color-Neutrals18);
+
+    /* 滚动条 */
+    --scrollbar-background: var(--gw-color-Neutrals18);
+    --scrollbar-border: var(--gw-color-Neutrals18);
+
+    --timeline-line-background: var(--gw-color-Neutrals16);
+    --timeline-dot-background: var(--gw-color-Neutrals27);
+    --timeline-dot-background__active: var(--gw-color-primary);
+    --timeline-dot-border: var(--gw-color-Neutrals16);
+    --timeline-dot-border__active: var(--gw-color-Neutrals15);
+    --timeline-default: var(--gw-color-Neutrals18);
+
+    --alert-background__success: var(--gw-color-success7);
+    --alert-border__success: var(--gw-color-success6);
+    --alert-background__info: var(--gw-color-Neutrals24);
+    --alert-border__info: var(--gw-color-Neutrals21);
+    --alert-background__warning: var(--gw-color-waning6);
+    --alert-border__warning: var(--gw-color-waning5);
+    --alert-background__error: var(--gw-color-danger6);
+    --alert-border__error: var(--gw-color-danger5);
+    --alert-title-color: var(--frame-main-color);
+    --alert-description-color: var(--gw-color-Neutrals7);
+    --alert-btn-color: var(--gw-color-Neutrals12);
+
+    --upload-tips-color: var(--gw-color-Neutrals7);
+
+    --contextmenu-background: var(--gw-color-Neutrals27);
+    --contextmenu-background__hover: var(--gw-color-Neutrals20);
+    --contextmenu-color: var(--gw-color-Neutrals1);
+    --contextmenu-color__disabled: var(--gw-color-Neutrals12);
+    --contextmenu-icon-color: var(--gw-color-Neutrals12);
+
+    --loading-bgColor: rgb(255, 255, 255);
+
+    --equipselect-header-background: var(--gw-color-Neutrals23);
+    --equipselect-body-background: var(--gw-color-Neutrals20);
+
+    --task-popper-background: var(--gw-color-Neutrals27);
+    --task-popper-item-background: var(--gw-color-Neutrals28);
+}

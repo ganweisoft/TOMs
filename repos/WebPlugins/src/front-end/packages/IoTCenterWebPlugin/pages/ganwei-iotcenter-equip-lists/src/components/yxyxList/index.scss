@@ -1,0 +1,82 @@
+.el-dialog__wrapper {
+    /deep/ .el-dialog {
+        @include el-dialog;
+        height: 576px;
+
+        .el-dialog__header span {
+            font-size: 16px !important;
+        }
+
+        .el-dialog__header {
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .close {
+                    cursor: pointer;
+                    font-size: 20px !important;
+                }
+            }
+        }
+
+        .el-loading-mask {
+            visibility: visible !important;
+        }
+
+        .select {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .el-date-editor {
+                flex: 1;
+            }
+
+            .el-button {
+                width: 100px;
+                margin-left: 20px;
+            }
+        }
+
+        .el-dialog__body {
+            height: calc(100% - 64px - 72px);
+            @include el-table;
+
+            .el-table {
+                width: 100%;
+                height: calc(100% - 44px);
+                margin-top: 12px;
+
+                .cell {
+                    display: inline-block !important;
+                    text-align: left;
+                    width: 100%;
+                }
+
+                .el-table__body-wrapper {
+                    height: calc(100% - 43px);
+                    overflow-y: auto;
+                }
+
+                th {
+                    padding: 4px !important;
+                }
+            }
+        }
+
+        .el-dialog__footer {
+            border-top-width: 1px!important;
+            border-top-style: solid;
+            border-top-color: var(--frame-main-border1);
+            justify-content: center !important;
+            @include pagination;
+
+            .el-pagination__jump {
+                margin-left: 10px !important;
+            }
+        }
+
+
+    }
+}

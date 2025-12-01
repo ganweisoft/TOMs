@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <Version>9.0.0.1</Version>
+	  <IsPackable>true</IsPackable>
+	  <EnableNETAnalyzers>False</EnableNETAnalyzers>
+	  <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+	  <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\IoTCenterHost.Core\IoTCenterHost.Core.csproj" />
+	</ItemGroup>
+</Project>

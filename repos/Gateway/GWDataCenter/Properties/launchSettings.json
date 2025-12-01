@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GWDataCenter": {
+      "commandName": "Executable",
+      "executablePath": "C:\\IoTCenter\\bin\\GWHost1.exe"
+    }
+  }
+}

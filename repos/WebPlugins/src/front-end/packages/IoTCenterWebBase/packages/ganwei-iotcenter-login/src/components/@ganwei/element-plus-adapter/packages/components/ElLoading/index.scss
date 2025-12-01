@@ -1,0 +1,21 @@
+.el-loading-mask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--loading-background);
+
+    .el-loading-spinner {
+        background: url('./images/index-loading.png') no-repeat center center;
+        background-size: 60px;
+
+        .circular {
+            display: none;
+        }
+
+        .el-loading-text {
+            transform: scale(0.6);
+            margin-top: 60px;
+            color: var(--frame-main-color);
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 122 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>菜单栏_设置（选中）</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#3D7BFF" offset="0%"></stop>
+            <stop stop-color="#134FD8" offset="100%"></stop>
+        </linearGradient>
+        <path d="M3.32714703,0 L118,0 C120.209139,-4.05812251e-16 122,1.790861 122,4 L122,40 L122,40 L21.2491582,40 L1.5609002,2.93828146 C1.04270165,1.96281027 1.41339438,0.751951706 2.38886557,0.233753162 C2.67779879,0.0802634663 2.99997507,1.39236814e-15 3.32714703,0 Z" id="path-2"></path>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-4">
+            <stop stop-color="#1653DB" offset="0%"></stop>
+            <stop stop-color="#91B4FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="黑" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-41">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="BG备份-10" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            <path d="M118,0 C120.209139,0 122,1.790861 122,4 L122,40 L21.2491582,40 L1.5609002,2.93828146 C1.04270165,1.96281027 1.41339438,0.751951706 2.38886557,0.233753162 C2.67779879,0.0802634663 2.99997507,0 3.32714703,0 L118,0 Z M118,1 L3.32714703,1 C3.16356105,1 3.00247291,1.04013173 2.8580063,1.11687658 C2.40510896,1.35746876 2.2129452,1.89668223 2.39525331,2.36299363 L2.44402361,2.46914073 L21.851,39 L121,39 L121,4 C121,2.40231912 119.75108,1.09633912 118.176273,1.00509269 L118,1 Z" id="BG备份-10" fill="url(#linearGradient-4)" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

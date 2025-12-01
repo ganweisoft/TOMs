@@ -1,0 +1,314 @@
+@import '../../../css/comStyle.scss';
+
+// 右侧设备列表
+.analogueEquip {
+    height: 100%;
+    width: 100%;
+    padding-left: 0px !important;
+    position: relative;
+    @include noData;
+    padding-right: 20px;
+    overflow: hidden;
+    min-width: 700px;
+
+    .equipNumberLabel {
+        display: inline-block;
+        border-left: 1px solid var(--frame-main-border);
+        line-height: 20px;
+        margin-left: 25px;
+        padding-left: 25px;
+    }
+
+    .tab_btn {
+        border-radius: 3px;
+
+        display: flex;
+        height: 40px;
+
+        span {
+            display: inline-block;
+        }
+
+        .tab {
+            font-size: 16px;
+            color: var(--equiptab-color);
+            text-align: center;
+            border-radius: 2px;
+            cursor: pointer;
+
+            height: 100%;
+            line-height: 40px;
+            margin-right: -16px;
+            display: flex;
+            align-items: center;
+
+            .content {
+                min-width: 84px;
+            }
+
+            .leftBox,
+            .rightBox {
+                width: 0;
+                height: 0;
+            }
+
+            .content {
+                background-color: var(--tab-background);
+            }
+
+            .rightBox {
+                border-bottom: 40px solid var(--tab-background);
+                border-right: 20px solid transparent;
+            }
+
+            .leftBox {
+                width: 20px;
+                height: 100%;
+                background: var(--tab-background);
+            }
+
+            &:not(:first-of-type) {
+                .leftBox {
+                    width: 0;
+                    height: 0;
+                    border-top: 40px solid var(--tab-background);
+                    border-left: 20px solid transparent;
+                    background: unset;
+                }
+            }
+
+            &:hover {
+                color: var(--gw-color-primary);
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                &.onTabNavClass {
+
+                    .leftBox {
+                        width: 0;
+                        height: 0;
+                        border-top: 40px solid var(--tab-background__active);
+                        border-left: 20px solid transparent;
+                        background: unset;
+                    }
+
+                    .content {
+                        background: var(--tab-background__active);
+                    }
+
+                    .rightBox {
+                        border-bottom: 40px solid var(--tab-background__active);
+                        border-right: 20px solid transparent;
+                    }
+                }
+            }
+
+            &:first-child.onTabNavClass {
+
+                .leftBox,
+                .content {
+                    background: var(--tab-background__active);
+                }
+
+                .rightBox {
+                    border-bottom: 40px solid var(--tab-background__active);
+                    border-right: 20px solid transparent;
+                }
+            }
+        }
+
+        .onTabNavClass {
+            // color: white;
+            color: var(--equiptab-color__active) !important;
+        }
+    }
+
+    .anologueEquipHeader {
+        // border-bottom: 0.5px solid;
+        @include page-header;
+        height: 110px !important;
+        padding-right: 0px;
+        display: block;
+        padding: 0px 20px !important;
+        padding-right: 0px !important;
+
+        >.anologueEquipHeaderTop {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: var(--frame-main-color);
+            font-size: 18px;
+
+            .anologueEquipHeaderTopLeft {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .selectEquipNm {
+                    display: inline-block;
+                    max-width: 500px;
+                    text-overflow: ellipsis;
+                    /*主角光环自然不能少了*/
+                    -ms-text-overflow: ellipsis;
+                    -o-text-overflow: ellipsis;
+                    white-space: nowrap;
+                    /*必须设置，否则无效*/
+                    overflow: hidden;
+                    /*必须设置，否则无效*/
+                    line-height: 40px;
+                }
+            }
+
+            div {
+
+                .icon16_bianji,
+                .el-icon-more {
+                    color: var(--frame-main-color);
+                    cursor: pointer;
+                }
+
+                .icon16_bianji {
+                    font-size: 1.5rem;
+                    margin: 0px 12px;
+                }
+
+                .el-icon-more {
+                    transform: rotate(90deg);
+                }
+            }
+
+            .YcYxSetBtn {
+                button {
+                    background-color: transparent !important;
+                    border: unset !important;
+                    padding: 0px !important;
+
+                    .icon16_tianjia,
+                    span {
+                        font-size: 1rem;
+                        color: $themeColor_1;
+                    }
+                }
+            }
+        }
+
+        .anologueEquipHeaderBottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-right {
+            display: flex;
+            justify-content: flex-end;
+            // width: 340px;
+            flex-shrink: 0;
+
+            .icon {
+                display: inline-block;
+                // min-width: 48px;
+                display: flex;
+                margin-right: 24px;
+                cursor: pointer;
+
+                i {
+                    margin-right: 4px;
+                }
+
+                .el-icon-edit-outline, .el-icon-edit-outline~span {
+                    color: var(--gw-color-primary);
+                }
+
+                .el-icon-delete, .el-icon-delete~span{
+                    color: var(--gw-color-danger);
+                }
+
+            }
+
+            .icon_shanchu {
+                color: var(--gw-color-danger) !important;
+
+                &+span {
+                    color: var(--gw-color-danger) !important;
+                }
+            }
+
+            div:first-of-type {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+
+                i.iconfont {
+                    font-size: 14px;
+                    cursor: pointer;
+                    // margin-right: 24px;
+                }
+
+                .el-icon-more {
+                    transform: rotate(90deg);
+                }
+            }
+
+            .reference {
+                cursor: pointer;
+
+                i {
+                    margin-right: 5px;
+                }
+
+                span {
+                    width: 72px;
+                }
+            }
+
+            .el-button {
+                // color: $aside-font3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+
+                .el-icon-circle-plus-outline {
+                    // margin-right: 4px;
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+
+    .anologueEquipContent {
+        height: calc(100% - 110px - 68px);
+        margin-left: 20px;
+        padding: 15px 15px 0px 15px;
+        @include el-table;
+
+        .el-table {
+            height: 100%;
+
+            .el-loading-mask {
+                visibility: visible !important;
+            }
+
+            .el-table__body-wrapper {
+                overflow: auto;
+            }
+
+        }
+    }
+
+    .anologueEquipPaging {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        @include pagination;
+        width: calc(100% - 40px);
+        margin-left: 20px;
+    }
+}

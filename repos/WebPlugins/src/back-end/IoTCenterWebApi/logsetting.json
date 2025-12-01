@@ -1,0 +1,71 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning",
+      "System": "Warning",
+      "Grpc": "Warning",
+      "Microsoft": "Warning"
+    }
+  },
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.File" ],
+    "MinimumLevel": "Information",
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": { 
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}**********************************************************************************************{NewLine}",
+          "rollOnFileSizeLimit": true,
+          "fileSizeLimitBytes": 104857600,
+          "retainedFileCountLimit": 10,
+          "rollingInterval": "Day",
+          "restrictedToMinimumLevel": "Debug"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": { 
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}**********************************************************************************************{NewLine}",
+          "rollOnFileSizeLimit": true,
+          "fileSizeLimitBytes": 104857600,
+          "retainedFileCountLimit": 1,
+          "rollingInterval": "Day",
+          "restrictedToMinimumLevel": "Information"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": { 
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}**********************************************************************************************{NewLine}",
+          "rollOnFileSizeLimit": true,
+          "fileSizeLimitBytes": 104857600,
+          "retainedFileCountLimit": 1,
+          "rollingInterval": "Day",
+          "restrictedToMinimumLevel": "Warning"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": { 
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}**********************************************************************************************{NewLine}",
+          "rollOnFileSizeLimit": true,
+          "fileSizeLimitBytes": 104857600,
+          "retainedFileCountLimit": 1,
+          "rollingInterval": "Day",
+          "restrictedToMinimumLevel": "Error"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": { 
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}**********************************************************************************************{NewLine}",
+          "rollOnFileSizeLimit": true,
+          "fileSizeLimitBytes": 104857600,
+          "retainedFileCountLimit": 1,
+          "rollingInterval": "Day",
+          "restrictedToMinimumLevel": "Fatal"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+/build/
+/config/
+/dist/
+/static/fonts/
+/*.js
+/.git/
+/.svn/
+/test.html/
+
+.eslintrc.cjs
+.prettierrc.cjs
+.stylelintrc.cjs
+commitlint.config.cjs

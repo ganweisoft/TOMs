@@ -1,0 +1,819 @@
+@import '../../css/comStyle.scss';
+
+.equipDetailSenior {
+    width: 100%;
+    padding: 0;
+    margin-top: 12px;
+
+    .el-form {
+        margin-top: 12px;
+    }
+}
+.el-form {
+    .el-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .flexBox {
+        display: flex;
+
+        .security-period {
+            /deep/ .el-form-item__content {
+                height: 40px;
+
+                button {
+                    padding: 0;
+                    width: 100%;
+                    height: 40px;
+                    border: 0px;
+
+                    span,
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .item {
+                border: 1px solid $themeColor_alarm;
+            }
+        }
+
+        /deep/ .el-button--default {
+            border: none !important;
+        }
+    }
+
+    .el-form-item {
+        width: 100%;
+        margin-right: 16px;
+        margin-bottom: 4px;
+
+        &.is-error {
+            margin-bottom: 16px;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        .el-form-item__label {
+            display: block;
+            text-align: left;
+            white-space: nowrap;
+            padding-left: 8px;
+            width: 150px;
+            flex-shrink: 0;
+            display: flex;
+            height: 25px;
+            line-height: 25px;
+
+        }
+
+        .el-form-item__content {
+            display: block;
+            // width: 100%;
+
+            .el-select {
+                width: 100%;
+            }
+
+            .LevelOfAlarmBox {
+                width: 100%;
+                display: flex;
+
+                .LevelOfAlarm {
+                    margin-left: 10px;
+                }
+            }
+
+            ::-webkit-input-placeholder {
+                color: var(--input-plaColor1);
+            }
+
+            .el-textarea__inner {
+                padding: 11px 15px;
+                max-height: 120px;
+            }
+
+            .el-date-editor {
+                width: 100%;
+            }
+
+            .el-date-editor.el-input {
+                width: 100%;
+            }
+
+            .el-date-editor .el-range-separator {
+                padding: 0;
+                width: 6%;
+            }
+
+            .el-input-number {
+                width: 100%;
+
+                .el-input-number__increase {
+                    border-left: 1px solid;
+                    border-color: var(--border-color-2);
+                }
+
+                .el-input-number__decrease {
+                    border-right: 1px solid;
+                    border-color: var(--border-color-2);
+                }
+            }
+
+            .el-input__suffix {
+                right: 8px;
+            }
+
+            .el-input__icon {
+                width: 16px;
+            }
+        }
+    }
+
+    &.stepsAdd .el-form-item {
+        .el-form-item__label {
+            height: 40px;
+            line-height: 40px;
+            justify-content: flex-end;
+        }
+    }
+
+    .col-1-box {
+        width: 60px;
+    }
+
+    .col-2-box {
+        width: 136px;
+    }
+
+    .col-3-box {
+        width: 212px;
+    }
+
+    .col-4-box {
+        width: 288px;
+    }
+
+    .col-8-box {
+        width: 592px;
+    }
+}
+.el-collapse {
+    border-top: none;
+    border-bottom: none;
+
+    .el-collapse-item__header {
+        height: 40px;
+        font-size: 0.875rem;
+        border-bottom: none;
+        background-color: var(--frame-main-background-3);
+        color: var(--frame-main-color) !important;
+        padding-left: 16px;
+    }
+
+    .el-collapse-item__wrap {
+        border-bottom: none;
+        background-color: transparent;
+    }
+}
+/deep/ .eqYcYxDialog .el-dialog {
+    .el-form-item {
+        display: flex;
+        align-items: center;
+
+        .el-form-item__content {
+            width: 100%;
+        }
+
+        .el-form-item__label {
+            justify-content: flex-end;
+
+            .label {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+.editDetailDialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /deep/ .el-dialog {
+        width: 420px;
+        margin-top: 0px !important;
+
+        .el-input-number__decrease {
+            border-right: 1px solid !important;
+            border-color: var(--btn-borderColor2);
+        }
+    }
+}
+
+.equipFilterTip {
+    color: $textColor_2;
+    padding: 10px 20px;
+}
+
+/deep/ .el-tooltip__popper.is-dark {
+    color: $themeColor_alarm !important;
+}
+
+.el-tooltip__popper {
+    max-width: 200px !important;
+}
+
+.el-step /deep/ {
+    &.is-horizontal .el-step__line {
+        top: 7px;
+        background-color: var(--step-line-background);
+    }
+
+    .is-finish .el-step__icon {
+        background-color: var(--step-line-background__finish);
+    }
+
+    .el-step__icon {
+        border: none;
+        width: 8px;
+        height: 8px;
+        background-color: var(--step-line-background);
+    }
+
+    .el-step__icon-inner {
+        display: none;
+    }
+
+    .el-step__line-inner {
+        transition-delay: 0ms !important;
+        background-color: var(--step-line-background__finish);
+        border-color: transparent;
+    }
+
+    .el-step__main {
+        margin-top: 16px;
+        margin-bottom: 41px;
+
+        .el-step__description {
+            color: var(--frame-main-color);
+        }
+    }
+}
+
+#addPanel /deep/ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .el-dialog {
+        margin: unset !important;
+        margin-bottom: 0px;
+        @include el-dialog;
+
+        .el-dialog__body {
+            height: calc(100% - 64px - 72px);
+
+            .el-steps {
+                .el-step__line {
+                    margin: 0 10px !important;
+                }
+
+                .el-step__main {
+                    margin-bottom: 24px;
+                }
+            }
+
+            .el-form-item__label {
+                justify-content: flex-end;
+
+                .label {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .el-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .el-form-item {
+            margin-bottom: 8px;
+
+            &.is-error {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .uploader {
+        display: flex;
+        justify-content: center;
+
+        span {
+            margin-right: 16px;
+            height: 32px;
+            line-height: 32px;
+        }
+
+        .el-input {
+            width: 216px;
+
+            span {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    span.is-required {
+        &::before {
+            content: '*';
+            color: #f56c6c;
+            margin-right: 4px;
+        }
+    }
+}
+
+.activeStep1 {
+    /deep/ .el-dialog {
+        width: 560px;
+        height: 321px;
+
+        .el-dialog__body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .el-steps {
+                width: 320px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.activeStepMore {
+    /deep/ .el-dialog {
+        width: 798px;
+    }
+}
+// 弹出框
+.el-dialog {
+    @include el-dialog;
+
+    .el-dialog__header {
+        align-items: center;
+
+        .el-dialog__title {
+            font-size: 18px;
+            font-weight: normal;
+            color: var(--dialog-textColor1);
+        }
+
+        .title {
+            font-size: 18px;
+            height: 26px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--dialog-textColor1);
+
+            div {
+                color: var(--dialog-textColor1);
+            }
+
+            .close {
+                cursor: pointer;
+            }
+
+            .close {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .el-dialog__body {
+        padding: 0;
+        border-color: var(--frame-main-border);
+
+        .equipDetailTitle {
+            margin-bottom: 12px;
+        }
+
+        .tips {
+            color: var(--dialog-textColor1);
+        }
+
+        .el-form-item {
+
+            .el-form-item__content {
+                .el-textarea__inner {
+                    background-color: var(--input-bgColor);
+                }
+
+                .el-date-editor {
+                    .el-range-input {
+                        background-color: var(--input-bgColor);
+                    }
+                }
+            }
+        }
+
+        .input {
+            background: #0c0e14 !important;
+        }
+
+        .equipDetail-equipInfo {
+            height: 723px;
+        }
+
+        .el-col {
+            position: relative;
+
+            .icons {
+                width: 16px !important;
+                height: 16px !important;
+                right: 10px;
+                top: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 2px;
+            }
+        }
+
+        .editDetail {
+
+            .equipDetailLeft,
+            .equipDetailRight {
+                width: 50%;
+                float: left;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .equipDetailBasic {
+                width: 100%;
+                padding: 0;
+            }
+
+            .equipDetailSenior {
+                width: 100%;
+                padding: 0;
+                margin-top: 12px;
+
+                .el-form {
+                    margin-top: 12px;
+                }
+            }
+
+            .tempEquipForm {
+
+                /deep/ .el-row {
+                    padding: 0 12px;
+
+                    .el-col {
+                        height: 88px;
+                        padding-left: 0px !important;
+                        padding-right: 0px !important;
+
+                        .el-form-item {
+                            padding-right: 0px !important;
+                        }
+
+                        .el-form-item__label {
+                            height: 40px !important;
+                        }
+
+                        .el-form-item__content {
+                            height: 80px;
+                        }
+                    }
+                }
+
+                .el-form {
+                    padding: 0 16px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .el-form-item {
+                        width: auto !important;
+                        margin-right: 0px !important;
+
+                        .el-form-item__label {
+                            height: 40px !important;
+                            line-height: 40px !important;
+                            justify-content: flex-end;
+                        }
+
+                        .el-select {
+                            width: 216px !important;
+                        }
+
+                        .el-input-number {
+                            width: 216px !important;
+                        }
+                    }
+                }
+            }
+
+            >div {
+                .equipDetailTitle {
+                    font-size: 0.875rem;
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 0 0 16px;
+                    margin-top: 4px;
+                    background-color: var(--frame-main-background-3);
+                    border-radius: 3px;
+                    width: 100%;
+                }
+
+                .el-form {
+                    .el-row {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+
+                    .flexBox {
+                        display: flex;
+
+                        .security-period {
+                            /deep/ .el-form-item__content {
+                                height: 40px;
+
+                                button {
+                                    padding: 0;
+                                    width: 100%;
+                                    height: 40px;
+                                    border: 0px;
+
+                                    span,
+                                    input {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            .item {
+                                border: 1px solid $themeColor_alarm;
+                            }
+                        }
+
+                        /deep/ .el-button--default {
+                            border: none !important;
+                        }
+                    }
+
+                    .el-form-item {
+                        width: 100%;
+                        margin-right: 16px;
+                        margin-bottom: 4px;
+
+                        &.is-error {
+                            margin-bottom: 16px;
+                        }
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+
+                        .el-form-item__label {
+                            display: block;
+                            text-align: left;
+                            white-space: nowrap;
+                            padding-left: 8px;
+                            width: 150px;
+                            flex-shrink: 0;
+                            display: flex;
+                            height: 25px;
+                            line-height: 25px;
+
+                        }
+
+                        .el-form-item__content {
+                            display: block;
+                            // width: 100%;
+
+                            .el-select {
+                                width: 100%;
+                            }
+
+                            .LevelOfAlarmBox {
+                                width: 100%;
+                                display: flex;
+
+                                .LevelOfAlarm {
+                                    margin-left: 10px;
+                                }
+                            }
+
+                            ::-webkit-input-placeholder {
+                                color: var(--input-plaColor1);
+                            }
+
+                            .el-textarea__inner {
+                                padding: 11px 15px;
+                                max-height: 120px;
+                            }
+
+                            .el-date-editor {
+                                width: 100%;
+                            }
+
+                            .el-date-editor.el-input {
+                                width: 100%;
+                            }
+
+                            .el-date-editor .el-range-separator {
+                                padding: 0;
+                                width: 6%;
+                            }
+
+                            .el-input-number {
+                                width: 100%;
+
+                                .el-input-number__increase {
+                                    border-left: 1px solid;
+                                    border-color: var(--border-color-2);
+                                }
+
+                                .el-input-number__decrease {
+                                    border-right: 1px solid;
+                                    border-color: var(--border-color-2);
+                                }
+                            }
+
+                            .el-input__suffix {
+                                right: 8px;
+                            }
+
+                            .el-input__icon {
+                                width: 16px;
+                            }
+                        }
+                    }
+
+                    &.stepsAdd .el-form-item {
+                        .el-form-item__label {
+                            height: 40px;
+                            line-height: 40px;
+                            justify-content: flex-end;
+                        }
+                    }
+
+                    .col-1-box {
+                        width: 60px;
+                    }
+
+                    .col-2-box {
+                        width: 136px;
+                    }
+
+                    .col-3-box {
+                        width: 212px;
+                    }
+
+                    .col-4-box {
+                        width: 288px;
+                    }
+
+                    .col-8-box {
+                        width: 592px;
+                    }
+                }
+
+                .equipDetailBox2 {
+                    border-bottom: none;
+                }
+
+                .el-collapse {
+                    border-top: none;
+                    border-bottom: none;
+
+                    .el-collapse-item__header {
+                        height: 40px;
+                        font-size: 0.875rem;
+                        border-bottom: none;
+                        background-color: var(--frame-main-background-3);
+                        color: var(--frame-main-color) !important;
+                        padding-left: 16px;
+                    }
+
+                    .el-collapse-item__wrap {
+                        border-bottom: none;
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            .equipDetailLeft {
+                height: 100%;
+                border-right: 1px solid $n-borderColor;
+            }
+
+            .equipDetailRight {
+                height: 100%;
+            }
+
+            .equipDetailBox {
+                width: 100%;
+            }
+        }
+
+        .handlingOpinions {
+            width: 100%;
+
+            .equipDetailTitle {
+                height: 40px;
+                line-height: 40px;
+                padding: 0 16px;
+                margin: 16px 16px 6px;
+                background: $foregroundColor_2;
+                border-radius: 3px;
+            }
+
+            .equipDetailBox {
+                padding: 0 16px 16px;
+
+                .el-form {
+                    .el-form-item {
+                        width: 100%;
+                        margin-bottom: 0;
+
+                        .el-form-item__label {
+                            display: block;
+                            text-align: left;
+                            white-space: nowrap;
+                        }
+
+                        .el-form-item__content {
+                            display: block;
+
+                            .el-input__inner {
+                                color: $aside-font;
+                                background-color: #0c0e14;
+                            }
+
+                            ::-webkit-input-placeholder {
+                                color: var(--input-plaColor1);
+                            }
+
+                            .el-textarea__inner {
+                                padding: 11px 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        >p {
+            line-height: 78px;
+            text-align: center;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        .setTemp {
+            padding-top: 24px;
+            padding-left: 24px;
+
+            .el-form-item__label {
+                width: 100px;
+            }
+        }
+    }
+
+    .el-dialog__footer {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+
+        .el-button {
+            width: auto !important;
+            height: 28px;
+            line-height: 28px;
+            padding: 0 10px !important;
+            border: none;
+            float: left;
+
+            .el-icon-loading {
+                line-height: 28px !important;
+            }
+        }
+    }
+}

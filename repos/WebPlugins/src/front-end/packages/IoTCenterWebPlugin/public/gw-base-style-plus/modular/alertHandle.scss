@@ -1,0 +1,22 @@
+//统一弹窗属性设置
+@mixin mobileAlertHeader {
+    height: 54px !important;
+}
+
+@mixin mobileAlertBody {
+    height: calc(100% - 118px) !important;
+    overflow: auto;
+}
+
+@mixin mobileAlertFooter {
+    top: 0;
+    height: 64px !important;
+    line-height: 64px;
+    padding: 0 !important;
+
+    .el-button {
+        width: 60px !important;
+        height: 28px !important;
+        @include nativeBtn;
+    }
+}

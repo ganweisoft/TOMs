@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="14px" viewBox="0 0 12 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>形状结合 3</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#A8CAFF" offset="0%"></stop>
+            <stop stop-color="#337CEF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="16页面配置" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="「17」页面配置（楼层交互）" transform="translate(-237.000000, -121.000000)" fill="url(#linearGradient-1)">
+            <g id="形状结合-2" transform="translate(237.000000, 121.000000)">
+                <path d="M5.72727273,0 C8.89035811,0 11.4545455,2.56418734 11.4545455,5.72727273 C11.4545455,7.83599632 9.54545455,10.5935721 5.72727273,14 C1.90909091,10.5935721 0,7.83599632 0,5.72727273 C0,2.56418734 2.56418734,0 5.72727273,0 Z M5.72727273,3.18181818 C4.321457,3.18181818 3.18181818,4.321457 3.18181818,5.72727273 C3.18181818,7.13308845 4.321457,8.27272727 5.72727273,8.27272727 C7.13308845,8.27272727 8.27272727,7.13308845 8.27272727,5.72727273 C8.27272727,4.321457 7.13308845,3.18181818 5.72727273,3.18181818 Z" id="形状结合"></path>
+            </g>
+        </g>
+    </g>
+</svg>

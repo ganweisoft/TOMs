@@ -1,0 +1,201 @@
+{
+    "account": [
+        "account.config.create",
+        "account.config.desc"
+    ],
+    "alarm": [
+        "alarm.report.list",
+        "alarm.report.create",
+        "alarm.report.update",
+        "alarm.report.delete",
+        "alarm.person.list",
+        "alarm.person.desc",
+        "alarm.person.create",
+        "alarm.person.update",
+        "alarm.person.delete",
+        "alarm.config.list",
+        "alarm.data.list"
+    ],
+    "equip": [
+        "equip.group.list",
+        "equip.group.create",
+        "equip.group.update",
+        "equip.group.delete",
+        "equip.list",
+        "equip.command.set",
+        "equip.num.stat",
+        "equip.stat.export",
+        "equip.desc",
+        "equip.update",
+        "equip.delete",
+        "equip.create",
+        "equip.import",
+        "equip.export",
+        "equip.ycp.list",
+        "equip.ycp.desc",
+        "equip.ycp.create",
+        "equip.ycp.update",
+        "equip.ycp.delete",
+        "equip.drive.list",
+        "equip.yxp.list",
+        "equip.yxp.desc",
+        "equip.yxp.create",
+        "equip.yxp.update",
+        "equip.yxp.delete",
+        "equip.parm.list",
+        "equip.parm.desc",
+        "equip.parm.create",
+        "equip.parm.update",
+        "equip.parm.delete",
+        "equip.update.batch",
+        "equip.ycp.update.batch",
+        "equip.yxp.update.batch",
+        "equip.parm.update.batch",
+        "equip.delete.batch",
+        "equip.link.list",
+        "equip.link.create",
+        "equip.link.update",
+        "equip.link.delete",
+        "equip.group.desc",
+        "equip.group.item.move",
+        "equip.curve.list",
+        "equip.event.list"
+    ],
+    "welcome": [
+        "welcome.speech.desc",
+        "welcome.speech.create"
+    ],
+    "file": [
+        "file.list",
+        "file.upload",
+        "file.download",
+        "file.delete"
+    ],
+    "image": [
+        "image.file",
+        "image.upload",
+        "image.thumbnail",
+        "image.preview"
+    ],
+    "log": [
+        "log.list",
+        "log.download"
+    ],
+    "menu": [
+        "menu.list",
+        "menu.create",
+        "menu.delete",
+        "menu.update"
+    ],
+    "product": [
+        "product.list",
+        "product.desc",
+        "product.num.desc",
+        "product.create",
+        "product.update",
+        "product.delete",
+        "product.import",
+        "product.ycp.list",
+        "product.yxp.list",
+        "product.yxp.desc",
+        "product.parm.list",
+        "product.parm.desc",
+        "product.ycp.create",
+        "product.ycp.update",
+        "product.ycp.delete",
+        "product.yxp.create",
+        "product.yxp.update",
+        "product.yxp.delete",
+        "product.parm.create",
+        "product.parm.update",
+        "product.parm.delete"
+    ],
+    "excel": [
+        "excel.template.download"
+    ],
+    "ram": [
+        "ram.policy.list",
+        "ram.policy.desc",
+        "ram.policy.create",
+        "ram.policy.update",
+        "ram.policy.delete"
+    ],
+    "realtime": [
+        "realtime.config.list",
+        "realtime.list",
+        "realtime.desc",
+        "realtime.export",
+        "realtime.update"
+    ],
+    "record": [
+        "record.list",
+        "record.email.send",
+        "record.create",
+        "record.delete",
+        "record.export"
+    ],
+    "system": [
+        "system.event.list",
+        "system.query.delete",
+        "system.export",
+        "system.list"
+    ],
+    "task": [
+        "task.list",
+        "task.desc",
+        "task.create",
+        "task.update",
+        "task.delete"
+    ],
+    "user": [
+        "user.password.update",
+        "user.list",
+        "user.create",
+        "user.update",
+        "user.delete",
+        "user.lock",
+        "user.unlock",
+        "user.password.reset",
+        "user.role.list",
+        "user.role.create",
+        "user.role.update",
+        "user.role.delete"
+    ],
+    "video": [
+        "video.config.desc",
+        "video.config.update",
+        "video.desc",
+        "video.list",
+        "video.create",
+        "video.update",
+        "video.delete",
+        "video.record.create",
+        "video.record.delete",
+        "video.group.list",
+        "video.group.update",
+        "video.record.list"
+    ],
+    "wo": [
+        "wo.list",
+        "wo.desc",
+        "wo.create",
+        "wo.update",
+        "wo.assigned",
+        "wo.assigned.batch",
+        "wo.accept",
+        "wo.transfer",
+        "wo.config.desc",
+        "wo.config.update"
+    ],
+    "zichan": [
+        "zichan.list",
+        "zichan.desc",
+        "zichan.create",
+        "zichan.create.batch",
+        "zichan.delete",
+        "zichan.delete.batch",
+        "zichan.update",
+        "zichan.import",
+        "zichan.export"
+    ]
+}

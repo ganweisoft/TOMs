@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<OutputType>Library</OutputType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="OpenGWDataCenter" Version="9.0.0.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="BouncyCastle.Crypto">
+	    <HintPath>lib\BouncyCastle.Crypto.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Opc.Ua.Client">
+	    <HintPath>lib\Opc.Ua.Client.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Opc.Ua.Configuration">
+	    <HintPath>lib\Opc.Ua.Configuration.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Opc.Ua.Core">
+	    <HintPath>lib\Opc.Ua.Core.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Opc.Ua.Security.Certificates">
+	    <HintPath>lib\Opc.Ua.Security.Certificates.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>

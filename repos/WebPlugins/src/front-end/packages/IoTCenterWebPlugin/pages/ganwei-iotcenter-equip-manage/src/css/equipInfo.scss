@@ -1,0 +1,1297 @@
+@import './comStyle.scss';
+.related{
+    border: 1px solid;
+    .el-icon-connection{
+        width: 5px;
+        height: 5px;
+        display: inline-block;
+        transform: rotate(180deg);
+    }
+}
+
+#equipInfo {
+    width: calc(100% + 40px);
+    height: 100%;
+    min-width: 880px;
+    display: flex;
+    justify-content: space-between; // 左侧设备列表
+    margin-left: -20px;
+
+    /deep/ .gw-tree {
+        .hover-add-width {
+            .el-tree-node {
+                width: 100% !important;
+            }
+        }
+    }
+
+    /deep/ .el-tree>div .el-tree-node {
+        padding-left: 6px !important;
+    }
+
+    /deep/ .eqYcYxDialog .el-dialog {
+        .el-form-item {
+            display: flex;
+            align-items: center;
+
+            .el-form-item__content {
+                width: 100%;
+            }
+
+            .el-form-item__label {
+                justify-content: flex-end;
+
+                .label {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .equipList {
+        height: calc(100% + 20px);
+        min-height: 100%;
+        max-height: calc(100% + 20px) !important;
+        padding-bottom: 20px;
+        position: relative;
+        border-right: 0.5px solid;
+        border-color: var(--frame-main-border);
+        width: 370px;
+        // border-color: #232833;
+
+        .equipListHeader {
+            @include list-title;
+            height: 180px !important;
+            padding-left: 20px;
+            // padding-bottom: 20px;
+            border-bottom: 1px solid;
+            border-color: var(--frame-main-border);
+
+            /deep/ .el-input {
+                .el-input__inner {
+                    ::placeholder {
+                        color: var(--input-plaColor1);
+                    }
+
+                    ::-webkit-input-placeholder {
+                        color: var(--input-plaColor1);
+                    }
+                }
+            }
+
+            .equipListTitle {
+                margin-bottom: 10px;
+
+                .equipListTitleBtn {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top: 5px;
+
+                    >* {
+                        margin-right: 20px;
+                        cursor: pointer;
+                    }
+
+                    svg,
+                    span {
+                        width: 20px;
+                        height: 20px;
+                        line-height: 26px;
+                        padding: unset !important;
+                    }
+
+                    /deep/ .el-upload-list {
+                        display: none;
+                    }
+                }
+
+                .el-button {
+                    border: unset !important;
+                    justify-content: space-between !important;
+                    align-items: center !important;
+                    background-color: transparent !important;
+                }
+
+                .activeBtn {
+                    color: var(--btn-selectBgColor);
+                    border-color: $themeColor_1;
+                }
+            }
+        }
+
+        .equipListTitleBtn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 28px;
+
+            .el-button {
+                width: 88px;
+                font-size: 0.75rem;
+                vertical-align: middle;
+                color: var(--frame-main-color);
+                background-color: $foregroundColor_3;
+                border: 0.5px solid $n-borderColor;
+            }
+        }
+
+        .equipListHeadHeight {
+            height: 141px;
+
+            .equipListTitle {
+                .el-button {
+                    width: 88px;
+                }
+            }
+
+            .equipListTitleBtn {
+                margin-top: 8px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                line-height: 28px;
+
+                .el-button {
+                    width: 88px;
+                    font-size: 0.75rem;
+                    vertical-align: middle;
+                    color: $aside-font;
+                    background-color: $foregroundColor_3;
+                    border: 0.5px solid $n-borderColor;
+                }
+            }
+        }
+
+        .equipListMain {
+            height: calc(100% - 180px);
+            overflow: auto;
+            @include firefoxScroll;
+            padding: 12px 2px 0 0;
+            position: relative;
+            @include leftNoDataTips;
+            overflow: hidden;
+            padding-right: 8px;
+
+            .leftNoDataTips {
+                position: absolute;
+                top: 100px;
+                width: 100%;
+                height: calc(100% - 200px) !important;
+            }
+
+            /deep/ .el-loading-spinner i {
+                font-size: 3rem;
+            }
+
+            // 无查找结果
+            .promptResults {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                color: $textColor_3;
+                font-size: 0.875rem;
+            }
+
+            .el-container {
+                width: calc(100% + 16px);
+                padding: 8px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                @include firefoxScroll;
+
+                .el-radio-group {
+                    width: 100%;
+
+                    .el-radio {
+                        width: calc(100% - 8px);
+                    }
+                }
+
+                /deep/ .el-radio__input {
+                    display: none;
+                }
+
+                /deep/ .el-radio__label {
+                    padding: 0;
+                }
+
+                .equipListItem {
+                    font-size: 0.875rem;
+                    height: 72px;
+                    margin-bottom: 8px;
+                    padding: 0 12px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 3px;
+                    background-color: $foregroundColor_1;
+                    border: 0.5px solid $n-borderColor;
+                    // transition: 0.1s all;
+
+                    .equipItemInfo {
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+
+                        width: calc(100% - 12px);
+                        float: left;
+
+                        .equipName {
+                            margin-bottom: 8px;
+                            display: flex;
+
+                            p {
+                                height: 1.2rem;
+                                margin-left: 16px;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+                        }
+
+                        .equipNum {
+                            p {
+                                width: 40px;
+                                font-size: 0.75rem;
+                                text-align: center;
+                                line-height: 16px;
+                                background: $n-borderColor;
+                                color: $aside-font;
+                                margin-right: 3px;
+                                border-radius: 3px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+
+                    .el-icon-more {
+                        color: $aside-font;
+                        transform: rotate(90deg);
+                        cursor: pointer;
+                    }
+                }
+
+                .is-checked {
+                    .equipListItem {
+                        background: $themeColor_1;
+                        color: $background-box;
+                        opacity: 0.9;
+
+                        .equipNum {
+                            p {
+                                background: $textColor_4 !important;
+                                color: $textColor_1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .equipListMainHeight {
+            height: calc(100% - 189px);
+        }
+
+        .equipPaging {
+            width: 100%;
+            height: 48px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-top: 0.5px solid $n-borderColor;
+            border-bottom: 0.5px solid $n-borderColor;
+            background: $foregroundColor_1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /deep/ .el-pager {
+                li {
+                    background: $foregroundColor_1;
+                }
+
+                .active {
+                    background: $themeColor_1;
+                }
+            }
+
+            /deep/ .btn-prev,
+            /deep/ .btn-next {
+                background: $foregroundColor_1;
+                border: 0.5px solid $foregroundColor_3;
+            }
+        }
+
+        .dragLine {
+            width: 3px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            //   cursor: w-resize;
+        }
+    }
+
+    .editDetailDialog {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /deep/ .el-dialog {
+            width: 420px;
+            margin-top: 0px !important;
+
+            .el-input-number__decrease {
+                border-right: 1px solid !important;
+                border-color: var(--btn-borderColor2);
+            }
+        }
+    }
+
+    .addGroup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /deep/ .el-dialog {
+            position: relative;
+            width: 400px;
+            max-height: 420px;
+            margin-top: 0px !important;
+
+            .el-dialog__body {
+                padding: 0;
+            }
+
+            // 新增设备
+            .addEquipBox {
+                // padding: 1rem;
+                padding-bottom: 0px;
+                width: 100%;
+                height: calc(100% - 50px);
+
+                .header {
+                    position: relative;
+                    width: 100%;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    z-index: 1;
+
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        bottom: 0;
+                        left: 0%;
+                        width: 100%;
+                        height: 1px;
+                        border-bottom: 0.5px solid $textColor_5;
+                    }
+                }
+
+                .addEquipAndFenZu {
+                    .type_btn {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 1rem;
+                        width: 40%;
+                        height: 32px;
+                        line-height: 32px;
+                        border-radius: 3px;
+                        border: 1px solid $textColor_5;
+
+                        >span {
+                            display: block;
+                            width: 48%;
+                            text-align: center;
+                            color: $textColor_2;
+                            font-size: 0.875rem;
+                        }
+
+                        .btn_span_active {
+                            color: $textColor_1;
+                            background-color: $foregroundColor_2;
+                        }
+                    }
+
+                    .addEquipAndFenZu_main {
+
+                        p,
+                        span {
+                            color: var(--dialog-textColor2);
+                        }
+
+                        >p {
+                            margin-top: 12px;
+
+                            .el-input {
+                                margin: 12px 0;
+                                margin-bottom: 0px;
+                                border-radius: 3px;
+                            }
+                        }
+
+                        .nmEquip_link {
+                            position: relative;
+
+                            p:not(:first-child) {
+                                margin-top: 12px;
+                            }
+
+                            .tab {
+                                margin: 12px 0 24px 0;
+                                position: relative;
+                                height: 42px;
+                                line-height: 42px;
+                                border-radius: 3px;
+                                border: 1px solid $inputBorder;
+
+                                input {
+                                    width: 100%;
+                                    height: 100%;
+                                    border: 0;
+                                    outline: none;
+                                    background: transparent;
+                                    text-indent: 11px;
+                                }
+
+                                >span {
+                                    display: inline-block;
+                                    width: 100%;
+                                    height: 100%;
+                                    margin: 0;
+                                    text-indent: 11px;
+                                    @include whiteSpace;
+                                }
+
+                                i {
+                                    position: absolute;
+                                    right: 1rem;
+                                    pointer-events: none;
+                                }
+                            }
+
+                            ul {
+                                padding-bottom: 10px;
+                                position: absolute;
+                                width: 100%;
+                                height: 160px;
+                                margin-top: -20px;
+                                border-radius: 3px;
+                                font-size: 0.75rem;
+                                border: 1px solid $inputBorder;
+                                z-index: 99;
+                                background: $n-frondColor;
+                                overflow: auto;
+                                @include firefoxScroll;
+
+                                .active {
+                                    color: $n-fontColor;
+                                    background: $aside-font3;
+                                }
+
+                                li {
+                                    position: relative;
+                                    width: 100%;
+                                    text-indent: 11px;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    cursor: pointer;
+                                    @include whiteSpace;
+
+                                    &:first-child {
+                                        margin-top: 0;
+                                    }
+
+                                    &:hover {
+                                        background-color: $foregroundColor_3;
+                                    }
+
+                                    i {
+                                        display: none;
+                                        position: absolute;
+                                        right: 10px;
+                                        top: 0;
+                                    }
+                                }
+
+                                .formPage_tab_active {
+                                    color: $textColor_2;
+                                    background-color: $background;
+
+                                    i {
+                                        display: block;
+                                    }
+                                }
+                            }
+
+                            .el-input {
+                                margin: 16px 0 0;
+                            }
+
+                            .el-form-item,
+                            .el-form-item__content {
+                                width: 100%;
+                            }
+                        }
+
+                        /deep/ .is-focus {
+                            /deep/ .el-radio-button__inner {
+                                background-color: $themeColor_alarm !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .el-select {
+                display: block;
+
+                .el-select__tags {
+                    max-height: 100px;
+                    overflow: auto;
+                    @include firefoxScroll;
+
+                    input {
+                        border: 1px solid transparent !important;
+                    }
+
+                    .el-tag.el-tag--info {
+                        background-color: $foregroundColor_3;
+                        color: $aside-font;
+
+                        .el-tag__close {
+                            color: $black;
+
+                            :hover {
+                                color: $n-fontColor;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .el-popper .el-select-dropdown__item {
+                color: $inputBorder;
+                font-size: inherit;
+            }
+        }
+    }
+
+    // 弹出框
+    /deep/ .el-dialog {
+        @include el-dialog;
+
+        .el-dialog__header {
+            align-items: center;
+
+            .el-dialog__title {
+                font-size: 18px;
+                font-weight: normal;
+                color: var(--dialog-textColor1);
+            }
+
+            .title {
+                font-size: 18px;
+                height: 26px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: var(--dialog-textColor1);
+
+                div {
+                    color: var(--dialog-textColor1);
+                }
+
+                .close {
+                    cursor: pointer;
+                }
+
+                .close {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .el-dialog__body {
+            padding: 0;
+            border-color: var(--frame-main-border);
+
+            .equipDetailTitle {
+                margin-bottom: 12px;
+            }
+
+            .tips {
+                color: var(--dialog-textColor1);
+            }
+
+            .el-form-item {
+
+                .el-form-item__content {
+                    .el-textarea__inner {
+                        background-color: var(--input-bgColor);
+                    }
+
+                    .el-date-editor {
+                        .el-range-input {
+                            background-color: var(--input-bgColor);
+                        }
+                    }
+                }
+            }
+
+            .input {
+                background: #0c0e14 !important;
+            }
+
+            .equipDetail-equipInfo {
+                height: 723px;
+            }
+
+            .el-col {
+                position: relative;
+
+                .icons {
+                    width: 16px !important;
+                    height: 16px !important;
+                    right: 10px;
+                    top: 6px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 2px;
+                }
+            }
+
+            .editDetail {
+
+                .equipDetailLeft,
+                .equipDetailRight {
+                    width: 50%;
+                    float: left;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                }
+
+                .equipDetailBasic {
+                    width: 100%;
+                    padding: 0;
+                }
+
+                .equipDetailSenior {
+                    width: 100%;
+                    padding: 0;
+                    margin-top: 12px;
+
+                    .el-form {
+                        margin-top: 12px;
+                    }
+                }
+
+                .tempEquipForm {
+
+                    /deep/ .el-row {
+                        padding: 0 12px;
+
+                        .el-col {
+                            height: 88px;
+                            padding-left: 0px !important;
+                            padding-right: 0px !important;
+
+                            .el-form-item {
+                                padding-right: 0px !important;
+                            }
+
+                            .el-form-item__label {
+                                height: 40px !important;
+                            }
+
+                            .el-form-item__content {
+                                height: 80px;
+                            }
+                        }
+                    }
+
+                    .el-form {
+                        padding: 0 16px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .el-form-item {
+                            width: auto !important;
+                            margin-right: 0px !important;
+
+                            .el-form-item__label {
+                                height: 40px !important;
+                                line-height: 40px !important;
+                                justify-content: flex-end;
+                            }
+
+                            .el-select {
+                                width: 216px !important;
+                            }
+
+                            .el-input-number {
+                                width: 216px !important;
+                            }
+                        }
+                    }
+                }
+
+                >div {
+                    .equipDetailTitle {
+                        font-size: 0.875rem;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 0 0 16px;
+                        margin-top: 4px;
+                        background-color: var(--frame-main-background-3);
+                        border-radius: 3px;
+                        width: 100%;
+                    }
+
+                    .el-form {
+                        .el-row {
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+
+                        .flexBox {
+                            display: flex;
+
+                            .security-period {
+                                /deep/ .el-form-item__content {
+                                    height: 40px;
+
+                                    button {
+                                        padding: 0;
+                                        width: 100%;
+                                        height: 40px;
+                                        border: 0px;
+
+                                        span,
+                                        input {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                .item {
+                                    border: 1px solid $themeColor_alarm;
+                                }
+                            }
+
+                            /deep/ .el-button--default {
+                                border: none !important;
+                            }
+                        }
+
+                        .el-form-item {
+                            width: 100%;
+                            margin-right: 16px;
+                            margin-bottom: 4px;
+
+                            &.is-error {
+                                margin-bottom: 16px;
+                            }
+
+                            &:last-of-type {
+                                margin-right: 0;
+                            }
+
+                            .el-form-item__label {
+                                display: block;
+                                text-align: left;
+                                white-space: nowrap;
+                                padding-left: 8px;
+                                width: 150px;
+                                flex-shrink: 0;
+                                display: flex;
+                                height: 25px;
+                                line-height: 25px;
+
+                            }
+
+                            .el-form-item__content {
+                                display: block;
+                                // width: 100%;
+
+                                .el-select {
+                                    width: 100%;
+                                }
+
+                                .LevelOfAlarmBox {
+                                    width: 100%;
+                                    display: flex;
+
+                                    .LevelOfAlarm {
+                                        margin-left: 10px;
+                                    }
+                                }
+
+                                ::-webkit-input-placeholder {
+                                    color: var(--input-plaColor1);
+                                }
+
+                                .el-textarea__inner {
+                                    padding: 11px 15px;
+                                    max-height: 120px;
+                                }
+
+                                .el-date-editor {
+                                    width: 100%;
+                                }
+
+                                .el-date-editor.el-input {
+                                    width: 100%;
+                                }
+
+                                .el-date-editor .el-range-separator {
+                                    padding: 0;
+                                    width: 6%;
+                                }
+
+                                .el-input-number {
+                                    width: 100%;
+
+                                    .el-input-number__increase {
+                                        border-left: 1px solid;
+                                        border-color: var(--border-color-2);
+                                    }
+
+                                    .el-input-number__decrease {
+                                        border-right: 1px solid;
+                                        border-color: var(--border-color-2);
+                                    }
+                                }
+
+                                .el-input__suffix {
+                                    right: 8px;
+                                }
+
+                                .el-input__icon {
+                                    width: 16px;
+                                }
+                            }
+                        }
+
+                        &.stepsAdd .el-form-item {
+                            .el-form-item__label {
+                                height: 40px;
+                                line-height: 40px;
+                                justify-content: flex-end;
+                            }
+                        }
+
+                        .col-1-box {
+                            width: 60px;
+                        }
+
+                        .col-2-box {
+                            width: 136px;
+                        }
+
+                        .col-3-box {
+                            width: 212px;
+                        }
+
+                        .col-4-box {
+                            width: 288px;
+                        }
+
+                        .col-8-box {
+                            width: 592px;
+                        }
+                    }
+
+                    .equipDetailBox2 {
+                        border-bottom: none;
+                    }
+
+                    .el-collapse {
+                        border-top: none;
+                        border-bottom: none;
+
+                        .el-collapse-item__header {
+                            height: 40px;
+                            font-size: 0.875rem;
+                            border-bottom: none;
+                            background-color: var(--frame-main-background-3);
+                            color: var(--frame-main-color) !important;
+                            padding-left: 16px;
+                        }
+
+                        .el-collapse-item__wrap {
+                            border-bottom: none;
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                .equipDetailLeft {
+                    height: 100%;
+                    border-right: 1px solid $n-borderColor;
+                }
+
+                .equipDetailRight {
+                    height: 100%;
+                }
+
+                .equipDetailBox {
+                    width: 100%;
+                }
+            }
+
+            .handlingOpinions {
+                width: 100%;
+
+                .equipDetailTitle {
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 16px;
+                    margin: 16px 16px 6px;
+                    background: $foregroundColor_2;
+                    border-radius: 3px;
+                }
+
+                .equipDetailBox {
+                    padding: 0 16px 16px;
+
+                    .el-form {
+                        .el-form-item {
+                            width: 100%;
+                            margin-bottom: 0;
+
+                            .el-form-item__label {
+                                display: block;
+                                text-align: left;
+                                white-space: nowrap;
+                            }
+
+                            .el-form-item__content {
+                                display: block;
+
+                                .el-input__inner {
+                                    color: $aside-font;
+                                    background-color: #0c0e14;
+                                }
+
+                                ::-webkit-input-placeholder {
+                                    color: var(--input-plaColor1);
+                                }
+
+                                .el-textarea__inner {
+                                    padding: 11px 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            >p {
+                line-height: 78px;
+                text-align: center;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            .setTemp {
+                padding-top: 24px;
+                padding-left: 24px;
+
+                .el-form-item__label {
+                    width: 100px;
+                }
+            }
+        }
+
+        .el-dialog__footer {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-end;
+            border: none;
+
+            .el-button {
+                width: auto !important;
+                height: 28px;
+                line-height: 28px;
+                padding: 0 10px !important;
+                border: none;
+                float: left;
+
+                .el-icon-loading {
+                    line-height: 28px !important;
+                }
+            }
+        }
+    }
+
+    /deep/ .deleteGroupDialog {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .el-dialog {
+            width: 350px;
+            position: unset;
+            margin-top: 0px !important;
+        }
+
+        .el-dialog__body {
+            border: unset;
+            padding: 0px 20px;
+
+            .el-checkbox__inner {
+                background-color: var(--radio-bgColor);
+            }
+
+            .el-checkbox__input.is-checked {
+                .el-checkbox__inner {
+                    background-color: var(--radio-selectBg);
+                }
+            }
+
+            div {
+                margin-bottom: 12px;
+
+                div {
+                    margin-top: 4px;
+                }
+            }
+
+            .el-icon-warning {
+                font-size: 18px !important;
+            }
+
+            .deleteTip {
+                color: #f78989;
+                line-height: 18px;
+            }
+        }
+
+    }
+
+    /deep/ .deleteGroupEquip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .el-dialog {
+            width: 350px;
+            margin-top: 0px !important;
+
+            .el-dialog__body {
+                border: unset;
+                padding: 0px 20px;
+
+                div {
+                    margin-bottom: 12px;
+
+                    span {
+                        line-height: 24px;
+                        width: 100%;
+                        text-align: left;
+                    }
+
+                    .el-icon-warning {
+                        margin-right: 5px;
+                    }
+
+                    .tips {
+                        color: #f56c6c !important;
+                        width: unset !important;
+                    }
+                }
+            }
+        }
+    }
+
+    /deep/ .moveEquip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .el-dialog {
+            width: 420px;
+            margin-top: 0px !important;
+
+            div {
+                .tips {
+                    display: block;
+                    line-height: 28px;
+                }
+
+                .el-select {
+                    width: 100%;
+
+                    input {
+                        width: 100%;
+                        background-color: $n-backColor;
+                    }
+                }
+            }
+        }
+
+        .el-dialog__body {
+            padding: 12px;
+        }
+    }
+}
+
+.equipFilterTip {
+    color: $textColor_2;
+    padding: 10px 20px;
+}
+
+/deep/ .el-tooltip__popper.is-dark {
+    color: $themeColor_alarm !important;
+}
+
+.el-tooltip__popper {
+    max-width: 200px !important;
+}
+
+.el-step /deep/ {
+    &.is-horizontal .el-step__line {
+        top: 7px;
+        background-color: var(--step-line-background);
+    }
+
+    .is-finish .el-step__icon {
+        background-color: var(--step-line-background__finish);
+    }
+
+    .el-step__icon {
+        border: none;
+        width: 8px;
+        height: 8px;
+        background-color: var(--step-line-background);
+    }
+
+    .el-step__icon-inner {
+        display: none;
+    }
+
+    .el-step__line-inner {
+        transition-delay: 0ms !important;
+        background-color: var(--step-line-background__finish);
+        border-color: transparent;
+    }
+
+    .el-step__main {
+        margin-top: 16px;
+        margin-bottom: 41px;
+
+        .el-step__description {
+            color: var(--frame-main-color);
+        }
+    }
+}
+
+#addPanel /deep/ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .el-dialog {
+        margin: unset !important;
+        margin-bottom: 0px;
+        @include el-dialog;
+
+        .el-dialog__body {
+            height: calc(100% - 64px - 72px);
+
+            .el-steps {
+                .el-step__line {
+                    margin: 0 10px !important;
+                }
+
+                .el-step__main {
+                    margin-bottom: 24px;
+                }
+            }
+
+            .el-form-item__label {
+                justify-content: flex-end;
+
+                .label {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .el-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .el-form-item {
+            margin-bottom: 8px;
+
+            &.is-error {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .uploader {
+        display: flex;
+        justify-content: center;
+
+        span {
+            margin-right: 16px;
+            height: 32px;
+            line-height: 32px;
+        }
+
+        .el-input {
+            width: 216px;
+
+            span {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    span.is-required {
+        &::before {
+            content: '*';
+            color: #f56c6c;
+            margin-right: 4px;
+        }
+    }
+}
+
+.activeStep1 {
+    /deep/ .el-dialog {
+        width: 560px;
+        height: 321px;
+
+        .el-dialog__body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .el-steps {
+                width: 320px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.activeStepMore {
+    /deep/ .el-dialog {
+        width: 798px;
+    }
+}

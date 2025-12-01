@@ -1,0 +1,247 @@
+/deep/ .el-dialog {
+    @include el-dialog;
+
+    .el-dialog__body {
+        height: 530px;
+    }
+
+    .logContent {
+        width: 100%;
+        height: 500px;
+        overflow-y: auto;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.logPreview {
+    width: 100%;
+    min-width: 1000px;
+    height: 100%;
+
+    .minWidth {
+        display: inline-block;
+        min-width: 100px;
+    }
+
+    .logPreviewHeader {
+        @include page-header;
+        padding-left: 0px;
+        border-bottom: 1px solid var(--frame-main-border);
+        // min-width: 1200px;
+        flex-wrap: nowrap !important;
+
+        .headerLeft {
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        .headerRight {
+            display: flex;
+            align-items: center;
+            height: 32px;
+
+            /deep/ .el-select {
+                height: 32px;
+
+                .el-input {
+                    height: 32px;
+
+                    input {
+                        height: 32px;
+                    }
+
+                    .el-input__suffix {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .el-select:nth-of-type(2) {
+                margin-right: 16px;
+            }
+
+            /deep/ .el-date-editor {
+                height: 32px;
+
+                input {
+                    height: 32px;
+                }
+
+                .el-input__suffix {
+                    .el-input__suffix-inner {
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .el-input__icon {
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+
+                .el-input__prefix {
+                    .el-input__icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            label {
+                font-size: 16px;
+                margin-right: 12px;
+                color: var(--frame-main-color);
+                flex-shrink: 0;
+            }
+
+            .btn-title {
+                padding: 0 10px !important;
+                height: 28px;
+                margin-left: 1rem;
+                padding: 0 20px;
+                height: 32px;
+                font-size: 18px;
+                line-height: 32px;
+                text-align: center;
+                color: #ffffff;
+                border-radius: 3px;
+
+                button {
+                    height: 100%;
+                    width: 100%;
+                    margin-left: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .iconfont {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .nodeItem {
+        width: 100%;
+    }
+
+
+    .logPreviewMain {
+        width: 100%;
+        height: calc(100% - 70px - 68px);
+        overflow: hidden;
+        padding: 10px 16px;
+        @include el-table;
+
+        .download {
+            .el-button {
+                min-width: 60px;
+                height: 28px;
+                background: var(--gw-color-primary);
+                border-radius: 4px;
+                border: 1px solid var(--gw-color-primary);
+                color: white;
+                line-height: 28px;
+                padding: 0 10px;
+            }
+        }
+
+
+        img {
+            margin-right: 12px;
+        }
+
+        /deep/ .el-table {
+            @include el-table;
+
+            tr {
+                height: 50px !important;
+            }
+
+            tbody {
+                .el-table__row {
+                    &:nth-child(2n) {
+                        background-color: var(--table-body-background__strip2);
+                    }
+
+                    &:nth-child(2n + 1) {
+                        background-color: var(--table-body-background__strip2);
+                    }
+
+                    &:hover {
+                        background-color: var(--table-body-background__hover);
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    /deep/ .el-tree {
+        width: 100%;
+        height: 100%;
+        background-color: transparent !important;
+
+
+
+        .el-tree-node__content .custom-tree-node {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 120px;
+
+            .content {
+                span {
+
+                    user-select: none;
+                }
+            }
+        }
+
+        .el-tree-node__content {
+            height: 40px;
+
+            &>.el-tree-node__loading-icon {
+                display: none;
+            }
+        }
+
+        .el-tree-node,
+        .el-tree-node__content {
+
+            font-size: 14px;
+            background-color: var(--table-rowBgColor-strip2);
+
+            .size {
+                margin: 0 0 0 112px;
+            }
+
+            .modifyTime {
+                margin: 0 140px;
+            }
+
+        }
+
+        .el-tree-node:focus>.el-tree-node__content {
+            color: #3875FF;
+        }
+    }
+
+
+
+}
+
+/deep/ .pagination {
+    @include pagination;
+}

@@ -1,0 +1,27 @@
+$fontH36: 36px;
+$fontH30: 30px;
+$fontH24: 24px;
+$fontH20: 20px;
+$fontH18: 18px;
+$fontH16: 16px;
+$fontH14: 14px;
+$fontH12: 12px;
+
+$main-titleHeight: 48px; // 主内容标题高度
+
+// 浏览器相关混合
+@import "./modular/browserScroll.scss";
+// 文本相关混合
+@import "./modular/txtHandle.scss";
+// 列表相关混合
+@import "./modular/listHandle.scss";
+//输入框
+@import "./modular/inputStyle.scss";
+// 容器相关混合
+@import "./modular/containerHandle.scss";
+
+// 表格相关混合
+@import "./modular/tableHandle.scss";
+
+// 弹窗样式混入
+@import "./modular/dialogStyle.scss";

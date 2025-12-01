@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<PackageId>OpenGWDataCenter</PackageId>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Version>9.0.0.1</Version>
+		<Description>a high-performance, centralized communication and scheduling module for various device plugins. It uniformly converts heterogeneous data into standardized models and delivers core functionalities such as real-time data storage, alarm triggering, linkage control, and task planning.</Description>
+		<Authors>shendong</Authors>
+		<Company>ganweisoft</Company>
+		<PackageProjectUrl>https://opensource.ganweicloud.com</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ganweisoft/Gateway</RepositoryUrl>
+		<PackageTags>iot;time-series;heterogeneous;real-time;data storage;alarm triggering;linkage control;task planning</PackageTags>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>logo.jpg</PackageIcon>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>C:\IoTCenter\bin\</OutputPath>
+		<LangVersion>default</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.5" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.3.efcore.9.0.0" />
+		<PackageReference Include="qcloud.qcloudsms_csharp" Version="0.1.6" />
+		<PackageReference Include="SerialPortStream" Version="2.4.2" />
+		<PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.11" />
+		<PackageReference Include="SQLitePCLRaw.provider.e_sqlite3" Version="2.1.11" />
+		<PackageReference Include="System.Data.SQLite" Version="1.0.119" />
+		<PackageReference Include="System.IO.Ports" Version="9.0.5" />
+		<PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.5" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="logo.jpg">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Update="logo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>C:\IoTCenter\bin\</OutputPath>
+	</PropertyGroup>
+</Project>

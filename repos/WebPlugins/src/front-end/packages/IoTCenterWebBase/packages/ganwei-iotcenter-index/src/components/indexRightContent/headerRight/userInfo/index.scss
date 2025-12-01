@@ -1,0 +1,105 @@
+.el-dropdown-menu {
+    margin-top: 0;
+
+    p {
+        font-size: 14px;
+        width: 220px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        color: #f0f4ff;
+        padding: 10px 4px;
+        margin: 0px;
+
+        i {
+            margin-left: 16px;
+            margin-right: 14px;
+            font-size: 16px;
+        }
+    }
+
+    .user {
+        padding: 4px 15px 14px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid var(--poper-border);
+
+        .el-avatar {
+            background: transparent;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        span {
+            color: var(--dropdown-menu-color);
+            font-size: 16px;
+        }
+    }
+}
+
+.el-overlay-message-box {
+    .el-message-box {
+        transform: translateY(-100px);
+    }
+}
+
+.dividingLine {
+    margin: 5px 0;
+    height: 1px;
+    background-color: var(--poper-border);
+}
+
+.el-dropdown-menu p {
+    height: 34px !important;
+    width: auto !important;
+    padding-right: 20px !important;
+
+    .iconBox {
+        height: 20px !important;
+        width: 20px !important;
+        padding: 0 6px;
+        margin-left: 6px;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 6px;
+        border-radius: 6px;
+        i {
+            margin: 0px !important;
+            font-size: 14px !important;
+            color: white;
+            
+        }
+    }
+
+    .iconBox.info {
+        background-color: rgb(47, 169, 230);
+    }
+
+    .iconBox.updateAuth {
+        background-color: rgb(103, 99, 239);
+    }
+
+    .iconBox.restartPlatform {
+        background-color: rgb(39, 174, 121);
+    }
+
+    .iconBox.changePassword {
+        background-color: rgb(253, 176, 61);
+    }
+
+    .iconBox.logout {
+        background-color: rgb(243, 112, 113);
+    }
+
+    .iconBox.safeMode {
+        background-color: rgb(47, 169, 230);
+    }
+
+    span {
+        display: inline-block;
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,254 @@
+// 除左侧列表主区域
+@mixin main-container {
+    @media screen and (min-width: 1440px) {
+        width: calc(100% - 370px);
+    }
+
+    @media screen and (max-width: 1440px) {
+        width: calc(100% - 320px) !important;
+    }
+}
+
+// 主区域顶部
+@mixin page-header {
+    height: 70px;
+    font-size: 18px;
+    color: var(--frame-main-color);
+    // padding-left: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .el-input {
+        width: 287px;
+
+        .el-input__inner {
+            background-color: var(--input-background);
+        }
+    }
+
+    >div:first-of-type {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    @include searchInput;
+
+    .el-select {
+        margin-left: 16px;
+        width: 287px;
+        margin-right: 12px;
+
+        .el-input {
+            margin-left: 0;
+
+            .el-input__inner {
+                height: 32px;
+                background-color: var(--input-background);
+            }
+        }
+    }
+
+    .el-button {
+        height: 32px;
+    }
+
+    >i {
+        font-size: 24px;
+        padding-right: 38px;
+        padding-left: 24px;
+        color: var(--btn-txColor2);
+        cursor: pointer;
+
+        &:not(:first-child) {
+            border-left: 1px solid var(--frame-main-border1);
+        }
+    }
+
+    >span {
+        padding-left: 26px;
+        padding-right: 26px;
+
+        &:first-of-type {
+            padding-left: 0px;
+        }
+    }
+
+    .el-button.is-circle {
+        color: var(--btn-txColor2);
+    }
+}
+
+
+@mixin page-body {
+    height: calc(100% - 70px - 68px);
+    padding: 15px 20px;
+    background-color: var(--table-background);
+}
+
+// 分页组件外层div
+@mixin pagination {
+    width: 100%;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--table-background);
+    border-top: 1px solid;
+    border-color: var(--frame-main-border);
+
+    .el-input__wrapper {
+        background-color: var(--page-background) !important;
+    }
+
+    .el-pagination {
+        padding: 0;
+
+        .el-input__inner {
+            height: 26px;
+        }
+
+        .el-pagination__jump {
+            margin-left: 16px !important;
+        }
+
+        button {
+            width: 28px;
+            height: 28px;
+        }
+
+        .el-pagination__editor {
+            height: 28px;
+            min-width: 28px;
+            margin-right: 8px;
+            margin-left: 8px;
+
+            .el-input__inner {
+                height: 26px;
+                min-width: 28px;
+                border-radius: 0;
+            }
+        }
+
+        .el-pager {
+            li {
+                min-width: 28px;
+                height: 28px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+@mixin leftNoDataTips {
+    .leftNoDataTips {
+        width: 100%;
+        height: 100%;
+        color: var(--frame-main-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+}
+
+//暂无数据
+@mixin noDataTips {
+    line-height: 30px !important;
+    width: 50%;
+    color: #999fa8;
+
+    .noData {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+
+        .tip {
+            font-size: $fontH16;
+            display: flex;
+            line-height: 50px;
+            justify-content: center;
+            align-items: center;
+            color: var(--noData-fontColor);
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #646774;
+            line-height: 30px;
+
+            ::v-deep .el-button {
+                color: white;
+                border: unset !important;
+                background-color: transparent !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: unset;
+
+                .iconfont {
+                    margin-right: 4px;
+                    font-size: 1.25rem;
+                    cursor: pointer;
+                }
+            }
+
+            i {
+                margin: 0px 10px;
+            }
+        }
+
+        div {
+            span {
+                color: var(--noData-fontColor1);
+                font-size: $fontH14;
+                white-space: nowrap;
+            }
+
+            button {
+                color: var(--noData-fontColor1);
+                font-size: $fontH16;
+            }
+        }
+    }
+}
+
+// 带表单的表格
+@mixin form-table {
+    .el-table {
+        tbody .el-table__row td .cell {
+            height: 48px;
+        }
+
+        .el-form-item {
+            margin-bottom: 0 !important;
+
+            .el-form-item__content {
+                line-height: 100%;
+            }
+
+            .el-form-item__error {
+                position: static;
+                ;
+            }
+        }
+    }
+}
+
+@mixin table-containerBox {
+    width: 100%;
+    padding: 15px 20px 0;
+    overflow: auto;
+    position: relative;
+    background-color: var(--con-bgColor19);
+}

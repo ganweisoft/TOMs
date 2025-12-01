@@ -1,0 +1,19 @@
+<Project>
+	<PropertyGroup>
+		<AspNetCoreVersion>9.0.5</AspNetCoreVersion>
+		<AspNetCoreTargetFramework>net9.0</AspNetCoreTargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageManagement Include="System.IdentityModel.Tokens.Jwt" Version="8.12.0" />
+		<PackageManagement Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="$(AspNetCoreVersion)" />
+		<PackageManagement Include="Microsoft.Extensions.Hosting.WindowsServices" Version="$(AspNetCoreVersion)" />
+		<PackageManagement Include="Microsoft.EntityFrameworkCore" Version="$(AspNetCoreVersion)" />
+		<PackageManagement Include="Microsoft.EntityFrameworkCore.Design" Version="$(AspNetCoreVersion)"  />
+		<PackageManagement Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(AspNetCoreVersion)" />
+		<PackageManagement Include="Microsoft.Extensions.Hosting.Systemd" Version="$(AspNetCoreVersion)" />
+		<PackageManagement Include="Microsoft.Extensions.Logging.Debug" Version="$(AspNetCoreVersion)" />
+		<PackageManagement Include="Microsoft.Extensions.Caching.Abstractions" Version="$(AspNetCoreVersion)"  />
+	</ItemGroup>
+
+</Project>

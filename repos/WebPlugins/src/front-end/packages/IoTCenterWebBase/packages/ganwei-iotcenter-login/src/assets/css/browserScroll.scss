@@ -1,0 +1,5 @@
+//火狐滚动条样式
+@mixin firefoxScroll {
+    scrollbar-color: var(--scrollbar-bgColor) transparent !important;
+    scrollbar-width: thin;
+}

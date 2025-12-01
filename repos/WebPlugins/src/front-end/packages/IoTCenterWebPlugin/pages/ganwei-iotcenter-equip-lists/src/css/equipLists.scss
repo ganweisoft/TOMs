@@ -1,0 +1,319 @@
+#equipLists {
+    display: flex;
+    justify-content: space-between;
+    // width: 100%;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    height: 100%;
+    color: $fontColor;
+
+    .equipCon_main {
+        min-width: 700px;
+    }
+
+	.equipNumberLabel {
+        display: inline-block;
+        color: var(--frame-main-color);
+        line-height: 20px;
+        margin-left: 25px;
+        padding-left: 25px;
+    }
+
+    .equipCon_nav_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .el-input {
+            width: 300px
+        }
+    }
+
+    .box {
+        width: 500px;
+        height: 200px;
+        border: 1px solid red;
+        position: relative;
+
+        .left {
+            margin-top: 10px;
+            width: 200px;
+            height: 20px;
+            border: 1px solid yellow;
+            position: relative;
+        }
+    }
+
+
+
+    /deep/ .gw-tree {
+        .hover-add-width {
+            .el-tree-node {
+                width: 100% !important;
+            }
+        }
+    }
+
+
+    /deep/ .el-tree>div .el-tree-node {
+        padding-left: 6px !important;
+    }
+
+
+    /deep/ .el-table__empty-text {
+        font-size: 24px;
+        // color: var(--con-textColor8);
+    }
+
+
+    .main_search {
+        display: flex;
+        justify-content: space-between;
+        // width: 200px;
+        // margin-top: 3px !important;
+        height: 34px;
+        line-height: 32px;
+        border-radius: 3px;
+        font-size: 0.875rem;
+        overflow: hidden;
+        z-index: 1;
+
+        &:after {
+            position: absolute !important;
+            content: '';
+            display: block;
+            right: -24px;
+            width: 1px;
+            height: 100%;
+            background-color: $textColor_2;
+        }
+
+        input {
+            padding-left: 4px;
+            width: 90%;
+            height: 100%;
+            border: none;
+            outline: none;
+            border: 0;
+            color: $textColor_2;
+            background-color: $bjColor_1;
+            border-radius: 3px;
+        }
+
+        /deep/ .el-input__inner {
+            height: 32px;
+            // background-color: $n-backColor;
+        }
+
+        ::-webkit-input-placeholder {
+            font-size: 14px;
+            // color: $fontColor-minor;
+        }
+
+        span {
+            display: none;
+        }
+
+        /deep/ .el-input__prefix {
+            .el-input__icon {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    // 左侧设备列表
+    .equipList {
+        position: relative;
+        height: calc(100% + 20px);
+        min-height: 100%;
+        padding-bottom: 20px;
+        // background: $middleColor_1;
+        float: left;
+        // overflow: hidden;
+        border-right: 1px solid;
+        border-color: var(--frame-main-border);
+        // @include main-list;
+        width: 370px;
+        min-width: 320px;
+
+        .equipList_header {
+            @include list-title;
+            height: 130px !important;
+            padding-left: 20px;
+            border-bottom: 1px solid;
+            border-color: var(--frame-main-border);
+
+            .searchEquipSide {
+                padding-right: 16px;
+            }
+
+            &>div {
+                .iconfont {
+                    padding-right: 4px;
+                    font-size: 20px;
+                }
+
+            }
+
+            .el-input {
+                width: 100% !important;
+            }
+
+            .equipList_header_mian {
+                height: 70px !important;
+
+                /deep/ .el-button {
+                    border: none !important;
+                    background-color: transparent !important;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+
+                    .iconfont {
+                        font-size: 24px;
+                        padding: 0;
+                        margin-left: 0;
+                        margin-right: -4px;
+                    }
+                }
+            }
+        }
+
+        // 左侧设备---导航列表
+        .equipList_main {
+            position: relative;
+            height: calc(100% - 122px);
+            padding: 8px;
+            overflow: auto; // min-width: 250px;
+            // padding-right: 8px;
+
+            @include leftNoDataTips;
+        }
+
+    }
+
+    // 右侧设备列表
+    .equipCon_main {
+        height: 100%;
+        overflow: hidden; // 弹出框
+        padding: 0px 20px;
+        width: calc(100% - 370px);
+
+
+        .equipCon_nav {
+            color: var(--frame-main-color);
+            font-size: 18px;
+
+            /deep/ .el-input {
+                .el-input__inner {
+                    // color: var(--input-txColor1);
+                }
+            }
+
+            .equipConNm {
+                display: flex;
+                align-items: center;
+                text-overflow: ellipsis;
+                -ms-text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 100%;
+                height: 70px;
+
+                .equipListLeftTopName {
+                    display: inline-block;
+                    max-width: 500px;
+                    text-overflow: ellipsis;
+                    -ms-text-overflow: ellipsis;
+                    -o-text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    margin-left: 10px;
+                }
+
+                i {
+                    margin-left: 12px;
+                    font-size: 10px;
+                }
+
+                .yd {
+                    margin-left: 12px;
+                }
+            }
+
+
+        }
+
+        .equipment_list {
+            width: 100%;
+            height: calc(100% - 70px - 68px);
+            position: relative;
+            overflow: hidden;
+
+            /deep/ .el-table {
+                height: 100%;
+                padding-bottom: 0px !important;
+
+                .el-table__body-wrapper {
+                    height: calc(100% - 43px);
+                    overflow-y: auto;
+                }
+            }
+
+
+            // 设置模块
+            .set-box {
+                padding-top: 20px;
+                padding-left: 20px;
+                margin-top: 0 !important;
+                // background-color: #202534;
+
+
+
+                .noSetting {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .el-table__body-wrapper {
+                background-color: $n-middleColor;
+            }
+        }
+
+        /deep/ .anologueEquipPaging {
+            border-top: 1px solid #232833;
+            @include pagination;
+        }
+
+        /deep/ .el-popper {
+            height: 28px;
+            margin-left: 3%;
+            background: white;
+            line-height: 20px;
+        }
+    }
+
+}
+
+.el-popper {
+    button {
+        // color: #F0F4FF !important;
+        color: var(--frame-main-color);
+    }
+}
+
+
+.v-modal {
+    z-index: 0 !important;
+}

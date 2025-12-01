@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>$(AspNetCoreTargetFramework)</TargetFramework>
+		<Configurations>Debug;Release;</Configurations>
+		<RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+		<FileVersion>9.0.0</FileVersion>
+		<Version>9.0.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+</Project>

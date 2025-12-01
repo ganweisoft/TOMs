@@ -1,0 +1,405 @@
+ $light: ( //字体
+     // 左侧菜单导航
+     nav-bgColor: #0754aa, //左侧导航按整体颜色
+     nav-bgColor1: #181c29, //左侧导航按钮收起侧边栏颜色
+     nav-bgColor2:transparent, //zzz
+     nav-bgColor3: #2f3d4a, //light nav黑色
+     nav-bgColor4: #181c29,
+     nav-bgColor5: #fff,
+     av-bgColor6: #EFF4FE,
+     nav-txColor: rgba(240, 244, 255, 0.56),
+     nav-txColor1: #555,
+     asideColor: #fff,
+     nav-iconColor: #606266,
+
+     nav-hoverBgColor: #181c29, //hover背景颜色
+
+     nav-hoverTxColor: #f0f4ff, //hover字体
+
+     nav-hoverIconColor: #f0f4ff, //hover字体
+
+     nav-selBgColor: linear-gradient(to bottom right, #2e9bff, #1ecff7), //左侧导航按钮选中颜色
+     nav-selBgColor2: #00b4ed, //light nav按钮选中 黑色
+
+     nav-selTxColor: #f0f4ff, //左侧导航按钮选中字体颜色
+
+     nav-selIconColor: #f0f4ff, //左侧导航按钮选中字体颜色
+
+     // 按钮 btn-
+     btn-bgColor: #3875ff, //按钮查询、确定等按钮颜色 //ccc
+     btn-bgColor1: #fff, //如：设备管理下拉 //ccc
+     btn-bgColor2: #f22433, //如：误报等按钮 //ccc
+     btn-bgColor3: #fff, //zzz
+     btn-bgColor4: #fff, //ccc
+     btn-bgColor5: linear-gradient(to bottom right, #2e9bff, #1ecff7), //zzz
+     btn-bgColor7: #eafaf4, //zzz
+     btn-bgColor8: #fff,
+     btn-bgColor9: #fff,
+     btn-bgColor10: #EBEFEF,
+
+     btn-disableBgColor: #0c79dd, //ccc
+
+     btn-selectBgColor:#3875ff, //按钮点击选中背景颜色   //zzz
+
+     btn-txColor: #606266, //按钮字体颜色  //zzz
+     btn-txColor1: #3875ff, //按钮字体颜色   //ccc
+     btn-txColor2: #262626, //按钮字体颜色 //ccc
+     btn-txColor3: #fff, //按钮字体颜色 //ccc
+     btn-txColor4: #f56c6c, //按钮字体颜色，如删除
+     btn-txColor5: #fff, //按钮字体颜色    //zzz
+     btn-txColor6: #f22433, //ccc
+     btn-bgColor6: #13c2c2, //zzz
+     btn-txColor7: #313747, //ccc
+     btn-txColor8: #2cd08c, //ccc
+     btn-txColor9: #333333,
+
+     btn-iconColor: #e6edff, //按钮icon颜色
+     btn-iconColor1: #d3d8e2, //按钮icon颜色
+     btn-iconColor2: #3875ff, //按钮icon颜色
+
+     btn-borderColor: #3875ff, //按钮边框颜色   //ccc
+     btn-borderColor1: rgba(240, 244, 255, 0.16), //按钮边框颜色
+     btn-borderColor2: #e6e6e6, //按钮边框颜色  //zzz
+     btn-borderColor3: #d5f6e8, //按钮边框颜色  //zzz
+
+     btn-hoverBgColor: #fff, //hover背景颜色 //ccc
+     btn-hoverBgColor1: #ecf5ff, //hover背景颜色   //zzz
+     btn-hoverBgColor2: #2769c2, //hover背景颜色
+     btn-hoverBgColor3: #253045, //hover背景颜色 //ccc
+     btn-hoverBgColor4: #409eff, //hover背景颜色  zzz
+     btn-hoverBgColor5: linear-gradient(to bottom right, #1ecff7, #2e9bff), //hover背景颜色
+
+     btn-hoverTXColor: #3875ff, //hover text颜色 //ccc
+     btn-hoverTXColor1: #f0f4ff, //hover text颜色
+
+     btn-hoverBorColor: #264069, //hover边框颜色
+
+     // Tab tab-
+     tab-bgColor: #f5f5f5, // 背景    zzz
+     tab-bgColor2: #f5f5f5,
+     tab-bgColor3:#2BA3FD,
+     tab-bgColor4:#fff,
+     tab-bgColor5:#F2F3F5,
+     tab-bgColor6:#DBDEE5,
+
+     tab-txColor: #333, // 字体    zzz
+     tab-txColor1: rgba(51, 51, 51, 0.64),
+     tab-txColor2: #333,
+
+     tab-borderColor: #E1E3E6, // 字体
+     tab-borderColor1: #EEEEEE,
+
+
+     tab-selBgColor: #fff, //选中背景   zzz
+     tab-selBgColor2: #fff,
+     tab-selBgColor3: #fff,
+     tab-selTXColor: #333, //选中字体颜色  zzz
+     tab-selTXColor1: #ffffff, //选中字体颜色  zzz
+
+
+     tab-hoverTXColor: #3875ff, //hover字体颜色 zzz
+     tab-hoverBg: #fff,
+
+     tab-actColor: #f5f7fa,
+
+     // 输入框 input-
+     input-bgColor: #fff, //背景颜色  //ccc  zzz
+     input-bgColor2: #919191, //背景颜色 //ccc
+     input-bgColor4: #fff,
+     input-bgColor5: #fff,
+     input-bgColor6: #F8F8F8,
+     input-disabled-bgColor: #F8F8F8,
+
+     input-btnBgColor3: #fff, //按钮背景颜色  zzz
+     input-btnBorColor: #e6e6e6, //按钮边框颜色  zzz
+
+     input-btnBgColor: #333, //计数按钮
+
+     input-txColor: #d3d8e2, // 字体颜色
+
+     input-txColor1: #000, // 字体颜色 如设备管理编辑弹窗input字体颜色   zzz //ccc
+
+     input-plaColor: #2d2e30, // placeholder字体颜色  zzz
+     input-plaColor1: #8c8c8c, // placeholder字体颜色  ///zzz //ccc
+
+     input-iconColor: #8f9091, // icon颜色 如输入框左侧输入icon颜色
+     input-iconColor1: #f0f4ff, // icon颜色,如设备管理文字提示
+
+     input-borderColor: rgba(240, 244, 255, 0.16), // 边框颜色
+     input-borderColor1: rgba(235, 236, 240, 0.5), // 边框颜色  如图片上传边框
+     input-borderColor2: #e6e6e6, // 边框颜色 //zzz
+     input-borderColor3: #e6e6e6,
+
+     input-selBorColor: #3875ff, // 选中后边框颜色
+
+     input-hoverBorColor: #8f9091, // hover后边框颜色
+
+     //编辑多行文本textarea-
+     textarea-fontColor: #262626,
+     textarea-backgroundColor: #fafafa,
+     textarea-borderColor: #eee,
+
+     // 文本 txt-
+     txt-color-1: #3875FF,
+     txt-color-2: #FF7A00,
+
+     // 表格 table-
+     table-headerBgColor:#fafafa, //zzz //ccc
+     table-headerBgColor2: #f2f6ff,
+     table-txColor:#333, //zzz //ccc
+
+     table-headerTXColor:#333, //zzz  //ccc
+     table-borderColor:#e6e6e6, //zzz
+     table-rowBgColor: #fff, //table行背景颜色   zzz //ccc
+     table-rowBgColor-strip: #fff,
+     table-rowBgColor-strip2: #fff,
+     table-hoverRowBgColor: #E9F5FE, //zzz //ccc
+     //hover  table行背景颜色
+
+     table-iconEdit: #346ae4, //编辑
+
+     // table-iconDel: #bf2533, //删除
+
+     table-borderBottomColor: #fff, //zkx
+
+     // 容器(div、section等背景) con-
+     //主要用于自定义的文字（div、p、span...）
+     con-textColor1:#333, //ccc
+     con-textColor2: #595959, //ccc
+     con-textColor3: rgba(240, 244, 255, 0.64),
+     con-textColor4: #606266, //zzz   //ccc
+     con-textColor5: rgba(240, 244, 255, 0.32),
+     con-textColor6: rgba(240, 244, 255, 0.16),
+     con-textColor7: rgba(240, 244, 255, 0.08),
+     con-textColor8: #262626, //ccc
+     con-textColor9:#262626, //zzz
+     con-textColor10:#f0f4ff, //zzz
+     con-textColor11: #409eff,
+
+     con-borderColor:#e6e6e6,
+     con-borderColor1:transparent,
+     con-borderColor2:rgba(240, 244, 255, 0.08),
+     con-borderColor3:#CCCCCC,
+     con-borderColor4: #cccccc,
+     con-borderColor5:#eeeeee,
+     con-borderHoverColor:#c0c4cc,
+     con-borderHoverColor2: #5D709B,
+     border-color-1: #cccccc,
+     border-color-2: #D9D9D9,
+
+     //主要用于自定义区域的背景（div、section..）
+     con-bgColor1:#090f1a,
+     con-bgColor2: #f5f5f5, //ccc
+     con-bgColor3: #f5f5f5, //zzz //ccc
+     con-bgColor4: #fff, //ccc
+     con-bgColor5: #f5f5f5, //ccc
+     con-bgColor5-1: #fff, //ccc
+     con-bgColor6: #fff, //ccc
+     con-bgColor6-1: #F9F9F9,
+     con-bgColor7: #fff, //zzz
+     con-bgColor8: #fff, // zzz
+     con-bgColor9:#697073, //zzz
+     con-bgColor10:#fff, //zzz
+     con-bgColor11:#fff, //zzz
+     con-bgColor12:#2ba3fd, //zzz
+     con-bgColor13:linear-gradient(-43deg, rgba(39, 121, 230, .7) 4%, rgba(39, 176, 230, .9) 94%), //zzz
+     con-bgColor14:linear-gradient(90deg, #104cb3, #16a6e2), //zzz
+     con-bgColor15:#104cb3, //zzz
+     con-bgColor16: transparent, //zzz
+     con-bgColor17: #12202e, // light header黑色版本
+     con-bgColor18:#fff,
+     con-bgColor19: #fff,
+     con-bgColor20:#fff,
+     con-bgColor21:#F1F4F4,
+     con-bgColor22:#F2F3F5,
+     con-bgColor23:#f5f5f5,
+     con-bgColor24:#F1F4F4,
+     con-bgColor25:#DFDFDF,
+     con-bgColor26:white,
+     con-bgColor27:#F1F4F4,
+     con-bgColor28:#F1F4F4,
+
+
+     con-themeColor: #3875ff, //ccc
+     con-themeColor2: #2669EC,
+     con-successColor: #63e03f,
+
+     //主要用于带状态的文字
+     con-alarmColor: #f22433, //ccc
+     con-alarmColor2: #F73231,
+     con-warningColor: #f5bb36,
+
+     // 边框 border-
+     bor-default:#e6e6e6, //ccc
+     bor-primary:#3875ff, //ccc
+     bor-danger:#f22433, //ccc
+     bor-light:#fff,
+
+     // 弹窗 dialog-
+     dialog-textColor1:#333, //ccc
+     dialog-textColor2:rgba(0, 0, 0, 0.65), //ccc
+
+     dialog-labelBgColor: #eee, //kkk
+
+     dialog-bgColor:#fff, //ccc
+     dialog-bgColor2:#f5f5f5, //ccc
+     dialog-bgColor3:#fff, //zzz
+     dialog-bgColor4:#fff,
+     dialog-groupBgColor:#3875ff, //zzz
+     dialog-groupBgColor2: #00b4ed,
+     dialog-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.2),
+
+
+     // 提示 tips-
+     tips-textColor1: #F0F4FF,
+     tips-textColor2: rgba(240, 244, 255, 0.56),
+     tips-bgColor: #252833,
+
+     // 选中框-单选-多选 sel-
+     sel-textColor: #f0f4ff,
+
+     sel-bgColor: #0c0e14,
+     sel-tagtextColor: #606266, //ccc
+     sel-tagBgColor: #EBEFEF, //ccc
+     sel-tagIconColor: #606266, //ccc
+
+     dropdown-bgColor: #fff,
+     dropdown-bgColor1: rgba(255, 255, 255, 0.8),
+
+     // 分页 page-
+
+     page-textColor: #595959,
+     page-borColor:#e6e6e6,
+     page-bgColor:#3875ff,
+
+
+     page-bgColor2:#ffffff,
+
+     // 树状结构 tree
+
+     tree-bgColor:#fff, //ccc
+     tree-bgColor1:#fff, //zzz //ccc
+     tree-bgColor2:#fff, //zzz
+     tree-bgColor3:#fff, //zzz
+     tree-bgColor4: #f1efef, // kkk
+     tree-bgColor5: #ffffff,
+     tree-bgColor6: #F2F3F5,
+     tree-bgColor7:#fff,
+     tree-bgColor8:rgba(255, 255, 255, .5),
+     tree-txColor:#595959, //zzz //ccc
+     tree-txColor1:#606266, //ccc
+     tree-iconColor:#979797, //zzz //ccc
+
+     tree-selBgColor:#ffffff, //zzz
+     tree-selBgColor1:#3875ff, //ccc
+     tree-selTXColor:#fff, //zzz //ccc
+
+     tree-linearColor: #8c8c8c, //ccc
+
+     tree-borderColor:#e6e6e6, //zzz
+     tree-borderColor1:#e6e6e6,
+
+     tree-labelBg:#D9D9D9,
+
+
+     // radio/checkbox 用于单选框或者多选框
+     radio-bgColor: #fff, //ccc
+     radio-selectBg: #3875ff, //ccc
+     radio-selectBorder: #fff, //ccc
+
+     switch-bgColor: #D9D9D9,
+     switch-bgColor1: #337CEF,
+
+     popover-bgColor:#fff, //zzz
+     popover-bgColor2: #fff,
+    popover-bgColor3:rgba(3,3,3,1),
+    //  popover-bgColor3:#030303,
+     popover-txColor:#606266, //zzz
+     popover-borderColor:#e6e6e6, //zzz
+     popover-borderColor2:#595959, // scrollbar滚动条
+     popover-borderColor3:#eee,
+     popover-hoverBgColor:#f5f7fa, //zzz
+     popover-hoverTXColor:#595959, //zzz
+
+
+     scrollbar-bgColor:#E1E3E6, //zzz
+
+     // 头像
+     avater-textColor: #fff, //ccc
+     avater-baColor: #c0c4cc, //ccc
+
+     // 日期时间选择器
+     datePanelBg: #fff,
+    timeHeaderColor: #333,
+    pickerHeaderBg: #F2F3F5,
+    iconBtnColor: #999,
+    pickRangeBg: #DFE9FF,
+    footerBtnColor: #666666,
+    datePick-selectRangeBg: #f5f5f5, //ccc
+    datePick-selectColor: #f0f4ff, //ccc
+    timePick-hoverBg: #f5f7fa, //ccc
+
+     // 无数据提示 noData-
+     noData-fontColor: #252833,
+     noData-fontColor1: rgba(0, 0, 0, 0.65),
+
+     // 外部日历插件
+     fc-todayBg: #d9f5fe, //ccc
+
+     //时间线 timeLine
+     timeLine-default: #EEEEEE,
+     timeLine-infosBg: #F1F4F4,
+     timeLine-dot1: #fff,
+     timeLine-dotBorder1: #D7E3FF,
+     timeLine-dotBorder2: #ccc,
+
+     timeLine-line: #aeaeae,
+
+     //lsit
+     list-bgColor-1: #ffffff,
+     list-bgColor-2: #F0F4FF,
+     list-bgColor-3: #ffffff,
+
+     list-labelBg: #F2F6FF,
+
+     // // 新版首页
+     radar-bgColor: #fcfdff,
+     radar-title: #60A3FF, // radar title
+     tag-title: #666666, // tag title
+     tag-unit: #666666, // unit
+     tag-number1: #FF3A3A,
+     tag-number2: #666666,
+     tag-number3: #FF7700,
+     tag-number4: #0DBC00,
+     snapshots-bg: #fff,
+     snapshots-bor: -webkit-linear-gradient(-40deg, transparent 0%, transparent 10%, transparent 90%, transparent 100%) 10,
+     splitline-bor1: #E7E7E7,
+     splitline-bor2: #E7E7E7,
+     snapshot-bor: transparent,
+     snapshot-bg: #fff,
+     snapshot-bs: transparent,
+     types-fc: #0F283E,
+     snapshot-number: #0F283E,
+     active-bg: #3875ff,
+     active-fc: #fff,
+     descriptions-bor: #CED9DF,
+     descriptions-fc: #0F283E,
+
+     loadingBg:#7fa2f3,
+     notifyBg: #fff,
+     notifytitle: #262626,
+     notifytext: #606266,
+
+     //线条
+     line-color:rgba(240, 244, 255, 0.16),
+     line-color-1:#ccc,
+     line-finish:#3875FF,
+
+     // 图片 $img-
+     img-color-1: linear-gradient(180deg, #F2F3F5 0%, #757d93 100%),
+     img-color-2: #8B8F97,
+
+     // loading
+     loading-bgColor: rgba(255, 255, 255, 0.9),
+
+     tips-text: #999999)

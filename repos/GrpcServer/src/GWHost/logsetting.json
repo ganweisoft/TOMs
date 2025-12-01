@@ -1,0 +1,29 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning",
+      "System": "Warning",
+      "Grpc": "Warning",
+      "Microsoft": "Warning"
+    }
+  },
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.File" ],
+    "MinimumLevel": "Debug",
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "directory": "../log/",
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}**********************************************************************************************{NewLine}",
+          "rollOnFileSizeLimit": true,
+          "fileSizeLimitBytes": 104857600,
+          "retainedFileCountLimit": 10,
+          "rollingInterval": "Day",
+          "restrictedToMinimumLevel": "Debug",
+          "retainedFileTimeLimit": "100"
+        }
+      }
+    ]
+  }
+}

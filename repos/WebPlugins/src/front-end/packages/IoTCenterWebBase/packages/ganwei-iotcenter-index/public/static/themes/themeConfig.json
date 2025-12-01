@@ -1,0 +1,30 @@
+{
+    "theme": {
+        "supportThemes": [{
+            "value": "dark",
+            "color": "#3d4a63",
+            "name": "黑色",
+            "name-en": "Black",
+            "skin": "/static/images/index-skin-dark.svg",
+            "logo": "/static/images/index-logo-src-dark.svg",
+            "fullScreen": "/static/images/index-fullscreen-dark.svg",
+            "user": "/static/images/index-user-dark.svg",
+            "outFullScreeen": "/static/images/index-tuchuquanping-dark.svg",
+            "contentFullScreen": "/static/images/index-contentfull-dark.svg",
+            "appPreview": "/static/images/index-apppreview-dark.svg"
+        }, {
+            "value": "light",
+            "color": "#ffffff",
+            "name": "白色",
+            "name-en": "White",
+            "skin": "/static/images/index-skin-light.svg",
+            "logo": "/static/images/index-logo-src-light.svg",
+            "fullScreen": "/static/images/index-fullscreen-light.svg",
+            "user": "/static/images/index-user-light.svg",
+            "outFullScreeen": "/static/images/index-tuchuquanping-light.svg",
+            "contentFullScreen": "/static/images/index-contentfull-light.svg",
+            "appPreview": "/static/images/index-apppreview-light.svg"
+        }
+        ]
+    }
+}

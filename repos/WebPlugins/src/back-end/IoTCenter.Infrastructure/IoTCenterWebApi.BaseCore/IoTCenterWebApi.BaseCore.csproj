@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>$(AspNetCoreTargetFramework)</TargetFramework>
+		<FileVersion>9.0.0</FileVersion>
+		<Version>9.0.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\IoTCenter.HostProxies\IoTCenterHost.Proxy\IoTCenterHost.Proxy.csproj" />
+		<ProjectReference Include="..\IoTCenter.Data\IoTCenter.Data.csproj" />
+		<ProjectReference Include="..\IoTCenter.Utilities\IoTCenter.Utilities.csproj" />
+		<ProjectReference Include="..\IoTCenterCore.DeviceDetection\IoTCenterCore.DeviceDetection.csproj" />
+		<ProjectReference Include="..\IoTCenterCore.ExcelHelper\IoTCenterCore.ExcelHelper.csproj" />
+		<ProjectReference Include="..\IoTCenterCore.RsaEncrypt\IoTCenterCore.RsaEncrypt.csproj" />
+	</ItemGroup>
+
+</Project>

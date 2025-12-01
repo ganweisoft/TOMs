@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Configurations>Development;Staging;Production</Configurations>
+		<Description>
+			敢为物联网平台服务端程序框架，用以提供敢为物联网平台宿主程序对外访问的接口和消息推送。
+			1.4.x 提供dotnetfx支持
+		</Description>
+		<Version>9.0.0.1</Version>
+		<Product>IoTCenterHost.Core</Product>
+		<AssemblyName>IoTCenterHost.Core</AssemblyName>
+		<RootNamespace>IoTCenterHost.Core</RootNamespace>
+		<IsPackable>true</IsPackable>
+		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+		<EnableNETAnalyzers>False</EnableNETAnalyzers>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Staging|AnyCPU'">
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<LangVersion>8.0</LangVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Production|AnyCPU'">
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|AnyCPU'">
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Caching.Memory" />
+		<PackageReference Include="protobuf-net" />
+		<PackageReference Include="System.Net.Http" />
+		<PackageReference Include="OpenGWDataCenter" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\IoTCenterHost.Core.Abstraction\IoTCenterHost.Core.Abstraction.csproj" />
+		<ProjectReference Include="..\IoTCenterHost.Core.Extension\IoTCenterHost.Core.Extension.csproj" />
+	</ItemGroup>
+</Project>

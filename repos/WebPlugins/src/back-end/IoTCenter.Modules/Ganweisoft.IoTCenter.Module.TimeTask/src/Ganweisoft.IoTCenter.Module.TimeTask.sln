@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ganweisoft.IoTCenter.Module.TimeTask", "Ganweisoft.IoTCenter.Module.TimeTask\Ganweisoft.IoTCenter.Module.TimeTask.csproj", "{0F096F6F-7C53-4084-8C61-8BD8CC251D16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoTCenter.Build", "IoTCenter.Build", "{95F5AA86-C043-47EF-A9AD-9555534DA52B}"
+	ProjectSection(SolutionItems) = preProject
+		IoTCenter.Build\Dependencies.AspNetCore.props = IoTCenter.Build\Dependencies.AspNetCore.props
+		IoTCenter.Build\Dependencies.props = IoTCenter.Build\Dependencies.props
+		IoTCenter.Build\IoTCenterCore.Commons.props = IoTCenter.Build\IoTCenterCore.Commons.props
+		IoTCenter.Build\IoTCenterCore.Commons.targets = IoTCenter.Build\IoTCenterCore.Commons.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F096F6F-7C53-4084-8C61-8BD8CC251D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F096F6F-7C53-4084-8C61-8BD8CC251D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F096F6F-7C53-4084-8C61-8BD8CC251D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F096F6F-7C53-4084-8C61-8BD8CC251D16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FE8B017-220D-4C05-A1C0-A2A3EB9030BA}
+	EndGlobalSection
+EndGlobal

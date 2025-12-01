@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>全屏</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F2F2F2" offset="0%"></stop>
+            <stop stop-color="#95A2BD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-105" transform="translate(-59.000000, -8.000000)">
+            <g id="编组-62">
+                <path d="M69.5355339,24.0502525 L70.9497475,25.4644661 L63.4125544,33 L66.0111481,33.0005544 L68.0005544,35.0005544 L60.0005544,35.0005544 L60.0005544,27 L62,29.0112554 L61.9995544,31.585 L69.5355339,24.0502525 Z M86.0005544,27 L86.0005544,35.0005544 L78.0005544,35.0005544 L79.9899608,33.0005544 L84.0011089,33.0005544 L84.0011089,29.0112554 L86.0005544,27 Z M86.0005544,9 L86.0005544,17.0005544 L84.0011089,14.989299 L84.0005544,12.413 L76.4644661,19.9497475 L75.0502525,18.5355339 L82.5845544,11 L79.9899608,11 L78.0005544,9 L86.0005544,9 Z M68.0005544,9 L66.0111481,11 L62,11 L62,14.989299 L60.0005544,17.0005544 L60.0005544,9 L68.0005544,9 Z" id="形状结合备份-5" fill="url(#linearGradient-1)"></path>
+                <polygon id="矩形备份-94" opacity="0.438476562" points="59 8 87 8 87 36 59 36"></polygon>
+            </g>
+            <g id="编组-126" transform="translate(59.000000, 8.000000)"></g>
+        </g>
+    </g>
+</svg>

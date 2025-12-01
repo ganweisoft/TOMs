@@ -1,0 +1,20 @@
+.realtimeCurve {
+
+    // @include el-dialog;
+    .el-dialog {
+        width: 850px;
+        height: 612px;
+        max-height: 720px;
+    }
+
+    .el-dialog__body {
+        width: 100%;
+        height: calc(100% - 64px);
+
+        #containerE {
+            width: 100%;
+            height: calc(100% - 20px);
+        }
+    }
+
+}

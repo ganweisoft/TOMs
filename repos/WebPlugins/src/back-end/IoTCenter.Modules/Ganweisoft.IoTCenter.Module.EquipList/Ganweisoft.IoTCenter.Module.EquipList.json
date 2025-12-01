@@ -1,0 +1,8 @@
+{
+  "Ganweisoft.IoTCenter.Module.EquipList": {
+    "CacheOption": {
+      "AbsoluteRepeatTimeSeconds": 10, //s
+      "AbsoluteExpirationRelativeToNow": 5 //单位: minutes
+    }
+  }
+}

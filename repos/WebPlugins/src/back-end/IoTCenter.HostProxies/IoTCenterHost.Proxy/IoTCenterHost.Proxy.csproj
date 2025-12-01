@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>$(AspNetCoreTargetFramework)</TargetFramework>
+		<PackageId>IoTCenterHost.Proxy</PackageId>
+		<Version>6.1.0.5</Version>
+		<NoWarn>$(NoWarn);CS1591;CS0067;CS0414</NoWarn>
+		<Description>单元测试：兼容请求上下文无RequestServices</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Grpc.Net.Client" />
+		<PackageReference Include="Grpc.Net.ClientFactory" />
+		<PackageReference Include="Grpc.Tools" />
+		<PackageReference Include="Google.Protobuf" />
+		<PackageReference Include="Grpc.AspNetCore.HealthChecks" />
+		<PackageReference Include="protobuf-net" />
+		<PackageReference Include="IoTCenterHost.Core.Abstraction" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="..\IoTCenterHost.Protos\*.proto" GrpcServices="Client" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\IoTCenter.Infrastructure\IoTCenter.Utilities\IoTCenter.Utilities.csproj" />
+		<ProjectReference Include="..\..\IoTCenter.Infrastructure\IoTCenterCore.AutoMapper\IoTCenterCore.AutoMapper.csproj" />
+	</ItemGroup>
+
+</Project>

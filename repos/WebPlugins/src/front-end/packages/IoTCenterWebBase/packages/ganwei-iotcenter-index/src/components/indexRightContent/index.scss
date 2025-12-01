@@ -1,0 +1,40 @@
+.el-container {
+    flex: 1;
+
+    .indexBottomContent {
+        height: calc(100% - 50px);
+        position: relative;
+    }
+
+    // 页面内容组件
+    .el-main {
+        padding: 0;
+        height: 100%;
+        position: relative;
+    }
+}
+
+[data-theme="green"] .el-container {
+    .indexHeader{
+        background: url(/static/images/head-background.png) no-repeat center center/100% 110%;
+    }
+    .indexBottomContent{
+        .container-main .el-tabs .el-tabs__header{
+            background: url(/static/images/head-background.png) no-repeat center center/100% 110%;
+        }
+    }
+}
+
+
+.indexHeader {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--frame-top-background);
+    white-space: nowrap;
+    position: relative;
+    padding-left: 16px;
+    padding-right: 16px;
+    // box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.05);
+    z-index: 2;
+}

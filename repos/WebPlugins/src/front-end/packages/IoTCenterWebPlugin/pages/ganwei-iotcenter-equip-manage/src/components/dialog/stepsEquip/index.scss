@@ -1,0 +1,34 @@
+@import '../../../css/comStyle.scss';
+@include dialog;
+
+
+.batUseDialog {
+    /deep/ .el-dialog {
+        .el-dialog__header {
+            .title {
+                height: 26px;
+                width: 100%;
+                font-size: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: $textColor_1;
+
+                .close {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .el-dialog__body {
+            overflow: auto;
+            padding: 16px;
+
+            .editDetail {
+                .equipDetailSenior {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

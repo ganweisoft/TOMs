@@ -1,0 +1,107 @@
+.mask-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(12, 14, 20, 0.64);
+}
+
+.tos {
+    padding: 0 24px;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateY(-25%);
+    transform: translateX(-50%);
+    width: 60%;
+    height: 64%;
+    border-radius: 3px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    background-color: #252833;
+
+    h3 {
+        font-size: 1.75rem;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12%;
+    }
+
+    /deep/ .tos-main {
+        padding: 1rem;
+        height: 78%;
+        border-radius: 3px;
+        overflow-y: scroll;
+        background-color: #181c29;
+
+        h4 {
+            margin: 32px 0 10px 0;
+            font-size: 16px;
+            color: #f0f4ff;
+            text-align: left;
+        }
+
+        .bd {
+            color: #f0f4ff;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        p {
+            text-align: left;
+            text-indent: 30px;
+            line-height: 24px;
+            color: rgba(240, 244, 255, 0.64);
+            font-size: 14px;
+
+            span {
+                width: 100%;
+                display: inline-block;
+            }
+        }
+
+        .links {
+            padding-left: 46px;
+            text-indent: 0px;
+        }
+    }
+
+    .bottom {
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        color: rgba(240, 244, 255, 0.88);
+        font-size: 14px;
+        cursor: pointer;
+
+        span {
+            color: #f0f4ff;
+            font-size: 14px;
+        }
+
+        .pre {
+            margin-right: 20px;
+        }
+    }
+}
+
+//响应式宽度
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+@media (max-width: $screen-xs-max) {
+    .tos {
+        width: 86% !important;
+    }
+
+    h3 {
+        font-size: 18px !important;
+    }
+}

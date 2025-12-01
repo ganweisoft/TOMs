@@ -1,0 +1,225 @@
+@import "./dialogStyle.scss";
+@import "./txtHandle.scss";
+@import "./browserScroll.scss";
+@import "./containerHandle.scss";
+
+
+.el-dropdown {
+    color: white !important;
+}
+
+#index {
+    background-color: var(--frame-main-background) !important;
+
+    .el-icon svg {
+        height: 1em;
+        width: 1em;
+    }
+
+    ::v-deep .el-dialog {
+        @include el-dialog;
+    }
+
+    ::v-deep .el-menu {
+        .el-sub-menu .el-menu-item {
+            height: 44px !important;
+            line-height: 44px !important;
+        }
+
+
+    }
+}
+
+
+.transition {
+    transition: all 0.5s ease-in-out;
+}
+
+
+::v-deep .el-menu--collapse {
+    .el-submenu__title {
+        text-align: center;
+        transition: none !important;
+
+        .iconfont {
+            margin-right: 0px !important;
+        }
+    }
+
+    .is-active {
+        background-color: var(--menu-background__active)!important;// #3875ff !important;
+        z-index: 99;
+
+        .el-submenu__title {
+            background-color: var(--menu-background__active)!important;
+
+            >i,
+            >span,
+            >span i {
+                color: white;
+            }
+        }
+    }
+}
+
+::v-deep .el-menu--vertical {
+    .is-active {
+        // background-color: #3875ff !important;
+        z-index: 99;
+    }
+
+    .two-title-ch.is-active {
+        background-color: #3875ff !important;
+        z-index: 99;
+    }
+
+    ::v-deep.el-menu--vertical {
+        z-index: 99;
+
+        .is-active {
+            background-color: #3875ff !important;
+        }
+    }
+}
+
+
+.draw-enter-active,
+.draw-leave-active {
+    transition: all 1s ease;
+}
+
+.draw-enter,
+.draw-leave-to {
+    width: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+
+    a {
+        text-decoration: none;
+    }
+
+    .activeIndexLeft {
+        color: #fff !important;
+    }
+
+    .el-container {
+        height: 100%;
+    }
+
+    #index {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        height: 100%;
+
+        // 主内容
+        >.el-container {
+            flex: 1;
+
+            // 面包屑导航
+            .breadcrumb {
+                width: 100%;
+                height: 48px;
+                padding-left: 16px;
+                background-color: var(--frame-main-background-1);
+
+                >div {
+                    height: 100%;
+                    line-height: 48px;
+                    font-size: 14px;
+                }
+
+                ::v-deep .el-breadcrumb {
+
+                    .is-link,
+                    span {
+                        font-weight: 500;
+                        color: var(--frame-main-color);
+                    }
+                }
+            }
+
+            // 页面内容组件
+            .el-main {
+                padding: 0;
+                height: 100%;
+                position: relative;
+            }
+        }
+    }
+}
+
+
+.slide-fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.slide-fade-enter-active {
+    transition: all 1.2s ease;
+}
+
+.slide-fade-leave-active {
+    transition: all 0.1s cubic-bezier(2, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+    left: 0;
+    right: 0;
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+.onlyContent {
+
+    .topIndexHeader,
+    .noIsCollapse {
+        display: none;
+    }
+
+    ::v-deep .el-container {
+
+        .indexHeader,
+        .el-tabs__header {
+            display: none;
+        }
+
+        .indexBottomContent {
+            height: 100%;
+        }
+
+        .container-main .el-tabs .el-tabs__content {
+            height: 100%;
+        }
+    }
+}
+
+.isHideMenu{
+    .noIsCollapse {
+        display: none;
+    }
+}
+
+.isHideHead{
+    .topIndexHeader{display: none;}
+    ::v-deep .el-container{
+        .indexHeader{
+            display: none;
+        }
+        .indexBottomContent{
+            height: 100%;
+            .el-tabs__header{
+                display: none;
+            }
+        }
+        .container-main .el-tabs .el-tabs__content{
+            height: 100%;
+        }
+    }
+}

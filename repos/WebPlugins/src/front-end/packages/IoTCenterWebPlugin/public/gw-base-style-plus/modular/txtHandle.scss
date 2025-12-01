@@ -1,0 +1,39 @@
+// 单行超出省略号
+@mixin whiteSpace {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// 360度图片旋转
+@keyframes radar-beam {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.el-tooltip__popper[x-placement^="top"] .popper__arrow:after {
+    border-top-color: var(--popover-bgColor);
+}
+
+@mixin verticalLine {
+    width: 1px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 24px;
+    border-right: 1px solid $line-color;
+}
+
+@mixin titpsTxt {
+
+    .el-form-item__error {
+        height: 20px;
+        text-indent: 15px;
+        position: relative !important;
+    }
+}

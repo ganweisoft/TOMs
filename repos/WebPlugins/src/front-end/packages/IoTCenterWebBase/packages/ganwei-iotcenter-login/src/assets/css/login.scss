@@ -1,0 +1,338 @@
+.login {
+    width: 100%;
+    height: 100%;
+    img{
+        user-select: none;
+    }
+    ::v-deep .languageSelect {
+        width: 136px;
+        height: 44px;
+        position: fixed;
+        right: 2%;
+        top: 16px;
+        z-index: 1;
+        border: 0;
+        .el-select__wrapper {
+            width: 100%;
+            border-radius: 24px;
+            border-image: linear-gradient(46deg, rgba(74, 157, 249, 0.1), rgba(101, 117, 150, 0.07)) 1 1;
+            border: 2px solid white;
+            box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+            background: linear-gradient(0deg, #fff, #f3f5f8);
+            .el-select__prefix{
+                i{
+                    color: #2464F1;
+                }
+            }
+        }
+
+        .select-trigger {
+            height: 100%;
+
+            .el-input {
+                height: 100%;
+            }
+
+            .el-input__wrapper {
+                background-color: #fff;
+                border: none;
+
+                .el-input__inner {
+                    color: #000 !important;
+                }
+            }
+        }
+
+        .el-input__prefix {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 20px;
+        }
+    }
+
+    .el-loading-mask {
+        visibility: visible;
+    }
+
+    .backgroundImage {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        pointer-events: none;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    >section {
+        position: fixed;
+        top: 50%;
+        right: 13.125%;
+        transform: translateY(-50%);
+        width: 422px;
+        border-radius: 24px;
+        border-image: linear-gradient(46deg, rgba(74, 157, 249, 0.1), rgba(101, 117, 150, 0.07)) 1 1;
+        backdrop-filter: blur(7px);
+        border: 2px solid white;
+        box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+        // background: linear-gradient(0deg, #fff, #f3f5f8);
+        overflow: hidden;
+        transition: height 1s ease;
+        .login_form {
+            padding: 88px 56px 56px 56px;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            box-sizing: border-box;
+            .blurBackground {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                filter: blur(32px);
+                border-radius: 6px;
+                z-index: -1;
+            }
+
+            .logo {
+                opacity: 0;
+                transform: translate(-40px);
+                animation: enter-x-animation .3s ease-in-out .3s;
+                animation-fill-mode: forwards;
+                margin-bottom: 40px;
+                height: 69px;
+                text-align: center;
+                overflow: hidden;
+                img {
+                    height: 100%;
+                    position: relative;
+
+                }
+            }
+
+            .el-form {
+                margin-bottom: 18px;
+                position: relative;
+                .el-form-item {
+                    height: 80px;
+                    margin-bottom: 0px;
+                    opacity: 0;
+                    animation: enter-x-animation .4s ease-in-out .3s;
+                    animation-fill-mode: forwards;
+                    align-items: self-start;
+                    &:nth-of-type(1) {
+                        transform: translate(-80px);
+                    }
+                    &:nth-of-type(2) {
+                        transform: translate(-120px);
+                    }
+                    &:nth-of-type(3) {
+                        transform: translate(-160px);
+                        ::v-deep .el-input
+                          .el-input__wrapper{
+                            justify-content: left;
+                            .el-input__inner{
+                                width: 110px;
+                                flex-grow: unset;
+                           }
+                        }
+                    }
+
+                }
+
+                .el-form-item.is-error {
+                    ::v-deep .el-input__wrapper{
+                        box-shadow: 0 0 0 1px var(--el-color-danger) inset !important;
+                        border: 0 !important;
+                    }
+                }
+                ::v-deep .el-form-item__content {
+                    .el-form-item__error{
+                        position: relative !important;
+                        left: 50px!important;
+                        padding-top: 6px !important;
+                        top: 0!important;
+                    }
+                }
+            }
+
+            ::v-deep .el-input {
+                .el-input__wrapper {
+                    width: 310px;
+                    height: 52px;
+                    background: rgba(255,255,255,0.55);
+                    border-radius: 31px;
+                    backdrop-filter: blur(1px);
+                    border: 1px solid rgba(151,151,151,0.21);
+
+                    .el-input__inner {
+                        text-indent: 10px;
+                        font-size: 16px;
+                        color: #000 !important;
+                    }
+
+                    .el-input__suffix{
+                       .el-input__suffix-inner i{
+                        font-size: 20px;
+                        svg{
+                            color: #2464F1;
+                        }
+                       }
+                    }
+                }
+
+                .el-input__prefix {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #2464F1;
+                    margin-left: -2px;
+                    span{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        border-image: linear-gradient(46deg, rgba(74, 157, 249, 0.1), rgba(101, 117, 150, 0.07)) 1 1;
+                        border: 2px solid white;
+                        box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+                        background: linear-gradient(0deg, #fff, #f3f5f8);
+                    }
+                    i{
+                        font-size: 20px;
+                        margin: auto;
+                    }
+                }
+            }
+
+            .verificationCode{
+                position: relative;
+                width: 100%;
+                .slideCode{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #011832;
+                    width: 100%;
+                    height: 52px;
+                    background: #ECF0FB;
+                    border-radius: 31px;
+                    backdrop-filter: blur(1px);
+                }
+                .codeLoading{
+                    position: absolute;
+                    right: 0;
+                    border-radius: 0px 31px 31px 0px;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+            }
+
+            .submit {
+                width: 100%;
+                height: 52px;
+                background-color: #2464F1!important;
+                border-radius: 31px;
+                border: 2px solid #B8CEFF;
+                backdrop-filter: blur(1px);
+
+                transform: translate(-200px);
+                opacity: 0;
+                animation: enter-x-animation .4s ease-in-out .3s;
+                animation-fill-mode: forwards;
+            }
+
+            .loading {
+                display: block;
+                margin-top: 32px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 3px;
+                font-size: 1rem;
+                text-align: center;
+                cursor: pointer;
+                background-color: rgba(49, 108, 251, 1);
+
+                &:hover {
+                    background-color: rgba(49, 108, 251, 1);
+                }
+            }
+            .loginExtend{
+                text-align: right;
+                position: absolute;
+                right: 18px;
+                bottom: -10px;
+                transform: translate(-200px);
+                opacity: 0;
+                animation: enter-x-animation .3s ease-in-out .3s;
+                animation-fill-mode: forwards;
+                .loginExtendButton{
+                    cursor: pointer;
+                    background-color: transparent;
+                    border-color: transparent;
+                    padding: 0;
+                    font-size: 14px;
+                    color: #8B8F97;
+                }
+            }
+        }
+    }
+
+    >footer {
+        width: 100%;
+        position: fixed;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 32px;
+        white-space: nowrap;
+
+        span {
+            height: 32px;
+            line-height: 32px;
+            font-size: 1rem;
+            // color: $n-fontColor;
+            white-space: nowrap;
+            vertical-align: bottom;
+        }
+
+        .footer-btn {
+            width: 107px;
+            height: 28px;
+            position: fixed;
+            right: 30px;
+            bottom: 0;
+            opacity: 0;
+        }
+
+        &:hover {
+            .footer-btn {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@keyframes enter-x-animation {
+    to {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    background-color: transparent;
+    background-image: none;
+    transition: background-color 50000s ease-in-out 0s; //背景色透明  生效时长  过渡效果  启用时延迟的时间
+}

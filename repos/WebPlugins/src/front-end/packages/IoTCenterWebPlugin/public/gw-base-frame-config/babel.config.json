@@ -1,0 +1,26 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": "entry",
+                "corejs": "3.22",
+                "modules": false,
+                "targets": {
+                    "browsers": [
+                        "> 1%",
+                        "last 2 versions",
+                        "not ie <= 9"
+                    ]
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-classes",
+        "@babel/plugin-transform-object-rest-spread",
+        "babel-plugin-transform-vue-jsx"
+    ]
+}

@@ -1,0 +1,338 @@
+//响应式宽度
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+
+@media (max-width: $screen-xs-max) {
+
+    .noDownload {
+        display: none !important;
+    }
+
+    .displayNone {
+        display: none;
+    }
+
+    // 登录页
+    .login {
+        width: 300px !important;
+        margin-left: -150px !important;
+        margin-top: -150px !important;
+
+        .main {
+            width: 94% !important;
+            min-height: 400px !important;
+            background-color: transparent !important;
+
+            .logo_box {
+                display: none;
+            }
+
+            .login_form {
+                width: 100%;
+                padding: 50px 16px !important;
+            }
+
+            #code_img {
+                max-width: 100px;
+            }
+        }
+    }
+
+    // 首页
+    #index {
+        position: relative;
+
+        .minW-active {
+            width: 0 !important;
+        }
+
+        // 系统运行信息
+        .systemInformation_main {
+            /deep/ .el-dialog {
+                width: 100% !important;
+                height: 100% !important;
+                margin: 0 !important;
+
+                .el-dialog__header {
+                    line-height: 64px !important;
+                    padding: 0 !important;
+                }
+
+                .el-dialog__body {
+                    height: calc(100% - 64px) !important;
+                    position: relative;
+                    padding: 10px !important;
+                }
+            }
+
+            .systemInformation {
+                top: 0 !important;
+                overflow-y: auto;
+
+                >header {}
+
+                .information_box {
+                    &::after {
+                        content: '';
+                        width: 0 !important;
+                    }
+
+                    >div:nth-child(3) {
+                        padding-bottom: 100px;
+                    }
+
+                    >div {
+                        position: relative;
+                        width: 100% !important;
+                        height: auto !important;
+
+                        .inform_title {
+                            position: relative !important;
+                        }
+
+                        .inform_msg {
+                            height: auto !important;
+                            margin-top: 0 !important;
+
+                            p {
+                                margin: 0;
+                            }
+
+                            .inform_link {}
+                        }
+                    }
+                }
+            }
+        }
+
+        // 修改密码、退出
+        .editPassword {
+            overflow: hidden;
+
+            /deep/ .el-dialog {
+                width: 94% !important;
+
+                .el-dialog__header {
+                    .el-dialog__headerbtn {
+                        top: 0 !important;
+                    }
+                }
+
+                .el-dialog__body {
+                    position: relative;
+                    border-top: 0.5px solid $n-borderColor;
+                }
+
+                .el-dialog__footer {
+                    padding: 10px !important;
+                }
+            }
+        }
+
+        //退出登录
+        #quit {
+            /deep/ .el-dialog {
+                width: 94% !important;
+            }
+        }
+
+        .mask {
+            width: 100%;
+            height: 100%;
+            background-color: transparent !important;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 12;
+
+            .maxW {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 9;
+                height: 100%;
+
+                .aside-header {
+                    background-color: $foregroundColor_1 !important; // 高亮
+                }
+            }
+        }
+
+        .el-container {
+            width: 100%;
+
+            .indexHeader {
+                height: 64px !important;
+
+                &>a {
+                    position: absolute;
+                    left: 16px;
+                    display: inline-block !important;
+                    font-size: 24px;
+                    color: $textColor_1;
+
+                    i {
+                        font-size: 24px;
+                        margin-right: 10px;
+                        vertical-align: bottom;
+                    }
+                }
+
+                .header-right {
+                    border-radius: 20px;
+                    height: 40px !important;
+                    line-height: 40px;
+                    margin-top: 10px;
+                    background-color: $middleColor_1;
+
+                    .el-avatar {
+                        margin: 0 4px !important;
+                    }
+                }
+
+                .iconquanping {
+                    display: none;
+                }
+            }
+
+            .breadcrumb {
+                display: none;
+                height: 48px !important;
+                padding-left: 16px !important;
+            }
+
+            .el-main {
+                height: calc(100% - 112px) !important;
+            }
+        }
+    }
+
+    // 带有返回icon头部title样式
+    .mobileTilte {
+        width: 100%;
+        height: 64px;
+        width: 100%;
+        color: #f0f4ff;
+        font-size: 1.25rem;
+        font-weight: 600;
+
+        .el-icon-arrow-left {
+            display: inline-block;
+        }
+    }
+
+    //弹窗顶部title整行样式
+    .mobileDialogTitle {
+        width: 100%;
+        height: 64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        font-size: 1.25rem;
+
+        span:last-child {
+            color: #3875ff;
+        }
+    }
+
+    // 手机端分页去除跳转及跳转页码显示
+    .el-pagination {
+        text-align: center;
+
+        .el-pagination__sizes,
+        .el-pagination__jump {
+            display: none !important;
+        }
+    }
+
+    // 普通弹窗
+    .el-message {
+        min-width: 280px !important;
+        width: 94% !important;
+    }
+
+    .el-message-box {
+        width: 94% !important;
+        margin: auto;
+    }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
+    .pcHide {
+        display: none !important;
+    }
+
+    #index {
+        .minW-active {
+            width: 64px !important;
+        }
+
+        .el-container {
+            .indexHeader {
+                min-width: 800px;
+            }
+        }
+    }
+
+    .toBack {
+        display: none;
+    }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+    .pcHide {
+        display: none !important;
+    }
+
+    #index {
+        .minW-active {
+            width: 64px !important;
+        }
+
+        .el-container {
+            .indexHeader {
+                min-width: 800px;
+            }
+        }
+    }
+
+    .toBack {
+        display: none;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .pcHide {
+        display: none !important;
+    }
+
+    #index {
+        .minW-active {
+            width: 64px !important;
+        }
+
+        .el-container {
+            .indexHeader {
+                min-width: 800px;
+            }
+        }
+    }
+
+    .toBack {
+        display: none;
+    }
+
+    /deep/ .el-date-range-picker__header {
+        /deep/ .el-icon-arrow-left {
+            display: inline-block !important;
+        }
+
+        .el-icon-arrow-left {
+            display: inline-block !important;
+        }
+    }
+}

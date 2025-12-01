@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>升级</title>
+    <defs>
+        <radialGradient cx="50%" cy="-5.44009282e-13%" fx="50%" fy="-5.44009282e-13%" r="57.9053845%" gradientTransform="translate(0.500000,-0.000000),scale(1.000000,0.984426),rotate(90.000000),translate(-0.500000,0.000000)" id="radialGradient-1">
+            <stop stop-color="#FFCA90" offset="0%"></stop>
+            <stop stop-color="#FF9842" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="「31」切图" transform="translate(-513.000000, -176.000000)">
+            <g id="编组-18备份-5" transform="translate(519.000000, 182.000000)">
+                <path d="M8.64346974,0 L1.35665278,0 C0.600833129,0 0,0.62019113 0,1.35665278 L0,8.80167232 C0,9.55749197 0.62019113,10.1582026 1.35665278,10.1582026 L8.64346974,10.1582026 C9.37993139,10.1582026 10,9.53801145 10,8.80167232 L10,1.35665278 C10,0.60071061 9.37980887,0 8.64346974,0 Z" id="形状" fill="url(#radialGradient-1)"></path>
+                <path d="M5.05239053,2.22609593 L3.41054688,4.70632172 L4.43666255,4.70632172 L4.43666255,6.6329946 L5.66821403,6.6329946 L5.66821403,4.70632172 L6.69425328,4.70632172 L5.05239053,2.22609593 Z M3.41054688,7.3754337 L6.69425328,7.3754337 L6.69425328,7.82762555 L3.41054688,7.82762555 L3.41054688,7.3754337 Z" id="形状" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

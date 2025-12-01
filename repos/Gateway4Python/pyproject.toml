@@ -1,0 +1,30 @@
+[project]
+name = "gw.mini.datacenter"
+version = "1.0.4"
+authors = [
+  { name="LiHao", email="lihao@ganweisoft.com" },
+]
+description = "GWMiniDataCenter的python实现。用于边缘网关的下级，使用mqtt上传实时消息"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = {file = "LICENSE"}
+#license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "chardet>=5.2.0",
+    "cryptography>=44.0.1",
+    "pyserial>=3.5",
+    "dapr>=1.15.0",
+    "dapr-ext-grpc>=1.15.0"
+]
+
+[project.urls]
+Homepage = "https://gitee.com/ganweicloud/gw-mini-datacenter-python"
+Issues = "https://gitee.com/ganweicloud/gw-mini-datacenter-python"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

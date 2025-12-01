@@ -1,0 +1,30 @@
+.el-notification.success {
+    background-color: #f0ffe2;
+}
+
+.el-notification.warning {
+    background-color: #fffbe6;
+}
+
+.el-notification.error {
+    background-color: #fff2f1;
+}
+
+.el-notification.info {
+    background-color: #e6f7ff;
+}
+
+.el-notification.info .el-icon-info {
+    color: #1690ff;
+}
+
+.el-notification .el-notification__title {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--notification-color);
+}
+
+.el-message {
+    background-color: var(--message-background);
+    border-color: var(--message-border);
+}

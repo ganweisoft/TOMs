@@ -1,0 +1,84 @@
+@mixin icondianFize {
+    font-size: 0.8rem;
+}
+
+.disPlayNone {
+    display: none !important;
+}
+
+.disPlayBlock {
+    display: block !important;
+}
+
+.showSetParm {
+    min-width: 680px !important;
+}
+
+.STTreeMenu {
+    width: 55% !important;
+}
+
+.equipSelectDialog {
+    ::v-deep(.EquipSelectDialog) {
+        height: 620px;
+        margin-top: 0px !important;
+
+        .el-dialog__body {
+            width: 100%;
+            height: calc(100% - 72px - 64px);
+            padding: 16px;
+
+            .noData {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .treeMenu {
+                height: 100%;
+            }
+
+            .treeMenuBox {
+                height: 100%;
+                overflow: hidden;
+
+                .el-input {
+                    margin-bottom: 12px;
+                }
+
+                .main {
+                    height: calc(100% - 52px);
+                    overflow: auto;
+                    padding: 8px;
+                    background-color: var(--frame-main-background);
+                }
+            }
+        }
+
+        .dialogTitle {
+            display: flex;
+            font-size: 18px;
+            color: #f0f4ff;
+
+            span:last-child {
+                display: inline-block;
+                width: 45%;
+            }
+
+            span:first-child {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+
+        .operation {
+            position: absolute;
+            right: 10px;
+            color: white;
+        }
+    }
+
+}
+

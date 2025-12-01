@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>9.0.0.1</Version>
+    <Description>敢为物联网平台服务端程序框架，用以提供敢为物联网平台宿主程序对外访问的接口和消息推送。
+9.0.0基于.NET9.0实现</Description>
+    <SignAssembly>true</SignAssembly>
+    <PackageId>IoTCenterHost.Core.Extension</PackageId>
+    <Authors>IoTCenterHost.Core.Extension</Authors>
+    <Product>IoTCenterHost.Core.Extension</Product>
+	  <IsPackable>true</IsPackable>
+	  <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+	  <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+	  <EnableNETAnalyzers>False</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="Google.Protobuf" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+  </ItemGroup>
+
+</Project>

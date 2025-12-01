@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option csharp_namespace = "IoTCenterHost.Proto";
+
+package IoTCenterHost.Proto;
+import "common.proto";  
+service Tool { 
+	rpc Encrypt (StringResult) returns (StringResult); 
+	rpc Decrypt (StringResult) returns (StringResult);  
+	rpc EncryptWithSalt (StringResult) returns (StringResult);  
+	rpc DecryptWithSalt (StringResult) returns (StringResult);  
+	rpc BatchDecryptWithSalt (StringResult) returns (StringResult);  
+	rpc BatchEncryptWithSalt (StringResult) returns (StringResult);  
+} 

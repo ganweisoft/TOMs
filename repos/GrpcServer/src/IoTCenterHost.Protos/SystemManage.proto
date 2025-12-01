@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "IoTCenterHost.Proto";
+
+package IoTCenterHost.Proto;
+import "common.proto";  
+import "google/protobuf/empty.proto"; 
+
+
+service SystemManage { 
+	rpc AddRole (StringResult) returns (BoolDefine); 
+	rpc DeleteRole (StringResult) returns (BoolDefine); 
+	rpc GetRoleEntities (StringResult) returns (BaseResult); 
+	rpc ModifyRole (StringResult) returns (BoolDefine); 
+	rpc GetUserEntities (StringResult) returns (BaseResult); 
+	rpc GetWebUser (StringResult) returns (StringResult); 
+	rpc AddUserEntity (StringResult) returns (BoolDefine); 
+	rpc DeleteUserEntity (IntegerDefine) returns (BoolDefine); 
+	rpc ModifyUserEntity (StringResult) returns (BoolDefine); 
+	rpc RevisePassword (StringResult) returns(BoolDefine);
+} 

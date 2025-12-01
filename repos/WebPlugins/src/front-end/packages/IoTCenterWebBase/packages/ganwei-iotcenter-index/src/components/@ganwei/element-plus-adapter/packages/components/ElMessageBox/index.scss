@@ -1,0 +1,57 @@
+.el-message-box {
+    border: unset;
+    padding-bottom: 0;
+    background-color: var(--message-box-background);
+}
+
+.el-message-box .el-message-box__status {
+    font-size: 20px !important;
+}
+
+.el-message-box .el-message-box__status+.el-message-box__message {
+    padding-left: 28px;
+}
+
+.el-message-box .el-message-box__header {
+    color: var(--message-box-color);
+}
+
+.el-message-box .el-message-box__header .el-message-box__title {
+    color: var(--message-box-color);
+}
+
+.el-message-box .el-message-box__content {
+    color: var(--message-box-color);
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+.el-message-box .el-message-box__content p {
+    line-height: 14px;
+}
+
+.el-message-box .el-button--default {
+    color: #ffffff;
+}
+
+.el-message-box .el-message-box__btns {
+    padding: 20px;
+}
+
+.el-message-box .el-message-box__btns .el-button {
+    width: 92px;
+    color: var(--message-box-button-color);
+    padding: 8px 22px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+.el-message-box .el-message-box__btns .el-button:first-child {
+    background-color: transparent;
+    border: 1px solid var(--gw-color-primary);
+    color: var(--gw-color-primary);
+}
+
+.el-message-box .el-message-box__btns .el-button:nth-child(2) {
+    color: var(--message-box-button-color);
+}

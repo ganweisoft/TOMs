@@ -1,0 +1,5 @@
+chardet==5.2.0
+cryptography==44.0.1
+pyserial==3.5
+dapr==1.15.0
+dapr-ext-grpc==1.15.0

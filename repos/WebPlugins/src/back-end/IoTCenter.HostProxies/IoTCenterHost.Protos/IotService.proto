@@ -1,0 +1,110 @@
+syntax = "proto3"; 
+import "google/protobuf/empty.proto";
+import "common.proto"; 
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "IoTCenterHost.Proto";
+  
+package IoTCenterHost.Proto;
+ 
+service IotService {  
+	rpc Login (LoginModel) returns (BaseResult);
+	rpc CloseSession (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc GetEquipStateFromEquipNo (IntegerDefine) returns (EquipStateReply);
+	rpc GetEquipStateFromEquipNoList (StringResult) returns (StringResult);
+	rpc GetEquipStateDict (google.protobuf.Empty) returns (GetEquipStateDictReply);
+	rpc GetYCValue (GetYCAlarmStateRequest) returns (BaseResult);
+	rpc GetYCValueDictFromEquip (IntegerDefine) returns (BaseResult);
+	rpc GetYCAlarmState (GetYCAlarmStateRequest) returns (BoolDefine);
+	rpc GetYCAlarmStateDictFromEquip (IntegerDefine) returns (BaseResult);
+	rpc GetYXValue (GetYXValueRequest) returns (StringResult);
+	rpc GetYXValueDictFromEquip (IntegerDefine) returns (BaseResult);
+	rpc GetYXAlarmState (GetYXAlarmStateRequest) returns (BoolDefine);
+	rpc GetYXEvt01 (GetYXEvt01Request) returns (BaseResult);
+	rpc GetYXEvt10 (GetYXEvt01Request) returns (BaseResult);
+	rpc GetYXAlarmStateDictFromEquip (IntegerDefine) returns (BaseResult);
+	rpc GetCurveData (GetCurveDataRequest) returns (ByteArrDefine);
+	rpc GetCurveData1 (GetCurveData1Request) returns (ByteArrDefine);
+	rpc GetDataFromCurve (GetDataFromCurveRequest) returns (StringResult);
+	rpc GetChangedDataFromCurveAsync (GetChangedDataFromCurveAsyncRequest) returns (StringResult);
+
+	rpc SetEquipDebug (SetEquipDebugRequest) returns (google.protobuf.Empty); 
+	rpc GetEquipDebugState (IntegerDefine) returns (BoolDefine);  
+
+	rpc SetParm (SetParmRequest) returns(google.protobuf.Empty);  
+	rpc SetParmEx (SetParmRequest) returns(stream StringResult);   
+	rpc SetParmCallback (SetParmRequest) returns(stream StringResult);  
+	rpc SetParm_1 (SetParm_1Request) returns(google.protobuf.Empty); 
+	rpc SetParm1 (SetParm1Request) returns(google.protobuf.Empty); 
+	rpc SetParm1_1 (SetParm1_1Request) returns(google.protobuf.Empty); 
+	rpc SetParm2 (SetParm2Request) returns(google.protobuf.Empty); 
+	rpc SetParm2_1 (SetParm2_1Request) returns(google.protobuf.Empty);
+	rpc SetParm2_1Ex (BaseResult) returns(google.protobuf.Empty);
+	rpc DoEquipSetItem (SetParm1_1Request) returns(StringResult);
+	rpc HaveYCP (IntegerDefine) returns (BoolDefine);
+	rpc HaveYXP (IntegerDefine) returns (BoolDefine);
+	rpc HaveSet (IntegerDefine) returns (BoolDefine); 
+	rpc HaveHistoryCurve (HaveHistoryCurveRequest) returns (BoolDefine); 
+	rpc GetEquipListStr (google.protobuf.Empty) returns (BaseResult);
+	rpc GetYCPListStr (IntegerDefine) returns(BaseResult);
+	rpc GetYXPListStr (IntegerDefine) returns(BaseResult);
+	rpc GetSetListStr (IntegerDefine) returns (BaseResult);
+	rpc GetYCAlarmComments (HaveHistoryCurveRequest) returns (BaseResult);
+	rpc GetYXAlarmComments (HaveHistoryCurveRequest) returns (BaseResult);
+	rpc GetVersionInfo (google.protobuf.Empty) returns (BaseResult);
+	rpc GetTotalRTYCItemData1 (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc GetChangedRTYCItemData1 (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc GetChangedRTYXItemData1 (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc GetTotalRTEquipItemData1 (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc GetChangedRTEquipItemData1 (google.protobuf.Empty) returns (google.protobuf.Empty); 
+	rpc GetAddRTEquipItemData (google.protobuf.Empty) returns (IntegerArrReply);
+	rpc GetDelRTEquipItemData (google.protobuf.Empty) returns (IntegerArrReply);
+	rpc GetEditRTEquipItemData (google.protobuf.Empty) returns (IntegerArrReply);
+
+	rpc FirstGetRealEventItem1 (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc GetAddRealEventItem1 (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc GetDelRealEventItem1 (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc DeleteDebugInfo (IntegerDefine) returns (google.protobuf.Empty); 
+	rpc DeleteDebugInfoEx (ConfirmedRealTimeEventItemRequest) returns (google.protobuf.Empty);  
+	rpc ConfirmedRealTimeEventItem (StringResult) returns (google.protobuf.Empty);   
+	rpc GetRealTimeEventItem (StringResult) returns (BaseResult);   
+	rpc ContainsRealTimeEventItem (StringResult) returns (BoolDefine);   	
+	rpc ResetEquips (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc ResetEquipsEx (StringResult) returns (google.protobuf.Empty); 
+
+	rpc ResetEquipmentLinkage (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc ResetProcTimeManage (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc ResetGWDataRecordItems (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc ResetDelayActionPlan (google.protobuf.Empty) returns (google.protobuf.Empty);
+
+	rpc SetEquipNm (SetEquipNmDefine) returns (google.protobuf.Empty);
+	rpc SetEquipNmEx (SetYcpNmRequest) returns (google.protobuf.Empty);
+	rpc SetYxpNm (SetYxpNmRequest) returns (google.protobuf.Empty);
+	rpc SetYcpNm (SetYxpNmRequest) returns (google.protobuf.Empty);
+	rpc MResetYcYxNo (MResetYcYxNoRequest) returns (google.protobuf.Empty);
+
+	rpc GetPropertyFromPropertyService (GetPropertyFromPropertyServiceRequest) returns (BaseResult);
+	rpc SetPropertyToPropertyService (GetPropertyFromPropertyServiceRequest) returns (google.protobuf.Empty);
+	
+	rpc AddChangedEquip (ChangedEquip) returns (google.protobuf.Empty);
+	rpc AddChangedEquipList (StringResult) returns (google.protobuf.Empty);
+	rpc ShowMsg2GUID (ShowMsg2GUIDRequest) returns (google.protobuf.Empty); 
+	rpc GetImageFromSvr1 (GetImageFromSvr1Request) returns (ByteArrDefine); 
+	rpc SetWuBao (SetWuBaoRequest) returns (BoolDefine); 
+	rpc SetNoAlarm (SetNoAlarmRequest) returns (BoolDefine); 
+	rpc DoExProcSetParm (DoExProcSetParmRequest) returns (google.protobuf.Empty); 
+	rpc Confirm2NormalState (Confirm2NormalStateRequest) returns (BoolDefine); 
+	rpc GetTotalRTYXItemData (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc GetChangedRTYXItemData (google.protobuf.Empty) returns (google.protobuf.Empty);
+	rpc DoSetParmFromString (BaseResult) returns (google.protobuf.Empty);
+	rpc GetTotalRTYXItemData1 (google.protobuf.Empty) returns (google.protobuf.Empty); 
+	rpc GetYXPListByEquipNo (StringResult) returns (StringResult);  
+	rpc GetYCPListByEquipNo (StringResult) returns (StringResult);   
+	rpc SetHistoryStorePeriod (IntegerDefine) returns (google.protobuf.Empty); 
+	rpc GetHistoryStorePeriod (google.protobuf.Empty) returns (BaseResult); 
+	rpc GetEquipDict(StringResult) returns (StringResult);
+	rpc GetYXPDict(StringResult) returns (StringResult);
+	rpc GetYCPDict(StringResult) returns (StringResult);
+
+	rpc GetGWEventInfo(StringResult) returns (EventInfoResultList);
+	
+} 

@@ -1,0 +1,426 @@
+:root {
+    --color-primary: #fff;
+    --color-text-primary: #f0f4ff;
+    --color-text2: rgba(240, 244, 255, 0.88);
+    --color-text1: rgba(240, 244, 255, 0.56);
+    --input-btn-color: #d3d8e2;
+    --border-color-base: rgba(240, 244, 255, 0.16);
+    --background-color-base: #121622;
+    --background1: #181c29;
+    --background2: #202534;
+    --inputbackground3: #0c0e14;
+    --front-color: #252833;
+    --btn-background-primary: #3b4357;
+    --btn-color-primary: rgba(240, 244, 255, 0.88);
+    --btn-color: #fff;
+    --control-background: #3875ff;
+    --btn-hover-primary: #2769c2;
+    --background-color-light: #313747;
+    --table-icon-edit-color: #346ae4;
+    --table-icon-del-color: #bf2533;
+    --success: #63e03f;
+    --alarm: #f22433;
+    --warning: #f5bb36;
+    --h-color: #5386bb;
+    --mask: rgba(0, 0, 0, 0.3);
+    --mask1: rgba(0, 0, 0, 0.3);
+
+    --nav-bgColor: #252833;
+    --nav-bgColor1: #181c29;
+    --nav-bgColor2: #181c29;
+    --nav-bgColor3: #252833;
+    --nav-bgColor4: #181c29;
+    --nav-bgColor5: #202534;
+    --nav-bgColor6: #3f495f;
+    --nav-txColor: rgba(240, 244, 255, 0.56);
+    --nav-txColor1: #8b8f97;
+    --nav-iconColor: rgba(240, 244, 255, 0.56);
+
+    --asideColor: rgba(240, 244, 255, 0.56);
+
+    --nav-hoverBgColor: #181c29;
+    --nav-hoverTxColor: #f0f4ff;
+    --nav-hoverIconColor: #f0f4ff;
+    --nav-selBgColor: #3875ff;
+    --nav-selBgColor2: #3875ff;
+    --nav-selTxColor: #f0f4ff;
+    --nav-selIconColor: #f0f4ff;
+
+    --btn-bgColor: #3875ff;
+    --btn-bgColor1: rgba(59, 67, 87, 0.64);
+    --btn-bgColor2: #f22433;
+    --btn-bgColor3: #3b4357;
+    --btn-bgColor4: #252833;
+    --btn-bgColor5: #3b4357;
+    --btn-bgColor6: #13c2c2;
+    --btn-bgColor7: #eafaf4;
+    --btn-disableBgColor: #0c79dd;
+    --btn-bgColor8: #3b4357;
+    --btn-bgColor9: #0c0e14;
+    --btn-bgColor10: #313747;
+    --btn-selectBgColor: #3875ff;
+    --btn-txColor: #e6edff;
+    --btn-txColor1: #3875ff;
+    --btn-txColor2: rgba(240, 244, 255, 0.88);
+    --btn-txColor3: #fff;
+    --btn-txColor4: #f56c6c;
+    --btn-txColor5: #e6edff;
+    --btn-txColor6: #f22433;
+    --btn-txColor7: #313747;
+    --btn-txColor8: #2cd08c;
+    --btn-txColor9: #3875ff;
+    --btn-txColor10:#0987e5;
+    --btn-iconColor: #e6edff;
+    --btn-iconColor1: #d3d8e2;
+    --btn-iconColor2: #3875ff;
+    --btn-borderColor: #3875ff;
+    --btn-borderColor1: rgba(240, 244, 255, 0.16);
+    --btn-borderColor2: #464954;
+    --btn-borderColor3: #d5f6e8;
+    --btn-hoverBgColor: rgba(59, 67, 87, 1);
+    --btn-hoverBgColor1: rgba(240, 244, 255, 0.16);
+    --btn-hoverBgColor2: #2769c2;
+    --btn-hoverBgColor3: #253045;
+    --btn-hoverBgColor4: #3b4357;
+    --btn-hoverBgColor5: #2f3544;
+    --btn-hoverTXColor: #3875ff;
+    --btn-hoverTXColor1: #f0f4ff;
+    --btn-hoverBorColor: #264069;
+
+    --tab-bgColor: #0c0e14;
+    --tab-bgColor2: #252833;
+    --tab-bgColor3: #323745;
+    --tab-bgColor4: #202533;
+    --tab-bgColor5: #1c2230;
+    --tab-bgColor6: #1c2230;
+    --tab-bgColor7: #121622;
+    --tab-txColor: rgba(240, 244, 255, 0.5);
+    --tab-txColor1: rgba(240, 244, 255, 0.56);
+    --tab-txColor2: #626d84;
+    --tab-borderColor: transparent;
+    --tab-borderColor1: transparent;
+    --tab-selBgColor: #121622;
+    --tab-selBgColor2: #141722;
+    --tab-selBgColor3: #1f2432;
+    --tab-selBgColor4: #1f2432;
+    --tab-selBgColor5: #1c2230;
+    --tab-selTXColor: #f0f4ff;
+    --tab-selTXColor1: #ffffff;
+    --tab-hoverTXColor: #3875ff;
+    --tab-hoverBg: #1f2432;
+    --tab-actColor: #313747;
+
+    --input-bgColor: #0c0e14;
+    --input-bgColor2: #181c29;
+    --input-bgColor3: #313747;
+    --input-bgColor4: #121927;
+    --input-bgColor5: #151a27;
+    --input-bgColor6: #121927;
+    --input-disabled-bgColor: #29303f;
+    --input-btnBgColor3: #26282c;
+    --input-btnBorColor: #323848;
+    --input-btnBgColor: #f0f4ff;
+    --input-txColor: #d3d8e2;
+    --input-txColor1: #f0f4ff;
+    --input-plaColor: #2d2e30;
+    --input-plaColor1: rgba(240, 244, 255, 0.64);
+    --input-iconColor: #8f9091;
+    --input-iconColor1: #f0f4ff;
+    --input-borderColor: rgba(240, 244, 255, 0.16);
+    --input-borderColor1: rgba(235, 236, 240, 0.5);
+    --input-borderColor2: rgba(240, 244, 255, 0.16);
+    --input-borderColor3: #3d4a63;
+    --input-selBorColor: #3875ff;
+    --input-hoverBorColor: #8f9091;
+
+    --textarea-fontColor: #fafafa;
+    --textarea-backgroundColor: #0c0e14;
+    --textarea-borderColor: rgba(240, 244, 255, 0.16);
+
+    --txt-color-1: #3875ff;
+    --txt-color-2: #ff7a00;
+
+    --table-headerBgColor: #181c29;
+    --table-headerBgColor2: #29303f;
+    --table-txColor: #f0f4ff;
+    --table-headerTXColor: #8d929d;
+    --table-borderColor: #000;
+    --table-rowBgColor: #252833;
+    --table-hoverRowBgColor: #3b4357;
+    --table-rowBgColor-strip: #1c2230;
+    --table-rowBgColor-strip2: #151a27;
+    --table-iconEdit: #346ae4;
+    --table-iconDel: #bf2533;
+    --table-borderBottomColor: #181c29;
+
+    --con-textColor1: #f0f4ff;
+    --con-textColor2: rgba(240, 244, 255, 0.88);
+    --con-textColor3: rgba(240, 244, 255, 0.64);
+    --con-textColor4: rgba(240, 244, 255, 0.56);
+    --con-textColor5: rgba(240, 244, 255, 0.32);
+    --con-textColor6: rgba(240, 244, 255, 0.16);
+    --con-textColor7: rgba(240, 244, 255, 0.08);
+    --con-textColor8: #f0f4ff;
+    --con-textColor9: #b7b7ba;
+    --con-textColor10: #f0f4ff;
+    --con-textColor11: #f0f4ff;
+    --con-textColor12: #f0f0f0;
+    --con-textColor13: linear-gradient(to top, #2c75d8, #61c5fe);
+    --con-textColor14: #cccccc;
+    --con-textColor15: #999999;
+    --con-textColor16: #dbdbdb;
+    --con-textColor17: #7af8ff;
+    --con-textColor18: #999999;
+    --con-textColor19: #cccccc;
+    --con-textColor20: #999999;
+    --con-textColor21: #f8c161;
+    --con-textColor22: #0adae6;
+    --con-textColor23: #dbdbdb;
+    --con-textColor24: #dfdfdf;
+    --con-textColor25: #999999;
+    --con-textColor26: #dbdbdb;
+    --con-textColor27: #f0f4ff;
+    --con-textColor28: #666666;
+    --con-textColor29: #4df6af;
+    --con-bgColor1: #090f1a;
+    --con-bgColor2: #0c0e14;
+    --con-bgColor3: #181c29;
+    --con-bgColor4: #252833;
+    --con-bgColor5: #313747;
+    --con-bgColor5-1: #313747;
+    --con-bgColor6: #3b4357;
+    --con-bgColor6-1: #3b4357;
+    --con-bgColor7: #181c29;
+    --con-bgColor8: transparent;
+    --con-bgColor9: #3e3e42;
+    --con-bgColor10: #1d1e20;
+    --con-bgColor11: #2d2e30;
+    --con-bgColor12: #3b4357;
+    --con-bgColor13: linear-gradient(-43deg, #181c29, #3b4357);
+    --con-bgColor14: #313747;
+    --con-bgColor15: #313747;
+    --con-bgColor16: transparent;
+    --con-bgColor17: #313747;
+    --con-bgColor18: #252833;
+    --con-bgColor19: #202534;
+    --con-bgColor20: #1f2535;
+    --con-bgColor21: #29303f;
+    --con-bgColor22: #121622;
+    --con-bgColor23: #242938;
+    --con-bgColor24: rgba(63, 72, 95, 0.39);
+    --con-bgColor25: #2b3245;
+    --con-bgColor26: #121927;
+    --con-bgColor27: #1f2535;
+    --con-bgColor28: #293040;
+    --con-bgColor29: #1b1f2c;
+    --con-bgColor30: #555555;
+    --con-bgColor31: #252936;
+    --con-borderColor: rgba(240, 244, 255, 0.16);
+    --con-borderColor1: rgba(240, 244, 255, 0.16);
+    --con-borderColor2: rgba(240, 244, 255, 0.08);
+    --con-borderColor3: #3b4860;
+    --con-borderColor4: #3d4a63;
+    --con-borderColor5: rgba(240, 244, 255, 0.08);
+    --con-borderHoverColor: #8f9091;
+    --con-borderHoverColor2: #5d709b;
+
+    --con-themeColor: #3875ff;
+    --con-themeColor2: #2669ec;
+    --con-successColor: #63e03f;
+    --con-alarmColor: #f22433;
+    --con-alarmColor2: #f73231;
+    --con-warningColor: #f5bb36;
+
+    --border-color-1: rgba(61, 74, 99, 0.51);
+    --border-color-2: #3d4a63;
+    --border-color-3: #30384b;
+    --border-color-4: #30384b;
+    --border-color-5: #5E6576;
+    --bor-default: rgba(240, 244, 255, 0.16);
+    --bor-primary: #3875ff;
+    --bor-danger: #f22433;
+    --bor-light: #fff;
+
+    --dialog-textColor1: #f0f4ff;
+    --dialog-textColor2: rgba(240, 244, 255, 0.56);
+    --dialog-bgColor: #1f2535;
+    --dialog-bgColor2: #181c29;
+    --dialog-bgColor3: #0c0e14;
+    --dialog-bgColor4: #1f2535;
+    --dialog-groupBgColor: #313747;
+    --dialog-groupBgColor2: #313747;
+    --dialog-labelBgColor: #313747;
+    --dialog-shadow: 0px 12px 20px 0px rgba(12, 14, 20, 0.64);
+
+    --tips-textColor1: #f0f4ff;
+    --tips-textColor2: rgba(240, 244, 255, 0.56);
+    --tips-bgColor: #252833;
+    --tips-text: #999999;
+
+    --sel-textColor: #f0f4ff;
+    --sel-bgColor: #0c0e14;
+    --sel-tagtextColor: rgba(240, 244, 255, 0.56);
+    --sel-tagBgColor: #252833;
+    --sel-tagIconColor: rgba(240, 244, 255, 0.56);
+
+    --dropdown-bgColor: #0c0e14;
+    --dropdown-bgColor1: rgba(0, 0, 0, 0.8);
+
+    --page-textColor: #c1c1c1;
+    --page-textColor1: #888;
+    --page-bgColor: #3875ff;
+    --page-borColor: #313747;
+    --page-bgColor2: #272c3d;
+
+    --tree-bgColor: #313747;
+    --tree-bgColor1: #252833;
+    --tree-bgColor2: #212533;
+    --tree-bgColor3: #181c29;
+    --tree-bgColor4: #252833;
+    --tree-bgColor5: transparent;
+    --tree-bgColor6: #2c3342;
+    --tree-bgColor7: #202534;
+    --tree-bgColor8: #2c3342;
+    --tree-txColor: #fff;
+    --tree-txColor1: rgba(240, 244, 255, 0.88);
+    --tree-iconColor: #fff;
+    --tree-selBgColor: #3b4357;
+    --tree-selBgColor1: #3875ff;
+    --tree-selTXColor: #fff;
+    --tree-linearColor: #8c8c8c;
+    --tree-borderColor: rgba(240, 244, 255, 0.16);
+    --tree-borderColor1: #353843;
+    --tree-labelBg: #313747;
+
+    --radio-bgColor: #252833;
+    --radio-selectBg: #3875ff;
+    --radio-selectBorder: #252833;
+
+    --switch-bgColor: #121927;
+    --switch-bgColor1: #337cef;
+
+    --popover-bgColor: #121623;
+    --popover-bgColor2: #313747;
+    --popover-bgColor3: rgba(3, 3, 3, 1);
+    --popover-txColor: #fff;
+    --popover-borderColor: rgba(240, 244, 255, 0.16);
+    --popover-borderColor2: #595959;
+    --popover-borderColor3: #2a2d3a;
+    --popover-hoverBgColor: #3875ff;
+    --popover-hoverTXColor: #fff;
+
+    --scrollbar-bgColor: #313747;
+
+    --avater-textColor: #181c29;
+    --avater-baColor: rgba(240, 244, 255, 0.64);
+
+    --datePanelBg: #121622;
+    --timeHeaderColor: #f0f4ff;
+    --pickerHeaderBg: #3b4357;
+    --iconBtnColor: #3875ff;
+    --pickRangeBg: #2b4074;
+    --footerBtnColor: #f22433;
+    --datePick-selectRangeBg: #3b4357;
+    --datePick-selectColor: #252833;
+    --timePick-hoverBg: #5e5f5f;
+
+    --noData-fontColor: #ced2dd;
+    --noData-fontColor1: #91a2af;
+
+    --fc-todayBg: #0d1f4c;
+
+    --radar-bgColor: transparent;
+    --radar-title: #3875ff;
+
+    --tag-title: #abceff;
+    --tag-unit: #f0f0f0;
+    --tag-number1: #f0f0f0;
+    --tag-number2: #f0f0f0;
+    --tag-number3: #f0f0f0;
+    --tag-number4: #f0f0f0;
+    --tag-number5: #f0f0f0;
+
+    --timeLine-default: #3d4a63;
+    --timeLine-infosBg: #29303f;
+    --timeLine-dot1: #8d929d;
+    --timeLine-dotBorder1: #3775ff;
+    --timeLine-dotBorder2: #1b2231;
+    --timeLine-line: #8d929d;
+
+    --list-bgColor-1: #202534;
+    --list-bgColor-2: #3b4357;
+    --list-bgColor-3: #29303f;
+    --list-labelBg: #313747;
+
+    --snapshots-bg: #1e2332;
+    --snapshots-bor: -webkit-linear-gradient(
+        -40deg,
+        #3368df 0%,
+        transparent 10%,
+        transparent 90%,
+        #3875ff 100%
+      )
+      10;
+    --snapshot-bor: #1b1f2c;
+    --snapshot-bg: #1b1f2c;
+    --snapshot-bs: rgba(0, 0, 0, 0.44);
+    --snapshot-number: #7af8ff;
+
+    --splitline-bor1: #414653;
+    --splitline-bor2: rgba(0, 0, 0, 1);
+
+    --notifyBg: #f0ffe2;
+    --notifytitle: #222222;
+    --notifytext: #8b8f97;
+
+    --line-color: rgba(240, 244, 255, 0.16);
+    --line-color-1: rgba(240, 244, 255, 0.16);
+    --line-finish: #3875ff;
+
+    --types-fc-opacity: rgba(240, 244, 255, 0.64);
+    --types-fc-opacity2: rgba(240, 244, 255, 0.64);
+    --types-fc-opacity3: rgba(240, 244, 255, 0.64);
+    --types-fc: #f0f4ff;
+
+    --active-bg: #1c2230;
+    --active-fc: #c2c2c2;
+    --descriptions-bor: #313543;
+    --descriptions-fc: #e8f0ff;
+
+    --loadingBg: #495266;
+    --loading-bgColor: rgba(18, 22, 34, 0.9);
+
+    --img-color-1: linear-gradient(180deg, #f2f3f5 0%, #757d93 100%);
+    --img-color-2: #8b8f97;
+
+    --top-menu-bg: #494f60;
+    --top-menu-fc: #ffffff;
+
+    --theme-hover: #353C4B;
+
+    --plugin-blue1: #0396FF;
+    --plugin-blue2: #2D94FF;
+    --plugin-bgColor1: #2C3347;
+    --plugin-bgColor2: #2B3248;
+    --plugin-bgColor3: #004678;
+    --plugin-bgColor4:#2b385c;
+    --plugin-bgColor5:#2c3347;
+    --plugin-radial-bgColor: #032283 radial-gradient(circle at 50% 50%, rgba(4, 9, 44, 0.5) 0%, rgba(102, 187, 255, 0.5) 100%, rgba(18, 76, 170, 0.5) 100%);
+    --plugin-tagColor1: #383F52;
+    --plugin-tagColor2: #383F52;
+    --plugin-tagColor3: #2b385c;
+    --plugin-tagColor4: #383F52;
+    --plugin-borderColor1:#2c3347;
+    --plugin-text1:#f0f4ff;
+    --plugin-text2:#FBD500;
+    --plugin-titleColor1:#0e7cce;
+    --plugin-downloadColor:#fff;
+
+
+    --allocation-menu-active-background: linear-gradient(
+      270deg,
+      rgba(51, 124, 239, 0.1) 0%,
+      rgba(51, 124, 239, 0.23) 100%
+    );
+    --allocation-menu-active-color: #f0f4ff;
+  }

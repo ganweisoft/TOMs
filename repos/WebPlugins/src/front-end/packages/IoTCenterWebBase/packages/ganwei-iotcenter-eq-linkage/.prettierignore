@@ -1,0 +1,13 @@
+dist
+node_modules
+public
+.husky
+.vscode
+.idea
+*.sh
+*.md
+
+src/assets
+commitlint.config.cjs
+.prettierrc.cjs
+.prettierignore

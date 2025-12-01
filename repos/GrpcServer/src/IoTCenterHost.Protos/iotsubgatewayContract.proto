@@ -1,0 +1,16 @@
+syntax = "proto3"; 
+import "google/protobuf/empty.proto";
+import "common.proto"; 
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "IoTCenterHost.Proto";  
+package IoTCenterHost.Proto;
+service iotsubgatewayContract {  
+	rpc EquipAddEvent(google.protobuf.Empty) returns(stream StringResult);
+	rpc EquipChangeEvent(google.protobuf.Empty) returns(stream StringResult);
+	rpc EquipDeleteEvent(google.protobuf.Empty) returns(stream IntegerDefine);
+	rpc EquipStateEvent(google.protobuf.Empty) returns(stream StringResult);
+	rpc YcChangeEvent(google.protobuf.Empty) returns(stream YcItemResponseList);
+	rpc YxChangeEvent(google.protobuf.Empty) returns(stream StringResult);  
+	rpc AddRealTimeSnapshot(google.protobuf.Empty) returns(stream StringResult);
+	rpc DeleteRealTimeSnapshot(google.protobuf.Empty) returns(stream StringResult);
+}    

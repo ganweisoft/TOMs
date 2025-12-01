@@ -1,0 +1,11 @@
+{
+  "name": "@ganwei-pc/gw-base-utils-plus",
+  "version": "7.0.4",
+  "type": "module",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

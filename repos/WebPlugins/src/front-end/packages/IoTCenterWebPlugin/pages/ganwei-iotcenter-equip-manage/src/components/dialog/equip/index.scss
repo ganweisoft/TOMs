@@ -1,0 +1,33 @@
+@import '../../../css/comStyle.scss';
+
+.eqYcYxDialog {
+    /deep/ .el-dialog {
+        @include el-dialog;
+    }
+}
+
+.batUseDialog {
+    .el-dialog {
+        @include el-dialog;
+        width: 500px;
+        height: 625px;
+
+        .el-dialog__body {
+            height: calc(100% - 72px - 64px);
+            overflow: auto;
+
+            .set-equip {
+                height: 100%;
+                width: 100%;
+                border: 1px solid;
+                border-color: var(--frame-main-border);
+                overflow: auto;
+                background-color: var(--frame-main-background) !important;
+
+                .treeData {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

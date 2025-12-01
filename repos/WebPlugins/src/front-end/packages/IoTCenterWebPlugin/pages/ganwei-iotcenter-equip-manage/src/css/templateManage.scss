@@ -1,0 +1,903 @@
+@import './comStyle.scss';
+@include dialog;
+
+#templateManage {
+    // width: 100%;
+    width: calc(100%);
+    min-width: 910px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; // 左侧设备列表
+
+    .overScroll {
+        width: calc(100% - 12px) !important;
+    }
+
+    .tab_btn {
+        border-radius: 3px;
+
+        display: flex;
+        height: 40px;
+
+        span {
+            display: inline-block;
+        }
+
+        .tab {
+            font-size: 16px;
+            color: var(--equiptab-color);
+            text-align: center;
+            border-radius: 2px;
+            cursor: pointer;
+
+            height: 100%;
+            line-height: 40px;
+            margin-right: -16px;
+            display: flex;
+            align-items: center;
+
+            .content {
+                min-width: 84px;
+            }
+
+            .leftBox,
+            .rightBox {
+                width: 0;
+                height: 0;
+            }
+
+            .content {
+                background-color: var(--tab-background);
+            }
+
+            .rightBox {
+                border-bottom: 40px solid var(--tab-background);
+                border-right: 20px solid transparent;
+            }
+
+            .leftBox {
+                width: 20px;
+                height: 100%;
+                background: var(--tab-background);
+            }
+
+            &:not(:first-of-type) {
+                .leftBox {
+                    width: 0;
+                    height: 0;
+                    border-top: 40px solid var(--tab-background);
+                    border-left: 20px solid transparent;
+                    background: unset;
+                }
+            }
+
+            &:hover {
+                color: var(--gw-color-primary);
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                &.onTabNavClass {
+
+                    .leftBox {
+                        width: 0;
+                        height: 0;
+                        border-top: 40px solid var(--tab-background__active);
+                        border-left: 20px solid transparent;
+                        background: unset;
+                    }
+
+                    .content {
+                        background: var(--tab-background__active);
+                    }
+
+                    .rightBox {
+                        border-bottom: 40px solid var(--tab-background__active);
+                        border-right: 20px solid transparent;
+                    }
+                }
+            }
+
+            &:first-child.onTabNavClass {
+
+                .leftBox,
+                .content {
+                    background: var(--tab-background__active);
+                }
+
+                .rightBox {
+                    border-bottom: 40px solid var(--tab-background__active);
+                    border-right: 20px solid transparent;
+                }
+            }
+        }
+
+        .onTabNavClass {
+            // color: white;
+            color: var(--equiptab-color__active) !important;
+        }
+    }
+
+    /deep/ .anologueEquipContent {
+        height: calc(100% - 110px - 68px);
+        margin-left: 20px;
+        padding: 15px 15px 0px 15px;
+        @include el-table;
+
+        .el-table {
+            height: 100%;
+
+            .el-loading-mask {
+                visibility: visible !important;
+            }
+        }
+    }
+
+    .equipList {
+        height: calc(100% + 20px);
+        // padding-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        border-right: 0.5px solid;
+        border-color: var(--frame-main-border);
+        @include main-list;
+
+        .equipListHeader {
+            @include list-title;
+
+            svg path {
+                fill: var(--con-textColor1);
+            }
+
+            height: 172px;
+
+            .el-popover__reference {
+                padding-left: 0px !important;
+            }
+
+            .equipListTitle {
+                margin-bottom: 10px;
+
+                .operateList {
+                    display: flex;
+                    // justify-content: flex-end;
+                    align-items: center;
+                    margin-top: 5px;
+
+                    /deep/ .el-button {
+                        background-color: transparent !important;
+                        border: unset !important;
+                    }
+
+                    /deep/ .el-upload-list {
+                        display: none;
+                    }
+
+                    >* {
+                        margin-right: 20px;
+                        cursor: pointer;
+                    }
+
+                    svg,
+                    span {
+                        width: 20px;
+                        height: 20px;
+                        line-height: 26px;
+                        padding: unset !important;
+                    }
+                }
+            }
+        }
+
+        .equipListHeadHeight {
+            height: 141px;
+
+            .equipListTitle {
+                .el-button {
+                    width: 88px;
+                }
+            }
+
+            .equipListTitleBtn {
+                margin-top: 8px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                line-height: 28px;
+
+                .el-button {
+                    width: 88px;
+                    font-size: 0.75rem;
+                    vertical-align: middle;
+                    color: $aside-font;
+                    background-color: $foregroundColor_3;
+                    border: 0.5px solid $n-borderColor;
+                }
+            }
+        }
+
+        .equipListMain {
+            height: calc(100% - 212px - 48px);
+            overflow: auto;
+            // padding: 0px 20px 20px 0px;
+            @include leftNoDataTips;
+
+            .el-container {
+                height: 100%;
+                overflow: auto;
+                @include firefoxScroll;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 1px;
+                // padding-right: 20px;
+
+                .equipListItem {
+                    font-size: 0.875rem;
+                    @include list-height;
+                    height: 38px;
+                    margin-bottom: 8px;
+                    padding: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 3px;
+                    // overflow: hidden;
+                    background-color: var(--tree-node-background);
+                    width: calc(100% - 20px);
+
+                    // transition: 0.1s all;
+                    color: var(--tree-node-color);
+                    cursor: pointer;
+
+                    &:hover .equipItemInfo {
+
+                        // transform: scale(1.05);
+                        p {
+                            color: var(--gw-color-primary);
+                        }
+                    }
+
+                    .index {
+                        flex-shrink: 0;
+                        width: 38px;
+                        height: 38px;
+                        text-align: center;
+                        border-top: 1px solid;
+                        border-left: 1px solid;
+                        border-bottom: 1px solid;
+                        border-color: var(--tree-node-border);
+                        background-color: var(--tree-list-index-background);
+                    }
+
+                    .equipName {
+                        flex: 1;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 38px;
+                        border-top: 1px solid;
+                        border-right: 1px solid;
+                        border-bottom: 1px solid;
+                        border-color: var(--tree-node-border);
+                        padding-right: 10px;
+                        width: calc(100% - 38px);
+                    }
+
+                    p {
+                        height: 1.2rem;
+                        line-height: 1.2rem;
+                        margin-left: 20px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                    .operations {
+                        flex-shrink: 0;
+                    }
+
+                    i {
+                        font-size: 20px;
+                        // display: none;
+                        visibility: hidden;
+                    }
+
+                    i+i {
+                        // color: #bf2533;
+                        margin-left: 8px;
+                    }
+
+                    .el-icon-copy-document {
+                        color: var(--button-primary-color);
+                    }
+
+                    &:hover {
+                        i {
+                            visibility: visible;
+                        }
+                    }
+                }
+
+                .equipListItem:hover {
+                    transition: 0.3s;
+                    // background-color: #3b4357;
+                }
+
+                .is-checked {
+                    i {
+                        visibility: visible !important;
+                    }
+
+                    .index {
+                        border-color: var(--tree-node-border__select);
+                    }
+
+                    .equipName {
+                        border-color: var(--tree-node-border__select);
+
+                        p {
+                            color: var(--gw-color-primary) !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .equipListMainHeight {
+            height: calc(100% - 189px);
+        }
+
+        /deep/ .equipPaging {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            @include pagination;
+            background-color: transparent;
+        }
+
+        .dragLine {
+            width: 3px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: w-resize;
+        }
+    }
+
+    // 右侧设备列表
+    .analogueEquip {
+        height: 100%;
+        position: relative;
+        min-width: 604px;
+        // padding: 20px;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-left: 0px !important;
+        // @include background-color('con-bgColor8');
+        @include main-container;
+
+        .anologueEquipHeader {
+            height: 110px !important;
+            display: block;
+            // border-bottom: 1px solid rgba(240, 244, 255, 0.16);
+            border: none;
+            padding-left: 20px;
+            @include page-header;
+
+            .anologueEquipHeaderTop {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                color: var(--frame-main-color);
+                font-size: 24px;
+
+                .left {
+                    // line-height: 28px;
+                    display: flex;
+                    align-items: center;
+
+                    >p {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        color: var(--frame-main-color);
+                    }
+
+                    .selectEquipNm {
+                        display: inline-block;
+                        max-width: 500px;
+                        text-overflow: ellipsis;
+                        /*主角光环自然不能少了*/
+                        -ms-text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
+                        white-space: nowrap;
+                        /*必须设置，否则无效*/
+                        overflow: hidden;
+                        /*必须设置，否则无效*/
+                        font-size: 18px;
+                        line-height: 40px;
+
+                        label {
+                            margin-left: 50px;
+                        }
+                    }
+
+                    span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .el-icon-more {
+                        width: 16px;
+                        height: 16px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--frame-main-color);
+                        transform: rotate(90deg);
+                        cursor: pointer;
+                        font-size: 24px;
+                        margin-left: 12px;
+                    }
+                }
+
+                /deep/ .el-button {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+
+                    i {
+                        // margin-right: 4px;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .header-right {
+                display: flex;
+
+                /deep/ .el-button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+
+                    .iconfont {
+                        margin-right: 4px !important;
+                    }
+                }
+            }
+
+            /deep/ .productAttr {
+                .el-textarea {
+                    margin-left: 20px;
+                }
+
+                .el-tabs__content {
+                    overflow-x: hidden !important;
+                    height: calc(100% - 150px) !important;
+                }
+
+                .el-form {
+                    .el-form-item {
+                        &__label {
+                            display: block;
+                            // text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+
+        /deep/ .anologueEquipPaging {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            @include pagination;
+            margin: 0px 20px;
+            width: calc(100% - 20px);
+
+            .el-button {
+                width: 78px;
+                height: 28px;
+                line-height: 28px;
+                padding: 0px !important;
+                border: none;
+                float: left;
+
+                .el-icon-loading {
+                    line-height: 28px !important;
+                }
+            }
+
+            .el-button--default {
+                color: $aside-font;
+                background-color: $foregroundColor_3;
+                border: 0.5px solid $n-borderColor;
+            }
+
+            button:nth-child(3) {
+                padding: 0 14px !important;
+            }
+        }
+    }
+
+    // 弹出框
+    /deep/ .el-dialog {
+        border-color: var(--frame-main-border);
+        @include el-dialog;
+
+        .el-dialog__header {
+            .el-dialog__title {
+                font-size: 18px;
+                font-weight: normal;
+            }
+
+            .title {
+                font-size: 18px;
+                height: 26px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .close {
+                    cursor: pointer;
+                }
+
+                .close {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .el-dialog__body {
+            padding: 0;
+            // border-top: 0.5px solid;
+            // border-color: var(--frame-main-border);
+
+            .tips {
+                color: var(--dialog-textColor1);
+            }
+
+            .equipDetail-equipInfo {
+                height: 723px;
+            }
+
+            .el-col {
+                position: relative;
+
+                .icons {
+                    // position: absolute;
+                    width: 16px !important;
+                    height: 16px !important;
+                    margin-left: 2px;
+                    right: 10px;
+                    top: 13px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .editDetail {
+
+                .equipDetailLeft,
+                .equipDetailRight {
+                    width: 50%;
+                    float: left;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
+                .equipDetailBasic {
+                    width: 100%;
+                }
+
+                .equipDetailSenior {
+                    width: 100%;
+                }
+
+                .tempEquipForm {
+                    padding-bottom: 20px;
+
+                    /deep/ .el-row {
+                        padding: 0 12px;
+
+                        .el-col {
+                            height: 88px;
+                            padding-left: 0px !important;
+                            padding-right: 0px !important;
+
+                            .el-form-item {
+                                padding-right: 0px !important;
+                            }
+
+                            .el-form-item__label {
+                                height: 40px;
+                            }
+
+                            .el-form-item__content {
+                                height: 80px;
+                            }
+                        }
+                    }
+
+                    .el-form {
+                        padding: 0 20px;
+
+                        .el-form-item {
+                            width: 100%;
+
+                            .el-select {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                >div {
+                    .equipDetailTitle {
+                        font-size: 0.875rem;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 0 0 20px;
+                        // margin-top: 16px;
+                        background-color: var(--frame-main-background-3);
+                        border-radius: 3px;
+                    }
+
+                    .el-form {
+                        padding-top: 8px;
+
+                        .el-row {
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+
+                        .flexBox {
+                            display: flex;
+
+                            .security-period {
+                                /deep/ .el-form-item__content {
+                                    height: 40px;
+
+                                    button {
+                                        padding: 0;
+                                        width: 100%;
+                                        height: 40px;
+                                        border: 0px;
+
+                                        span,
+                                        input {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                .item {
+                                    border: 1px solid $themeColor_alarm;
+                                }
+                            }
+
+                            /deep/ .el-button--default {
+                                border: none !important;
+                            }
+                        }
+
+                        .el-form-item {
+                            width: 100%;
+                            margin-right: 20px;
+                            margin-bottom: 4px;
+                            display: flex;
+                            transition: margin-bottom 0.3s;
+
+                            &.is-error {
+                                margin-bottom: 25px;
+                            }
+
+                            &:last-of-type {
+                                margin-right: 0;
+                            }
+
+                            .el-form-item__label {
+                                display: block;
+                                text-align: right;
+                                white-space: nowrap;
+                                padding-left: 8px;
+                                // color: $aside-font2;
+                                width: 150px;
+                                display: flex;
+                                justify-content: flex-end;
+                                flex-shrink: 0;
+
+                                .label {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-end;
+                                }
+                            }
+
+                            .el-form-item__content {
+                                display: block;
+                                width: 100%;
+
+                                .LevelOfAlarmBox {
+                                    width: 100%;
+                                    display: flex;
+
+                                    .LevelOfAlarm {
+                                        margin-left: 10px;
+                                    }
+                                }
+
+                                .el-select {
+                                    width: 100%;
+                                }
+
+                                .el-textarea__inner {
+                                    padding: 11px 15px;
+                                    max-height: 120px;
+                                }
+
+                                .el-date-editor {
+                                    width: 100%;
+                                }
+
+                                .el-date-editor.el-input {
+                                    width: 100%;
+                                }
+
+                                .el-date-editor .el-range-separator {
+                                    padding: 0;
+                                    width: 6%;
+                                }
+
+                                .el-input-number {
+                                    width: 100%;
+
+                                    .el-input-number__increase {
+                                        border-bottom: 1px solid;
+                                        border-left: 1px solid;
+                                        border-color: var(--border-color-2);
+                                    }
+                                }
+
+                                .el-input__suffix {
+                                    right: 8px;
+                                }
+
+                                .el-input__icon {
+                                    width: 16px;
+                                }
+                            }
+                        }
+
+                        .col-1-box {
+                            width: 60px;
+                        }
+
+                        .col-2-box {
+                            width: 136px;
+                        }
+
+                        .col-3-box {
+                            width: 212px;
+                        }
+
+                        .col-4-box {
+                            width: 288px;
+                        }
+
+                        .col-8-box {
+                            width: 592px;
+                        }
+                    }
+
+                    .equipDetailBox2 {
+                        border-bottom: none;
+                    }
+
+                    .el-collapse {
+                        border: none;
+
+                        .el-collapse-item__header {
+                            height: 40px;
+                            font-size: 0.875rem;
+                            border-bottom: none;
+                            background-color: var(--frame-main-background-3);
+                            color: var(--frame-main-color) !important;
+                            padding-left: 20px;
+                        }
+
+                        .el-collapse-item__wrap {
+                            border-bottom: none;
+                            background: transparent;
+                        }
+                    }
+                }
+
+                .equipDetailLeft {
+                    height: 100%;
+                    border-right: 1px solid $n-borderColor;
+                }
+
+                .equipDetailRight {
+                    height: 100%;
+                }
+
+                .equipDetailBox {
+                    width: 100%;
+                }
+            }
+
+            .handlingOpinions {
+                width: 100%;
+
+                .equipDetailTitle {
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 20px;
+                    margin: 16px 16px 6px;
+                    background: $foregroundColor_2;
+                    border-radius: 3px;
+                }
+
+                .equipDetailBox {
+                    padding: 0 20px 20px;
+
+                    .el-form {
+                        .el-form-item {
+                            width: 100%;
+                            margin-bottom: 0;
+
+                            .el-form-item__label {
+                                display: block;
+                                text-align: left;
+                                white-space: nowrap;
+                            }
+
+                            .el-form-item__content {
+                                display: block;
+
+                                .el-input__inner {
+                                    color: $aside-font;
+                                    // background-color: #0c0e14;
+                                }
+
+                                .el-textarea__inner {
+                                    padding: 11px 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            >p {
+                line-height: 78px;
+                text-align: center;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            .setTemp {
+                padding-top: 24px;
+                padding-left: 24px;
+
+                .el-form-item__label {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}

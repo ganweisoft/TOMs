@@ -1,0 +1,14 @@
+{
+  "name": "@ganwei-pc/gw-base-components-plus",
+  "version": "6.1.24",
+  "type": "module",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "vue3-virtual-scroll-list": "^0.2.1"
+  }
+}

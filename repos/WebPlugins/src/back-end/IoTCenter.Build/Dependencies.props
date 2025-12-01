@@ -1,0 +1,39 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<Import Project="Dependencies.AspNetCore.props" />
+
+	<ItemGroup>
+		<PackageManagement Include="IoTCenterHost.Core.Abstraction" Version="9.0.0.3" />
+		<PackageManagement Include="NodaTime" Version="3.2.2" />
+		<PackageManagement Include="ncrontab" Version="3.3.3" />
+		<PackageManagement Include="Dapper" Version="2.1.66" />
+		<PackageManagement Include="Serilog" Version="4.2.0" />
+		<PackageManagement Include="Serilog.Sinks.Console" Version="6.0.0" />
+		<PackageManagement Include="Serilog.Sinks.File" Version="7.0.0" />
+		<PackageManagement Include="Serilog.Settings.Configuration" Version="9.0.0"  />
+		<PackageManagement Include="Serilog.AspNetCore" Version="9.0.0" />
+		<PackageManagement Include="Serilog.Sinks.Map" Version="2.0.0" />
+		<PackageManagement Include="AutoMapper" Version="14.0.0" />
+		<PackageManagement Include="NPOI" Version="2.7.3" />
+		<PackageManagement Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageManagement Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.3.efcore.9.0.0" />
+		<PackageManagement Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.11" />
+		<PackageManagement Include="SkiaSharp" Version="3.119.0"/>
+		<PackageManagement Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="3.119.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageManagement Include="protobuf-net" Version="3.2.52" />
+		<PackageManagement Include="Google.Protobuf" Version="3.30.2" />
+		<PackageManagement Include="Grpc.Core" Version="2.46.6" />
+		<PackageManagement Include="Grpc.Net.Client" Version="2.71.0" />
+		<PackageManagement Include="Grpc.Net.ClientFactory" Version="2.71.0" />
+		<PackageManagement Include="Grpc.Net.Client.Web" Version="2.71.0" />
+		<PackageManagement Include="Grpc.AspNetCore.HealthChecks" Version="2.71.0" />
+		<PackageManagement Include="Grpc.Tools" Version="2.72.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageManagement>
+	</ItemGroup>
+
+</Project>

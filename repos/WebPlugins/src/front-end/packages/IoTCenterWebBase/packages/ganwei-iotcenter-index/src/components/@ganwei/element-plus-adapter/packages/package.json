@@ -1,0 +1,30 @@
+{
+    "name": "@ganwei/element-plus-adapter",
+    "version": "0.0.18",
+    "type": "module",
+    "scripts": {
+        "docs": "",
+        "build": "vite build",
+        "prepublish": ""
+    },
+    "main": "./index.ts",
+    "files": [
+        "docs",
+        "packages",
+        "dist",
+        "tsconfig.json",
+        "vite.config.ts"
+    ],
+    "peerDependencies": {
+        "vue": "^3.2.0",
+        "element-plus": "^2.7.6",
+        "@element-plus/icons-vue": "^2.3.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.14.9",
+        "@vitejs/plugin-vue": "^4.6.2",
+        "element-plus": "^2.7.6",
+        "sass": "^1.77.6",
+        "vite": "^4.3.2"
+    }
+}

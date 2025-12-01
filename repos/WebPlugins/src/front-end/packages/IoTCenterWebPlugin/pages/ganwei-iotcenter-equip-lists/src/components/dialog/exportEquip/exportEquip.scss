@@ -1,0 +1,16 @@
+  .exportDialog {
+
+    .el-dialog {
+      width: 420px;
+      height: auto;
+
+
+      .el-dialog__body {
+        padding: 16px;
+
+        .el-select {
+          width: 100%;
+        }
+      }
+    }
+  }

@@ -1,0 +1,29 @@
+{
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "GwWebHost": {
+      "commandName": "Executable",
+      "executablePath": "D:\\ganwei\\OpenIoTCenter\\bin\\GWHost1.exe",
+      "workingDirectory": "D:\\ganwei\\OpenIoTCenter\\bin",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000",
+      "nativeDebugging": false
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:63817/",
+      "sslPort": 44337
+    }
+  }
+}

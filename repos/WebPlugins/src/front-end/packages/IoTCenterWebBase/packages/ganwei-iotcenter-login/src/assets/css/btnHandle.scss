@@ -1,0 +1,36 @@
+// 公共底层按钮
+@mixin btn {
+    width: 100%;
+    color: $textColor_2;
+    display: block;
+    text-align: right;
+    margin: 0;
+
+    span {
+        width: 60px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 3px;
+        display: inline-block;
+        background-color: $n-frondHigh;
+        cursor: pointer;
+
+        &:nth-child(1) {
+            right: 70px;
+        }
+
+        &:nth-child(2) {
+            background-color: $themeColor_1;
+        }
+    }
+}
+
+@mixin nativeBtn {
+    display: inline-block !important;
+    width: 60px;
+    height: 28px;
+    vertical-align: middle;
+    font-size: 14px;
+}

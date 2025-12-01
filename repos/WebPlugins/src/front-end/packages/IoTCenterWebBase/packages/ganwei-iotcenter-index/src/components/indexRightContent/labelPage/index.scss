@@ -1,0 +1,136 @@
+ .container-main {
+     ::v-deep .el-tabs {
+         height: 100%;
+         position: relative;
+         padding-top: 38px;
+         iframe {
+             border: 0px;
+         }
+
+         .el-tabs__header {
+            position: absolute;
+            left: 0;
+            top: 0;
+             width: 100%;
+             height: 38px;
+             margin-bottom: 0;
+             background-color: var(--frame-top-background);
+             border-top: 1px solid var(--frame-main-border2);
+             border-bottom: 1px solid var(--frame-main-border2);
+            z-index: 1;
+             .el-tabs__nav-scroll {
+                height: 100%;
+                display: flex;
+                align-items: end;
+                gap: 10px;
+                padding: 2px 10px;
+                 ::-webkit-scrollbar {
+                     width: 4px;
+                     height: 4px;
+                 }
+
+                 ::-webkit-scrollbar-button:vertical:start,
+                 ::-webkit-scrollbar-button:vertical:end,
+                 ::-webkit-scrollbar-button:horizontal:start,
+                 ::-webkit-scrollbar-button:horizontal:end {
+                     display: none;
+                 }
+
+                 ::-webkit-scrollbar-corner {
+                     background-color: red;
+                 }
+             }
+             .el-tabs__nav-wrap {
+                height: 100%;
+             }
+             .el-tabs__nav {
+                 height: 32px;
+                 border: 0;
+                 gap: 2px;
+                 .el-tabs__item {
+                     height: 100%;
+                     margin: 0;
+                     border: 0;
+                     border-radius: 8px 8px 0px 0px;
+                     background: var(--labelpage-background);
+                     box-shadow: 0px 1px 0px 0px var(--labelpage-boxshadow);
+                     color: var(--labelpage-color);
+                     overflow: hidden;
+                     >i{margin-right: 6px;}
+                     &:not(:first-child) {
+                         margin-left: 1px;
+                     }
+
+                     &:only-of-type {
+                         .el-icon-close {
+                             display: none;
+                         }
+                     }
+
+                     .el-icon {
+                         font-size: 14px;
+                         margin-right: 4px;
+                         overflow: hidden;
+                     }
+
+                     span:nth-child(2) {
+                         font-size: 12px;
+                     }
+                 }
+
+                 .el-icon-close {
+                     font-size: 14px;
+
+                     &:hover {
+                         background: transparent;
+                         color: var(--labelpage-icon-color__hover);
+                     }
+                 }
+
+                 .is-active {
+                     background-color: var(--labelpage-background__active);
+                     overflow: hidden;
+                     .el-icon-refresh-right {
+                         width: 14px;
+                         transition: all 0.3s;
+
+                         &:hover {
+                             color: var(--labelpage-icon-color__hover);
+                         }
+                     }
+                     span,i{
+                        color: var(--labelpage-color__active);
+                     }
+
+                     .active {
+                         transform: rotate(360deg);
+                         transition: all 0.5s;
+                     }
+                 }
+             }
+         }
+
+         .el-tabs__content {
+             height: 100%;
+
+             .el-tab-pane {
+                 height: 100%;
+             }
+         }
+     }
+
+     .tabs-refresh {
+         position: absolute;
+         right: 30px;
+         top: 10px;
+         z-index: 1;
+         cursor: pointer;
+         &:hover {
+             color: var(--button-primary-color);
+         }
+         i{
+            color: var(--button-primary-color);
+         }
+     }
+ }
+

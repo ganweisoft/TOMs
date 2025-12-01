@@ -1,0 +1,86 @@
+// 左侧列表
+@mixin main-list {
+    @media screen and (min-width: 1440px) {
+        width: 370px;
+    }
+
+    @media screen and (max-width: 1440px) {
+        width: 320px;
+    }
+}
+
+@mixin list-height {
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+}
+
+// 左侧列表顶部的标题、icon、搜索框
+@mixin list-title {
+    width: 100%;
+    height: 150px;
+    font-size: 18px;
+    // padding-left: 20px;
+    color: var(--frame-main-color);
+
+    svg {
+        cursor: pointer;
+    }
+
+    svg g {
+        // @include stroke-color('con-textColor1');
+        fill: var(--frame-main-color);
+    }
+
+    >div {
+        width: 100%;
+
+        &:first-of-type {
+            height: 110px;
+            padding-right: 16px;
+
+            p {
+                height: 70x;
+                line-height: 70px;
+            }
+        }
+
+        .iconfont {
+            font-size: 24px;
+            // margin-left: 8px;
+            padding: 8px;
+
+        }
+
+        /deep/ .el-button {
+            width: 30px;
+            height: 30px;
+            // margin-left: 8px;
+            padding: 0px;
+            font-size: 14px;
+
+            .iconfont {
+                font-size: 24px;
+                color: var(--frame-main-color);
+            }
+        }
+
+        .el-button.is-circle {
+            color: var(--btn-txColor2);
+        }
+    }
+
+    &.iconinline {
+        height: 110px;
+
+        >div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    /deep/ .el-input {
+        width: calc(100% - 8px);
+    }
+}

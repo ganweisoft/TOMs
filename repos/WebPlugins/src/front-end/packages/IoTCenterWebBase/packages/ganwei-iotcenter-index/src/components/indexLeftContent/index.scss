@@ -1,0 +1,250 @@
+[data-theme="green"] .el-container {
+    #menuRef{
+       background: url(/static/images/menu-background.png) no-repeat center center/100% 100%, var(--frame-left-background);
+    }
+    .maxActive{
+        box-shadow: none!important;
+    }
+}
+
+
+::v-deep .el-menu {
+    background-color: transparent;
+    border-right: none;
+    padding: 0;
+}
+.maxActive {
+    width: 220px;
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0px 4px 14px 0px var(--menu-popup-boxshadow), 1px 0px 0px 0px var(--menu-popup-boxshadow-1);
+}
+.minActive {
+    width: 64px;
+    position: relative;
+    box-shadow: 0px 4px 14px 0px var(--menu-popup-boxshadow), 1px 0px 0px 0px var(--menu-popup-boxshadow-1);
+    .minActiveContent {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: -64px;
+        ::v-deep .el-menu {
+
+            .el-sub-menu,
+            .el-menu-item {
+                display: flex;
+                justify-content: center;
+                padding: 0;
+            }
+
+            .el-sub-menu__title,
+            .el-menu-item {
+                padding: 0px !important;
+            }
+
+            .el-sub-menu__title {
+                &:hover {
+                    background-color: transparent !important;
+                }
+            }
+
+            .el-menu-item {
+                width: 100%;
+
+            }
+        }
+
+    }
+}
+
+.isCollapse {
+    margin-right: 0;
+
+    .maxActive {
+        left: calc(var(--left)*(-1px)) !important;
+    }
+
+    .minActive {
+        .minActiveContent {
+            left: 0px !important;
+        }
+    }
+}
+
+.noIsCollapse {
+    margin-right: calc(var(--result)*1px);
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    z-index: 99;
+
+    .maxActive {
+        left: 0px !important;
+
+    }
+
+    .minActive {
+        .minActiveContent {
+            left: -64px !important;
+        }
+
+    }
+}
+
+.transition {
+    transition: all 0.5s ease-in-out;
+}
+.maxW {
+    user-select: none;
+    height: 100%;
+    background-color: var(--frame-left-background);
+
+    .aside-header {
+        height:69px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .aside-header-box {
+            height: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            white-space: nowrap;
+            overflow: hidden;
+
+            img {
+                position: relative;
+                height: 100%;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+            }
+
+            .min-img {
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // 导航
+    .left-nav {
+        width: 100%;
+        height: calc(100% - 69px); // 新版UI
+
+        .list {
+            width: 100%;
+            height: calc(100% - 44px);
+
+            .max {
+                width: calc(100% + 8px);
+                height: 100%;
+                overflow: hidden;
+                padding-top: 34px;
+
+                ::v-deep .el-loading-mask {
+                    visibility: visible;
+                }
+
+                .el-input {
+                    width: calc(100% - 40px);
+                    text-indent: 0;
+                    margin-left: 20px;
+                    margin-bottom: 15px;
+                    font-size: 14px !important;
+                    .icon-sousuoL {
+                        color: var(--gw-color-primary);
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+
+                    ::v-deep .el-input__wrapper {
+                        height: 32px;
+                        background: var(--input-background);
+                        box-shadow: 0 0 0 0px;
+                        border-radius: 16px;
+                        border: 0;
+                    }
+                }
+
+                .el-menu {
+                    width: calc(100% + 8px);
+                    height: calc(100% - 47px);
+                    padding: 0 20px 20px 20px;
+                    overflow-y: auto;
+                }
+            }
+        }
+
+        // 折叠面板按钮
+        .fold {
+            width: 100%;
+            height: 44px;
+
+            >div {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                height: 100%;
+                font-size: 14px;
+                cursor: pointer;
+                margin: 0px 20px;
+                border-top: 1px solid rgba(157, 166, 186, 0.39);
+
+                &.menuOverflow {
+                    border-top: none;
+                }
+
+                span {
+                    color: var(--menu-color);
+                }
+
+                i {
+                    font-size: 14px;
+                    margin-right: 16px;
+                    color: var(--menu-color);
+                }
+
+                i.cacelmargin {
+                    margin-left: 4px !important;
+                    margin-right: 0px !important;
+                }
+
+                button {
+                    border: 0;
+                    padding: 0;
+                    background-color: transparent !important;
+                }
+
+                .el-button--default {
+                    padding: 0;
+                    border: none !important;
+                }
+            }
+        }
+    }
+
+}
+
+.showOrganizationalStructure{
+    .organizationalStructure{
+        padding-top: 20px;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 16px;
+        height: 36px;
+        width: 100%;
+        color: var(--menu-color);
+    }
+    .left-nav{
+        height: calc(100% - 100px)!important; // 新版UI
+    }
+}

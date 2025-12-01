@@ -1,0 +1,15 @@
+{
+  "name": "@ganwei-pc/gw-base-api-plus",
+  "version": "7.0.7",
+  "type": "module",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@ganwei-pc/gw-base-utils-plus": "^7.0.0",
+    "qs": "^6.10.2"
+  },
+  "author": "",
+  "license": "MIT"
+}

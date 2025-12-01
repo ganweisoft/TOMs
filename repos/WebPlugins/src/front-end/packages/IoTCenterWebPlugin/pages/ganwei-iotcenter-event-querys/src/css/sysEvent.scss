@@ -1,0 +1,202 @@
+.sysEvent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 700px;
+
+    /deep/ .el-table__empty-text {
+        font-size: 24px;
+        color: var(--frame-main-color);
+    }
+
+    /deep/ #eqTable .el-loading-mask {
+        visibility: visible !important;
+    }
+
+    .header {
+        // padding-left: 8px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 70px;
+        // border-bottom: 1px solid $n-borderColor;
+
+        .title-number {
+            display: inline-block;
+            color: var(--frame-main-color);
+            font-size: 18px;
+            flex: 1;
+        }
+
+        #search {
+            padding: 0 10px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            border-color: $btn-blue;
+            border: 1px solid $n-borderColor;
+            margin-left: 16px;
+            line-height: 32px;
+
+            /deep/ .el-button {
+                display: inline-block;
+                height: 32px;
+                line-height: 0;
+                font-size: 14px;
+                background-color: $btn-blue !important;
+            }
+
+            i {
+                margin-right: 4px;
+                font-size: 14px;
+            }
+        }
+
+        // 时间范围
+        .calendar {
+            display: flex;
+            align-items: center;
+            height: 32px;
+
+            >span {
+                display: inline-block;
+                font-size: 14px;
+                color: var(--frame-main-color-1);
+                width: 100px;
+                height: 14px;
+                line-height: 14px;
+                text-align: right;
+            }
+
+            /deep/ .el-date-editor {
+                height: 28px;
+                margin-left: 3%;
+                // background: $foregroundColor_2;
+                line-height: 20px;
+
+                .el-input__icon {
+                    line-height: 22px;
+                }
+
+                .el-range-separator {
+                    line-height: 24px;
+                    width: 8%;
+                    color: $fontColor-gray;
+                }
+
+                input {
+                    padding-bottom: 1px;
+                    // background: $foregroundColor_2;
+                }
+
+                input::-webkit-input-placeholder {
+                    color: $fontColor-gray !important;
+                }
+            }
+
+            .el-date-editor {
+                display: flex;
+                align-items: center;
+                height: 32px;
+            }
+        }
+    }
+
+    /deep/ #eqTable {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: calc(100% - 70px - 68px);
+        padding: 15px 20px 0px;
+        @include el-table;
+
+        .el-table {
+            .el-table__cell.gutter {
+                border: none;
+            }
+        }
+
+        @mixin spanW {
+            &:first-child {
+                padding-left: 16px;
+                width: 180px;
+            }
+
+            &:nth-child(2) {
+                width: calc(100% - 650px);
+            }
+
+            &:nth-child(3) {
+                width: 170px;
+            }
+
+            &:nth-child(4) {
+                width: 200px;
+            }
+
+            &:last-child {
+                width: 210px;
+                @include whiteSpace;
+            }
+        }
+
+        .navs {
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: calc(100% - 8px);
+            height: 48px;
+            font-size: 14px;
+            color: var(--con-textColor2);
+
+            li {
+                padding-left: 1rem;
+                @include spanW;
+            }
+        }
+
+        .list {
+            padding-bottom: 1rem;
+            margin-top: 48px;
+            height: calc(100% - 48px);
+            overflow: auto;
+
+            li {
+                margin-top: 4px;
+                display: flex;
+                justify-content: space-between;
+                height: 48px;
+                line-height: 48px;
+                color: var(--con-textColor1);
+                font-size: 14px;
+                border-radius: 3px;
+                border: 1px solid $n-borderColor;
+                background-color: var(--tree-bgColor1);
+                box-sizing: border-box !important;
+                -webkit-box-sizing: border-box;
+                cursor: pointer;
+                // transition: all 0.2s;
+
+                >span {
+                    padding-left: 1rem;
+
+                    &:nth-child(2) {
+                        text-align: left;
+                        @include whiteSpace;
+                    }
+
+                    @include spanW;
+                }
+            }
+        }
+    }
+
+    /deep/ .pagination {
+        @include pagination;
+    }
+}
