@@ -3,8 +3,7 @@
     <img width="260" height="260" src="/media/img/logo.png">
   </a>
 </p>
-
-[![GitHub license](https://camo.githubusercontent.com/5eaf3ed8a7e8ccb15c21d967b8635ac79e8b1865da3a5ccf78d2572a3e10738a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f646f746e65742f6173706e6574636f72653f636f6c6f723d253233306230267374796c653d666c61742d737175617265)](https://github.com/ganweisoft/TOMs/blob/main/LICENSE) ![GitHub Pages](https://img.shields.io/github/deployments/ganweisoft/TOMs/github-pages?label=GitHub%20Pages) [![Build Status](https://github.com/ganweisoft/TOMs/actions/workflows/build.yml/badge.svg)](https://github.com/ganweisoft/TOMs/actions) ![Docker](https://img.shields.io/github/v/release/ganweisoft/toms?logo=docker) ![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white) ![](https://img.shields.io/badge/join-discord-infomational)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ganweisoft/TOMs/blob/main/LICENSE) ![GitHub Pages](https://img.shields.io/github/deployments/ganweisoft/TOMs/github-pages?label=GitHub%20Pages) [![Build Status](https://github.com/ganweisoft/TOMs/actions/workflows/build.yml/badge.svg)](https://github.com/ganweisoft/TOMs/actions) ![Docker](https://img.shields.io/github/v/release/ganweisoft/toms?logo=docker) ![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white) ![](https://img.shields.io/badge/join-discord-infomational)
 
 English | [简体中文](README-CN.md)
 
@@ -40,23 +39,14 @@ English | [简体中文](README-CN.md)
 📦 Core Components
 | Badge | Repository | Description | Status |
 |------------|------------|-------------|--------|
-|<img src="https://raw.githubusercontent.com/ganweisoft/Gateway/main/GWDataCenter/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/Gateway) | high-performance, centralized communication and scheduling module for various device plugins. It uniformly converts heterogeneous data into standardized models and delivers core functionalities such as real-time data storage, alarm triggering, linkage control, and task planning | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
-|<img src="https://raw.githubusercontent.com/ganweisoft/GrpcServer/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/GrpcServer) | Builds a lightweight, high-performance proxy service framework using the gRPC (Google Remote Procedure Call) protocol. It models communication interfaces using the Protocol Buffers (protobuf) interface definition language, and supports cross-language and cross-platform service integration and invocation |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
-|<img src="https://raw.githubusercontent.com/ganweisoft/WebPlugins/main/src/logo.jpg" width="80" alt="GrpcServer Logo">| [WebPlugins](https://github.com/ganweisoft/WebPlugins) | A modular and pluggable application framework based on ASP.NET Core and VUE. Built on the design principles of loose coupling and high cohesion, it provides an extensible and maintainable application framework. By completely decoupling core logic from functional components, it enables secondary development |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
-
+|<img src="https://github.com/ganweisoft/.github/blob/main/images/logo.jpg" width="80" alt="Gateway Logo">| [Gateway](https://github.com/ganweisoft/TOMs/tree/main/repos/Gateway) | high-performance, centralized communication and scheduling module for various device plugins. It uniformly converts heterogeneous data into standardized models and delivers core functionalities such as real-time data storage, alarm triggering, linkage control, and task planning | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
+|<img src="https://github.com/ganweisoft/.github/blob/main/images/grpc-logo.jpg" width="80" alt="GrpcServer Logo">| [GrpcServer](https://github.com/ganweisoft/TOMs/tree/main/repos/GrpcServer) | Builds a lightweight, high-performance proxy service framework using the gRPC (Google Remote Procedure Call) protocol. It models communication interfaces using the Protocol Buffers (protobuf) interface definition language, and supports cross-language and cross-platform service integration and invocation |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
+|<img src="https://github.com/ganweisoft/.github/blob/main/images/web-logo.jpg" width="80" alt="WebPlugins Logo">| [WebPlugins](https://github.com/ganweisoft/TOMs/tree/main/repos/WebPlugins) | A modular and pluggable application framework based on ASP.NET Core and VUE. Built on the design principles of loose coupling and high cohesion, it provides an extensible and maintainable application framework. By completely decoupling core logic from functional components, it enables secondary development |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
 
 🛠️ Tools & Utilities
 | Badge | Repository | Description | Status |
 |------------|------------|-------------|--------|
-|<img src="https://raw.githubusercontent.com/ganweisoft/Devices/main/src/src/logo.jpg" width="80" alt="GrpcServer Logo">| [Devices](https://github.com/ganweisoft/Devices) | Natively support Modbus and OPC UA (Open Platform Communications Unified Architecture), two of the most widely used communication protocols in the field of industrial automation, providing efficient and reliable data acquisition and device interaction capabilities |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" />
-
-
-🌐 Multi-Language
-| Badge | Repository | Description | Status |
-|------------|------------|-------------|--------|
-|<img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" width="67" height="15" alt="Python Logo">| [Gateway4Python](https://github.com/ganweisoft/Gateway4Python) | Distributed Gateway for Python | <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" /> |
-|<img src="https://img.shields.io/badge/-Java-ED8B00?style=flat&logo=java&logoColor=white" width="67" height="17" alt="Java Logo">| [Gateway4Java](https://github.com/ganweisoft/Gateway4Java) | Distributed Gateway for Java |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" /> |
-|<img src="https://img.shields.io/badge/-.NET-512BD4?style=flat&logo=.net&logoColor=white" width="67" height="15" alt="CSharp Logo">| [Gateway4CSharp](https://github.com/ganweisoft/Gateway4CSharp) | Distributed Gateway for .NET |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" />
+|<img src="https://github.com/ganweisoft/.github/blob/main/images/devices-logo.jpg" width="80" alt="Devices Logo">| [Devices](https://github.com/ganweisoft/TOMs/tree/main/repos/Devices) | Natively support Modbus and OPC UA (Open Platform Communications Unified Architecture), two of the most widely used communication protocols in the field of industrial automation, providing efficient and reliable data acquisition and device interaction capabilities |  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" width="200" height="20" /> |
 
 # 2. Prerequisites
 
@@ -117,7 +107,7 @@ wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-mi
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 sudo apt-get install -y aspnetcore-runtime-9.0
-```
+ ```
 
 2. **CentOS/RHEL**
 ```shell
