@@ -3,6 +3,8 @@
     <img width="130" height="130" src="GWDataCenter/logo.jpg">
   </a>
 </p>
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ganweisoft/TOMs/blob/main/LICENSE) [![Build Status](https://github.com/ganweisoft/TOMs/actions/workflows/build.yml/badge.svg)](https://github.com/ganweisoft/TOMs/actions) [![NuGet](https://img.shields.io/nuget/v/OpenGWDataCenter.svg)](https://www.nuget.org/packages/OpenGWDataCenter/) ![](https://img.shields.io/badge/join-discord-infomational)
 
 English | [简体中文](README-CN.md)
@@ -16,7 +18,7 @@ Gateway is a high-performance, centralized communication and scheduling module f
 Gateway currently supports Windows, Linux, and MacOS platforms.
 
 ### License  
-Gatewayis licensed under the very permissive MIT License. For details, see [License](https://github.com/ganweisoft/Gateway/blob/main/LICENSE).
+Gateway is licensed under the very permissive MIT License. For details, see [License](https://github.com/ganweisoft/Gateway/blob/main/LICENSE).
 
 
 ### How to Contribute  
