@@ -1,4 +1,4 @@
-[![GitHub license](https://camo.githubusercontent.com/5eaf3ed8a7e8ccb15c21d967b8635ac79e8b1865da3a5ccf78d2572a3e10738a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f646f746e65742f6173706e6574636f72653f636f6c6f723d253233306230267374796c653d666c61742d737175617265)](https://github.com/ganweisoft/Mini-Gateway-Python/blob/main/LICENSE) ![Docker](https://img.shields.io/github/v/release/ganweisoft/toms?logo=docker) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![](https://img.shields.io/badge/join-discord-infomational)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ganweisoft/TOMs/blob/main/LICENSE) ![Docker](https://img.shields.io/github/v/release/ganweisoft/toms?logo=docker) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![](https://img.shields.io/badge/join-discord-infomational)
 
 
 ## 介绍
